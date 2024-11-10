@@ -3,18 +3,23 @@
   "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\vanillaquestsexpanded-thegenerator\\1.5\\source\\vanillaquestsexpanded-thegenerator\\vanillaquestsexpanded-thegenerator\\building\\building_genetron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\building\\building_genetron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\vanillaquestsexpanded-thegenerator\\1.5\\source\\vanillaquestsexpanded-thegenerator\\vanillaquestsexpanded-thegenerator\\defextensions\\genetrongraphicsextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\defextensions\\genetrongraphicsextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\vanillaquestsexpanded-thegenerator\\defofs\\internaldefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\defofs\\internaldefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\vanillaquestsexpanded-thegenerator\\1.5\\source\\vanillaquestsexpanded-thegenerator\\vanillaquestsexpanded-thegenerator\\harmony\\harmonyinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\harmony\\harmonyinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\vanillaquestsexpanded-thegenerator\\1.5\\source\\vanillaquestsexpanded-thegenerator\\vanillaquestsexpanded-thegenerator\\defofs\\internaldefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\defofs\\internaldefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|VanillaQuestsExpanded-TheGenerator||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\vanillaquestsexpanded-thegenerator\\1.5\\source\\vanillaquestsexpanded-thegenerator\\vanillaquestsexpanded-thegenerator\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,11 +29,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenetronGraphicsExtension.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\DefExtensions\\GenetronGraphicsExtension.cs",
+              "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\DefExtensions\\GenetronGraphicsExtension.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\DefExtensions\\GenetronGraphicsExtension.cs",
+              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\DefExtensions\\GenetronGraphicsExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T15:07:14.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Building_Genetron.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron.cs",
+              "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron.cs*",
+              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron.cs*",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACQAAACUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T15:05:06.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HarmonyInstance.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\HarmonyInstance.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Harmony\\HarmonyInstance.cs",
@@ -41,32 +76,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InternalDefOf.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\DefOfs\\InternalDefOf.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\DefOfs\\InternalDefOf.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\DefOfs\\InternalDefOf.cs",
               "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\DefOfs\\InternalDefOf.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T14:39:10.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "VanillaQuestsExpanded-TheGenerator",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj*",
-              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj*",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj",
+              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-10T14:38:39.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2024-11-10T14:38:39.786Z"
             }
           ]
         }

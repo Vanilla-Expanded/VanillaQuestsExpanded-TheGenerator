@@ -291,6 +291,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building\Building_Genetron.cs" />
+    <Compile Include="DefExtensions\GenetronGraphicsExtension.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

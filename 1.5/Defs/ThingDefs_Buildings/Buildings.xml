@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
- 
-
- 
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron</defName>
+		<label>genetron</label>
+		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5,5)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>18000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>3852</MarketValue>
+			<Beauty>-30</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>440</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<VQE_GenetronComponent>5</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerPlantSteam</compClass>
+				<basePowerConsumption>-3600</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<uiOrder>8000</uiOrder>
+		<placeWorkers>
+			<li>PlaceWorker_OnSteamGeyser</li>
+		</placeWorkers>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<textures>
+					<li>Things/Wood/Megagenerator_Core_Basic</li>
+					<li>Things/Turbines/Megagenerator_SpinningCore</li>
+					<li>Things/Wood/Megagenerator_CoreShield_Basic_Outline</li>
+					<li>Things/Wood/Megagenerator_CoreShield_Basic</li>					
+					
+				</textures>
+			</li>
+		</modExtensions>
+	</ThingDef>
 </Defs>
