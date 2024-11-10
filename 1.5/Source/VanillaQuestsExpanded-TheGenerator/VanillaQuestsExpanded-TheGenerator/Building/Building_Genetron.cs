@@ -12,8 +12,8 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public GenetronGraphicsExtension cachedExtension;
-        public List<Graphic_Single> cachedGraphics = new List<Graphic_Single>();
-
+        public Dictionary<Graphic_Single,Tuple<bool,Vector2>> cachedGraphics = new Dictionary<Graphic_Single, Tuple<bool, Vector2>>();
+        private float spinPosition;
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
@@ -23,21 +23,17 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 LongEventHandler.ExecuteWhenFinished(delegate { StoreGraphics(); });
 
-                
-
             }
 
         }
 
         public void StoreGraphics()
         {
-            foreach (string texture in cachedExtension.textures)
-            {
-                Log.Message("Storing "+ texture);
-                cachedGraphics.Add((Graphic_Single)GraphicDatabase.Get<Graphic_Single>(texture, ShaderDatabase.Cutout, this.def.graphicData.drawSize, Color.white));
-
+            foreach (GenetronGraphics graphic in cachedExtension.graphics)
+            {             
+                cachedGraphics.Add((Graphic_Single)GraphicDatabase.Get<Graphic_Single>(graphic.texture, ShaderDatabase.Cutout, 
+                    graphic.size != Vector2.zero ? graphic.size : this.def.graphicData.drawSize, Color.white),Tuple.Create(graphic.rotation,graphic.offset));
             }
-
 
         }
 
@@ -45,21 +41,32 @@ namespace VanillaQuestsExpandedTheGenerator
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             base.DrawAt(drawLoc, flip);
-            if(!cachedGraphics.NullOrEmpty()) {
 
-                var vector = this.DrawPos + Altitudes.AltIncVect;
-                foreach(Graphic overlay in cachedGraphics)
+            float speed = 0.75f;
+            float extrarot = (Current.Game.tickManager.TicksGame * speed / Mathf.PI);
+
+            if (!cachedGraphics.NullOrEmpty()) {
+
+                var vector = DrawPos + Altitudes.AltIncVect;
+                foreach(KeyValuePair<Graphic_Single, Tuple<bool, Vector2>> overlay in cachedGraphics)
                 {
+                    vector.y += Altitudes.AltInc;
 
-                    vector.y += 5;
+                    Vector3 vectorOffset = Vector3.zero;
 
-                   // Vector2 drawingSize = this.def.graphicData.drawSize;
-                    
-                    overlay?.DrawFromDef(vector, Rot4.South, null);
+                    if (overlay.Value.Item2 != Vector2.zero)
+                    {
+                        vectorOffset.x = overlay.Value.Item2.x;
+                        vectorOffset.z = overlay.Value.Item2.y;
+                    }
+
+                    overlay.Key.DrawFromDef(vector + vectorOffset, Rot4.North, null, overlay.Value.Item1 ? extrarot : 0);
+
+                 
+                                     
                 }
                 
-            }
-            
+            }          
 
         }
 

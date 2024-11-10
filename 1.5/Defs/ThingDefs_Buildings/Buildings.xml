@@ -9,7 +9,7 @@
 		<graphicData>
 			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(5,5)</drawSize>
+			<drawSize>(8,8)</drawSize>
 			<shadowData>
 				<volume>(5.03,1.0,4.25)</volume>
 				<offset>(0,0,-0.25)</offset>
@@ -18,6 +18,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<blockWind>true</blockWind>
+		<uiIconPath>Things/Wood/MegageneratorTier0_MenuIcon</uiIconPath>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>1</fillPercent>
 		<blockLight>true</blockLight>
@@ -30,7 +31,7 @@
 			<Beauty>-30</Beauty>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<size>(6,6)</size>
+		<size>(5,5)</size>
 		<costList>
 			<Steel>440</Steel>
 			<ComponentIndustrial>8</ComponentIndustrial>
@@ -71,13 +72,26 @@
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
-				<textures>
-					<li>Things/Wood/Megagenerator_Core_Basic</li>
-					<li>Things/Turbines/Megagenerator_SpinningCore</li>
-					<li>Things/Wood/Megagenerator_CoreShield_Basic_Outline</li>
-					<li>Things/Wood/Megagenerator_CoreShield_Basic</li>					
+				<graphics>
+					<li>
+						<texture>Things/Wood/Megagenerator_CoreShield_Basic_Outline</texture>				
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Core_Basic</texture>				
+					</li>
+					<li>
+						<texture>Things/Turbines/Megagenerator_SpinningCore</texture>		
+						<size>3</size>
+						<offset>(0,0.5)</offset>
+						<rotation>true</rotation>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_CoreShield_Basic</texture>				
+					</li>
 					
-				</textures>
+							
+					
+				</graphics>
 			</li>
 		</modExtensions>
 	</ThingDef>
