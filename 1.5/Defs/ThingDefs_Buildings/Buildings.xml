@@ -9,7 +9,7 @@
 		<graphicData>
 			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(8,8)</drawSize>
+			<drawSize>(9,9)</drawSize>
 			<shadowData>
 				<volume>(5.03,1.0,4.25)</volume>
 				<offset>(0,0,-0.25)</offset>
@@ -31,7 +31,7 @@
 			<Beauty>-30</Beauty>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<size>(5,5)</size>
+		<size>(6,6)</size>
 		<costList>
 			<Steel>440</Steel>
 			<ComponentIndustrial>8</ComponentIndustrial>
@@ -81,7 +81,7 @@
 					</li>
 					<li>
 						<texture>Things/Turbines/Megagenerator_SpinningCore</texture>		
-						<size>3</size>
+						<size>4</size>
 						<offset>(0,0.5)</offset>
 						<rotation>true</rotation>
 					</li>
