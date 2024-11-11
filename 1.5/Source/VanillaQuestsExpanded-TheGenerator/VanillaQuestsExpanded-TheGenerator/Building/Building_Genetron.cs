@@ -25,6 +25,19 @@ namespace VanillaQuestsExpandedTheGenerator
 
             }
 
+            List<Thing> list = map.thingGrid.ThingsListAt(Position);
+            for (int i = 0; i < list.Count; i++)
+            {
+                Building existingBuilding = list[i] as Building;
+                if (existingBuilding != this && existingBuilding is Building_Genetron)
+                {
+                    existingBuilding.Destroy();
+                }
+            }
+
+            
+            
+
         }
 
         public void StoreGraphics()

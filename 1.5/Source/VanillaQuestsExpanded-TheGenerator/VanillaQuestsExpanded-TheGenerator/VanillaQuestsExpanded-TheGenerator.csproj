@@ -292,10 +292,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building\Building_Genetron.cs" />
+    <Compile Include="Building\Building_Genetron_Basic.cs" />
     <Compile Include="DefExtensions\GenetronGraphicsExtension.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
+    <Compile Include="Defs\HiddenDesignatorsDef.cs" />
+    <Compile Include="Harmony\DesignationCategoryDef_ResolvedAllowedDesignators.cs" />
+    <Compile Include="Harmony\GenSpawn_SpawningWipes.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticCollections\StaticCollections.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony">
@@ -304,5 +309,6 @@
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,9 @@ namespace VanillaQuestsExpandedTheGenerator
             DefOfHelper.EnsureInitializedInCtor(typeof(InternalDefOf));
         }
 
-       
+        public static ThingDef VQE_Genetron_Basic;
+        public static ThingDef VQE_Genetron_WoodFired;
+
 
     }
 }

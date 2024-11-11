@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<VQE_InstallWoodFiredGenetron>install wood-fired genetron core</VQE_InstallWoodFiredGenetron>
+	<VQE_InstallWoodFiredGenetronDesc>Install wood-fueled furnaces that greatly improve the power output of the genetron core, but will change the generator to require wood to operate.</VQE_InstallWoodFiredGenetronDesc>
+</LanguageData>

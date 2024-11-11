@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<VanillaQuestsExpandedTheGenerator.HiddenDesignatorsDef>
+		<defName>VQE_HiddenDesignators</defName>
+		<hiddenDesignators>			
+			
+			<li>VQE_Genetron_WoodFired</li>
+		
+		</hiddenDesignators>							
+	</VanillaQuestsExpandedTheGenerator.HiddenDesignatorsDef>
+
+
+
+
+
+</Defs>
