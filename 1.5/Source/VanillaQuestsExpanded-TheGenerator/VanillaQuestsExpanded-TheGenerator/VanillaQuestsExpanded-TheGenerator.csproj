@@ -291,12 +291,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\WorkGiver\WorkGiver_RefuelWithOverdrive.cs" />
     <Compile Include="Building\Building_Genetron.cs" />
+    <Compile Include="Building\Building_Genetron_WoodFueled.cs" />
+    <Compile Include="Building\Building_Genetron_WoodFired.cs" />
     <Compile Include="Building\Building_Genetron_Basic.cs" />
+    <Compile Include="Building\Building_Genetron_WoodPowered.cs" />
+    <Compile Include="Comps\CompPowerPlantGenetron.cs" />
+    <Compile Include="Comps\CompRefuelableWithOverdrive.cs" />
+    <Compile Include="Comps\Properties\CompProperties_PowerGenetron.cs" />
+    <Compile Include="Comps\Properties\CompProperties_RefuelableWithOverdrive.cs" />
     <Compile Include="DefExtensions\GenetronGraphicsExtension.cs" />
+    <Compile Include="DefExtensions\GenetronProperties.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Defs\HiddenDesignatorsDef.cs" />
     <Compile Include="Harmony\DesignationCategoryDef_ResolvedAllowedDesignators.cs" />
+    <Compile Include="Harmony\GenConstruct_CanConstruct.cs" />
     <Compile Include="Harmony\GenSpawn_SpawningWipes.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

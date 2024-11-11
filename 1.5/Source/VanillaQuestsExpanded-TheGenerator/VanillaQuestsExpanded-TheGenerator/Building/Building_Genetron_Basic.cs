@@ -11,6 +11,8 @@ namespace VanillaQuestsExpandedTheGenerator
     public class Building_Genetron_Basic : Building_Genetron
     {
 
+        public const int totalRunningTicksToUpdate = 180000; //3 days
+
         public override IEnumerable<Gizmo> GetGizmos()
         {
 
@@ -18,19 +20,27 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return c;
             }
-
             Command_Action command_Action = new Command_Action();
 
-            command_Action.defaultDesc = "VQE_InstallWoodFiredGenetronDesc".Translate();
-            command_Action.defaultLabel = "VQE_InstallWoodFiredGenetron".Translate();
-            command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/RestartGenetron_Gizmo", true);
-            command_Action.hotKey = KeyBindingDefOf.Misc1;
-            command_Action.action = delegate
+            if (totalRunningTicks> totalRunningTicksToUpdate)
             {
-                GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_WoodFired, Position, Map, Rotation, Faction.OfPlayer, null);
-
-
-            };
+                command_Action.defaultDesc = "VQE_InstallWoodFiredGenetronDesc".Translate();
+                command_Action.defaultLabel = "VQE_InstallWoodFiredGenetron".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_1", true);
+                command_Action.hotKey = KeyBindingDefOf.Misc1;
+                command_Action.action = delegate
+                {
+                    GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_WoodFired, Position, Map, Rotation, Faction.OfPlayer, null);
+                };
+            }
+            else
+            {
+                command_Action.defaultDesc = "VQE_InstallWoodFiredGenetronDescExpanded".Translate(totalRunningTicks.ToStringTicksToPeriod());
+                command_Action.defaultLabel = "VQE_InstallWoodFiredGenetron".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_1", true);
+                command_Action.Disabled = true;                
+            }           
+            
             yield return command_Action;
 
         }

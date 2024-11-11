@@ -30,7 +30,10 @@ namespace VanillaQuestsExpandedTheGenerator
 
         // A list of designators that shouldn't appear on the architect menu.
         public static HashSet<BuildableDef> hidden_designators = new HashSet<BuildableDef>();
+     
+        public static HashSet<BuildableDef> genetrons = new HashSet<BuildableDef>() { InternalDefOf.VQE_Genetron_Basic, InternalDefOf.VQE_Genetron_WoodFired,
+            InternalDefOf.VQE_Genetron_WoodFueled, InternalDefOf.VQE_Genetron_WoodPowered };
+   
 
-       
     }
 }

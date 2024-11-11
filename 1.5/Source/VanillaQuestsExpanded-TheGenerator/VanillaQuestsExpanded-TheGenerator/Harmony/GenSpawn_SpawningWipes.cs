@@ -15,7 +15,7 @@ namespace VanillaQuestsExpandedTheGenerator
     [HarmonyPatch("SpawningWipes")]
     public static class VanillaQuestsExpandedTheGenerator_GenSpawn_SpawningWipes_Patch
     {
-        public static HashSet<ThingDef> genetrons = new HashSet<ThingDef>() { InternalDefOf.VQE_Genetron_Basic,InternalDefOf.VQE_Genetron_WoodFired};
+      
 
 
         [HarmonyPostfix]
@@ -24,7 +24,7 @@ namespace VanillaQuestsExpandedTheGenerator
             ThingDef thingDef = newEntDef as ThingDef;
             ThingDef thingDef2 = oldEntDef as ThingDef;
            
-            if ((genetrons.Contains(thingDef)||thingDef.defName.Contains("Frame_")) && genetrons.Contains(thingDef2))
+            if ((StaticCollections.genetrons.Contains(thingDef)||thingDef?.defName?.Contains("Frame_")==true) && StaticCollections.genetrons.Contains(thingDef2))
             {
                 __result = false;
 

@@ -19,7 +19,9 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static ThingDef VQE_Genetron_Basic;
         public static ThingDef VQE_Genetron_WoodFired;
+        public static ThingDef VQE_Genetron_WoodFueled;
+        public static ThingDef VQE_Genetron_WoodPowered;
 
-
+        public static HediffDef VQE_StudiedAncientGenetron;
     }
 }

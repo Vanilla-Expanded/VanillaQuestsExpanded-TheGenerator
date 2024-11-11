@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>VQE_StudiedAncientGenetron</defName>
+		<label>studied ancient genetron</label>
+		<description>This particular colonist has studied the ancient genetron. It allows them to build, upgrade and maintain a genetron in the colony.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+	
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			
+		</comps>
+		<stages>
+			
+			<li>
+				
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

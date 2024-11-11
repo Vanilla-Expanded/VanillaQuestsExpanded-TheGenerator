@@ -2,4 +2,26 @@
 <LanguageData>
 	<VQE_InstallWoodFiredGenetron>install wood-fired genetron core</VQE_InstallWoodFiredGenetron>
 	<VQE_InstallWoodFiredGenetronDesc>Install wood-fueled furnaces that greatly improve the power output of the genetron core, but will change the generator to require wood to operate.</VQE_InstallWoodFiredGenetronDesc>
+	<VQE_InstallWoodFiredGenetronDescExpanded>Install wood-fueled furnaces that greatly improve the power output of the genetron core, but will change the generator to require wood to operate.\n\nGenetron needs to operate uninterrupted for 3 days (time at the moment: {0})</VQE_InstallWoodFiredGenetronDescExpanded>
+	
+	<VQE_InstallWoodFueledGenetron>install automated stoker</VQE_InstallWoodFueledGenetron>
+	<VQE_InstallWoodFueledGenetronDesc>Install an automated system for feeding the fuel, keeping the furnace at optimal output with less frequent fueling.</VQE_InstallWoodFueledGenetronDesc>
+	<VQE_InstallWoodFueledGenetronDescExpanded>Install an automated system for feeding the fuel, keeping the furnace at optimal output with less frequent fueling.\n\nGenetron needs to burn 700 fuel (fuel burned at the moment: {0})</VQE_InstallWoodFueledGenetronDescExpanded>
+		
+	<VQE_InstallWoodPoweredGenetron>install energy circulators</VQE_InstallWoodPoweredGenetron>
+	<VQE_InstallWoodPoweredGenetronDesc>Install energy circulators that redirect excess heat back into the genetron core, amplifying power output with only a slight rise in fuel consumption.</VQE_InstallWoodPoweredGenetronDesc>
+	<VQE_InstallWoodPoweredGenetronDescExpanded>Install energy circulators that redirect excess heat back into the genetron core, amplifying power output with only a slight rise in fuel consumption.\n\nGenetron needs to burn 1500 fuel (fuel burned at the moment: {0})</VQE_InstallWoodPoweredGenetronDescExpanded>
+	
+	
+	
+	
+	
+	
+	
+	
+	<VQE_GenetronOverdrive>genetron overdrive</VQE_GenetronOverdrive>
+	<VQE_GenetronOverdriveDesc>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.</VQE_GenetronOverdriveDesc>
+	<VQE_GenetronOverdriveDescExtended>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.\n\nThe Overdrive has a 30 day cooldown. It will be ready again in {0}</VQE_GenetronOverdriveDescExtended>
+	
+	<VQE_NeedsStudy>{0} did not study an ancient genetron.</VQE_NeedsStudy> 
 </LanguageData>

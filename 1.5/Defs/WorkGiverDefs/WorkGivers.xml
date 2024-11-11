@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+  <WorkGiverDef>
+    <defName>VQE_Refuel</defName>
+    <label>refuel fuelable buildings</label>
+    <giverClass>VanillaQuestsExpandedTheGenerator.WorkGiver_RefuelWithOverdrive</giverClass>
+    <workType>Hauling</workType>
+    <verb>refuel</verb>
+    <gerund>refueling</gerund>
+    <priorityInType>140</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+    <canBeDoneByMutants>false</canBeDoneByMutants>
+  </WorkGiverDef>
+
+ 
+
+</Defs>
