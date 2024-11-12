@@ -9,7 +9,7 @@ namespace VanillaQuestsExpandedTheGenerator
     [StaticConstructorOnStartup]
     public class CompRefuelableWithOverdrive : CompRefuelable
     {
-        Building_Genetron building;
+        Building_GenetronOverdrive building;
        
         private CompFlickable flickComp;
         float multiplier = 1;
@@ -18,8 +18,36 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void Initialize(CompProperties props)
         {
             base.Initialize(props);
-            building = this.parent as Building_Genetron;
+            building = this.parent as Building_GenetronOverdrive;
             flickComp = parent.GetComp<CompFlickable>();
+        }
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            Genetron_MapComponent mapComp = this.parent.Map.GetComponent<Genetron_MapComponent>();
+            if (mapComp != null)
+            {
+                mapComp.AddRefuelableToMap(this.parent);
+            }
+        }
+        public override void PostDeSpawn(Map map)
+        {
+            Genetron_MapComponent mapComp = map.GetComponent<Genetron_MapComponent>();
+            if (mapComp != null)
+            {
+                mapComp.RemoveRefuelableFromMap(this.parent);
+            }
+        }
+
+        public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+
+            Genetron_MapComponent mapComp = previousMap.GetComponent<Genetron_MapComponent>();
+            if (mapComp != null)
+            {
+                mapComp.RemoveRefuelableFromMap(this.parent);
+            }
         }
 
         private float ConsumptionRatePerTick
@@ -60,6 +88,10 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 int numTicks = (int)(Fuel / Props.fuelConsumptionRate * 60000f / multiplier);
                 text = text + " (" + numTicks.ToStringTicksToPeriod() + ")";
+                if (multiplier != 1)
+                {
+                    text = text + " ("+"VQE_Overdrive".Translate()+")";
+                }
             }
             if (!HasFuel && !Props.outOfFuelMessage.NullOrEmpty())
             {

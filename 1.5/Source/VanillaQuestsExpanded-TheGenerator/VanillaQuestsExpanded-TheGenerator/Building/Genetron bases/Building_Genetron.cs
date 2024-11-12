@@ -13,20 +13,13 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public GenetronGraphicsExtension cachedGraphicsExtension;
-        public GenetronProperties cachedPropertiesExtension;
         public Dictionary<Graphic_Single, Tuple<bool, Vector2>> cachedGraphics = new Dictionary<Graphic_Single, Tuple<bool, Vector2>>();
-        private float spinPosition;
         public CompPowerPlantGenetron compPower;
         public CompRefuelable compRefuelable;
         public int totalRunningTicks;
         public float totalFuelBurned;
         public float consumptionRatePerTick = 0;
-        public bool overdrive = false;
-        public const int overdriveTime = 300000; // 5 days
-        public int overdriveTimer = 0;
-        public bool overdriveCanBeReUsed = true;
-        public int overdriveCanBeReUsedTime = 1800000; // 30 days
-        public int overdriveCanBeReUsedTimer = 0;
+    
 
         public override void ExposeData()
         {
@@ -34,10 +27,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
             Scribe_Values.Look(ref this.totalRunningTicks, "totalRunningTicks", 0, false);
             Scribe_Values.Look(ref this.totalFuelBurned, "totalFuelBurned", 0, false);
-            Scribe_Values.Look(ref this.overdrive, "overdrive", false, false);
-            Scribe_Values.Look(ref this.overdrive, "overdriveCanBeReUsed", true, false);
-            Scribe_Values.Look(ref this.overdriveTimer, "overdriveTimer", 0, false);
-            Scribe_Values.Look(ref this.overdriveCanBeReUsedTimer, "overdriveCanBeReUsedTimer", 0, false);
+          
         }
 
 
@@ -64,7 +54,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
             base.SpawnSetup(map, respawningAfterLoad);
             cachedGraphicsExtension = this.def.GetModExtension<GenetronGraphicsExtension>();
-            cachedPropertiesExtension = this.def.GetModExtension<GenetronProperties>();
+          
             if (cachedGraphicsExtension != null)
             {
                 LongEventHandler.ExecuteWhenFinished(delegate { StoreGraphics(); });
@@ -129,24 +119,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 totalFuelBurned += consumptionRatePerTick;
             }
-            if (overdrive)
-            {
-                overdriveTimer++;
-                if(overdriveTimer > overdriveTime)
-                {
-                    overdrive = false;
-                    overdriveTimer = 0;
-                }
-            }
-            if (!overdriveCanBeReUsed)
-            {
-                overdriveCanBeReUsedTimer++;
-                if (overdriveCanBeReUsedTimer > overdriveCanBeReUsedTime)
-                {
-                    overdriveCanBeReUsed = true;
-                    overdriveCanBeReUsedTimer = 0;
-                }
-            }
+           
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -176,26 +149,7 @@ namespace VanillaQuestsExpandedTheGenerator
                     };
                     yield return command_Action2;
                 }
-                if(cachedPropertiesExtension?.overrideDevModeGizmos == true)
-                {
-                    Command_Action command_Action3 = new Command_Action();
-                    command_Action3.defaultLabel = "Reset overdrive reuse counter";
-                    command_Action3.action = delegate
-                    {
-                        overdriveCanBeReUsed = true;
-                        overdriveCanBeReUsedTimer = 0;
-                    };
-                    yield return command_Action3;
-                    Command_Action command_Action4 = new Command_Action();
-                    command_Action4.defaultLabel = "Stop overdrive";
-                    command_Action4.action = delegate
-                    {
-                        overdrive = false;
-                        overdriveTimer = 0;
-                    };
-                    yield return command_Action4;
-
-                }
+               
                
             }
 

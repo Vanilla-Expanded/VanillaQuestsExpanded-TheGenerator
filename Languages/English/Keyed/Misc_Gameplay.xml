@@ -12,7 +12,9 @@
 	<VQE_InstallWoodPoweredGenetronDesc>Install energy circulators that redirect excess heat back into the genetron core, amplifying power output with only a slight rise in fuel consumption.</VQE_InstallWoodPoweredGenetronDesc>
 	<VQE_InstallWoodPoweredGenetronDescExpanded>Install energy circulators that redirect excess heat back into the genetron core, amplifying power output with only a slight rise in fuel consumption.\n\nGenetron needs to burn 1500 fuel (fuel burned at the moment: {0})</VQE_InstallWoodPoweredGenetronDescExpanded>
 	
-	
+	<VQE_InstallWoodBlastingGenetron>install adjustable burn cylinders</VQE_InstallWoodBlastingGenetron>
+	<VQE_InstallWoodBlastingGenetronDesc>Install large, adjustable internal cylinders that allow altering the burn rate of the core, adjusting the power generated to fit the needs of the colony.</VQE_InstallWoodBlastingGenetronDesc>
+	<VQE_InstallWoodBlastingGenetronDescExpanded>Install large, adjustable internal cylinders that allow altering the burn rate of the core, adjusting the power generated to fit the needs of the colony.\n\nGenetron needs to operate uninterrupted for 30 days (time at the moment: {0})</VQE_InstallWoodBlastingGenetronDescExpanded>
 	
 	
 	
@@ -24,4 +26,7 @@
 	<VQE_GenetronOverdriveDescExtended>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.\n\nThe Overdrive has a 30 day cooldown. It will be ready again in {0}</VQE_GenetronOverdriveDescExtended>
 	
 	<VQE_NeedsStudy>{0} did not study an ancient genetron.</VQE_NeedsStudy> 
+	<VQE_NeedsStudyGeneric>This colonist can't repair critical breakdowns, as they did not study an ancient genetron</VQE_NeedsStudyGeneric>
+	<VQE_Overdrive>Reactor overdrive</VQE_Overdrive>
+	<VQE_CriticalBreakdown>Critical breakdown</VQE_CriticalBreakdown>
 </LanguageData>

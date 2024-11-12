@@ -5,13 +5,13 @@ namespace VanillaQuestsExpandedTheGenerator
 {
     public class CompPowerPlantGenetron : CompPowerPlant
     {
-        Building_Genetron building;
+        Building_GenetronOverdrive building;
         new public CompProperties_PowerGenetron Props => (CompProperties_PowerGenetron)props;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            building = this.parent as Building_Genetron;
+            building = this.parent as Building_GenetronOverdrive;
         }
 
         public override void CompTick()
@@ -21,7 +21,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public override void UpdateDesiredPowerOutput()
         {
-            if ((breakdownableComp != null && breakdownableComp.BrokenDown) || (flickableComp != null && !flickableComp.SwitchIsOn) || (autoPoweredComp != null && !autoPoweredComp.WantsToBeOn) || (toxifier != null && !toxifier.CanPolluteNow) || !base.PowerOn)
+            if ((building != null && building.criticalBreakdown) || (breakdownableComp != null && breakdownableComp.BrokenDown) || (flickableComp != null && !flickableComp.SwitchIsOn) || (autoPoweredComp != null && !autoPoweredComp.WantsToBeOn) || (toxifier != null && !toxifier.CanPolluteNow) || !base.PowerOn)
             {
                 base.PowerOutput = 0f;
             }else if(refuelableComp != null && !refuelableComp.HasFuel)
@@ -30,7 +30,12 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                float multiplier = building.overdrive ? 2 : 1;
+                float multiplier = 1;
+                if(building?.overdrive == true)
+                {
+                    multiplier = 2;
+                }
+               
                 base.PowerOutput = DesiredPowerOutput * multiplier;
             }
         }

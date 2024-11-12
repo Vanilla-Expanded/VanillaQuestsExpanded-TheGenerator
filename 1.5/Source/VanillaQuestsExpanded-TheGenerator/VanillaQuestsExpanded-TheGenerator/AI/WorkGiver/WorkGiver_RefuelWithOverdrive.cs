@@ -8,8 +8,10 @@ namespace VanillaQuestsExpandedTheGenerator
 {
     public class WorkGiver_RefuelWithOverdrive : WorkGiver_Scanner
     {
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForDef(InternalDefOf.VQE_Genetron_WoodPowered);
-
+        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
+        {
+            return pawn.Map.GetComponent<Genetron_MapComponent>().refuelables_InMap;
+        }
 
         public override PathEndMode PathEndMode => PathEndMode.Touch;
 

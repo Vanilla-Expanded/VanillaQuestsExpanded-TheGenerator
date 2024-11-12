@@ -6,6 +6,9 @@
 		<hiddenDesignators>			
 			
 			<li>VQE_Genetron_WoodFired</li>
+			<li>VQE_Genetron_WoodFueled</li>
+			<li>VQE_Genetron_WoodPowered</li>
+			<li>VQE_Genetron_WoodBlasting</li>
 		
 		</hiddenDesignators>							
 	</VanillaQuestsExpandedTheGenerator.HiddenDesignatorsDef>

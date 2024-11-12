@@ -23,7 +23,7 @@
 		<uiIconScale>1.4</uiIconScale>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>1</fillPercent>
-		<blockLight>true</blockLight>
+		<blockLight>false</blockLight>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
 			<WorkToBuild>18000</WorkToBuild>
@@ -115,7 +115,7 @@
 		<designationCategory>Power</designationCategory>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>1</fillPercent>
-		<blockLight>true</blockLight>
+		<blockLight>false</blockLight>
 		<clearBuildingArea>false</clearBuildingArea>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
@@ -225,7 +225,7 @@
 		<designationCategory>Power</designationCategory>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>1</fillPercent>
-		<blockLight>true</blockLight>
+		<blockLight>false</blockLight>
 		<clearBuildingArea>false</clearBuildingArea>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
@@ -341,7 +341,7 @@
 		<designationCategory>Power</designationCategory>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>1</fillPercent>
-		<blockLight>true</blockLight>
+		<blockLight>false</blockLight>
 		<clearBuildingArea>false</clearBuildingArea>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
@@ -377,7 +377,7 @@
 				<glowColor>(217,112,33,0)</glowColor>
 			</li>
 			<li Class="CompProperties_HeatPusher">
-				<compClass>CompHeatPusherPowered</compClass>
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
 				<heatPerSecond>6</heatPerSecond>
 			</li>
 			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
@@ -435,9 +435,133 @@
 					</li>
 				</graphics>
 			</li>
-			<li Class="VanillaQuestsExpandedTheGenerator.GenetronProperties">
-				<overrideDevModeGizmos>true</overrideDevModeGizmos>
+			
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_WoodBlasting</defName>
+		<label>wood-blasting genetron</label>
+		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_WoodBlasting</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<designationCategory>Power</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>7600</MarketValue>
+			<Beauty>-30</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>200</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<VQE_GenetronComponent>1</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-7200</basePowerConsumption>
+				<powerWithoutFuel>3600</powerWithoutFuel>
+				<transmitsPower>true</transmitsPower>
 			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(217,112,33,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
+				<heatPerSecond>6</heatPerSecond>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
+				<fuelConsumptionRate>66</fuelConsumptionRate>
+				<fuelCapacity>700</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconPath>Things/Wood/MegageneratorTier4_Wood_MenuIcon</uiIconPath>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Wood/Megagenerator_CoreShield_Basic_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier1_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier2_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Core_Basic</texture>
+					</li>
+					
+					<li>
+						<texture>Things/Wood/Megagenerator_CoreShield_Basic</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier1_Wood</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier2_Wood</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood</texture>
+					</li>
+				</graphics>
+			</li>
+			
 		</modExtensions>
 	</ThingDef>
 </Defs>

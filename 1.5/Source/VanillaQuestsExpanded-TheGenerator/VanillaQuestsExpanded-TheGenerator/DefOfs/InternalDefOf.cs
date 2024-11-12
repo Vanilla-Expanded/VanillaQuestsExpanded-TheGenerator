@@ -17,11 +17,19 @@ namespace VanillaQuestsExpandedTheGenerator
             DefOfHelper.EnsureInitializedInCtor(typeof(InternalDefOf));
         }
 
+        public static ThingDef VQE_GenetronComponent;
+
+        public static ThingDef VQE_GenetronJunk;
+        public static ThingDef VQE_ChunkProjectile;
+
         public static ThingDef VQE_Genetron_Basic;
         public static ThingDef VQE_Genetron_WoodFired;
         public static ThingDef VQE_Genetron_WoodFueled;
         public static ThingDef VQE_Genetron_WoodPowered;
+        public static ThingDef VQE_Genetron_WoodBlasting;
 
         public static HediffDef VQE_StudiedAncientGenetron;
+
+        public static JobDef VQE_FixCriticallyBrokenDownBuilding;
     }
 }
