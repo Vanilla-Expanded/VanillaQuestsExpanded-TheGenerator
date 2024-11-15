@@ -12,8 +12,16 @@ namespace VanillaQuestsExpandedTheGenerator
         Building_GenetronOverdrive building;
        
         private CompFlickable flickComp;
-        float multiplier = 1;
+        public float overdriveMultiplier = 1;
+        public float tuningMultiplier = 1;
+        public int maxTuningMultiplierTimer = 0;
         new public CompProperties_RefuelableWithOverdrive Props => (CompProperties_RefuelableWithOverdrive)props;
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref this.tuningMultiplier, "tuningMultiplier", 1, false);
+        }
 
         public override void Initialize(CompProperties props)
         {
@@ -56,10 +64,10 @@ namespace VanillaQuestsExpandedTheGenerator
                 
                 if (building.overdrive)
                 {
-                    multiplier = 3;
+                    overdriveMultiplier = 3;
                 }
-                else { multiplier = 1; }
-                return (Props.fuelConsumptionRate * multiplier) / 60000f;
+                else { overdriveMultiplier = 1; }
+                return (Props.fuelConsumptionRate * overdriveMultiplier * tuningMultiplier) / 60000f;
             }    
         }
         
@@ -75,6 +83,11 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 ConsumeFuel(Props.fuelConsumptionPerTickInRain);
             }
+            if(tuningMultiplier == 2 && HasFuel)
+            {
+                maxTuningMultiplierTimer++;
+            }
+            else { maxTuningMultiplierTimer = 0; }
         }
 
         public override string CompInspectStringExtra()
@@ -86,9 +99,9 @@ namespace VanillaQuestsExpandedTheGenerator
             string text = Props.FuelLabel + ": " + Fuel.ToStringDecimalIfSmall() + " / " + Props.fuelCapacity.ToStringDecimalIfSmall();
             if (!Props.consumeFuelOnlyWhenUsed && HasFuel)
             {
-                int numTicks = (int)(Fuel / Props.fuelConsumptionRate * 60000f / multiplier);
+                int numTicks = (int)(Fuel / Props.fuelConsumptionRate * 60000f / (overdriveMultiplier* tuningMultiplier));
                 text = text + " (" + numTicks.ToStringTicksToPeriod() + ")";
-                if (multiplier != 1)
+                if (overdriveMultiplier != 1)
                 {
                     text = text + " ("+"VQE_Overdrive".Translate()+")";
                 }

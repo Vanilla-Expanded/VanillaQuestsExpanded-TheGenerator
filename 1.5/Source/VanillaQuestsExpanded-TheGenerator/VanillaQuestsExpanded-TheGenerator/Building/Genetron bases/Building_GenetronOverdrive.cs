@@ -5,10 +5,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
-using static HarmonyLib.Code;
-using Verse.Noise;
-using System.Collections;
-using static UnityEngine.GraphicsBuffer;
+
 
 namespace VanillaQuestsExpandedTheGenerator
 {
@@ -188,7 +185,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             yield return command_Action;
 
-            if (Prefs.DevMode)
+            if (DebugSettings.ShowDevGizmos)
             {
 
                 Command_Action command_Action3 = new Command_Action();

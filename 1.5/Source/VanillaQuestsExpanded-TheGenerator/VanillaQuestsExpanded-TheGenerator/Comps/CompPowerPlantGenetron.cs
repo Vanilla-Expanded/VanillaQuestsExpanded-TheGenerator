@@ -5,13 +5,16 @@ namespace VanillaQuestsExpandedTheGenerator
 {
     public class CompPowerPlantGenetron : CompPowerPlant
     {
-        Building_GenetronOverdrive building;
+        public Building_GenetronOverdrive building;
+        public CompRefuelableWithOverdrive compRefuelableWithOverdrive;
+
         new public CompProperties_PowerGenetron Props => (CompProperties_PowerGenetron)props;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
             building = this.parent as Building_GenetronOverdrive;
+            compRefuelableWithOverdrive = this.parent.TryGetComp<CompRefuelableWithOverdrive>();
         }
 
         public override void CompTick()
@@ -30,13 +33,21 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                float multiplier = 1;
+                //Overdrive multiplier
+                float overdriveMultiplier = 1;
                 if(building?.overdrive == true)
                 {
-                    multiplier = 2;
+                    overdriveMultiplier = 2;
                 }
-               
-                base.PowerOutput = DesiredPowerOutput * multiplier;
+
+                //Tuning multiplier
+                float tuningMultiplier = 1;
+                if (compRefuelableWithOverdrive != null)
+                {
+                    tuningMultiplier = compRefuelableWithOverdrive.tuningMultiplier;
+                }
+                
+                base.PowerOutput = DesiredPowerOutput * overdriveMultiplier * tuningMultiplier;
             }
         }
 

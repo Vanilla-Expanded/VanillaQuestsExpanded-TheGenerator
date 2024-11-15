@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
-using static HarmonyLib.Code;
+
 
 namespace VanillaQuestsExpandedTheGenerator
 {
@@ -130,7 +130,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 yield return c;
             }
 
-            if (Prefs.DevMode)
+            if (DebugSettings.ShowDevGizmos)
             {
                 Command_Action command_Action = new Command_Action();
                 command_Action.defaultLabel = "Set Running Time to 100 days";

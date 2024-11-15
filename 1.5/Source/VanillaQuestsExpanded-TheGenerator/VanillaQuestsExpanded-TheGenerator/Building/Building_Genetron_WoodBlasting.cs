@@ -8,7 +8,7 @@ using RimWorld;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class Building_Genetron_WoodBlasting : Building_GenetronOverdrive
+    public class Building_Genetron_WoodBlasting : Building_GenetronTuning
     {
 
      
