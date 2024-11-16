@@ -53,10 +53,10 @@ namespace VanillaQuestsExpandedTheGenerator
 
             if (Widgets.ButtonImage(new Rect(outRect.xMax - 18f - 4f, 2f, 18f, 18f), TexButton.CloseXSmall))
             {
-                CompRefuelableWithOverdrive comp = building.TryGetComp<CompRefuelableWithOverdrive>();
-                if (comp != null)
+               
+                if (building?.compRefuelableWithOverdrive != null)
                 {
-                    comp.tuningMultiplier = building.tuningMultiplier/100;
+                    building.compRefuelableWithOverdrive.tuningMultiplier = building.tuningMultiplier/100;
                 }
 
                 Close();

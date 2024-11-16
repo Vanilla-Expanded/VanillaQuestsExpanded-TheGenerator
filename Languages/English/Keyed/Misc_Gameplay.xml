@@ -16,6 +16,9 @@
 	<VQE_InstallWoodBlastingGenetronDesc>Install large, adjustable internal cylinders that allow altering the burn rate of the core, adjusting the power generated to fit the needs of the colony.</VQE_InstallWoodBlastingGenetronDesc>
 	<VQE_InstallWoodBlastingGenetronDescExpanded>Install large, adjustable internal cylinders that allow altering the burn rate of the core, adjusting the power generated to fit the needs of the colony.\n\nGenetron needs to operate uninterrupted for 30 days (time at the moment: {0})</VQE_InstallWoodBlastingGenetronDescExpanded>
 	
+	<VQE_InstallChemfuelPoweredGenetron>install chemfuel-powered genetron core</VQE_InstallChemfuelPoweredGenetron>
+	<VQE_InstallChemfuelPoweredGenetronDesc>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.</VQE_InstallChemfuelPoweredGenetronDesc>
+	<VQE_InstallChemfuelPoweredGenetronDescExpanded>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.\n\nGenetron needs to operate at 200% using genetron tuning uninterrupted for 12 days. (time at the moment: {0})</VQE_InstallChemfuelPoweredGenetronDescExpanded>
 	
 	
 	
@@ -34,4 +37,5 @@
 	<VQE_NeedsStudyGeneric>This colonist can't repair critical breakdowns, as they did not study an ancient genetron</VQE_NeedsStudyGeneric>
 	<VQE_Overdrive>Reactor overdrive</VQE_Overdrive>
 	<VQE_CriticalBreakdown>Critical breakdown</VQE_CriticalBreakdown>
+	<VQE_CurrentMaintenance>Genetron maintenance: {0}</VQE_CurrentMaintenance>
 </LanguageData>

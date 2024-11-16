@@ -21,6 +21,7 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.PostExposeData();
             Scribe_Values.Look(ref this.tuningMultiplier, "tuningMultiplier", 1, false);
+            Scribe_Values.Look(ref this.maxTuningMultiplierTimer, "maxTuningMultiplierTimer", 0, false);
         }
 
         public override void Initialize(CompProperties props)

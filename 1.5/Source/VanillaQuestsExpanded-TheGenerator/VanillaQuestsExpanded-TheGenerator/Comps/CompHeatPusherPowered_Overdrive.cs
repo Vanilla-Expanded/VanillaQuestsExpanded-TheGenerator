@@ -7,8 +7,6 @@ namespace VanillaQuestsExpandedTheGenerator
     {
         protected CompPowerTrader powerComp;
 
-        protected CompRefuelableWithOverdrive refuelableComp;
-
         protected CompBreakdownable breakdownableComp;
 
         public Building_GenetronOverdrive building;
@@ -17,7 +15,7 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             get
             {
-                if (!base.ShouldPushHeatNow || !FlickUtility.WantsToBeOn(parent) || (powerComp != null && !powerComp.PowerOn) || (refuelableComp != null && !refuelableComp.HasFuel) || (breakdownableComp != null && breakdownableComp.BrokenDown))
+                if (!base.ShouldPushHeatNow || !FlickUtility.WantsToBeOn(parent) || (powerComp != null && !powerComp.PowerOn) || (building?.compRefuelableWithOverdrive != null && !building.compRefuelableWithOverdrive.HasFuel) || (breakdownableComp != null && breakdownableComp.BrokenDown))
                 {
                     return false;
                 }
@@ -41,8 +39,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            powerComp = parent.GetComp<CompPowerTrader>();
-            refuelableComp = parent.GetComp<CompRefuelableWithOverdrive>();
+            powerComp = parent.GetComp<CompPowerTrader>();         
             breakdownableComp = parent.GetComp<CompBreakdownable>();
             building = parent as Building_GenetronOverdrive;
         }

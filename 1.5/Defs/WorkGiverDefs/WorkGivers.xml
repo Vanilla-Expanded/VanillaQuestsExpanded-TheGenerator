@@ -27,4 +27,17 @@
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>VQE_MaintainGenetron</defName>
+		<label>maintain genetron</label>
+		<giverClass>VanillaQuestsExpandedTheGenerator.WorkGiver_MaintainGenetron</giverClass>
+		<workType>Construction</workType>
+		<verb>maintain</verb>
+		<gerund>maintaining</gerund>
+		<priorityInType>19</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 </Defs>

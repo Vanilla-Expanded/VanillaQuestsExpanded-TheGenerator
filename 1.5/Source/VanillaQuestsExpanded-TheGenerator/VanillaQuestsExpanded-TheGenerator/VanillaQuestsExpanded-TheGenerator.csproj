@@ -292,9 +292,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\JobDriver\JobDriver_FixCriticallyBrokenDownBuilding.cs" />
+    <Compile Include="AI\JobDriver\JobDriver_MaintainGenetron.cs" />
     <Compile Include="AI\WorkGiver\WorkGiver_FixCriticallyBreakdown.cs" />
+    <Compile Include="AI\WorkGiver\WorkGiver_MaintainGenetron.cs" />
     <Compile Include="AI\WorkGiver\WorkGiver_RefuelWithOverdrive.cs" />
+    <Compile Include="Building\Building_Genetron_ChemfuelPowered.cs" />
     <Compile Include="Building\Building_Genetron_WoodBlasting.cs" />
+    <Compile Include="Building\Genetron bases\Building_GenetronWithMaintenance.cs" />
     <Compile Include="Building\Genetron bases\Building_GenetronTuning.cs" />
     <Compile Include="Building\Genetron bases\Building_GenetronOverdrive.cs" />
     <Compile Include="Building\Genetron bases\Building_Genetron.cs" />

@@ -13,8 +13,7 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public float tuningMultiplier =1;
-        public CompRefuelable compRefuelable;
-
+       
         public override void ExposeData()
         {
             base.ExposeData();
@@ -43,7 +42,20 @@ namespace VanillaQuestsExpandedTheGenerator
                 };
             
             yield return command_Action;
+            if (DebugSettings.ShowDevGizmos)
+            {
 
+                Command_Action command_Action2 = new Command_Action();
+                command_Action2.defaultLabel = "Set time on 200% to 100 days";
+                command_Action2.action = delegate
+                {
+                    compRefuelableWithOverdrive.maxTuningMultiplierTimer = 6000000;
+                };
+                yield return command_Action2;
+               
+
+
+            }
 
 
         }

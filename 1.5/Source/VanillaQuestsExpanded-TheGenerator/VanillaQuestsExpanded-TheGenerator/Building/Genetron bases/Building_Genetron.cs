@@ -44,9 +44,15 @@ namespace VanillaQuestsExpandedTheGenerator
                 Building existingBuilding = list[i] as Building;
                 if (existingBuilding != this && existingBuilding is Building_Genetron)
                 {
-                    if (((Building_Genetron)existingBuilding).compRefuelable != null)
+                    Building_Genetron existingBuildingAsGenetron = (Building_Genetron)existingBuilding;
+
+                    if (existingBuildingAsGenetron.compRefuelable != null)
                     {
-                        compRefuelable.Refuel(((Building_Genetron)existingBuilding).compRefuelable.Fuel);
+                        if (existingBuildingAsGenetron.compRefuelable.Props.fuelFilter == compRefuelable.Props.fuelFilter)
+                        {
+                            compRefuelable.Refuel(existingBuildingAsGenetron.compRefuelable.Fuel);
+
+                        }
                     }
                     existingBuilding.Destroy();
                 }

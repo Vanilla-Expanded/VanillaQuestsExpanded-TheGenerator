@@ -20,6 +20,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public int overdriveCanBeReUsedTime = 1800000; // 30 days
         public int overdriveCanBeReUsedTimer = 0;
         public bool criticalBreakdown = false;
+        public CompRefuelableWithOverdrive compRefuelableWithOverdrive;
 
         public override void ExposeData()
         {
@@ -36,6 +37,7 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.SpawnSetup(map, respawningAfterLoad);
             steamSprayer = new IntermittentSteamSprayer_Constant(this);
+            compRefuelableWithOverdrive = this.TryGetComp<CompRefuelableWithOverdrive>();
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
