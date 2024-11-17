@@ -131,4 +131,136 @@
 			
 		</modExtensions>
 	</ThingDef>
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_ChemfuelBoosted</defName>
+		<label>chemfuel-boosted genetron</label>
+		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelBoosted</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<designationCategory>Power</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>16000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>12430</MarketValue>
+			<Beauty>-30</Beauty>
+			<VQE_GenetronMaintenanceLoss>0.05</VQE_GenetronMaintenanceLoss>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>120</Steel>
+			<Plasteel>30</Plasteel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<VQE_GenetronComponent>2</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-8400</basePowerConsumption>
+				<powerWithoutFuel>3600</powerWithoutFuel>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(80,112,180,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
+				<heatPerSecond>12</heatPerSecond>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
+				<fuelConsumptionRate>18</fuelConsumptionRate>
+				<fuelCapacity>300</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconPath>Things/Chemfuel/MegageneratorTier2_Chemfuel_MenuIcon</uiIconPath>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier2_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved</texture>
+					</li>
+					
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier2_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood</texture>
+					</li>
+				</graphics>
+			</li>
+			
+		</modExtensions>
+	</ThingDef>
 </Defs>

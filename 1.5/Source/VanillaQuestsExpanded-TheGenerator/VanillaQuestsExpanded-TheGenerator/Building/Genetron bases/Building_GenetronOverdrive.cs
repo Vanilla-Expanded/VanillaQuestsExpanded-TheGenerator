@@ -21,6 +21,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public int overdriveCanBeReUsedTimer = 0;
         public bool criticalBreakdown = false;
         public CompRefuelableWithOverdrive compRefuelableWithOverdrive;
+        public bool completedOverdriveSuccessfully = false;
 
         public override void ExposeData()
         {
@@ -31,6 +32,7 @@ namespace VanillaQuestsExpandedTheGenerator
             Scribe_Values.Look(ref this.overdriveTimer, "overdriveTimer", 0, false);
             Scribe_Values.Look(ref this.overdriveCanBeReUsedTimer, "overdriveCanBeReUsedTimer", 0, false);
             Scribe_Values.Look(ref this.criticalBreakdown, "criticalBreakdown", false, false);
+            Scribe_Values.Look(ref this.completedOverdriveSuccessfully, "completedOverdriveSuccessfully", false, false);
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -69,6 +71,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 if (overdriveTimer > overdriveTime)
                 {
                     Signal_OverdriveEnded();
+                    completedOverdriveSuccessfully = true;
                 }
                 if (compRefuelable?.HasFuel == false)
                 {

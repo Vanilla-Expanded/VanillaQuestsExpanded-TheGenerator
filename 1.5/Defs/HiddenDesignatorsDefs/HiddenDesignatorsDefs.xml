@@ -10,6 +10,7 @@
 			<li>VQE_Genetron_WoodPowered</li>
 			<li>VQE_Genetron_WoodBlasting</li>
 			<li>VQE_Genetron_ChemfuelPowered</li>
+			<li>VQE_Genetron_ChemfuelBoosted</li>
 		
 		</hiddenDesignators>							
 	</VanillaQuestsExpandedTheGenerator.HiddenDesignatorsDef>

@@ -20,7 +20,28 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return c;
             }
-           
+            Command_Action command_Action = new Command_Action();
+
+            if (completedOverdriveSuccessfully)
+            {
+                command_Action.defaultDesc = "VQE_InstallChemfuelBoostedGenetronDesc".Translate();
+                command_Action.defaultLabel = "VQE_InstallChemfuelBoostedGenetron".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_5", true);
+                command_Action.hotKey = KeyBindingDefOf.Misc1;
+                command_Action.action = delegate
+                {
+                    GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_ChemfuelBoosted, Position, Map, Rotation, Faction.OfPlayer, null);
+                };
+            }
+            else
+            {
+                command_Action.defaultDesc = "VQE_InstallChemfuelBoostedGenetronDescExpanded".Translate(overdriveTimer.ToStringTicksToPeriod());
+                command_Action.defaultLabel = "VQE_InstallChemfuelBoostedGenetron".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_6", true);
+                command_Action.Disabled = true;
+            }
+
+            yield return command_Action;
 
         }
 

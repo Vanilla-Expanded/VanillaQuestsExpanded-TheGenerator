@@ -20,7 +20,9 @@
 	<VQE_InstallChemfuelPoweredGenetronDesc>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.</VQE_InstallChemfuelPoweredGenetronDesc>
 	<VQE_InstallChemfuelPoweredGenetronDescExpanded>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.\n\nGenetron needs to operate at 200% using genetron tuning uninterrupted for 12 days. (time at the moment: {0})</VQE_InstallChemfuelPoweredGenetronDescExpanded>
 	
-	
+	<VQE_InstallChemfuelBoostedGenetron>install hyperburn chamber</VQE_InstallChemfuelBoostedGenetron>
+	<VQE_InstallChemfuelBoostedGenetronDesc>Install a hyperburn chamber to superheat the combustion process and extract maximum energy from each unit of fuel.</VQE_InstallChemfuelBoostedGenetronDesc>
+	<VQE_InstallChemfuelBoostedGenetronDescExpanded>Install a hyperburn chamber to superheat the combustion process and extract maximum energy from each unit of fuel.\n\nGenetron overdrive needs to be active for 5 days. (time at the moment: {0})</VQE_InstallChemfuelBoostedGenetronDescExpanded>
 	
 	
 	
@@ -38,4 +40,8 @@
 	<VQE_Overdrive>Reactor overdrive</VQE_Overdrive>
 	<VQE_CriticalBreakdown>Critical breakdown</VQE_CriticalBreakdown>
 	<VQE_CurrentMaintenance>Genetron maintenance: {0}</VQE_CurrentMaintenance>
+	<VQE_Alert_LowMaintenance>Genetron maintenance low</VQE_Alert_LowMaintenance>
+	<VQE_Alert_LowMaintenance_Desc>Genetron requires maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_LowMaintenance_Desc>
+	<VQE_Alert_CriticalMaintenance>Genetron maintenance critical</VQE_Alert_CriticalMaintenance>
+	<VQE_Alert_CriticalMaintenance_Desc>Genetron requires urgent maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_CriticalMaintenance_Desc>
 </LanguageData>

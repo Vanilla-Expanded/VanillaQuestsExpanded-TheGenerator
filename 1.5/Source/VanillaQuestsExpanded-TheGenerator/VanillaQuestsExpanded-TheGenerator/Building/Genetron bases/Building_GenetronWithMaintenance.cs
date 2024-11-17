@@ -57,9 +57,15 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void Tick()
         {
             base.Tick();
-            if (this.IsHashIntervalTick(100))
+            if (this.IsHashIntervalTick(100)&& maintenance >0)
             {
                 maintenance -= cachedMaintenanceLoss / 600;
+
+                if(maintenance <= 0)
+                {
+                    maintenance = 0.01f;
+                    Signal_CriticalBreakdown();
+                }
             }
         }
 
