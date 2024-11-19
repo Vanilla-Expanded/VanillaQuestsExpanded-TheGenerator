@@ -13,12 +13,14 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public float maintenance = 1;
+        public float maintenanceMultiplier = 1;
         public float cachedMaintenanceLoss = 0;
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref this.maintenance, "maintenance", 1, false);
+            Scribe_Values.Look(ref this.maintenanceMultiplier, "maintenanceMultiplier", 1, false);
             Scribe_Values.Look(ref this.cachedMaintenanceLoss, "cachedMaintenanceLoss", 0, false);
 
         }
@@ -36,22 +38,24 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            base.Destroy(mode);
             Genetron_MapComponent mapComp = Map.GetComponent<Genetron_MapComponent>();
             if (mapComp != null)
             {
                 mapComp.RemoveMaintainableFromMap(this);
             }
+            base.Destroy(mode);
+            
         }
 
         public override void Kill(DamageInfo? dinfo = null, Hediff exactCulprit = null)
         {
-            base.Kill(dinfo, exactCulprit);
             Genetron_MapComponent mapComp = Map.GetComponent<Genetron_MapComponent>();
             if (mapComp != null)
             {
                 mapComp.RemoveMaintainableFromMap(this);
             }
+            base.Kill(dinfo, exactCulprit);
+            
         }
 
         public override void Tick()
@@ -59,7 +63,7 @@ namespace VanillaQuestsExpandedTheGenerator
             base.Tick();
             if (this.IsHashIntervalTick(100)&& maintenance >0)
             {
-                maintenance -= cachedMaintenanceLoss / 600;
+                maintenance -= (cachedMaintenanceLoss / 600)* maintenanceMultiplier;
 
                 if(maintenance <= 0)
                 {

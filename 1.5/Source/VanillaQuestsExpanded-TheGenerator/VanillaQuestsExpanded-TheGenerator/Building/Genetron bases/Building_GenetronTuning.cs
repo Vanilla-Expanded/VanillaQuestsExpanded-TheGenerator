@@ -9,17 +9,8 @@ using RimWorld;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class Building_GenetronTuning  : Building_GenetronOverdrive
+    public class Building_GenetronTuning : Building_GenetronOverdrive
     {
-
-        public float tuningMultiplier =1;
-       
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref this.tuningMultiplier, "tuningMultiplier", 1, false);
-
-        }       
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -30,7 +21,20 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             Command_Action command_Action = new Command_Action();
 
-           
+            if (cachedDetailsExtension?.fineTuningControl == true)
+            {
+                command_Action.defaultDesc = "VQE_GenetronFineTuningDesc".Translate();
+                command_Action.defaultLabel = "VQE_GenetronFineTuning".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/FineTuneGenerator_Gizmo", true);
+                command_Action.hotKey = KeyBindingDefOf.Misc1;
+                command_Action.action = delegate
+                {
+                    Window_FineTuning tuningWindow = new Window_FineTuning(this as Building_GenetronWithMaintenance);
+                    Find.WindowStack.Add(tuningWindow);
+                };
+            }
+            else
+            {
                 command_Action.defaultDesc = "VQE_GenetronTuningDesc".Translate();
                 command_Action.defaultLabel = "VQE_GenetronTuning".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/TuneGenerator_Gizmo", true);
@@ -40,7 +44,10 @@ namespace VanillaQuestsExpandedTheGenerator
                     Window_Tuning tuningWindow = new Window_Tuning(this);
                     Find.WindowStack.Add(tuningWindow);
                 };
+            }
+
             
+
             yield return command_Action;
             if (DebugSettings.ShowDevGizmos)
             {
@@ -52,7 +59,7 @@ namespace VanillaQuestsExpandedTheGenerator
                     compRefuelableWithOverdrive.maxTuningMultiplierTimer = 6000000;
                 };
                 yield return command_Action2;
-               
+
 
 
             }
@@ -60,7 +67,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         }
 
-      
+
 
 
 

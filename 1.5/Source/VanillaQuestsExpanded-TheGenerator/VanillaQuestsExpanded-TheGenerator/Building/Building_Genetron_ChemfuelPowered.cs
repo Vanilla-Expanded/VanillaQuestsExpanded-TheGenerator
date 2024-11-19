@@ -26,7 +26,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 command_Action.defaultDesc = "VQE_InstallChemfuelBoostedGenetronDesc".Translate();
                 command_Action.defaultLabel = "VQE_InstallChemfuelBoostedGenetron".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_5", true);
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_6", true);
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {

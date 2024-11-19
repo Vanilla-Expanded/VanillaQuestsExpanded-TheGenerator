@@ -13,6 +13,7 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public GenetronGraphicsExtension cachedGraphicsExtension;
+        public ExtraGenetronParameters cachedDetailsExtension;
         public Dictionary<Graphic_Single, Tuple<bool, Vector2>> cachedGraphics = new Dictionary<Graphic_Single, Tuple<bool, Vector2>>();
         public CompPowerPlantGenetron compPower;
         public CompRefuelable compRefuelable;
@@ -48,11 +49,16 @@ namespace VanillaQuestsExpandedTheGenerator
 
                     if (existingBuildingAsGenetron.compRefuelable != null)
                     {
-                        if (existingBuildingAsGenetron.compRefuelable.Props.fuelFilter == compRefuelable.Props.fuelFilter)
+                        foreach(ThingDef fuel in existingBuildingAsGenetron.compRefuelable.Props.fuelFilter.AllowedThingDefs)
                         {
-                            compRefuelable.Refuel(existingBuildingAsGenetron.compRefuelable.Fuel);
+                            if (compRefuelable.Props.fuelFilter.AllowedThingDefs.Contains(fuel))
+                            {
+                                compRefuelable.Refuel(existingBuildingAsGenetron.compRefuelable.Fuel);
+                                break;
+                            }
+                        } 
 
-                        }
+
                     }
                     existingBuilding.Destroy();
                 }
@@ -66,7 +72,9 @@ namespace VanillaQuestsExpandedTheGenerator
                 LongEventHandler.ExecuteWhenFinished(delegate { StoreGraphics(); });
 
             }
-            
+
+            cachedDetailsExtension = this.def.GetModExtension<ExtraGenetronParameters>();
+
             compPower = this.TryGetComp<CompPowerPlantGenetron>();
 
         }

@@ -29,6 +29,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public static ThingDef VQE_Genetron_WoodBlasting;
         public static ThingDef VQE_Genetron_ChemfuelPowered;
         public static ThingDef VQE_Genetron_ChemfuelBoosted;
+        public static ThingDef VQE_Genetron_ChemfuelCharged;
 
         public static HediffDef VQE_StudiedAncientGenetron;
 

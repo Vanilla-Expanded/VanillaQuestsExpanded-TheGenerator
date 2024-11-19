@@ -14,6 +14,7 @@ namespace VanillaQuestsExpandedTheGenerator
         private CompFlickable flickComp;
         public float overdriveMultiplier = 1;
         public float tuningMultiplier = 1;
+       
         public int maxTuningMultiplierTimer = 0;
         new public CompProperties_RefuelableWithOverdrive Props => (CompProperties_RefuelableWithOverdrive)props;
 

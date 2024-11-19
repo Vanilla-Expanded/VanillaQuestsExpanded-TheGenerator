@@ -46,23 +46,19 @@ namespace VanillaQuestsExpandedTheGenerator
             Widgets.Label(IntroLabel, "VQE_GenetronTuning".Translate().CapitalizeFirst());
             Text.Font = GameFont.Small;
             var IntroLabel2 = new Rect(0, 40, 300, 32f);
-            Widgets.Label(IntroLabel2, "VQE_GenetronTuningSet".Translate(building.tuningMultiplier).CapitalizeFirst());
-            var IntroLabel3 = new Rect(0, 60, 300, 32f);
-            
-            Widgets.Label(IntroLabel3, "VQE_GenetronTuningProjected".Translate((0f - building.compPower.Props.PowerConsumption) * building.tuningMultiplier/100).CapitalizeFirst());
+            Widgets.Label(IntroLabel2, "VQE_GenetronTuningProjected".Translate((0f - building.compPower.Props.PowerConsumption) * building.compRefuelableWithOverdrive.tuningMultiplier).CapitalizeFirst());
+            var IntroLabel3 = new Rect(0, 60, 300, 32f);       
+            Widgets.Label(IntroLabel3, "VQE_GenetronTuningSet".Translate(building.compRefuelableWithOverdrive.tuningMultiplier * 100).CapitalizeFirst());
 
             if (Widgets.ButtonImage(new Rect(outRect.xMax - 18f - 4f, 2f, 18f, 18f), TexButton.CloseXSmall))
             {
                
-                if (building?.compRefuelableWithOverdrive != null)
-                {
-                    building.compRefuelableWithOverdrive.tuningMultiplier = building.tuningMultiplier/100;
-                }
+                
 
                 Close();
             }
-            outRect.yMin += 60f;
-            Widgets.HorizontalSlider(outRect,ref building.tuningMultiplier,new FloatRange(0,200));
+            var SliderContainer1 = new Rect(0, 120, 450, 32f);
+            SettingsHelper.HorizontalSliderLabeled(SliderContainer1, ref building.compRefuelableWithOverdrive.tuningMultiplier, new FloatRange(0,2),"0%","200%");
 
         }
     }

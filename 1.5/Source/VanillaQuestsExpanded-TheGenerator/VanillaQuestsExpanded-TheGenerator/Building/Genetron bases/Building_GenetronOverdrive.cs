@@ -48,7 +48,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
             if (criticalBreakdown)
             {
-
                 Vector3 drawPos = DrawPos + new Vector3(0, 0, 2.6f);
                 drawPos.y = AltitudeLayer.MetaOverlays.AltitudeFor() + 0.181818187f;
                 float num = ((float)Math.Sin((double)((Time.realtimeSinceStartup + 397f * (float)(thingIDNumber % 571)) * 4f)) + 1f) * 0.5f;
@@ -56,7 +55,6 @@ namespace VanillaQuestsExpandedTheGenerator
                 Material material = FadedMaterialPool.FadedVersionOf(GraphicsCache.CriticalBreakdown, num);
                 Graphics.DrawMesh(MeshPool.plane08, drawPos, Quaternion.identity, material, 0);
             }
-
         }
 
         public override void Tick()
@@ -146,9 +144,7 @@ namespace VanillaQuestsExpandedTheGenerator
                     var projectile = (Projectile)GenSpawn.Spawn(InternalDefOf.VQE_ChunkProjectile, randomCell, Map);
                     projectile.Launch(this, result, result, ProjectileHitFlags.None, false, null);
                 }
-
             }
-            
         }
 
         public void Signal_CriticalBreakdownRepaired()
@@ -192,7 +188,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
             if (DebugSettings.ShowDevGizmos)
             {
-
                 Command_Action command_Action3 = new Command_Action();
                 command_Action3.defaultLabel = "Reset overdrive cooldown";
                 command_Action3.action = delegate
@@ -207,12 +202,14 @@ namespace VanillaQuestsExpandedTheGenerator
                     Signal_OverdriveEnded();
                 };
                 yield return command_Action4;
-
-
-
+                Command_Action command_Action5 = new Command_Action();
+                command_Action5.defaultLabel = "Set overdrive successful for 5 days";
+                command_Action5.action = delegate
+                {
+                    completedOverdriveSuccessfully = true;
+                };
+                yield return command_Action5;
             }
-
-
         }
 
         public override string GetInspectString()
