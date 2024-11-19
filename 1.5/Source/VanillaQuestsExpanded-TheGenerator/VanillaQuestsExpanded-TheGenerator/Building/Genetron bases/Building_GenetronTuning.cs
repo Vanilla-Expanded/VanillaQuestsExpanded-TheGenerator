@@ -20,7 +20,19 @@ namespace VanillaQuestsExpandedTheGenerator
                 yield return c;
             }
             Command_Action command_Action = new Command_Action();
-
+            if (cachedDetailsExtension?.steamTuningControl == true)
+            {
+                command_Action.defaultDesc = "VQE_GenetronSteamTuningDesc".Translate();
+                command_Action.defaultLabel = "VQE_GenetronSteamTuning".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/TunePressure_Gizmo", true);
+                command_Action.hotKey = KeyBindingDefOf.Misc1;
+                command_Action.action = delegate
+                {
+                    /*Window_FineTuning tuningWindow = new Window_FineTuning(this as Building_GenetronWithMaintenance);
+                    Find.WindowStack.Add(tuningWindow);*/
+                };
+            }
+            else
             if (cachedDetailsExtension?.fineTuningControl == true)
             {
                 command_Action.defaultDesc = "VQE_GenetronFineTuningDesc".Translate();

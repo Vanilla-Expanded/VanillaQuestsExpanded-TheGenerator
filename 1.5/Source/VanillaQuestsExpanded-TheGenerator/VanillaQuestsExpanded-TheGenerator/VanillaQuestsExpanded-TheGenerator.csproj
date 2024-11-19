@@ -298,10 +298,12 @@
     <Compile Include="AI\WorkGiver\WorkGiver_RefuelWithOverdrive.cs" />
     <Compile Include="Alerts\Alert_CriticalMaintenance.cs" />
     <Compile Include="Alerts\Alert_LowMaintenance.cs" />
+    <Compile Include="Building\Building_Genetron_ChemfuelFortified.cs" />
     <Compile Include="Building\Building_Genetron_ChemfuelCharged.cs" />
     <Compile Include="Building\Building_Genetron_ChemfuelBoosted.cs" />
     <Compile Include="Building\Building_Genetron_ChemfuelPowered.cs" />
     <Compile Include="Building\Building_Genetron_WoodBlasting.cs" />
+    <Compile Include="Building\Genetron bases\Building_GenetronWithCalibration.cs" />
     <Compile Include="Building\Genetron bases\Building_GenetronWithPowerSurge.cs" />
     <Compile Include="Building\Genetron bases\Building_GenetronWithMaintenance.cs" />
     <Compile Include="Building\Genetron bases\Building_GenetronTuning.cs" />

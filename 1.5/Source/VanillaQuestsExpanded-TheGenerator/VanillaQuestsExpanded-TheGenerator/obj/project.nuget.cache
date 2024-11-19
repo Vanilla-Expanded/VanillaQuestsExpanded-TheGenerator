@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Yp/01s9viJOxCK7PpvwA9BVAf5WFf1yeGJRevrjrpWJKlst/BpB+nIBs98S5PiroCCL/SyKQJuv5epuD1SSpwA==",
+  "dgSpecHash": "14ZVrjw1y08=",
   "success": true,
-  "projectFilePath": "E:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj",
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+    "C:\\Users\\Sarg\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
   ],
   "logs": []
 }

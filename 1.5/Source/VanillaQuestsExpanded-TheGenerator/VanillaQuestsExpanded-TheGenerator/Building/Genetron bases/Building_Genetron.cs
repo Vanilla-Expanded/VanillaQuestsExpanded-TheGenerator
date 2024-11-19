@@ -60,6 +60,10 @@ namespace VanillaQuestsExpandedTheGenerator
 
 
                     }
+                    if (existingBuildingAsGenetron.compPower != null)
+                    {
+                        compPower.calibrationCounter = existingBuildingAsGenetron.compPower.calibrationCounter;
+                    }
                     existingBuilding.Destroy();
                 }
             }

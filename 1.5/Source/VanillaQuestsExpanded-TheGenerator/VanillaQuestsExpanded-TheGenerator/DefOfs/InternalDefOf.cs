@@ -30,6 +30,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public static ThingDef VQE_Genetron_ChemfuelPowered;
         public static ThingDef VQE_Genetron_ChemfuelBoosted;
         public static ThingDef VQE_Genetron_ChemfuelCharged;
+        public static ThingDef VQE_Genetron_ChemfuelFortified;
 
         public static HediffDef VQE_StudiedAncientGenetron;
 
@@ -37,5 +38,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public static JobDef VQE_MaintainGenetron;
 
         public static StatDef VQE_GenetronMaintenanceLoss;
+
+        public static ResearchProjectDef BiofuelRefining;
     }
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+
+	<!-- Wood genetron upgrades -->
 	<VQE_InstallWoodFiredGenetron>install wood-fired genetron core</VQE_InstallWoodFiredGenetron>
 	<VQE_InstallWoodFiredGenetronDesc>Install wood-fueled furnaces that greatly improve the power output of the genetron core, but will change the generator to require wood to operate.</VQE_InstallWoodFiredGenetronDesc>
 	<VQE_InstallWoodFiredGenetronDescExpanded>Install wood-fueled furnaces that greatly improve the power output of the genetron core, but will change the generator to require wood to operate.\n\nGenetron needs to operate uninterrupted for 3 days (time at the moment: {0})</VQE_InstallWoodFiredGenetronDescExpanded>
@@ -16,9 +18,11 @@
 	<VQE_InstallWoodBlastingGenetronDesc>Install large, adjustable internal cylinders that allow altering the burn rate of the core, adjusting the power generated to fit the needs of the colony.</VQE_InstallWoodBlastingGenetronDesc>
 	<VQE_InstallWoodBlastingGenetronDescExpanded>Install large, adjustable internal cylinders that allow altering the burn rate of the core, adjusting the power generated to fit the needs of the colony.\n\nGenetron needs to operate uninterrupted for 30 days (time at the moment: {0})</VQE_InstallWoodBlastingGenetronDescExpanded>
 	
+	<!-- Chemfuel genetron upgrades -->
 	<VQE_InstallChemfuelPoweredGenetron>install chemfuel-powered genetron core</VQE_InstallChemfuelPoweredGenetron>
 	<VQE_InstallChemfuelPoweredGenetronDesc>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.</VQE_InstallChemfuelPoweredGenetronDesc>
 	<VQE_InstallChemfuelPoweredGenetronDescExpanded>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.\n\nGenetron needs to operate at 200% using genetron tuning uninterrupted for 12 days. (time at the moment: {0})</VQE_InstallChemfuelPoweredGenetronDescExpanded>
+	<VQE_InstallChemfuelPoweredGenetronDescNoResearch>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.\n\nRequires Biofuel refining research to be completed.</VQE_InstallChemfuelPoweredGenetronDescNoResearch>
 	
 	<VQE_InstallChemfuelBoostedGenetron>install hyperburn chamber</VQE_InstallChemfuelBoostedGenetron>
 	<VQE_InstallChemfuelBoostedGenetronDesc>Install a hyperburn chamber to superheat the combustion process and extract maximum energy from each unit of fuel.</VQE_InstallChemfuelBoostedGenetronDesc>
@@ -28,7 +32,11 @@
 	<VQE_InstallChemfuelChargedGenetronDesc>Install an adaptive fuel modulator to adjust fuel flow dynamically, matching power demands and optimizing fuel usage. This ensures extended runtime and peak efficiency without sacrificing energy output.</VQE_InstallChemfuelChargedGenetronDesc>
 	<VQE_InstallChemfuelChargedGenetronDescExpanded>Install an adaptive fuel modulator to adjust fuel flow dynamically, matching power demands and optimizing fuel usage. This ensures extended runtime and peak efficiency without sacrificing energy output.\n\nPower surge needs to be activated 3 times. (activations at the moment: {0})</VQE_InstallChemfuelChargedGenetronDescExpanded>
 	
+	<VQE_InstallChemfuelFortifiedGenetron>install ignition stabilizer</VQE_InstallChemfuelFortifiedGenetron>
+	<VQE_InstallChemfuelFortifiedGenetronDesc>Install an ignition stabilizer gizmo to ensure consistent and steady combustion, maintaining optimal power output and reducing fluctuations in fuel consumption. This upgrade enhances the generator's reliability and fuel efficiency. The stabilizer can be calibrated to permanently improve the power output.</VQE_InstallChemfuelFortifiedGenetronDesc>
+	<VQE_InstallChemfuelFortifiedGenetronDescExpanded>Install an ignition stabilizer gizmo to ensure consistent and steady combustion, maintaining optimal power output and reducing fluctuations in fuel consumption. This upgrade enhances the generator's reliability and fuel efficiency. The stabilizer can be calibrated to permanently improve the power output.\n\nGenetron needs to burn 1000 fuel (fuel burned at the moment: {0})</VQE_InstallChemfuelFortifiedGenetronDescExpanded>
 	
+	<!-- Reactor abilities -->
 	<VQE_GenetronOverdrive>genetron overdrive</VQE_GenetronOverdrive>
 	<VQE_GenetronOverdriveDesc>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.</VQE_GenetronOverdriveDesc>
 	<VQE_GenetronOverdriveDescExtended>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.\n\nThe Overdrive has a 30 day cooldown. It will be ready again in {0}</VQE_GenetronOverdriveDescExtended>
@@ -47,6 +55,14 @@
 	<VQE_PowerSurgeDescExtended>nstantly vaporize half of the remaining fuel in the genetron to create a surge of power, refilling the batteries at the cost of a significant 25% maintenance reduction of the genetron. Power surge will temporarily disable nearby electronics.\n\nPower Surge has a 15 day cooldown. It will be ready again in {0}</VQE_PowerSurgeDescExtended>
 	<VQE_PowerSurgeDescNoMaintenance>Power surge cannot be activated: Genetron maintenance is too low (below 30%).</VQE_PowerSurgeDescNoMaintenance>
 	
+	<VQE_CalibrateEfficiency>calibrate efficiency</VQE_CalibrateEfficiency>
+	<VQE_CalibrateEfficiencyDesc>Set the genetron into a low-power mode to calibrate its efficiency. While the fuel consumption will not change in the low-power mode, upon completion of the calibration, the power output will permanently increase by 1%.</VQE_CalibrateEfficiencyDesc>
+	<VQE_CalibrateEfficiencyDescExtended>Set the genetron into a low-power mode to calibrate its efficiency. While the fuel consumption will not change in the low-power mode, upon completion of the calibration, the power output will permanently increase by 1%.\n\nThe efficiency calibration has a 5 day cooldown. It will be ready again in {0}</VQE_CalibrateEfficiencyDescExtended>
+	
+	<VQE_GenetronSteamTuning>pressure tuning</VQE_GenetronSteamTuning>
+	<VQE_GenetronSteamTuningDesc>Alter the pressure of the genetron, affecting the wear and tear of components and the power output.</VQE_GenetronSteamTuningDesc>
+	
+	<!-- General stuff -->
 	<VQE_NeedsStudy>{0} did not study an ancient genetron.</VQE_NeedsStudy> 
 	<VQE_NeedsStudyGeneric>This colonist can't repair critical breakdowns, as they did not study an ancient genetron</VQE_NeedsStudyGeneric>
 	<VQE_Overdrive>Reactor overdrive</VQE_Overdrive>
@@ -56,4 +72,5 @@
 	<VQE_Alert_LowMaintenance_Desc>Genetron requires maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_LowMaintenance_Desc>
 	<VQE_Alert_CriticalMaintenance>Genetron maintenance critical</VQE_Alert_CriticalMaintenance>
 	<VQE_Alert_CriticalMaintenance_Desc>Genetron requires urgent maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_CriticalMaintenance_Desc>
+	<VQE_LowPowerMode>Low power mode. Remaining time: {0} hours.</VQE_LowPowerMode>
 </LanguageData>

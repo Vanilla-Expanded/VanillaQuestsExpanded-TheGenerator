@@ -13,7 +13,7 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public bool powerSurgeCanBeReUsed = true;
-        public int powerSurgeCanBeReUsedTime = 900000; // 15 days
+        public const int powerSurgeCanBeReUsedTime = 900000; // 15 days
         public int powerSurgeCanBeReUsedTimer = 0;
         public int powerSurgeUsedCounter = 0;
         public static List<CompPowerBattery> batteriesShuffled = new List<CompPowerBattery>();
@@ -116,53 +116,55 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return c;
             }
+            if (cachedDetailsExtension?.hidePowerSurge != true)
+            {
+                Command_Action command_Action = new Command_Action();
 
-            Command_Action command_Action = new Command_Action();
-
-            if (maintenance<0.3f)
-            {
-                command_Action.defaultDesc = "VQE_PowerSurgeDescNoMaintenance".Translate();
-                command_Action.defaultLabel = "VQE_PowerSurge".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/PowerSurge_Gizmo", true);
-                command_Action.hotKey = KeyBindingDefOf.Misc1;
-                command_Action.Disabled = true;
-            }
-            else
-            if (powerSurgeCanBeReUsed)
-            {
-                command_Action.defaultDesc = "VQE_PowerSurgeDesc".Translate();
-                command_Action.defaultLabel = "VQE_PowerSurge".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/PowerSurge_Gizmo", true);
-                command_Action.hotKey = KeyBindingDefOf.Misc1;
-                command_Action.action = delegate
+                if (maintenance < 0.3f)
                 {
-                    Signal_PowerSurge();
-                };
-            }
-            else
-            {
-                command_Action.defaultDesc = "VQE_PowerSurgeDescExtended".Translate((powerSurgeCanBeReUsedTime - powerSurgeCanBeReUsedTimer).ToStringTicksToPeriod());
-                command_Action.defaultLabel = "VQE_PowerSurge".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/PowerSurge_Gizmo", true);
-                command_Action.Disabled = true;
-            }
-            yield return command_Action;
-            if (DebugSettings.ShowDevGizmos)
-            {
-                Command_Action command_Action3 = new Command_Action();
-                command_Action3.defaultLabel = "Reset power surge cooldown";
-                command_Action3.action = delegate
+                    command_Action.defaultDesc = "VQE_PowerSurgeDescNoMaintenance".Translate();
+                    command_Action.defaultLabel = "VQE_PowerSurge".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/PowerSurge_Gizmo", true);
+                    command_Action.hotKey = KeyBindingDefOf.Misc1;
+                    command_Action.Disabled = true;
+                }
+                else
+                if (powerSurgeCanBeReUsed)
                 {
-                    Signal_PowerSurgeOffCooldown();
-                };
-                yield return command_Action3;
-                Command_Action command_Action4 = new Command_Action();
-                command_Action4.defaultLabel = "Set power surge usage to 10";
-                command_Action4.action = delegate
+                    command_Action.defaultDesc = "VQE_PowerSurgeDesc".Translate();
+                    command_Action.defaultLabel = "VQE_PowerSurge".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/PowerSurge_Gizmo", true);
+                    command_Action.hotKey = KeyBindingDefOf.Misc1;
+                    command_Action.action = delegate
+                    {
+                        Signal_PowerSurge();
+                    };
+                }
+                else
                 {
-                    powerSurgeUsedCounter = 10;
-                };
-                yield return command_Action4;
+                    command_Action.defaultDesc = "VQE_PowerSurgeDescExtended".Translate((powerSurgeCanBeReUsedTime - powerSurgeCanBeReUsedTimer).ToStringTicksToPeriod());
+                    command_Action.defaultLabel = "VQE_PowerSurge".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/PowerSurge_Gizmo", true);
+                    command_Action.Disabled = true;
+                }
+                yield return command_Action;
+                if (DebugSettings.ShowDevGizmos)
+                {
+                    Command_Action command_Action3 = new Command_Action();
+                    command_Action3.defaultLabel = "Reset power surge cooldown";
+                    command_Action3.action = delegate
+                    {
+                        Signal_PowerSurgeOffCooldown();
+                    };
+                    yield return command_Action3;
+                    Command_Action command_Action4 = new Command_Action();
+                    command_Action4.defaultLabel = "Set power surge usage to 10";
+                    command_Action4.action = delegate
+                    {
+                        powerSurgeUsedCounter = 10;
+                    };
+                    yield return command_Action4;
+                }
             }
         }
     }

@@ -13,7 +13,10 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public bool fineTuningControl = false;
+        public bool steamTuningControl = false;
 
+        public bool hideOverdrive = false;
+        public bool hidePowerSurge = false;
 
     }
 

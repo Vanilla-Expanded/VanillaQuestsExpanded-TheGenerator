@@ -17,7 +17,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public const int overdriveTime = 300000; // 5 days
         public int overdriveTimer = 0;
         public bool overdriveCanBeReUsed = true;
-        public int overdriveCanBeReUsedTime = 1800000; // 30 days
+        public const int overdriveCanBeReUsedTime = 1800000; // 30 days
         public int overdriveCanBeReUsedTimer = 0;
         public bool criticalBreakdown = false;
         public CompRefuelableWithOverdrive compRefuelableWithOverdrive;
@@ -164,59 +164,64 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return c;
             }
-            Command_Action command_Action = new Command_Action();
+            if(cachedDetailsExtension?.hideOverdrive != true)
+            {
+                Command_Action command_Action = new Command_Action();
 
-            if (overdriveCanBeReUsed)
-            {
-                command_Action.defaultDesc = "VQE_GenetronOverdriveDesc".Translate();
-                command_Action.defaultLabel = "VQE_GenetronOverdrive".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/GeneratorOverdrive_Gizmo", true);
-                command_Action.hotKey = KeyBindingDefOf.Misc1;
-                command_Action.action = delegate
+                if (overdriveCanBeReUsed)
                 {
-                    Signal_OverdriveStarted();
-                };
-            }
-            else
-            {
-                command_Action.defaultDesc = "VQE_GenetronOverdriveDescExtended".Translate((overdriveTime - overdriveTimer).ToStringTicksToPeriod());
-                command_Action.defaultLabel = "VQE_GenetronOverdrive".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/GeneratorOverdrive_Gizmo", true);
-                command_Action.Disabled = true;
-            }
-            yield return command_Action;
+                    command_Action.defaultDesc = "VQE_GenetronOverdriveDesc".Translate();
+                    command_Action.defaultLabel = "VQE_GenetronOverdrive".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/GeneratorOverdrive_Gizmo", true);
+                    command_Action.hotKey = KeyBindingDefOf.Misc1;
+                    command_Action.action = delegate
+                    {
+                        Signal_OverdriveStarted();
+                    };
+                }
+                else
+                {
+                    command_Action.defaultDesc = "VQE_GenetronOverdriveDescExtended".Translate((overdriveTime - overdriveTimer).ToStringTicksToPeriod());
+                    command_Action.defaultLabel = "VQE_GenetronOverdrive".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/GeneratorOverdrive_Gizmo", true);
+                    command_Action.Disabled = true;
+                }
+                yield return command_Action;
 
-            if (DebugSettings.ShowDevGizmos)
-            {
-                Command_Action command_Action3 = new Command_Action();
-                command_Action3.defaultLabel = "Reset overdrive cooldown";
-                command_Action3.action = delegate
+                if (DebugSettings.ShowDevGizmos)
                 {
-                    Signal_OverdriveOffCooldown();
-                };
-                yield return command_Action3;
-                Command_Action command_Action4 = new Command_Action();
-                command_Action4.defaultLabel = "Stop overdrive";
-                command_Action4.action = delegate
-                {
-                    Signal_OverdriveEnded();
-                };
-                yield return command_Action4;
-                Command_Action command_Action5 = new Command_Action();
-                command_Action5.defaultLabel = "Set overdrive successful for 5 days";
-                command_Action5.action = delegate
-                {
-                    completedOverdriveSuccessfully = true;
-                };
-                yield return command_Action5;
+                    Command_Action command_Action3 = new Command_Action();
+                    command_Action3.defaultLabel = "Reset overdrive cooldown";
+                    command_Action3.action = delegate
+                    {
+                        Signal_OverdriveOffCooldown();
+                    };
+                    yield return command_Action3;
+                    Command_Action command_Action4 = new Command_Action();
+                    command_Action4.defaultLabel = "Stop overdrive";
+                    command_Action4.action = delegate
+                    {
+                        Signal_OverdriveEnded();
+                    };
+                    yield return command_Action4;
+                    Command_Action command_Action5 = new Command_Action();
+                    command_Action5.defaultLabel = "Set overdrive successful for 5 days";
+                    command_Action5.action = delegate
+                    {
+                        completedOverdriveSuccessfully = true;
+                    };
+                    yield return command_Action5;
+                }
+
             }
+                    
         }
 
         public override string GetInspectString()
         {
             if (criticalBreakdown)
             {
-                return base.GetInspectString() +  "VQE_CriticalBreakdown".Translate();
+                return base.GetInspectString() +  "\n"+"VQE_CriticalBreakdown".Translate();
             }
             return base.GetInspectString();
         }

@@ -33,7 +33,8 @@ namespace VanillaQuestsExpandedTheGenerator
      
         public static HashSet<BuildableDef> genetrons = new HashSet<BuildableDef>() { InternalDefOf.VQE_Genetron_Basic, InternalDefOf.VQE_Genetron_WoodFired,
             InternalDefOf.VQE_Genetron_WoodFueled, InternalDefOf.VQE_Genetron_WoodPowered, InternalDefOf.VQE_Genetron_WoodBlasting,
-        InternalDefOf.VQE_Genetron_ChemfuelPowered, InternalDefOf.VQE_Genetron_ChemfuelBoosted, InternalDefOf.VQE_Genetron_ChemfuelCharged};
+        InternalDefOf.VQE_Genetron_ChemfuelPowered, InternalDefOf.VQE_Genetron_ChemfuelBoosted, InternalDefOf.VQE_Genetron_ChemfuelCharged,
+        InternalDefOf.VQE_Genetron_ChemfuelFortified};
    
 
     }
