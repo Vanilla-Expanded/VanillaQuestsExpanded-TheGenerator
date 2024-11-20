@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\harmony\\harmonyinstance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\vanillaquestsexpanded-thegenerator\\1.5\\source\\vanillaquestsexpanded-thegenerator\\vanillaquestsexpanded-thegenerator\\building\\building_genetron_steampowered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\vanillaquestsexpanded-thegenerator\\building\\building_genetron_steampowered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\building\\building_genetron_steampowered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -201,9 +201,9 @@
               "Title": "InspectPaneFiller_DrawHealth_Patch.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
-              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAADAAAA",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs*",
+              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs*",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T16:16:03.239Z",
               "EditorCaption": ""
@@ -218,8 +218,7 @@
               "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:23:37.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T15:23:37.884Z"
             },
             {
               "$type": "Document",
@@ -279,8 +278,7 @@
               "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Harmony\\HarmonyInstance.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAgwAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:39:58.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T14:39:58.985Z"
             },
             {
               "$type": "Document",

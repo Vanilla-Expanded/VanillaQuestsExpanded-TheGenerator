@@ -18,6 +18,8 @@ namespace VanillaQuestsExpandedTheGenerator
             if (t is Building_GenetronWithMaintenance genetron)
             {
                 row.Gap(10);
+                Rect rect = new Rect(row.FinalX, row.FinalY, 93f, 16f);
+                TooltipHandler.TipRegion(rect, "VQE_GenetronMaintenanceTooltip".Translate());
                 row.FillableBar(93f, 16f, genetron.maintenance, genetron.maintenance.ToStringPercent(), HealthTex, BarBGTex);
                 GUI.color = Color.white;
             }

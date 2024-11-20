@@ -97,4 +97,6 @@
 	<VQE_Alert_CriticalMaintenance>Genetron maintenance critical</VQE_Alert_CriticalMaintenance>
 	<VQE_Alert_CriticalMaintenance_Desc>Genetron requires urgent maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_CriticalMaintenance_Desc>
 	<VQE_LowPowerMode>Low power mode. Remaining time: {0}.</VQE_LowPowerMode>
+	<VQE_GenetronMaintenanceTooltip>Genetron maintenance
+Genetron needs to be maintained by colonists. If maintenance reaches 0%, Genetron will break down.</VQE_GenetronMaintenanceTooltip>
 </LanguageData>
