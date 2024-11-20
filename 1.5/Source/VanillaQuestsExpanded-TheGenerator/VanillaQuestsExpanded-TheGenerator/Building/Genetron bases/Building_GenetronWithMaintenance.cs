@@ -78,12 +78,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
         }
 
-        public override string GetInspectString()
-        {
-            return base.GetInspectString() +"\n"+ "VQE_CurrentMaintenance".Translate(maintenance.ToStringPercent());
-            
-        }
-
+       
 
         public override IEnumerable<Gizmo> GetGizmos()
         {

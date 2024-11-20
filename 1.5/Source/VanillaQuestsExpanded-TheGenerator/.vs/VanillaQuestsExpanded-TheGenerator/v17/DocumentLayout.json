@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\vanillaquestsexpanded-thegenerator\\building\\genetron bases\\building_genetronwithmaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\building\\genetron bases\\building_genetronwithmaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\vanillaquestsexpanded-thegenerator\\1.5\\source\\vanillaquestsexpanded-thegenerator\\vanillaquestsexpanded-thegenerator\\harmony\\inspectpanefiller_drawhealth_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\harmony\\inspectpanefiller_drawhealth_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -77,10 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\vanillaquestsexpanded-thegenerator\\building\\genetron bases\\building_genetronoverdrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\building\\genetron bases\\building_genetronoverdrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\vanillaquestsexpanded-thegenerator\\building\\genetron bases\\building_genetronwithmaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|solutionrelative:vanillaquestsexpanded-thegenerator\\building\\genetron bases\\building_genetronwithmaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8281E4EE-FE39-4FAD-BA55-326503AE9284}|VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\vanillaquestsexpanded-thegenerator\\building\\genetron bases\\building_genetron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -189,40 +189,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InspectPaneFiller_DrawHealth_Patch.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs*",
-              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs*",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBgAAAANAAAA",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
+              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Harmony\\InspectPaneFiller_DrawHealth_Patch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T16:16:03.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Building_Genetron_SteamPowered.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
-              "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
-              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:23:37.884Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Building_Genetron_ChemfuelCharged.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelCharged.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelCharged.cs",
@@ -234,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Building_Genetron_ChemfuelBoosted.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelBoosted.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelBoosted.cs",
@@ -246,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Building_Genetron_Geothermal.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_Geothermal.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_Geothermal.cs",
@@ -258,7 +242,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "Building_GenetronWithMaintenance.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs",
+              "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs*",
+              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T08:56:35.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Building_Genetron_SteamPowered.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
+              "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
+              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_SteamPowered.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:23:37.884Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Building_Genetron_ChemfuelPowered.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelPowered.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelPowered.cs",
@@ -270,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HarmonyInstance.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Harmony\\HarmonyInstance.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Harmony\\HarmonyInstance.cs",
@@ -282,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Building_Genetron_ChemfuelFortified.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelFortified.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ChemfuelFortified.cs",
@@ -294,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Building_Genetron_ThermalVent.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ThermalVent.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_ThermalVent.cs",
@@ -306,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Building_Genetron_WoodPowered.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodPowered.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodPowered.cs",
@@ -318,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Building_Genetron_WoodFueled.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodFueled.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodFueled.cs",
@@ -330,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Building_Genetron_WoodFired.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodFired.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodFired.cs",
@@ -342,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Building_Genetron_WoodBlasting.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodBlasting.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Building_Genetron_WoodBlasting.cs",
@@ -354,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "InternalDefOf.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\DefOfs\\InternalDefOf.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\DefOfs\\InternalDefOf.cs",
@@ -366,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Building_GenetronWithSteamBoost.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithSteamBoost.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithSteamBoost.cs",
@@ -378,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Building_GenetronWithPowerSurge.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithPowerSurge.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithPowerSurge.cs",
@@ -390,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Building_GenetronTuning.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronTuning.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronTuning.cs",
@@ -402,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Building_GenetronOverdrive.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronOverdrive.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronOverdrive.cs",
@@ -414,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "StaticCollections.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\StaticCollections\\StaticCollections.cs",
               "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\StaticCollections\\StaticCollections.cs",
@@ -423,18 +436,6 @@
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T08:50:30.226Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Building_GenetronWithMaintenance.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs",
-              "RelativeDocumentMoniker": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaQuestsExpanded-TheGenerator\\1.5\\Source\\VanillaQuestsExpanded-TheGenerator\\VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs",
-              "RelativeToolTip": "VanillaQuestsExpanded-TheGenerator\\Building\\Genetron bases\\Building_GenetronWithMaintenance.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEgAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T08:56:35.005Z"
             },
             {
               "$type": "Document",
