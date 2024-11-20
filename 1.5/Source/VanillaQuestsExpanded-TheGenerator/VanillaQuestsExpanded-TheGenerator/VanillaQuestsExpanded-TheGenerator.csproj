@@ -331,6 +331,7 @@
     <Compile Include="Harmony\GenConstruct_CanConstruct.cs" />
     <Compile Include="Harmony\GenSpawn_SpawningWipes.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\InspectPaneFiller_DrawHealth_Patch.cs" />
     <Compile Include="MapComponents\Genetron_GameComponent.cs" />
     <Compile Include="MapComponents\Genetron_MapComponent.cs" />
     <Compile Include="Projectiles\Projectile_SpawnsThingAndExplodes.cs" />
