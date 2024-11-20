@@ -28,8 +28,8 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    /*Window_FineTuning tuningWindow = new Window_FineTuning(this as Building_GenetronWithMaintenance);
-                    Find.WindowStack.Add(tuningWindow);*/
+                    Window_SteamTuning tuningWindow = new Window_SteamTuning(this as Building_GenetronWithMaintenance);
+                    Find.WindowStack.Add(tuningWindow);
                 };
             }
             else

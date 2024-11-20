@@ -31,8 +31,12 @@ namespace VanillaQuestsExpandedTheGenerator
         public static ThingDef VQE_Genetron_ChemfuelBoosted;
         public static ThingDef VQE_Genetron_ChemfuelCharged;
         public static ThingDef VQE_Genetron_ChemfuelFortified;
+        public static ThingDef VQE_Genetron_Geothermal;
+        public static ThingDef VQE_Genetron_SteamPowered;
+        public static ThingDef VQE_Genetron_ThermalVent;
 
         public static HediffDef VQE_StudiedAncientGenetron;
+        public static HediffDef VQE_StudiedAncientGeothermalGenetron;
 
         public static JobDef VQE_FixCriticallyBrokenDownBuilding;
         public static JobDef VQE_MaintainGenetron;
@@ -40,5 +44,6 @@ namespace VanillaQuestsExpandedTheGenerator
         public static StatDef VQE_GenetronMaintenanceLoss;
 
         public static ResearchProjectDef BiofuelRefining;
+        public static ResearchProjectDef GeothermalPower;
     }
 }

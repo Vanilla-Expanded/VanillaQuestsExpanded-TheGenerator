@@ -36,10 +36,25 @@
 	<VQE_InstallChemfuelFortifiedGenetronDesc>Install an ignition stabilizer gizmo to ensure consistent and steady combustion, maintaining optimal power output and reducing fluctuations in fuel consumption. This upgrade enhances the generator's reliability and fuel efficiency. The stabilizer can be calibrated to permanently improve the power output.</VQE_InstallChemfuelFortifiedGenetronDesc>
 	<VQE_InstallChemfuelFortifiedGenetronDescExpanded>Install an ignition stabilizer gizmo to ensure consistent and steady combustion, maintaining optimal power output and reducing fluctuations in fuel consumption. This upgrade enhances the generator's reliability and fuel efficiency. The stabilizer can be calibrated to permanently improve the power output.\n\nGenetron needs to burn 1000 fuel (fuel burned at the moment: {0})</VQE_InstallChemfuelFortifiedGenetronDescExpanded>
 	
+	<!-- Geothermal genetron upgrades -->
+	
+	<VQE_InstallGeothermalGenetron>install geothermal genetron core</VQE_InstallGeothermalGenetron>
+	<VQE_InstallGeothermalGenetronDesc>Exchange the genetron core to utilise exclusively the steam energy produced by the geothermal vent. Doing so will decrease the power output significantly, but will also remove any fuel need completely. Geothermal genetron core will require regular maintenance, but can be maintained by everyone and not just the genetron specialists.</VQE_InstallGeothermalGenetronDesc>
+	<VQE_InstallGeothermalGenetronDescNoResearch>Exchange the genetron core to utilise exclusively the steam energy produced by the geothermal vent. Doing so will decrease the power output significantly, but will also remove any fuel need completely. Geothermal genetron core will require regular maintenance, but can be maintained by everyone and not just the genetron specialists.\n\nRequires Geothermal power research to be completed.</VQE_InstallGeothermalGenetronDescNoResearch>
+	<VQE_InstallGeothermalGenetronDescNoStudied>Exchange the genetron core to utilise exclusively the steam energy produced by the geothermal vent. Doing so will decrease the power output significantly, but will also remove any fuel need completely. Geothermal genetron core will require regular maintenance, but can be maintained by everyone and not just the genetron specialists.\n\nA colonist needs to study an ancient geothermal genetron somewhere in the world.</VQE_InstallGeothermalGenetronDescNoStudied>
+	
+	<VQE_InstallSteamPoweredGenetron>install vent booster</VQE_InstallSteamPoweredGenetron>
+	<VQE_InstallSteamPoweredGenetronDesc>Install a thermal vent booster to enhance steam flow from geothermal vents, boosting the genetron’s power output during peak energy demands. This upgrade ensures higher efficiency and performance when needed most.</VQE_InstallSteamPoweredGenetronDesc>
+	<VQE_InstallSteamPoweredGenetronDescExpanded> Install a thermal vent booster to enhance steam flow from geothermal vents, boosting the genetron’s power output during peak energy demands. This upgrade ensures higher efficiency and performance when needed most.\n\nGenetron needs to operate uninterrupted for 15 days (time at the moment: {0})</VQE_InstallSteamPoweredGenetronDescExpanded>
+	
+	<VQE_InstallThermalVentGenetron>install pressure surge protectors</VQE_InstallThermalVentGenetron>
+	<VQE_InstallThermalVentGenetronDesc>Install a set of pressure surge protectors that will prevent the genetron from ever reaching a critical breaking point, while also increasing the power output.</VQE_InstallThermalVentGenetronDesc>
+	<VQE_InstallThermalVentGenetronDescExpanded>Install a set of pressure surge protectors that will prevent the genetron from ever reaching a critical breaking point, while also increasing the power output.\n\nSteam boost needs to be activated 3 times. (activations at the moment: {0})</VQE_InstallThermalVentGenetronDescExpanded>
+	
 	<!-- Reactor abilities -->
 	<VQE_GenetronOverdrive>genetron overdrive</VQE_GenetronOverdrive>
 	<VQE_GenetronOverdriveDesc>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.</VQE_GenetronOverdriveDesc>
-	<VQE_GenetronOverdriveDescExtended>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.\n\nThe Overdrive has a 30 day cooldown. It will be ready again in {0}</VQE_GenetronOverdriveDescExtended>
+	<VQE_GenetronOverdriveDescExtended>Put the genetron in a temporary 5 day overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.\n\Overdrive has a 30 day cooldown. It will be ready again in {0}</VQE_GenetronOverdriveDescExtended>
 	
 	<VQE_GenetronTuning>genetron tuning</VQE_GenetronTuning>
 	<VQE_GenetronTuningDesc>Alter the fuel consumption to increase or decrease the power generated by the genetron.</VQE_GenetronTuningDesc>
@@ -61,9 +76,18 @@
 	
 	<VQE_GenetronSteamTuning>pressure tuning</VQE_GenetronSteamTuning>
 	<VQE_GenetronSteamTuningDesc>Alter the pressure of the genetron, affecting the wear and tear of components and the power output.</VQE_GenetronSteamTuningDesc>
+	<VQE_GenetronPressureLabel>genetron pressure</VQE_GenetronPressureLabel>
+	<VQE_GenetronSteamTuningMaintenance>set maintenance loss per day to: {0}%</VQE_GenetronSteamTuningMaintenance>
+	
+	<VQE_SteamBoost>steam boost</VQE_SteamBoost>
+	<VQE_SteamBoostDesc>Temporarily enhance the steam flow by activating internal steam pumps, increasing the power output of the genetron. The vent boosters will need to cool down for a period of time, preventing them from being used again until the temperature is optimal again.</VQE_SteamBoostDesc>
+	<VQE_SteamBoostDescExtended>Temporarily enhance the steam flow by activating internal steam pumps, increasing the power output of the genetron. The vent boosters will need to cool down for a period of time, preventing them from being used again until the temperature is optimal again.\n\nSteam boost has a 15 day cooldown. It will be ready again in {0}</VQE_SteamBoostDescExtended>
+	
+
 	
 	<!-- General stuff -->
 	<VQE_NeedsStudy>{0} did not study an ancient genetron.</VQE_NeedsStudy> 
+	<VQE_NeedsStudyGeothermal>{0} did not study an ancient geothermal genetron.</VQE_NeedsStudyGeothermal> 
 	<VQE_NeedsStudyGeneric>This colonist can't repair critical breakdowns, as they did not study an ancient genetron</VQE_NeedsStudyGeneric>
 	<VQE_Overdrive>Reactor overdrive</VQE_Overdrive>
 	<VQE_CriticalBreakdown>Critical breakdown</VQE_CriticalBreakdown>
@@ -72,5 +96,5 @@
 	<VQE_Alert_LowMaintenance_Desc>Genetron requires maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_LowMaintenance_Desc>
 	<VQE_Alert_CriticalMaintenance>Genetron maintenance critical</VQE_Alert_CriticalMaintenance>
 	<VQE_Alert_CriticalMaintenance_Desc>Genetron requires urgent maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_CriticalMaintenance_Desc>
-	<VQE_LowPowerMode>Low power mode. Remaining time: {0} hours.</VQE_LowPowerMode>
+	<VQE_LowPowerMode>Low power mode. Remaining time: {0}.</VQE_LowPowerMode>
 </LanguageData>

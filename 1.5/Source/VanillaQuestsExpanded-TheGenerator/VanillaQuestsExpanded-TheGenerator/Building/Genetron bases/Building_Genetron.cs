@@ -17,6 +17,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public Dictionary<Graphic_Single, Tuple<bool, Vector2>> cachedGraphics = new Dictionary<Graphic_Single, Tuple<bool, Vector2>>();
         public CompPowerPlantGenetron compPower;
         public CompRefuelable compRefuelable;
+        public CompBreakdownable compBreakdownable;
         public int totalRunningTicks;
         public float totalFuelBurned;
         public float consumptionRatePerTick = 0;
@@ -35,6 +36,17 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             compRefuelable = this.TryGetComp<CompRefuelable>();
+            compPower = this.TryGetComp<CompPowerPlantGenetron>();
+            compBreakdownable = this.TryGetComp<CompBreakdownable>();
+            cachedDetailsExtension = this.def.GetModExtension<ExtraGenetronParameters>();
+            cachedGraphicsExtension = this.def.GetModExtension<GenetronGraphicsExtension>();
+
+            if (cachedGraphicsExtension != null)
+            {
+                LongEventHandler.ExecuteWhenFinished(delegate { StoreGraphics(); });
+
+            }
+
             if (compRefuelable != null)
             {
                 consumptionRatePerTick = compRefuelable.Props.fuelConsumptionRate / 60000f;
@@ -47,7 +59,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 {
                     Building_Genetron existingBuildingAsGenetron = (Building_Genetron)existingBuilding;
 
-                    if (existingBuildingAsGenetron.compRefuelable != null)
+                    if (existingBuildingAsGenetron.compRefuelable != null && compRefuelable!=null)
                     {
                         foreach(ThingDef fuel in existingBuildingAsGenetron.compRefuelable.Props.fuelFilter.AllowedThingDefs)
                         {
@@ -69,17 +81,8 @@ namespace VanillaQuestsExpandedTheGenerator
             }
 
             base.SpawnSetup(map, respawningAfterLoad);
-            cachedGraphicsExtension = this.def.GetModExtension<GenetronGraphicsExtension>();
-          
-            if (cachedGraphicsExtension != null)
-            {
-                LongEventHandler.ExecuteWhenFinished(delegate { StoreGraphics(); });
+            
 
-            }
-
-            cachedDetailsExtension = this.def.GetModExtension<ExtraGenetronParameters>();
-
-            compPower = this.TryGetComp<CompPowerPlantGenetron>();
 
         }
 

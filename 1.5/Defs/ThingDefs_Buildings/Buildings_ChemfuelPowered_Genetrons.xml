@@ -9,7 +9,7 @@
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(9,9)</drawSize>
 			<shadowData>
@@ -140,7 +140,7 @@
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelBoosted</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(9,9)</drawSize>
 			<shadowData>
@@ -271,7 +271,7 @@
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelCharged</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(9,9)</drawSize>
 			<shadowData>
@@ -403,7 +403,7 @@
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelFortified</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(9,9)</drawSize>
 			<shadowData>

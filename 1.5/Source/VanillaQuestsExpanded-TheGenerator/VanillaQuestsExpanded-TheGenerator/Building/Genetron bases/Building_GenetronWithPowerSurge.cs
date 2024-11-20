@@ -164,6 +164,13 @@ namespace VanillaQuestsExpandedTheGenerator
                         powerSurgeUsedCounter = 10;
                     };
                     yield return command_Action4;
+                    Command_Action command_Action5 = new Command_Action();
+                    command_Action5.defaultLabel = "Set geothermal studied to TRUE";
+                    command_Action5.action = delegate
+                    {
+                        Genetron_GameComponent.Instance.geothermalGenetronStudied = true;
+                    };
+                    yield return command_Action5;
                 }
             }
         }

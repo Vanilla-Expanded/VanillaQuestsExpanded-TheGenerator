@@ -15,6 +15,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public HashSet<Thing> refuelables_InMap = new HashSet<Thing>();
         public HashSet<Thing> repairables_InMap = new HashSet<Thing>();
         public HashSet<Thing> maintainables_InMap = new HashSet<Thing>();
+      
 
         public Genetron_MapComponent(Map map) : base(map)
         {
@@ -24,6 +25,7 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.ExposeData();
             Scribe_Collections.Look(ref this.repairables_InMap, "repairables_InMap", LookMode.Reference);
+           
         }
 
         public override void FinalizeInit()

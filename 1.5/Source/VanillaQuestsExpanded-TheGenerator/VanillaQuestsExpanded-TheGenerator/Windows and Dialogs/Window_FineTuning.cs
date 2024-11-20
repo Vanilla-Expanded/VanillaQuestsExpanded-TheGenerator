@@ -49,7 +49,7 @@ namespace VanillaQuestsExpandedTheGenerator
             Widgets.Label(IntroLabel, "VQE_GenetronTuning".Translate().CapitalizeFirst());
             Text.Font = GameFont.Small;
             var IntroLabel2 = new Rect(0, 40, 300, 32f);
-            Widgets.Label(IntroLabel2, "VQE_GenetronTuningProjected".Translate((0f - building.compPower.Props.PowerConsumption) * building.compRefuelableWithOverdrive.tuningMultiplier * Utils.CalculateMaintenancePowerImpact(building.maintenanceMultiplier)).CapitalizeFirst());
+            Widgets.Label(IntroLabel2, "VQE_GenetronTuningProjected".Translate((0f - building.compPower.Props.PowerConsumption) * building.compRefuelableWithOverdrive.tuningMultiplier * (1 + (building.compPower.calibrationCounter * 0.01f)) * Utils.CalculateMaintenancePowerImpact(building.maintenanceMultiplier)).CapitalizeFirst());
             var IntroLabel3 = new Rect(0, 60, 300, 32f);
             Widgets.Label(IntroLabel3, "VQE_GenetronTuningSet".Translate(building.compRefuelableWithOverdrive.tuningMultiplier * 100).CapitalizeFirst());
 

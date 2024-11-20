@@ -12,7 +12,7 @@ namespace VanillaQuestsExpandedTheGenerator
     public class Building_GenetronOverdrive : Building_Genetron
     {
 
-        private IntermittentSteamSprayer_Constant steamSprayer;
+        public IntermittentSteamSprayer_Constant steamSprayer;
         public bool overdrive = false;
         public const int overdriveTime = 300000; // 5 days
         public int overdriveTimer = 0;
@@ -122,20 +122,23 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public void Signal_CriticalBreakdown()
         {
-            GenExplosion.DoExplosion(Position + IntVec3.North * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
-            GenExplosion.DoExplosion(Position + IntVec3.South * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
-            GenExplosion.DoExplosion(Position + IntVec3.West * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
-            GenExplosion.DoExplosion(Position + IntVec3.East * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+           
             criticalBreakdown = true;
             Genetron_MapComponent mapComp = Map.GetComponent<Genetron_MapComponent>();
             if (mapComp != null)
             {
                 mapComp.AddRepairableToMap(this);
             }
-            
+            Signal_Explode();
+
+
+        }
+
+        public void Signal_Explode()
+        {
             CellRect cellRect = GenAdj.OccupiedRect(Position, Rot4.North, def.Size);
             int randomAmountOfChunks = Rand.RangeInclusive(3, 9);
-            for(int i=0;i<randomAmountOfChunks;i++)
+            for (int i = 0; i < randomAmountOfChunks; i++)
             {
                 IntVec3 randomCell = cellRect.RandomCell;
 
@@ -145,6 +148,11 @@ namespace VanillaQuestsExpandedTheGenerator
                     projectile.Launch(this, result, result, ProjectileHitFlags.None, false, null);
                 }
             }
+            GenExplosion.DoExplosion(Position + IntVec3.North * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+            GenExplosion.DoExplosion(Position + IntVec3.South * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+            GenExplosion.DoExplosion(Position + IntVec3.West * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+            GenExplosion.DoExplosion(Position + IntVec3.East * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+
         }
 
         public void Signal_CriticalBreakdownRepaired()

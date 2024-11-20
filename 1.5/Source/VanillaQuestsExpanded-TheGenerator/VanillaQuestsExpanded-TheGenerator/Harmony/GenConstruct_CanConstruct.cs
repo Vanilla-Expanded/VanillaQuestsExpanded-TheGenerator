@@ -16,8 +16,16 @@ namespace VanillaQuestsExpandedTheGenerator
         private static void PostFix(ref bool __result, Thing t, Pawn p)
         {
 
-            if (__result && StaticCollections.genetrons.Contains(t.def.entityDefToBuild))
+            if (__result && StaticCollections.genetrons.Contains(t.def.entityDefToBuild) && !StaticCollections.geothermalGenetrons.Contains(t.def.entityDefToBuild))
             {
+                if(t.def.entityDefToBuild==InternalDefOf.VQE_Genetron_Geothermal && p?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGeothermalGenetron) == null)
+                {
+                    if (p != null) { JobFailReason.Is("VQE_NeedsStudyGeothermal".Translate(p.NameFullColored)); }
+
+                    __result = false;
+                }
+                else
+
 
                 if (p?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron)==null)
                 {

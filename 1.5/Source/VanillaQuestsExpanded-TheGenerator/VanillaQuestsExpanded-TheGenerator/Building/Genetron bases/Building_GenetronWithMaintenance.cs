@@ -67,8 +67,13 @@ namespace VanillaQuestsExpandedTheGenerator
 
                 if(maintenance <= 0)
                 {
-                    maintenance = 0.01f;
-                    Signal_CriticalBreakdown();
+                    maintenance = 0.1f;
+                    if(compBreakdownable!=null && cachedDetailsExtension.noCriticalBreakdowns)
+                    {
+                        compBreakdownable.DoBreakdown();
+                    }
+                    else { Signal_CriticalBreakdown(); }
+                    
                 }
             }
         }

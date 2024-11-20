@@ -8,6 +8,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public Building_GenetronOverdrive building;
         public Building_GenetronWithMaintenance building_withMaintenance;
         public bool inCalibrationMode = false;
+        public bool inSteamBoostMode = false;
         public int calibrationCounter = 0;
 
         new public CompProperties_PowerGenetron Props => (CompProperties_PowerGenetron)props;
@@ -23,8 +24,8 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.PostExposeData();
             Scribe_Values.Look(ref this.inCalibrationMode, "inCalibrationMode", false, false);
+            Scribe_Values.Look(ref this.inSteamBoostMode, "inSteamBoostMode", false, false);
             Scribe_Values.Look(ref this.calibrationCounter, "calibrationCounter", 0, false);
-
         }
 
         public override void CompTick()
@@ -74,7 +75,14 @@ namespace VanillaQuestsExpandedTheGenerator
                     calibrationMultiplier = 0.1f;
                 }
 
-                base.PowerOutput = baseOutput * overdriveMultiplier * tuningMultiplier * maintenanceMultiplier * calibrationMultiplier * (1+(calibrationCounter*0.01f));
+                //Steam boost multiplier
+                float steamBoostMultiplier = 1;
+                if (inSteamBoostMode)
+                {
+                    steamBoostMultiplier = 1.2f;
+                }
+
+                base.PowerOutput = baseOutput * overdriveMultiplier * tuningMultiplier * maintenanceMultiplier * calibrationMultiplier * (1+(calibrationCounter*0.01f)) * steamBoostMultiplier;
             }
         }
 

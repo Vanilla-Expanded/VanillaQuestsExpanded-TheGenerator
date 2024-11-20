@@ -62,7 +62,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 return false;
             }
-            if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron) == null)
+            if (!StaticCollections.geothermalGenetrons.Contains(building.def) && pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron) == null)
             {
                 JobFailReason.Is(NotStudied);
                 return false;

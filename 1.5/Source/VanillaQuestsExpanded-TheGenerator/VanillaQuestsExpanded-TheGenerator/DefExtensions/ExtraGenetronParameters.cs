@@ -18,6 +18,8 @@ namespace VanillaQuestsExpandedTheGenerator
         public bool hideOverdrive = false;
         public bool hidePowerSurge = false;
 
+        public bool noCriticalBreakdowns = false;
+
     }
 
 
