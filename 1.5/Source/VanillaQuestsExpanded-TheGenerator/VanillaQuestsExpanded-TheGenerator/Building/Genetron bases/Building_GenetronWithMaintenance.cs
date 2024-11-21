@@ -15,6 +15,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public float maintenance = 1;
         public float maintenanceMultiplier = 1;
         public float cachedMaintenanceLoss = 0;
+        public float componentCalibrationMultiplier = 1;
 
         public override void ExposeData()
         {
@@ -22,6 +23,7 @@ namespace VanillaQuestsExpandedTheGenerator
             Scribe_Values.Look(ref this.maintenance, "maintenance", 1, false);
             Scribe_Values.Look(ref this.maintenanceMultiplier, "maintenanceMultiplier", 1, false);
             Scribe_Values.Look(ref this.cachedMaintenanceLoss, "cachedMaintenanceLoss", 0, false);
+            Scribe_Values.Look(ref this.componentCalibrationMultiplier, "componentCalibrationMultiplier", 1, false);
 
         }
 
@@ -61,24 +63,31 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void Tick()
         {
             base.Tick();
-            if (this.IsHashIntervalTick(100)&& maintenance >0)
+            if (this.IsHashIntervalTick(100) && maintenance > 0 && cachedDetailsExtension?.nonLinearMaintenanceLoss != true)
             {
-                maintenance -= (cachedMaintenanceLoss / 600)* maintenanceMultiplier;
-
-                if(maintenance <= 0)
-                {
-                    maintenance = 0.1f;
-                    if(compBreakdownable!=null && cachedDetailsExtension.noCriticalBreakdowns)
-                    {
-                        compBreakdownable.DoBreakdown();
-                    }
-                    else { Signal_CriticalBreakdown(); }
-                    
-                }
+                maintenance -= (cachedMaintenanceLoss / 600)* maintenanceMultiplier * componentCalibrationMultiplier;                
+            }
+            if (maintenance <= 0)
+            {
+                maintenance = 0.1f;
+                Signal_ChooseBreakdown();
             }
         }
 
-       
+        public void Signal_ReduceMaintenanceBy(float amount)
+        {
+            maintenance -= amount;
+        }
+
+        public void Signal_ChooseBreakdown()
+        {          
+            if (compBreakdownable != null && cachedDetailsExtension.noCriticalBreakdowns)
+            {
+                compBreakdownable.DoBreakdown();
+            }
+            else { Signal_CriticalBreakdown(); }
+
+        }
 
         public override IEnumerable<Gizmo> GetGizmos()
         {

@@ -25,6 +25,13 @@ namespace VanillaQuestsExpandedTheGenerator
                     __result = false;
                 }
                 else
+                if (StaticCollections.nuclearGenetrons.Contains(t.def.entityDefToBuild) && p?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientNuclearGenetron) == null)
+                {
+                    if (p != null) { JobFailReason.Is("VQE_NeedsStudyNuclear".Translate(p.NameFullColored)); }
+
+                    __result = false;
+                }
+                else
 
 
                 if (p?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron)==null)

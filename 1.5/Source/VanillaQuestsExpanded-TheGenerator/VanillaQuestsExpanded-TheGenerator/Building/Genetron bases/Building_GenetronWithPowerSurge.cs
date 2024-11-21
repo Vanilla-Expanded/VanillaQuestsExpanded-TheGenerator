@@ -142,7 +142,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
                 else
                 {
-                    command_Action.defaultDesc = "VQE_PowerSurgeDescExtended".Translate((powerSurgeCanBeReUsedTime - powerSurgeCanBeReUsedTimer).ToStringTicksToPeriod());
+                    command_Action.defaultDesc = "VQE_PowerSurgeDesc".Translate()+"VQE_PowerSurgeDescExtended".Translate(powerSurgeCanBeReUsedTime.ToStringTicksToPeriod(),(powerSurgeCanBeReUsedTime - powerSurgeCanBeReUsedTimer).ToStringTicksToPeriod());
                     command_Action.defaultLabel = "VQE_PowerSurge".Translate();
                     command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/PowerSurge_Gizmo", true);
                     command_Action.Disabled = true;
@@ -164,13 +164,7 @@ namespace VanillaQuestsExpandedTheGenerator
                         powerSurgeUsedCounter = 10;
                     };
                     yield return command_Action4;
-                    Command_Action command_Action5 = new Command_Action();
-                    command_Action5.defaultLabel = "Set geothermal studied to TRUE";
-                    command_Action5.action = delegate
-                    {
-                        Genetron_GameComponent.Instance.geothermalGenetronStudied = true;
-                    };
-                    yield return command_Action5;
+                    
                 }
             }
         }

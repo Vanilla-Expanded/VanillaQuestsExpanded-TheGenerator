@@ -1,12 +1,14 @@
 ﻿
 using RimWorld;
 using Verse;
+using Verse.Sound;
 namespace VanillaQuestsExpandedTheGenerator
 {
     public class CompPowerPlantGenetron : CompPowerPlant
     {
         public Building_GenetronOverdrive building;
         public Building_GenetronWithMaintenance building_withMaintenance;
+        public Building_GenetronNuclear building_nuclear;
         public bool inCalibrationMode = false;
         public bool inSteamBoostMode = false;
         public int calibrationCounter = 0;
@@ -18,6 +20,7 @@ namespace VanillaQuestsExpandedTheGenerator
             base.PostSpawnSetup(respawningAfterLoad);
             building = this.parent as Building_GenetronOverdrive;
             building_withMaintenance = this.parent as Building_GenetronWithMaintenance;
+            building_nuclear = this.parent as Building_GenetronNuclear;
         }
 
         public override void PostExposeData()
@@ -33,13 +36,30 @@ namespace VanillaQuestsExpandedTheGenerator
             base.CompTick();         
         }
 
+        
+
         public override void UpdateDesiredPowerOutput()
         {
-            if ((building != null && building.criticalBreakdown) || (breakdownableComp != null && breakdownableComp.BrokenDown) || (flickableComp != null && !flickableComp.SwitchIsOn) || (autoPoweredComp != null && !autoPoweredComp.WantsToBeOn) || (toxifier != null && !toxifier.CanPolluteNow) || !base.PowerOn)
+            if ((building != null && building.criticalBreakdown) || (breakdownableComp != null && breakdownableComp.BrokenDown) || 
+                (flickableComp != null && !flickableComp.SwitchIsOn) || (autoPoweredComp != null && !autoPoweredComp.WantsToBeOn) ||
+                 (building_nuclear?.permanentlyDisabled == true) ||
+              (toxifier != null && !toxifier.CanPolluteNow) || !base.PowerOn)
             {
                 base.PowerOutput = 0f;
+            }else if (Props.isNuclear)
+            {
+                             
+                    //Overdrive multiplier
+                    float overdriveMultiplier = 1;
+                    if (building?.overdrive == true)
+                    {
+                        overdriveMultiplier = 2;
+                    }
+                    float fuelAmount = building.compRefuelableWithOverdrive.Fuel;
+                    base.PowerOutput = (5 * fuelAmount * fuelAmount + 50 * fuelAmount) * overdriveMultiplier;
+                                            
             }
-            else
+            else 
             {
                 float baseOutput = DesiredPowerOutput;
                 if (refuelableComp != null && !refuelableComp.HasFuel)

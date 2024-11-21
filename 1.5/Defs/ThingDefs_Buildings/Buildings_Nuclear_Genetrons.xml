@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_UraniumPowered</defName>
+		<label>uranium-powered genetron</label>
+		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_UraniumPowered</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Nuclear/Megagenerator_Core_Spacer_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<designationCategory>Power</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>28000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>22080</MarketValue>
+			<Beauty>-30</Beauty>
+			
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+		<Plasteel>100</Plasteel>
+			<Uranium>50</Uranium>	
+			<ComponentSpacer>6</ComponentSpacer>
+			<VQE_GenetronComponent>6</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<isNuclear>true</isNuclear>
+				<basePowerConsumption>-1</basePowerConsumption>				
+				<transmitsPower>true</transmitsPower>
+			</li>
+			
+			<li Class="CompProperties_Flickable"/>
+		
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(173, 255, 47,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
+				<heatPerSecond>24</heatPerSecond>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
+				<fuelConsumptionRate>1</fuelConsumptionRate>
+				<fuelCapacity>50</fuelCapacity>
+				<uraniumLevelConfigurable>true</uraniumLevelConfigurable>
+				<isNuclear>true</isNuclear>
+				<fuelGizmoLabel>Uranium</fuelGizmoLabel>
+				<showFuelGizmo>true</showFuelGizmo>
+				<fuelFilter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconPath>Things/Nuclear/MegageneratorTier1_Nuclear_MenuIcon</uiIconPath>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Nuclear/Megagenerator_Core_Spacer_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Nuclear/Megagenerator_CoreShield_Spacer_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Nuclear/Megagenerator_Tier1_Nuclear_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier3_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier4_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Nuclear/Megagenerator_Core_Spacer</texture>
+					</li>
+					
+					<li>
+						<texture>Things/Nuclear/Megagenerator_CoreShield_Spacer</texture>
+					</li>
+					<li>
+						<texture>Things/Nuclear/Megagenerator_Tier1_Nuclear</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier3_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier4_Chemfuel</texture>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				
+				<hidePowerSurge>true</hidePowerSurge>
+				<hideTuning>true</hideTuning>
+				<nonLinearMaintenanceLoss>true</nonLinearMaintenanceLoss>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	
+</Defs>

@@ -15,7 +15,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public HashSet<Thing> refuelables_InMap = new HashSet<Thing>();
         public HashSet<Thing> repairables_InMap = new HashSet<Thing>();
         public HashSet<Thing> maintainables_InMap = new HashSet<Thing>();
-      
+        public HashSet<Thing> uraniumFueled_InMap = new HashSet<Thing>();
 
         public Genetron_MapComponent(Map map) : base(map)
         {
@@ -84,6 +84,23 @@ namespace VanillaQuestsExpandedTheGenerator
             if (maintainables_InMap.Contains(thing))
             {
                 maintainables_InMap.Remove(thing);
+            }
+
+        }
+
+        public void AddUraniumFueledToMap(Thing thing)
+        {
+            if (!uraniumFueled_InMap.Contains(thing))
+            {
+                uraniumFueled_InMap.Add(thing);
+            }
+        }
+
+        public void RemoveUraniumFueledFromMap(Thing thing)
+        {
+            if (uraniumFueled_InMap.Contains(thing))
+            {
+                uraniumFueled_InMap.Remove(thing);
             }
 
         }

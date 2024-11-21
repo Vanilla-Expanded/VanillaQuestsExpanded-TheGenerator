@@ -35,7 +35,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallSteamPoweredGenetronDescExpanded".Translate(totalRunningTicks.ToStringTicksToPeriod());
+                command_Action.defaultDesc = "VQE_InstallSteamPoweredGenetronDesc".Translate()+"VQE_InstallSteamPoweredGenetronDescExpanded".Translate(totalRunningTicksToUpdate.ToStringTicksToPeriod(),totalRunningTicks.ToStringTicksToPeriod());
                 command_Action.defaultLabel = "VQE_InstallSteamPoweredGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_10", true);
                 command_Action.Disabled = true;

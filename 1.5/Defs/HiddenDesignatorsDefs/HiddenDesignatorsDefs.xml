@@ -7,13 +7,18 @@
 			<li>VQE_Genetron_WoodFueled</li>
 			<li>VQE_Genetron_WoodPowered</li>
 			<li>VQE_Genetron_WoodBlasting</li>
+			
 			<li>VQE_Genetron_ChemfuelPowered</li>
 			<li>VQE_Genetron_ChemfuelBoosted</li>
 			<li>VQE_Genetron_ChemfuelCharged</li>
 			<li>VQE_Genetron_ChemfuelFortified</li>
+			
 			<li>VQE_Genetron_Geothermal</li>
 			<li>VQE_Genetron_SteamPowered</li>
 			<li>VQE_Genetron_ThermalVent</li>
+			<li>VQE_Genetron_HeatPowered</li>
+			
+			<li>VQE_Genetron_UraniumPowered</li>
 		</hiddenDesignators>
 	</VanillaQuestsExpandedTheGenerator.HiddenDesignatorsDef>
 </Defs>

@@ -125,7 +125,8 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.Tick();
 
-            if (compPower.PowerOn && (compRefuelable is null ||(compRefuelable!=null && compRefuelable.HasFuel)))
+            if (compPower.PowerOn && (compRefuelable is null ||(compRefuelable!=null && compRefuelable.HasFuel))
+                && (compBreakdownable is null || (compBreakdownable != null && !compBreakdownable.BrokenDown)))
             {
                 totalRunningTicks++;
             }
@@ -170,8 +171,22 @@ namespace VanillaQuestsExpandedTheGenerator
                     };
                     yield return command_Action2;
                 }
-               
-               
+                Command_Action command_Action5 = new Command_Action();
+                command_Action5.defaultLabel = "Set geothermal studied to TRUE";
+                command_Action5.action = delegate
+                {
+                    Genetron_GameComponent.Instance.geothermalGenetronStudied = true;
+                };
+                yield return command_Action5;
+                Command_Action command_Action6 = new Command_Action();
+                command_Action6.defaultLabel = "Set nuclear studied to TRUE";
+                command_Action6.action = delegate
+                {
+                    Genetron_GameComponent.Instance.nuclearGenetronStudied = true;
+                };
+                yield return command_Action6;
+
+
             }
 
 

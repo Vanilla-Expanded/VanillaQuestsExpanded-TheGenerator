@@ -8,7 +8,7 @@ using RimWorld;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class Building_Genetron_ThermalVent : Building_GenetronWithSteamBoost
+    public class Building_Genetron_HeatPowered : Building_GenetronWithComponentCalibration
     {
 
 

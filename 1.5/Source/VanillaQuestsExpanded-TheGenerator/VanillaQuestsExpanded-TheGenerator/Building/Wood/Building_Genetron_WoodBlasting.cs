@@ -23,12 +23,14 @@ namespace VanillaQuestsExpandedTheGenerator
             Command_Action command_Action = new Command_Action();
             if (!InternalDefOf.BiofuelRefining.IsFinished)
             {
-                command_Action.defaultDesc = "VQE_InstallChemfuelPoweredGenetronDescNoResearch".Translate();
+                command_Action.defaultDesc = "VQE_InstallChemfuelPoweredGenetronDesc".Translate()+"VQE_InstallChemfuelPoweredGenetronDescNoResearch".Translate();
                 command_Action.defaultLabel = "VQE_InstallChemfuelPoweredGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_5", true);
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
-               
-            }else
+                command_Action.Disabled = true;
+
+            }
+            else
             if (compRefuelableWithOverdrive.maxTuningMultiplierTimer > totalTimeInFullTuning)
             {
                 command_Action.defaultDesc = "VQE_InstallChemfuelPoweredGenetronDesc".Translate();
@@ -42,7 +44,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallChemfuelPoweredGenetronDescExpanded".Translate(compRefuelableWithOverdrive.maxTuningMultiplierTimer.ToStringTicksToPeriod());
+                command_Action.defaultDesc = "VQE_InstallChemfuelPoweredGenetronDesc".Translate()+"VQE_InstallChemfuelPoweredGenetronDescExpanded".Translate(totalTimeInFullTuning.ToStringTicksToPeriod(),compRefuelableWithOverdrive.maxTuningMultiplierTimer.ToStringTicksToPeriod());
                 command_Action.defaultLabel = "VQE_InstallChemfuelPoweredGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_5", true);
                 command_Action.Disabled = true;

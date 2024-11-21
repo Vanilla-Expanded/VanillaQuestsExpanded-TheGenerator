@@ -35,7 +35,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallWoodFiredGenetronDescExpanded".Translate(totalRunningTicks.ToStringTicksToPeriod());
+                command_Action.defaultDesc = "VQE_InstallWoodFiredGenetronDesc".Translate()+"VQE_InstallWoodFiredGenetronDescExpanded".Translate(totalRunningTicksToUpdate.ToStringTicksToPeriod(),totalRunningTicks.ToStringTicksToPeriod());
                 command_Action.defaultLabel = "VQE_InstallWoodFiredGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_1", true);
                 command_Action.Disabled = true;                

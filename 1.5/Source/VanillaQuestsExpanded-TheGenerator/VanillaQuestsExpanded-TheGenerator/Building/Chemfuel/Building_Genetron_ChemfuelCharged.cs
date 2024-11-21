@@ -36,7 +36,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallChemfuelFortifiedGenetronDescExpanded".Translate(totalFuelBurned);
+                command_Action.defaultDesc = "VQE_InstallChemfuelFortifiedGenetronDesc".Translate()+"VQE_InstallChemfuelFortifiedGenetronDescExpanded".Translate(totalFuelBurnedToUpdate,totalFuelBurned);
                 command_Action.defaultLabel = "VQE_InstallChemfuelFortifiedGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_8", true);
                 command_Action.Disabled = true;

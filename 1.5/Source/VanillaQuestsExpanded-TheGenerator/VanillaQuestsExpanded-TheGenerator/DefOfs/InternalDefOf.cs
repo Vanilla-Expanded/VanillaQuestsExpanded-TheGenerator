@@ -22,21 +22,29 @@ namespace VanillaQuestsExpandedTheGenerator
         public static ThingDef VQE_GenetronJunk;
         public static ThingDef VQE_ChunkProjectile;
 
+        
         public static ThingDef VQE_Genetron_Basic;
+        //Wood
         public static ThingDef VQE_Genetron_WoodFired;
         public static ThingDef VQE_Genetron_WoodFueled;
         public static ThingDef VQE_Genetron_WoodPowered;
         public static ThingDef VQE_Genetron_WoodBlasting;
+        //Chemfuel
         public static ThingDef VQE_Genetron_ChemfuelPowered;
         public static ThingDef VQE_Genetron_ChemfuelBoosted;
         public static ThingDef VQE_Genetron_ChemfuelCharged;
         public static ThingDef VQE_Genetron_ChemfuelFortified;
+        //Geothermal
         public static ThingDef VQE_Genetron_Geothermal;
         public static ThingDef VQE_Genetron_SteamPowered;
         public static ThingDef VQE_Genetron_ThermalVent;
+        public static ThingDef VQE_Genetron_HeatPowered;
+        //Nuclear
+        public static ThingDef VQE_Genetron_UraniumPowered;
 
         public static HediffDef VQE_StudiedAncientGenetron;
         public static HediffDef VQE_StudiedAncientGeothermalGenetron;
+        public static HediffDef VQE_StudiedAncientNuclearGenetron;
 
         public static JobDef VQE_FixCriticallyBrokenDownBuilding;
         public static JobDef VQE_MaintainGenetron;
@@ -45,5 +53,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static ResearchProjectDef BiofuelRefining;
         public static ResearchProjectDef GeothermalPower;
+        public static ResearchProjectDef ShipReactor;
     }
 }

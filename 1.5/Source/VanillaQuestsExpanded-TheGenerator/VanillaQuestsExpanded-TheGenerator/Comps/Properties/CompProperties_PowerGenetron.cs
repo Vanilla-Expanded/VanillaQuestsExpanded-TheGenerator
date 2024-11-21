@@ -9,6 +9,8 @@ namespace VanillaQuestsExpandedTheGenerator
 
 
         public float powerWithoutFuel;
+        public bool isNuclear = false;
+
 
     }
 }

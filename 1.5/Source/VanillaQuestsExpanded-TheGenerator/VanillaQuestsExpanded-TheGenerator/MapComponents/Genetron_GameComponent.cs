@@ -18,12 +18,12 @@ public class Genetron_GameComponent : GameComponent
     public Genetron_GameComponent(Game game) => Instance = this;
 
     public bool geothermalGenetronStudied = false;
+    public bool nuclearGenetronStudied = false;
 
-    
 
     public override void ExposeData()
     {
-
+        Scribe_Values.Look(ref this.nuclearGenetronStudied, "nuclearGenetronStudied", false, false);
         Scribe_Values.Look(ref this.geothermalGenetronStudied, "geothermalGenetronStudied", false, false);
     }
 

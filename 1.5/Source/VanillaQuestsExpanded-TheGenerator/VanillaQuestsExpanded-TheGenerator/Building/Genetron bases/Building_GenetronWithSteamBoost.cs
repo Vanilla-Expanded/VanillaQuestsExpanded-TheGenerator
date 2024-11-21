@@ -73,6 +73,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public void Signal_SteamBoostStarted()
         {
+            steamBoostCanBeReUsed = false;
             compPower.inSteamBoostMode = true;
             steamBoostUsedCounter++;
         }
@@ -108,13 +109,30 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_SteamBoostDescExtended".Translate((steamBoostCanBeReUsedTime - steamBoostCanBeReUsedTimer).ToStringTicksToPeriod());
+                command_Action.defaultDesc = "VQE_SteamBoostDesc".Translate()+"VQE_SteamBoostDescExtended".Translate(steamBoostCanBeReUsedTime.ToStringTicksToPeriod(),(steamBoostCanBeReUsedTime - steamBoostCanBeReUsedTimer).ToStringTicksToPeriod());
                 command_Action.defaultLabel = "VQE_SteamBoost".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/SteamBoost_Gizmo", true);
                 command_Action.Disabled = true;
             }
             yield return command_Action;
-            
+            if (DebugSettings.ShowDevGizmos)
+            {
+                Command_Action command_Action3 = new Command_Action();
+                command_Action3.defaultLabel = "Reset steam boost cooldown";
+                command_Action3.action = delegate
+                {
+                    Signal_SteamBoostOffCooldown();
+                };
+                yield return command_Action3;
+                Command_Action command_Action4 = new Command_Action();
+                command_Action4.defaultLabel = "Set steam boost usage to 10";
+                command_Action4.action = delegate
+                {
+                    steamBoostUsedCounter = 10;
+                };
+                yield return command_Action4;
+               
+            }
         }
 
        

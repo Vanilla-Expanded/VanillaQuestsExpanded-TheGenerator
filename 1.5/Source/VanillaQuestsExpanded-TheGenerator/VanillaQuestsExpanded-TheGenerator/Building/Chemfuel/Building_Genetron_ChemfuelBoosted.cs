@@ -11,7 +11,7 @@ namespace VanillaQuestsExpandedTheGenerator
     public class Building_Genetron_ChemfuelBoosted : Building_GenetronWithPowerSurge
     {
 
-
+        public const int  powerSurgeUses = 3;
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -23,7 +23,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
             Command_Action command_Action = new Command_Action();
 
-            if (powerSurgeUsedCounter>=3)
+            if (powerSurgeUsedCounter>= powerSurgeUses)
             {
                 command_Action.defaultDesc = "VQE_InstallChemfuelChargedGenetronDesc".Translate();
                 command_Action.defaultLabel = "VQE_InstallChemfuelChargedGenetron".Translate();
@@ -36,7 +36,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallChemfuelChargedGenetronDescExpanded".Translate(powerSurgeUsedCounter);
+                command_Action.defaultDesc = "VQE_InstallChemfuelChargedGenetronDesc".Translate()+"VQE_InstallChemfuelChargedGenetronDescExpanded".Translate(powerSurgeUses,powerSurgeUsedCounter);
                 command_Action.defaultLabel = "VQE_InstallChemfuelChargedGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_7", true);
                 command_Action.Disabled = true;

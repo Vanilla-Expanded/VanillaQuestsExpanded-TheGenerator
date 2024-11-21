@@ -100,7 +100,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_CalibrateEfficiencyDescExtended".Translate((calibrationCanBeReUsedTime - calibrationCanBeReUsedTimer).ToStringTicksToPeriod());
+                command_Action.defaultDesc = "VQE_CalibrateEfficiencyDesc".Translate()+"VQE_CalibrateEfficiencyDescExtended".Translate(calibrationCanBeReUsedTime.ToStringTicksToPeriod(),(calibrationCanBeReUsedTime - calibrationCanBeReUsedTimer).ToStringTicksToPeriod());
                 command_Action.defaultLabel = "VQE_CalibrateEfficiency".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/CalibrateFuelEfficiency_Gizmo", true);
                 command_Action.Disabled = true;

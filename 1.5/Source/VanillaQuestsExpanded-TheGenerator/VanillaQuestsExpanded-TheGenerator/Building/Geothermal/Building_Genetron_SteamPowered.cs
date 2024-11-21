@@ -11,7 +11,7 @@ namespace VanillaQuestsExpandedTheGenerator
     public class Building_Genetron_SteamPowered : Building_GenetronWithSteamBoost
     {
 
-
+        public const int steamBoostUsesNeeded = 3;
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -23,7 +23,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
             Command_Action command_Action = new Command_Action();
 
-            if (steamBoostUsedCounter >= 3)
+            if (steamBoostUsedCounter >= steamBoostUsesNeeded)
             {
                 command_Action.defaultDesc = "VQE_InstallThermalVentGenetronDesc".Translate();
                 command_Action.defaultLabel = "VQE_InstallThermalVentGenetron".Translate();
@@ -36,7 +36,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallThermalVentGenetronDescExpanded".Translate(powerSurgeUsedCounter);
+                command_Action.defaultDesc = "VQE_InstallThermalVentGenetronDesc".Translate()+"VQE_InstallThermalVentGenetronDescExpanded".Translate(steamBoostUsesNeeded,steamBoostUsedCounter);
                 command_Action.defaultLabel = "VQE_InstallThermalVentGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_11", true);
                 command_Action.Disabled = true;

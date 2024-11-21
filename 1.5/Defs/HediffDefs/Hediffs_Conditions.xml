@@ -42,4 +42,25 @@
 			</li>
 		</stages>
 	</HediffDef>
+	
+	<HediffDef>
+		<defName>VQE_StudiedAncientNuclearGenetron</defName>
+		<label>studied nuclear genetron husk</label>
+		<description>This particular colonist has studied a nuclear genetron husk. It allows them to build, upgrade and maintain a nuclear genetron in the colony.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+	
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			
+		</comps>
+		<stages>
+			
+			<li>
+				
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>

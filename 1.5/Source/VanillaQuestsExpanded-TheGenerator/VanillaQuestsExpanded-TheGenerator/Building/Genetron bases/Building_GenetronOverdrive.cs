@@ -178,7 +178,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
                 if (overdriveCanBeReUsed)
                 {
-                    command_Action.defaultDesc = "VQE_GenetronOverdriveDesc".Translate();
+                    command_Action.defaultDesc = "VQE_GenetronOverdriveDesc".Translate(overdriveTime.ToStringTicksToPeriod());
                     command_Action.defaultLabel = "VQE_GenetronOverdrive".Translate();
                     command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/GeneratorOverdrive_Gizmo", true);
                     command_Action.hotKey = KeyBindingDefOf.Misc1;
@@ -189,7 +189,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
                 else
                 {
-                    command_Action.defaultDesc = "VQE_GenetronOverdriveDescExtended".Translate((overdriveTime - overdriveTimer).ToStringTicksToPeriod());
+                    command_Action.defaultDesc = "VQE_GenetronOverdriveDesc".Translate(overdriveTime.ToStringTicksToPeriod())+"VQE_GenetronOverdriveDescExtended".Translate(overdriveCanBeReUsedTime.ToStringTicksToPeriod(),(overdriveCanBeReUsedTime - overdriveCanBeReUsedTimer).ToStringTicksToPeriod());
                     command_Action.defaultLabel = "VQE_GenetronOverdrive".Translate();
                     command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/GeneratorOverdrive_Gizmo", true);
                     command_Action.Disabled = true;

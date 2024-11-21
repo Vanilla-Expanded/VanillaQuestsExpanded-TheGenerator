@@ -19,62 +19,69 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return c;
             }
-            Command_Action command_Action = new Command_Action();
-            if (cachedDetailsExtension?.steamTuningControl == true)
+
+            if (cachedDetailsExtension?.hideTuning != true)
             {
-                command_Action.defaultDesc = "VQE_GenetronSteamTuningDesc".Translate();
-                command_Action.defaultLabel = "VQE_GenetronSteamTuning".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/TunePressure_Gizmo", true);
-                command_Action.hotKey = KeyBindingDefOf.Misc1;
-                command_Action.action = delegate
+                Command_Action command_Action = new Command_Action();
+                if (cachedDetailsExtension?.steamTuningControl == true)
                 {
-                    Window_SteamTuning tuningWindow = new Window_SteamTuning(this as Building_GenetronWithMaintenance);
-                    Find.WindowStack.Add(tuningWindow);
-                };
-            }
-            else
-            if (cachedDetailsExtension?.fineTuningControl == true)
-            {
-                command_Action.defaultDesc = "VQE_GenetronFineTuningDesc".Translate();
-                command_Action.defaultLabel = "VQE_GenetronFineTuning".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/FineTuneGenerator_Gizmo", true);
-                command_Action.hotKey = KeyBindingDefOf.Misc1;
-                command_Action.action = delegate
+                    command_Action.defaultDesc = "VQE_GenetronSteamTuningDesc".Translate();
+                    command_Action.defaultLabel = "VQE_GenetronSteamTuning".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/TunePressure_Gizmo", true);
+                    command_Action.hotKey = KeyBindingDefOf.Misc1;
+                    command_Action.action = delegate
+                    {
+                        Window_SteamTuning tuningWindow = new Window_SteamTuning(this as Building_GenetronWithMaintenance);
+                        Find.WindowStack.Add(tuningWindow);
+                    };
+                }
+                else
+                if (cachedDetailsExtension?.fineTuningControl == true)
                 {
-                    Window_FineTuning tuningWindow = new Window_FineTuning(this as Building_GenetronWithMaintenance);
-                    Find.WindowStack.Add(tuningWindow);
-                };
-            }
-            else
-            {
-                command_Action.defaultDesc = "VQE_GenetronTuningDesc".Translate();
-                command_Action.defaultLabel = "VQE_GenetronTuning".Translate();
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/TuneGenerator_Gizmo", true);
-                command_Action.hotKey = KeyBindingDefOf.Misc1;
-                command_Action.action = delegate
+                    command_Action.defaultDesc = "VQE_GenetronFineTuningDesc".Translate();
+                    command_Action.defaultLabel = "VQE_GenetronFineTuning".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/FineTuneGenerator_Gizmo", true);
+                    command_Action.hotKey = KeyBindingDefOf.Misc1;
+                    command_Action.action = delegate
+                    {
+                        Window_FineTuning tuningWindow = new Window_FineTuning(this as Building_GenetronWithMaintenance);
+                        Find.WindowStack.Add(tuningWindow);
+                    };
+                }
+                else
                 {
-                    Window_Tuning tuningWindow = new Window_Tuning(this);
-                    Find.WindowStack.Add(tuningWindow);
-                };
+                    command_Action.defaultDesc = "VQE_GenetronTuningDesc".Translate();
+                    command_Action.defaultLabel = "VQE_GenetronTuning".Translate();
+                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/TuneGenerator_Gizmo", true);
+                    command_Action.hotKey = KeyBindingDefOf.Misc1;
+                    command_Action.action = delegate
+                    {
+                        Window_Tuning tuningWindow = new Window_Tuning(this);
+                        Find.WindowStack.Add(tuningWindow);
+                    };
+                }
+
+
+
+                yield return command_Action;
+                if (DebugSettings.ShowDevGizmos)
+                {
+
+                    Command_Action command_Action2 = new Command_Action();
+                    command_Action2.defaultLabel = "Set time on 200% to 100 days";
+                    command_Action2.action = delegate
+                    {
+                        compRefuelableWithOverdrive.maxTuningMultiplierTimer = 6000000;
+                    };
+                    yield return command_Action2;
+
+
+
+                }
+
             }
 
             
-
-            yield return command_Action;
-            if (DebugSettings.ShowDevGizmos)
-            {
-
-                Command_Action command_Action2 = new Command_Action();
-                command_Action2.defaultLabel = "Set time on 200% to 100 days";
-                command_Action2.action = delegate
-                {
-                    compRefuelableWithOverdrive.maxTuningMultiplierTimer = 6000000;
-                };
-                yield return command_Action2;
-
-
-
-            }
 
 
         }
