@@ -121,8 +121,7 @@ namespace VanillaQuestsExpandedTheGenerator
         }
 
         public void Signal_CriticalBreakdown()
-        {
-           
+        {           
             criticalBreakdown = true;
             Genetron_MapComponent mapComp = Map.GetComponent<Genetron_MapComponent>();
             if (mapComp != null)
@@ -130,7 +129,12 @@ namespace VanillaQuestsExpandedTheGenerator
                 mapComp.AddRepairableToMap(this);
             }
             Signal_Explode();
+        }
 
+        public void Signal_NuclearCriticalBreakdown()
+        {
+           
+           
 
         }
 
@@ -154,6 +158,8 @@ namespace VanillaQuestsExpandedTheGenerator
             GenExplosion.DoExplosion(Position + IntVec3.East * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
 
         }
+
+       
 
         public void Signal_CriticalBreakdownRepaired()
         {

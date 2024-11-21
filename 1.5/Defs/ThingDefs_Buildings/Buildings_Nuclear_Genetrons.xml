@@ -141,6 +141,7 @@
 				<hidePowerSurge>true</hidePowerSurge>
 				<hideTuning>true</hideTuning>
 				<nonLinearMaintenanceLoss>true</nonLinearMaintenanceLoss>
+				<hasNuclearMeltdowns>true</hasNuclearMeltdowns>
 			</li>
 		</modExtensions>
 	</ThingDef>

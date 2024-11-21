@@ -23,6 +23,8 @@ namespace VanillaQuestsExpandedTheGenerator
         public bool worksInSolarFlares = false;
         public bool nonLinearMaintenanceLoss = false;
 
+        public bool hasNuclearMeltdowns = false;
+
     }
 
 
