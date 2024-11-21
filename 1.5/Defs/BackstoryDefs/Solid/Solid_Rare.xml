@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- Inventor -->
+  
+  <BackstoryDef ParentName="Solid">
+    <defName>VQE_ChildhoodInventorGenetron</defName>
+    <identifier>VQE_ChildhoodInventorGenetron</identifier>
+    <slot>Childhood</slot>
+    <title>curious tinkerer</title>
+    <titleShort>tinkerer</titleShort>
+    <description>As a child, [PAWN_nameDef] was never content with toys or simple amusements. [PAWN_pronoun] found joy in taking apart old machines and scraps salvaged from the colony’s scrapyard. While the other children played, [PAWN_nameDef] could be found elbows-deep in a broken generator or defunct mining drone, trying to understand what made it tick. The adults often saw this as a nuisance, especially when [PAWN_pronoun] "borrowed" essential equipment for experiments. But those who looked closer saw a spark of genius.</description>
+    <skillGains>
+        <Intellectual>4</Intellectual>
+        <Crafting>3</Crafting>
+        <Social>-2</Social>
+    </skillGains>
+    <workDisables>None</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>Scientist</li>
+    </spawnCategories>
+    <shuffleable>False</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef ParentName="Solid">
+    <defName>VQE_InventorGenetronAdulthood</defName>
+    <identifier>VQE_InventorGenetron</identifier>
+    <slot>Adulthood</slot>
+    <title>inventor of the genetron</title>
+    <titleShort>inventor</titleShort>
+    <description>[PAWN_nameDef] became a legend among engineers as the inventor of the genetron, a groundbreaking power generator that changed the fate of entire colonies. Driven by a relentless desire to solve the energy shortages crippling the outer rim, [PAWN_pronoun] pushed the boundaries of safe experimentation. The first prototypes were rushed, leading to tragic accidents that claimed many lives. Though these failures weighed heavily on [PAWN_objective], they fueled [PAWN_possessive] determination. After countless trials, [PAWN_nameDef] finally succeeded, cementing [PAWN_possessive] legacy as a hero to some, and a reckless maverick to others.</description>
+    <skillGains>
+        <Construction>6</Construction>
+        <Intellectual>8</Intellectual>
+        <Crafting>5</Crafting>
+        <Social>-3</Social>
+    </skillGains>
+    <workDisables>None</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>Scientist</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <possessions>
+        <VQE_ComponentGenetron>3</VQE_ComponentGenetron>
+    </possessions>
+    <forcedTraits>
+        <Industrious>1</Industrious>
+        <Nerves>-1</Nerves>
+    </forcedTraits>
+    <shuffleable>False</shuffleable>
+</BackstoryDef>
+
+</Defs>
