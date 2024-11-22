@@ -87,7 +87,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             if (cachedDetailsExtension?.hasNuclearMeltdowns==true)
             {
-                Signal_NuclearCriticalBreakdown();
+                Signal_NuclearCriticalBreakdown_Begin();
 
             }
             else { Signal_CriticalBreakdown(); }

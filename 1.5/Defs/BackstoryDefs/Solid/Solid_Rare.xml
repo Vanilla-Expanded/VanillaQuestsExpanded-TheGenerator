@@ -46,10 +46,10 @@
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
     <possessions>
-        <VQE_ComponentGenetron>3</VQE_ComponentGenetron>
+        <VQE_GenetronComponent>3</VQE_GenetronComponent>
     </possessions>
     <forcedTraits>
-        <Industrious>1</Industrious>
+        <Industriousness>1</Industriousness>
         <Nerves>-1</Nerves>
     </forcedTraits>
     <shuffleable>False</shuffleable>

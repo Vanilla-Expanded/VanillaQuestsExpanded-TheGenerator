@@ -7,7 +7,7 @@ using Verse;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class Alert_CriticalMaintenance : Alert
+    public class Alert_CriticalMaintenance : Alert_Critical
     {
         public Alert_CriticalMaintenance()
         {

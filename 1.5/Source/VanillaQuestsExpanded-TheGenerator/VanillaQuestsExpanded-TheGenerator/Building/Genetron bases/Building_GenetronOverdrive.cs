@@ -5,6 +5,9 @@ using System.Text;
 using UnityEngine;
 using Verse;
 using RimWorld;
+using Verse.Sound;
+using HarmonyLib;
+using Verse.Noise;
 
 
 namespace VanillaQuestsExpandedTheGenerator
@@ -13,6 +16,7 @@ namespace VanillaQuestsExpandedTheGenerator
     {
 
         public IntermittentSteamSprayer_Constant steamSprayer;
+        public SmokeSprayer_Constant smokeSprayer;
         public bool overdrive = false;
         public const int overdriveTime = 300000; // 5 days
         public int overdriveTimer = 0;
@@ -22,6 +26,17 @@ namespace VanillaQuestsExpandedTheGenerator
         public bool criticalBreakdown = false;
         public CompRefuelableWithOverdrive compRefuelableWithOverdrive;
         public bool completedOverdriveSuccessfully = false;
+
+        //Nuclear meltdown stuff
+
+        public bool inMeltdown = false;
+        public const int ticksSmoke = 600; //10 seconds
+        public int ticksSmokeTimer = 0;
+        public bool wickActive = false;
+        protected Sustainer wickSoundSustainer;
+        public int wickTicksLeft;
+        public int wickTimer=0;
+        public OverlayHandle? overlayBurningWick;
 
         public override void ExposeData()
         {
@@ -33,12 +48,20 @@ namespace VanillaQuestsExpandedTheGenerator
             Scribe_Values.Look(ref this.overdriveCanBeReUsedTimer, "overdriveCanBeReUsedTimer", 0, false);
             Scribe_Values.Look(ref this.criticalBreakdown, "criticalBreakdown", false, false);
             Scribe_Values.Look(ref this.completedOverdriveSuccessfully, "completedOverdriveSuccessfully", false, false);
+            Scribe_Values.Look(ref this.inMeltdown, "inMeltdown", false, false);
+            Scribe_Values.Look(ref this.ticksSmokeTimer, "ticksSmokeTimer", 0, false);
+            Scribe_Values.Look(ref this.wickTicksLeft, "wickTicksLeft", 0, false);
+            Scribe_Values.Look(ref this.wickActive, "wickActive", false, false);
+            Scribe_Values.Look(ref this.wickTimer, "wickTimer", 0, false);
+
+
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
             steamSprayer = new IntermittentSteamSprayer_Constant(this);
+            smokeSprayer = new SmokeSprayer_Constant(this);
             compRefuelableWithOverdrive = this.TryGetComp<CompRefuelableWithOverdrive>();
         }
 
@@ -84,6 +107,30 @@ namespace VanillaQuestsExpandedTheGenerator
                 {
                     Signal_OverdriveOffCooldown();
                 }
+            }
+            if (inMeltdown)
+            {
+                smokeSprayer.SteamSprayerTick();
+
+                ticksSmokeTimer++;
+                if (ticksSmokeTimer > ticksSmoke)
+                {
+                    Signal_NuclearCriticalBreakdown_Fuse();
+                }
+            }
+            if (wickActive)
+            {
+                if (wickSoundSustainer != null)
+                {
+                   
+                    wickSoundSustainer.Maintain();
+                }
+                wickTimer++;
+                if (wickTimer > wickTicksLeft)
+                {
+                    Signal_NuclearCriticalBreakdown_Detonate();
+                }
+
             }
         }
 
@@ -131,10 +178,84 @@ namespace VanillaQuestsExpandedTheGenerator
             Signal_Explode();
         }
 
-        public void Signal_NuclearCriticalBreakdown()
+        public void Signal_NuclearCriticalBreakdown_Begin()
         {
+            inMeltdown = true;
+        }
+        public void Signal_NuclearCriticalBreakdown_Fuse()
+        {
+            wickTicksLeft = (new IntRange(1200, 3600)).RandomInRange;
            
-           
+            SoundInfo info = SoundInfo.InMap(this, MaintenanceType.PerTick);
+            wickSoundSustainer = SoundDefOf.HissSmall.TrySpawnSustainer(info);
+            Map.overlayDrawer.Disable(this,ref overlayBurningWick);
+            overlayBurningWick = Map.overlayDrawer.Enable(this, OverlayTypes.BurningWick);
+            wickActive = true;
+            
+        }
+        public void Signal_NuclearCriticalBreakdown_Detonate()
+        {
+            if (wickSoundSustainer != null)
+            {
+                wickSoundSustainer.End();
+                wickSoundSustainer = null;
+            }
+            wickActive = false;
+            InternalDefOf.VQE_MeltdownExplosion.PlayOneShotOnCamera();
+
+            CellRect cellRect = GenAdj.OccupiedRect(Position, Rot4.North, def.Size);
+            int randomAmountOfChunks = Rand.RangeInclusive(9, 12);
+            for (int i = 0; i < randomAmountOfChunks; i++)
+            {
+                IntVec3 randomCell = cellRect.RandomCell;
+
+                if (RCellFinder.TryFindRandomCellNearWith(Position, (IntVec3 c) => !c.Fogged(Map) && c.Walkable(Map) && !c.Impassable(Map), Map, out IntVec3 result, 13, 60))
+                {
+                    var projectile = (Projectile)GenSpawn.Spawn(InternalDefOf.VQE_ChunkProjectile, randomCell, Map);
+                    projectile.Launch(this, result, result, ProjectileHitFlags.None, false, null);
+                }
+            }
+
+            int radius = Mathf.CeilToInt(compRefuelable.Fuel);
+
+            CellRect cells = CellRect.CenteredOn(PositionHeld, radius);
+
+            Find.CameraDriver.shaker.DoShake(mag: 20f);
+
+            AccessTools.FieldRef<MoteCounter, int> moteCount = AccessTools.FieldRefAccess<MoteCounter, int>(fieldName: "moteCount");
+
+            DamageInfo destroyInfo = new DamageInfo(DamageDefOf.Bomb, float.MaxValue, float.MaxValue, instigator: this);
+            GenExplosion.DoExplosion(PositionHeld, this.Map, radius, DamageDefOf.Flame, damAmount: 500, applyDamageToExplosionCellsNeighbors: true, chanceToStartFire: 1f, instigator: this, postExplosionSpawnThingDef: InternalDefOf.Filth_Ash, postExplosionSpawnChance: 0.5f);
+
+            int x = 0;
+            foreach (IntVec3 intVec3 in cells)
+            {
+                x++;
+                if (x % 50 == 0)
+                {
+                    moteCount(this.Map.moteCounter) = 0;
+                    Vector3 vc = intVec3.ToVector3();               
+                    FleckMaker.ThrowLightningGlow(vc, this.Map, size: 10f);
+                    FleckMaker.ThrowMetaPuff(vc, this.Map);
+                }
+                List<Thing> things = this.Map.thingGrid.ThingsListAtFast(intVec3);
+
+                for (int i = 0; i < things.Count; i++)
+                {
+                    Thing thing = things[i];
+                    if (thing.def.filth is null&& thing!=this && thing.def!= InternalDefOf.VQE_NuclearGenetronHusk && !(thing.def.building?.isNaturalRock ?? false))
+                        thing.TakeDamage(destroyInfo);
+                }
+            }
+
+            FloodFillerFog.FloodUnfog(PositionHeld, Map);
+
+            GenExplosion.DoExplosion(Position + IntVec3.North * 4, Map, radius, DamageDefOf.Flame, damAmount: 500, applyDamageToExplosionCellsNeighbors: true, chanceToStartFire: 1f, instigator: this, postExplosionSpawnThingDef: InternalDefOf.Filth_Ash, postExplosionSpawnChance: 0.5f);
+            GenExplosion.DoExplosion(Position + IntVec3.South * 4, Map, radius, DamageDefOf.Flame, damAmount: 500, applyDamageToExplosionCellsNeighbors: true, chanceToStartFire: 1f, instigator: this, postExplosionSpawnThingDef: InternalDefOf.Filth_Ash, postExplosionSpawnChance: 0.5f);
+            GenExplosion.DoExplosion(Position + IntVec3.West * 4, Map, radius, DamageDefOf.Flame, damAmount: 500, applyDamageToExplosionCellsNeighbors: true, chanceToStartFire: 1f, instigator: this, postExplosionSpawnThingDef: InternalDefOf.Filth_Ash, postExplosionSpawnChance: 0.5f);
+            GenExplosion.DoExplosion(Position + IntVec3.East * 4, Map, radius, DamageDefOf.Flame, damAmount: 500, applyDamageToExplosionCellsNeighbors: true, chanceToStartFire: 1f, instigator: this, postExplosionSpawnThingDef: InternalDefOf.Filth_Ash, postExplosionSpawnChance: 0.5f);
+
+            Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(InternalDefOf.VQE_NuclearGenetronHusk), PositionHeld, Map);
 
         }
 
@@ -225,6 +346,16 @@ namespace VanillaQuestsExpandedTheGenerator
                         completedOverdriveSuccessfully = true;
                     };
                     yield return command_Action5;
+                    if (cachedDetailsExtension?.hasNuclearMeltdowns == true)
+                    {
+                        Command_Action command_Action6 = new Command_Action();
+                        command_Action6.defaultLabel = "Nuclear meltdown";
+                        command_Action6.action = delegate
+                        {
+                            Signal_NuclearCriticalBreakdown_Begin();
+                        };
+                        yield return command_Action6;
+                    }
                 }
 
             }

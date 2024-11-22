@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
+using UnityEngine;
+using Verse;
 using RimWorld;
 
-using Verse;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
@@ -14,6 +14,15 @@ namespace VanillaQuestsExpandedTheGenerator
             defaultPriority = AlertPriority.High;
             defaultLabel = "VQE_Alert_LowMaintenance".Translate();
             defaultExplanation = "VQE_Alert_LowMaintenance_Desc".Translate();
+        }
+
+        protected override Color BGColor
+        {
+            get
+            {
+                float num = Pulser.PulseBrightness(0.5f, Pulser.PulseBrightness(0.5f, 0.6f));
+                return new Color(num, num, num) * Color.yellow;
+            }
         }
 
         public override AlertReport GetReport()
@@ -35,7 +44,7 @@ namespace VanillaQuestsExpandedTheGenerator
             foreach (var genetron in genetrons)
             {
                 float maintenance = ((Building_GenetronWithMaintenance)genetron).maintenance;
-                if (maintenance > 0.3f || maintenance<0.1f)
+                if (maintenance > 0.3f || maintenance<=0.1f)
                 {
                      continue;
                 }else

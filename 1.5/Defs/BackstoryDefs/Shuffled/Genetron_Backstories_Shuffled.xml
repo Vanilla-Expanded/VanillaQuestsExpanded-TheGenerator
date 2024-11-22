@@ -22,7 +22,7 @@
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
     <possessions>
-        <VQE_ComponentGenetron>2</VQE_ComponentGenetron>
+        <VQE_GenetronComponent>2</VQE_GenetronComponent>
     </possessions>
 </BackstoryDef>
 
@@ -47,7 +47,7 @@
     <bodyTypeFemale>Male</bodyTypeFemale>
     <bodyTypeMale>Male</bodyTypeMale>
     <possessions>
-        <VQE_ComponentGenetron>1</VQE_ComponentGenetron>
+        <VQE_GenetronComponent>1</VQE_GenetronComponent>
     </possessions>
 </BackstoryDef>
 
@@ -73,7 +73,7 @@
     <bodyTypeFemale>Male</bodyTypeFemale>
     <bodyTypeMale>Male</bodyTypeMale>
     <possessions>
-        <VQE_ComponentGenetron>3</VQE_ComponentGenetron>
+        <VQE_GenetronComponent>3</VQE_GenetronComponent>
     </possessions>
 </BackstoryDef>
 
@@ -99,7 +99,7 @@
     <bodyTypeFemale>Hulk</bodyTypeFemale>
     <bodyTypeMale>Hulk</bodyTypeMale>
     <possessions>
-        <VQE_ComponentGenetron>1</VQE_ComponentGenetron>
+        <VQE_GenetronComponent>1</VQE_GenetronComponent>
     </possessions>
 </BackstoryDef>
 
@@ -125,7 +125,7 @@
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <bodyTypeMale>Thin</bodyTypeMale>
     <possessions>
-        <VQE_ComponentGenetron>2</VQE_ComponentGenetron>
+        <VQE_GenetronComponent>2</VQE_GenetronComponent>
     </possessions>
 </BackstoryDef>
 

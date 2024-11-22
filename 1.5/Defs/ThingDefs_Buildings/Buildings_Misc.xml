@@ -22,4 +22,43 @@
 			<graphicClass>Graphic_Random</graphicClass>
 		</graphicData>
 	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_NuclearGenetronHusk</defName>
+		<label>nuclear genetron husk</label>
+		<description>A ruined husk of a nuclear genetron. Lack of maintenance or other unforeseen crisis has resulted in a devastating detonation that has twisted the metal into something quite unusable. This husk can be studied to learn how to construct and maintain a nuclear genetron, but can also be deconstructed to yield some resources back.</description>
+		<graphicData>
+			<texPath>Things/AncientJunk/NuclearGenetronHusk</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<blockWind>true</blockWind>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>0.5</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>2500</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-30</Beauty>
+		</statBases>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>440</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+			<VQE_GenetronComponent>5</VQE_GenetronComponent>
+		</costList>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+	</ThingDef>
 </Defs>
