@@ -19,6 +19,9 @@
 			<li>VQE_Genetron_HeatPowered</li>
 			
 			<li>VQE_Genetron_UraniumPowered</li>
+			<li>VQE_Genetron_Nuclear</li>
+			<li>VQE_Genetron_Isotopic</li>
+			<li>VQE_Genetron_Atomic</li>
 		</hiddenDesignators>
 	</VanillaQuestsExpandedTheGenerator.HiddenDesignatorsDef>
 </Defs>

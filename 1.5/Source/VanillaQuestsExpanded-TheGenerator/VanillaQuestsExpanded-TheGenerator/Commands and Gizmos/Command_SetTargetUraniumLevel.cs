@@ -42,8 +42,10 @@ namespace VanillaQuestsExpandedTheGenerator
                     break;
                 }
             }
+            CompRefuelableWithOverdrive comp = refuelables.First();
             Func<int, string> textGetter =  (Func<int, string>)((int x) => "VQE_SetTargetUraniumLevelTo".Translate(x)+"\n\n"+
-            "VQE_NuclearPowerOutput".Translate(5 * x * x + 50 * x) + "\n\n" + "VQE_NuclearFuelConsumption".Translate((refuelables.First().constant1 * x * x + refuelables.First().constant2 * x).ToStringDecimalIfSmall()));
+            "VQE_NuclearPowerOutput".Translate(5 * x * x + 50 * x) + "\n\n" + 
+            "VQE_NuclearFuelConsumption".Translate((comp.constant1 * comp.permanentFuelRodCalibrationMultiplier * x * x + comp.constant2 * comp.permanentFuelRodCalibrationMultiplier * x).ToStringDecimalIfSmall()));
             Dialog_Slider dialog_Slider = new Dialog_Slider(textGetter, 0, num, delegate (int value)
             {
                 for (int k = 0; k < refuelables.Count; k++)

@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
+using UnityEngine;
 using RimWorld;
-
 using Verse;
 
 namespace VanillaQuestsExpandedTheGenerator
@@ -14,6 +13,15 @@ namespace VanillaQuestsExpandedTheGenerator
             defaultPriority = AlertPriority.Medium;
             defaultLabel = "VQE_Alert_LowUranium".Translate();
             defaultExplanation = "VQE_Alert_LowUranium_Desc".Translate();
+        }
+
+        protected override Color BGColor
+        {
+            get
+            {
+                float num = Pulser.PulseBrightness(0.5f, Pulser.PulseBrightness(0.5f, 0.6f));
+                return new Color(num, num, num) * Color.yellow;
+            }
         }
 
         public override AlertReport GetReport()

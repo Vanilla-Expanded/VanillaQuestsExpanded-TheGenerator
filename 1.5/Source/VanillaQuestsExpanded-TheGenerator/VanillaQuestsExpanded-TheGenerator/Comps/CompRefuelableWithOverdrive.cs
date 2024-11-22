@@ -22,6 +22,8 @@ namespace VanillaQuestsExpandedTheGenerator
         public int maxTuningMultiplierTimer = 0;
         new public CompProperties_RefuelableWithOverdrive Props => (CompProperties_RefuelableWithOverdrive)props;
 
+        public float permanentFuelRodCalibrationMultiplier = 1;
+
         private static readonly Texture2D SetTargetUraniumLevelCommand = ContentFinder<Texture2D>.Get("UI/Gizmos/SetTargetUraniumLevel_Gizmo");
 
         public override void PostExposeData()
@@ -29,7 +31,7 @@ namespace VanillaQuestsExpandedTheGenerator
             base.PostExposeData();
             Scribe_Values.Look(ref this.tuningMultiplier, "tuningMultiplier", 1, false);
             Scribe_Values.Look(ref this.maxTuningMultiplierTimer, "maxTuningMultiplierTimer", 0, false);
-
+            Scribe_Values.Look(ref this.permanentFuelRodCalibrationMultiplier, "permanentFuelRodCalibrationMultiplier", 1, false);
 
         }
 
@@ -69,7 +71,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
         }
 
-        private float ConsumptionRatePerTick
+        public float ConsumptionRatePerTick
         {
             get {
                 if (building.overdrive)
@@ -83,7 +85,12 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
                 else
                 {
-                    return ((constant1*Fuel*Fuel + constant2*Fuel) * overdriveMultiplier)/60000f;
+                    if(building_nuclear?.compPower.inFuelRodCalibrationMode == true)
+                    {
+                        return 0;
+                    }
+                    
+                    return ((constant1*permanentFuelRodCalibrationMultiplier*Fuel*Fuel + constant2 * permanentFuelRodCalibrationMultiplier * Fuel) * overdriveMultiplier)/60000f;
 
                 }
                 
@@ -135,7 +142,8 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
                 else
                 {
-                    text = text + " (" + "VQE_FuelRateAtTheMoment".Translate(((constant1 * Fuel * Fuel + constant2 * Fuel) * overdriveMultiplier).ToStringDecimalIfSmall()) + ")";
+                    text = text + " (" + "VQE_FuelRateAtTheMoment".Translate(((constant1 * permanentFuelRodCalibrationMultiplier * Fuel * Fuel 
+                        + constant2* permanentFuelRodCalibrationMultiplier * Fuel) * overdriveMultiplier).ToStringDecimalIfSmall()) + ")";
                 }
                 
                 

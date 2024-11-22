@@ -62,7 +62,17 @@
 	<VQE_InstallUraniumPoweredGenetronDescNoResearch>\n\nRequires Starship reactor research to be completed.</VQE_InstallUraniumPoweredGenetronDescNoResearch>
 	<VQE_InstallUraniumPoweredGenetronDescNoStudied>\n\nA colonist needs to study a nuclear genetron husk somewhere in the world.</VQE_InstallUraniumPoweredGenetronDescNoStudied>
 	
+	<VQE_InstallNuclearGenetron>install uranium enrichment chamber</VQE_InstallNuclearGenetron>
+	<VQE_InstallNuclearGenetronDesc>Install a chamber that allows you to slow down the decay rate of uranium, allowing it to generate power for a longer time.</VQE_InstallNuclearGenetronDesc>
+	<VQE_InstallNuclearGenetronDescExpanded>\n\nUranium-powered genetron needs to be restarted. To do that, it needs to burn all uranium and shut down due to lack of fuel.</VQE_InstallNuclearGenetronDescExpanded>
 	
+	<VQE_InstallIsotopicGenetron>install radiation shielding</VQE_InstallIsotopicGenetron>
+	<VQE_InstallIsotopicGenetronDesc>Install advanced shielding to reduce radiation exposure in nearby areas, making it safer for colonists when the reactor operates in unsafe mode.</VQE_InstallIsotopicGenetronDesc>
+	<VQE_InstallIsotopicGenetronDescExpanded>\n\nGenetron needs to burn {0} uranium (uranium burned at the moment: {1})</VQE_InstallIsotopicGenetronDescExpanded>
+	
+	<VQE_InstallAtomicGenetron>install emergency shut-off systems</VQE_InstallAtomicGenetron>
+	<VQE_InstallAtomicGenetronDesc>Install a system that instantly shuts down the reactor in dangerous situations, avoiding catastrophic failures and giving time for repairs. Additional safety mechanisms also allow anyone to maintain the atomic genetron, not just those who studied the ancient variants.</VQE_InstallAtomicGenetronDesc>
+	<VQE_InstallAtomicGenetronDescExpanded>\n\nGenetron needs to operate uninterrupted in hazard mode for {0} (time at the moment: {1})</VQE_InstallAtomicGenetronDescExpanded>
 	
 	<!-- Reactor abilities -->
 	<VQE_GenetronOverdrive>genetron overdrive</VQE_GenetronOverdrive>
@@ -103,6 +113,18 @@
 	<VQE_RestartGenetron>restart genetron</VQE_RestartGenetron>
 	<VQE_RestartGenetronDesc>Jumpstart the nuclear genetron that has shut down due to lack of uranium. This restart can only be done if the genetron is filled with at least {0} uranium.</VQE_RestartGenetronDesc>
 	<VQE_RestartGenetronDescExtended>\n\nThere isn't enough uranium in this reactor to restart it.</VQE_RestartGenetronDescExtended>
+	<VQE_RestartGenetronDescNotNeeded>\n\nGenetron is running normally at the moment and doesn't require a restart.</VQE_RestartGenetronDescNotNeeded>
+	
+	<VQE_CalibrateFuelRods>calibrate fuel rods</VQE_CalibrateFuelRods>
+	<VQE_CalibrateFuelRodsDesc>Temporarily shut down the reactor to calibrate the fuel consumption, allowing each unit of uranium to provide power for a longer time. Each calibration of fuel rods will reduce the fuel consumption rate by 10% of the remaining value.</VQE_CalibrateFuelRodsDesc>
+	<VQE_CalibrateFuelRodsDescExtended>\n\nCalibrate fuel rods has a {0} cooldown. It will be ready again in {1}</VQE_CalibrateFuelRodsDescExtended>
+	
+	<VQE_SafeMode>safe mode</VQE_SafeMode>
+	<VQE_SafeModeDesc>The genetron operates in safe mode. Burning uranium affects the maintenance of the genetron core, but no radiation is leaking from it. Activating this ability will change the genetron to operate in hazard mode.</VQE_SafeModeDesc>
+	<VQE_HazardMode>hazard mode</VQE_HazardMode>
+	<VQE_HazardModeDesc>The genetron operates in hazard mode. Burning uranium emits an unhealthy amount of radiation in radius, generating toxic buildup to everyone caught in it without toxic-resistant gear. The radius depends on the amount of uranium in the genetron. Maintenance of the genetron does not decrease. Activating this ability will change the genetron to operate in safe mode.</VQE_HazardModeDesc>
+	<VQE_SafeModeInfo>Operating in safe mode.</VQE_SafeModeInfo>
+	<VQE_HazardModeInfo>Operating in hazard mode.</VQE_HazardModeInfo>
 	
 	<!-- Alerts -->
 	
@@ -122,6 +144,7 @@
 	<VQE_CriticalBreakdown>Critical breakdown</VQE_CriticalBreakdown>
 	<VQE_CurrentMaintenance>Genetron maintenance: {0}</VQE_CurrentMaintenance>
 	<VQE_LowPowerMode>Low power mode. Remaining time: {0}.</VQE_LowPowerMode>
+	<VQE_ShutDownForCalibrations>Shut down for calibrations. Remaining time: {0}.</VQE_ShutDownForCalibrations>
 	<VQE_FuelRateAtTheMoment>Current fuel burn rate: {0} per day</VQE_FuelRateAtTheMoment>
 	<VQE_ReactorShutdown>Reactor shut down</VQE_ReactorShutdown>
 	<VQE_SetTargetUraniumLevel>Set target uranium level</VQE_SetTargetUraniumLevel>

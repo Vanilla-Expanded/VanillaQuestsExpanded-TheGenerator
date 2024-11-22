@@ -29,9 +29,9 @@ namespace VanillaQuestsExpandedTheGenerator
             if (parent.IsHashIntervalTick(60) && ShouldPushHeatNow)
             {
                 if(building?.overdrive == true) {
-                    GenTemperature.PushHeat(parent.PositionHeld, parent.MapHeld, 24);
+                    GenTemperature.PushHeat(parent.PositionHeld + IntVec3.South * 4, parent.MapHeld, 24);
                 }
-                else { GenTemperature.PushHeat(parent.PositionHeld, parent.MapHeld, Props.heatPerSecond); }
+                else { GenTemperature.PushHeat(parent.PositionHeld + IntVec3.South * 4, parent.MapHeld, Props.heatPerSecond); }
                 
             }
         }

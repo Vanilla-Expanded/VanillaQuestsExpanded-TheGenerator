@@ -304,10 +304,16 @@
     <Compile Include="Building\Chemfuel\Building_Genetron_ChemfuelBoosted.cs" />
     <Compile Include="Building\Chemfuel\Building_Genetron_ChemfuelPowered.cs" />
     <Compile Include="Building\Genetron bases\Building_GenetronNuclear.cs" />
+    <Compile Include="Building\Genetron bases\Building_GenetronWithEmergencyShutDown.cs" />
+    <Compile Include="Building\Genetron bases\Building_GenetronWithHazardModes.cs" />
+    <Compile Include="Building\Genetron bases\Building_GenetronWithFuelRodCalibration.cs" />
     <Compile Include="Building\Geothermal\Building_Genetron_Geothermal.cs" />
     <Compile Include="Building\Geothermal\Building_Genetron_HeatPowered.cs" />
     <Compile Include="Building\Geothermal\Building_Genetron_SteamPowered.cs" />
     <Compile Include="Building\Geothermal\Building_Genetron_ThermalVent.cs" />
+    <Compile Include="Building\Nuclear\Building_Genetron_Atomic.cs" />
+    <Compile Include="Building\Nuclear\Building_Genetron_Isotopic.cs" />
+    <Compile Include="Building\Nuclear\Building_Genetron_Nuclear.cs" />
     <Compile Include="Building\Nuclear\Building_Genetron_UraniumPowered.cs" />
     <Compile Include="Building\Wood\Building_Genetron_WoodBlasting.cs" />
     <Compile Include="Building\Genetron bases\Building_GenetronWithComponentCalibration.cs" />

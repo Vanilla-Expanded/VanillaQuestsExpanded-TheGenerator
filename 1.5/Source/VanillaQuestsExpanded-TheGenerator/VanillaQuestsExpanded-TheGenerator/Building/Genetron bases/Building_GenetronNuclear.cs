@@ -13,11 +13,16 @@ namespace VanillaQuestsExpandedTheGenerator
     {
         public bool permanentlyDisabled = false;
         public const int minUraniumToRestart = 50;
+        public bool usedRestartAtLeastOnce = false;
+     
+        public float nuclearConsumptionTotal = 0;
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref this.permanentlyDisabled, "permanentlyDisabled", false, false);
+            Scribe_Values.Look(ref this.usedRestartAtLeastOnce, "usedRestartAtLeastOnce", false, false);
+            Scribe_Values.Look(ref this.nuclearConsumptionTotal, "nuclearConsumptionTotal", 0, false);
 
 
         }
@@ -25,7 +30,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
+            if (!respawningAfterLoad && !compRefuelable.HasFuel)
             {
                 compRefuelable.Refuel(50);
 
@@ -35,6 +40,19 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 mapComp.AddUraniumFueledToMap(this);
             }
+
+            
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+            if (compRefuelableWithOverdrive?.HasFuel == true)
+            {
+                nuclearConsumptionTotal += compRefuelableWithOverdrive.ConsumptionRatePerTick;
+            }
+         
+
         }
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
@@ -66,36 +84,61 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return c;
             }
-            if (permanentlyDisabled)
+            Command_Action command_Action = new Command_Action();
+            if (!permanentlyDisabled)
             {
-                Command_Action command_Action = new Command_Action();
+                command_Action.defaultDesc = "VQE_RestartGenetronDesc".Translate(minUraniumToRestart) + "VQE_RestartGenetronDescNotNeeded".Translate();
+                command_Action.defaultLabel = "VQE_RestartGenetron".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/RestartGenetron_Gizmo", true);
+                command_Action.Disabled = true;
 
+            }
+            else
 
-
-                if (compRefuelable.Fuel >= minUraniumToRestart)
+            if (compRefuelable.Fuel >= minUraniumToRestart)
+            {
+                command_Action.defaultDesc = "VQE_RestartGenetronDesc".Translate(minUraniumToRestart);
+                command_Action.defaultLabel = "VQE_RestartGenetron".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/RestartGenetron_Gizmo", true);
+                command_Action.hotKey = KeyBindingDefOf.Misc1;
+                command_Action.action = delegate
                 {
-                    command_Action.defaultDesc = "VQE_RestartGenetronDesc".Translate(minUraniumToRestart);
-                    command_Action.defaultLabel = "VQE_RestartGenetron".Translate();
-                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/RestartGenetron_Gizmo", true);
-                    command_Action.hotKey = KeyBindingDefOf.Misc1;
-                    command_Action.action = delegate
-                    {
-                        permanentlyDisabled = false;
-                    };
+                    permanentlyDisabled = false;
+                    usedRestartAtLeastOnce = true;
+                };
 
-                }
-                else
-                {
-                    command_Action.defaultDesc = "VQE_RestartGenetronDesc".Translate(minUraniumToRestart) + "VQE_RestartGenetronDescExtended".Translate();
-                    command_Action.defaultLabel = "VQE_RestartGenetron".Translate();
-                    command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/RestartGenetron_Gizmo", true);
-                    command_Action.Disabled = true;
-                }
-
-                yield return command_Action;
+            }
+            else
+            {
+                command_Action.defaultDesc = "VQE_RestartGenetronDesc".Translate(minUraniumToRestart) + "VQE_RestartGenetronDescExtended".Translate();
+                command_Action.defaultLabel = "VQE_RestartGenetron".Translate();
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/RestartGenetron_Gizmo", true);
+                command_Action.Disabled = true;
             }
 
-            
+            yield return command_Action;
+
+            if (DebugSettings.ShowDevGizmos)
+            {
+                Command_Action command_Action3 = new Command_Action();
+                command_Action3.defaultLabel = "Fake a restart";
+                command_Action3.action = delegate
+                {
+                    usedRestartAtLeastOnce = true;
+                };
+                yield return command_Action3;
+
+                Command_Action command_Action4 = new Command_Action();
+                command_Action4.defaultLabel = "Set uranium used to 10000";
+                command_Action4.action = delegate
+                {
+                    nuclearConsumptionTotal = 10000;
+                };
+                yield return command_Action4;
+            }
+
+
+
         }
     }
 

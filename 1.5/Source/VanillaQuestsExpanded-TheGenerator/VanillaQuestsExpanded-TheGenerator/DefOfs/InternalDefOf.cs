@@ -42,6 +42,9 @@ namespace VanillaQuestsExpandedTheGenerator
         public static ThingDef VQE_Genetron_HeatPowered;
         //Nuclear
         public static ThingDef VQE_Genetron_UraniumPowered;
+        public static ThingDef VQE_Genetron_Nuclear;
+        public static ThingDef VQE_Genetron_Isotopic;
+        public static ThingDef VQE_Genetron_Atomic;
 
         //Ruins
         public static ThingDef VQE_NuclearGenetronHusk;

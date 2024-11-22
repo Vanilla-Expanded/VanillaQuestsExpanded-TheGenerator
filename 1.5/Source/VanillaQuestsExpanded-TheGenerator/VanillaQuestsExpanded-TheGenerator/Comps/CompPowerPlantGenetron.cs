@@ -10,8 +10,10 @@ namespace VanillaQuestsExpandedTheGenerator
         public Building_GenetronWithMaintenance building_withMaintenance;
         public Building_GenetronNuclear building_nuclear;
         public bool inCalibrationMode = false;
+        public bool inFuelRodCalibrationMode = false;
         public bool inSteamBoostMode = false;
         public int calibrationCounter = 0;
+      
 
         new public CompProperties_PowerGenetron Props => (CompProperties_PowerGenetron)props;
 
@@ -27,8 +29,11 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.PostExposeData();
             Scribe_Values.Look(ref this.inCalibrationMode, "inCalibrationMode", false, false);
+            Scribe_Values.Look(ref this.inFuelRodCalibrationMode, "inFuelRodCalibrationMode", false, false);
             Scribe_Values.Look(ref this.inSteamBoostMode, "inSteamBoostMode", false, false);
             Scribe_Values.Look(ref this.calibrationCounter, "calibrationCounter", 0, false);
+            
+
         }
 
         public override void CompTick()
@@ -40,7 +45,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public override void UpdateDesiredPowerOutput()
         {
-            if ((building != null && building.criticalBreakdown) || (breakdownableComp != null && breakdownableComp.BrokenDown) || 
+            if (inFuelRodCalibrationMode||(building != null && building.criticalBreakdown) || (breakdownableComp != null && breakdownableComp.BrokenDown) || 
                 (flickableComp != null && !flickableComp.SwitchIsOn) || (autoPoweredComp != null && !autoPoweredComp.WantsToBeOn) ||
                  (building_nuclear?.permanentlyDisabled == true) ||
               (toxifier != null && !toxifier.CanPolluteNow) || !base.PowerOn)

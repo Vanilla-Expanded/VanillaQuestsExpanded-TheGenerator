@@ -69,13 +69,18 @@ namespace VanillaQuestsExpandedTheGenerator
                                 break;
                             }
                         } 
-
-
                     }
                     if (existingBuildingAsGenetron.compPower != null)
                     {
                         compPower.calibrationCounter = existingBuildingAsGenetron.compPower.calibrationCounter;
                     }
+                    Building_GenetronNuclear existingBuildingAsNuclearGenetron = (Building_GenetronNuclear)existingBuilding;
+                    if(existingBuildingAsNuclearGenetron!=null && this.TryGetComp<CompRefuelableWithOverdrive>() is CompRefuelableWithOverdrive compRefuelableWithOverdrive)
+                    {
+                        compRefuelableWithOverdrive.permanentFuelRodCalibrationMultiplier = existingBuildingAsNuclearGenetron.compRefuelableWithOverdrive.permanentFuelRodCalibrationMultiplier;
+
+                    }
+
                     existingBuilding.Destroy();
                 }
             }
