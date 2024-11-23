@@ -113,7 +113,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 smokeSprayer.SteamSprayerTick();
 
                 ticksSmokeTimer++;
-                if (ticksSmokeTimer > ticksSmoke)
+                if ((ticksSmokeTimer > ticksSmoke)&& !wickActive)
                 {
                     Signal_NuclearCriticalBreakdown_Fuse();
                 }
@@ -121,8 +121,7 @@ namespace VanillaQuestsExpandedTheGenerator
             if (wickActive)
             {
                 if (wickSoundSustainer != null)
-                {
-                   
+                {                   
                     wickSoundSustainer.Maintain();
                 }
                 wickTimer++;
@@ -216,7 +215,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
             }
 
-            int radius = Mathf.CeilToInt(compRefuelable.Fuel);
+            int radius = Math.Min(Mathf.CeilToInt(compRefuelable.Fuel),282);
 
             CellRect cells = CellRect.CenteredOn(PositionHeld, radius);
 
@@ -230,22 +229,26 @@ namespace VanillaQuestsExpandedTheGenerator
             int x = 0;
             foreach (IntVec3 intVec3 in cells)
             {
-                x++;
-                if (x % 50 == 0)
-                {
-                    moteCount(this.Map.moteCounter) = 0;
-                    Vector3 vc = intVec3.ToVector3();               
-                    FleckMaker.ThrowLightningGlow(vc, this.Map, size: 10f);
-                    FleckMaker.ThrowMetaPuff(vc, this.Map);
-                }
-                List<Thing> things = this.Map.thingGrid.ThingsListAtFast(intVec3);
+                if (intVec3.InBounds(Map)) {
+                    x++;
+                    if (x % 50 == 0)
+                    {
+                        moteCount(this.Map.moteCounter) = 0;
+                        Vector3 vc = intVec3.ToVector3();
+                        FleckMaker.ThrowLightningGlow(vc, this.Map, size: 10f);
+                        FleckMaker.ThrowMetaPuff(vc, this.Map);
+                    }
+                    List<Thing> things = this.Map.thingGrid.ThingsListAtFast(intVec3);
 
-                for (int i = 0; i < things.Count; i++)
-                {
-                    Thing thing = things[i];
-                    if (thing.def.filth is null&& thing!=this && thing.def!= InternalDefOf.VQE_NuclearGenetronHusk && !(thing.def.building?.isNaturalRock ?? false))
-                        thing.TakeDamage(destroyInfo);
+                    for (int i = 0; i < things.Count; i++)
+                    {
+                        Thing thing = things[i];
+                        if (thing.def.filth is null && thing != this && thing.def != InternalDefOf.VQE_NuclearGenetronHusk && !(thing.def.building?.isNaturalRock ?? false))
+                            thing.TakeDamage(destroyInfo);
+                    }
+
                 }
+                
             }
 
             FloodFillerFog.FloodUnfog(PositionHeld, Map);

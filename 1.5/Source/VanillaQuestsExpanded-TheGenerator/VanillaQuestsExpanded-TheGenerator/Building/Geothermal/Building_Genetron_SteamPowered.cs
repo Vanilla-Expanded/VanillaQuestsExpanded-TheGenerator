@@ -36,7 +36,9 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallThermalVentGenetronDesc".Translate()+"VQE_InstallThermalVentGenetronDescExpanded".Translate(steamBoostUsesNeeded,steamBoostUsedCounter);
+                command_Action.defaultDesc = "VQE_InstallThermalVentGenetronDesc".Translate();
+                command_Action.defaultDescPostfix = "VQE_InstallThermalVentGenetronDescExpanded".Translate(steamBoostUsesNeeded, steamBoostUsedCounter).Colorize(Utils.tooltipColour);
+
                 command_Action.defaultLabel = "VQE_InstallThermalVentGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_11", true);
                 command_Action.Disabled = true;

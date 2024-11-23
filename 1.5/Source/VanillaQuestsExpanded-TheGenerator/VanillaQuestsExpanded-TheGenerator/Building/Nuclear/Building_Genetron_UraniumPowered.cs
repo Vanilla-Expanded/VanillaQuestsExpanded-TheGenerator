@@ -35,7 +35,9 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallNuclearGenetronDesc".Translate() + "VQE_InstallNuclearGenetronDescExpanded".Translate();
+                command_Action.defaultDesc = "VQE_InstallNuclearGenetronDesc".Translate() ;
+                command_Action.defaultDescPostfix = "VQE_InstallNuclearGenetronDescExpanded".Translate().Colorize(Utils.tooltipColour);
+
                 command_Action.defaultLabel = "VQE_InstallNuclearGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_14", true);
                 command_Action.Disabled = true;

@@ -13,6 +13,8 @@ namespace VanillaQuestsExpandedTheGenerator
     public static class Utils
     {
 
+        public static Color tooltipColour = Color.yellow;
+
 
         public static float CalculateMaintenancePowerImpact(float multiplier)
         {

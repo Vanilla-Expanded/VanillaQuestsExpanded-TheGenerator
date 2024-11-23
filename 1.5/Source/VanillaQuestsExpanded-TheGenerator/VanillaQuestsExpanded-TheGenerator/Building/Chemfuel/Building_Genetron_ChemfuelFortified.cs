@@ -22,7 +22,9 @@ namespace VanillaQuestsExpandedTheGenerator
             Command_Action command_Action = new Command_Action();
             if (!InternalDefOf.GeothermalPower.IsFinished)
             {
-                command_Action.defaultDesc = "VQE_InstallGeothermalGenetronDesc".Translate()+"VQE_InstallGeothermalGenetronDescNoResearch".Translate();
+                command_Action.defaultDesc = "VQE_InstallGeothermalGenetronDesc".Translate();
+                command_Action.defaultDescPostfix = "VQE_InstallGeothermalGenetronDescNoResearch".Translate().Colorize(Utils.tooltipColour);
+
                 command_Action.defaultLabel = "VQE_InstallGeothermalGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_9", true);
                 command_Action.Disabled = true;
@@ -31,7 +33,9 @@ namespace VanillaQuestsExpandedTheGenerator
             else
             if (!Genetron_GameComponent.Instance.geothermalGenetronStudied)
             {
-                command_Action.defaultDesc = "VQE_InstallGeothermalGenetronDesc".Translate()+"VQE_InstallGeothermalGenetronDescNoStudied".Translate();
+                command_Action.defaultDesc = "VQE_InstallGeothermalGenetronDesc".Translate();
+                command_Action.defaultDescPostfix = "VQE_InstallGeothermalGenetronDescNoStudied".Translate().Colorize(Utils.tooltipColour);
+
                 command_Action.defaultLabel = "VQE_InstallGeothermalGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_9", true);
               
@@ -57,7 +61,9 @@ namespace VanillaQuestsExpandedTheGenerator
             Command_Action command_Action2 = new Command_Action();
             if (!InternalDefOf.ShipReactor.IsFinished)
             {
-                command_Action2.defaultDesc = "VQE_InstallUraniumPoweredGenetronDesc".Translate() + "VQE_InstallUraniumPoweredGenetronDescNoResearch".Translate();
+                command_Action2.defaultDesc = "VQE_InstallUraniumPoweredGenetronDesc".Translate();
+                command_Action2.defaultDescPostfix = "VQE_InstallUraniumPoweredGenetronDescNoResearch".Translate().Colorize(Utils.tooltipColour);
+
                 command_Action2.defaultLabel = "VQE_InstallUraniumPoweredGenetron".Translate();
                 command_Action2.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_13", true);
                 command_Action2.Disabled = true;
@@ -66,7 +72,9 @@ namespace VanillaQuestsExpandedTheGenerator
             else
             if (!Genetron_GameComponent.Instance.nuclearGenetronStudied)
             {
-                command_Action2.defaultDesc = "VQE_InstallUraniumPoweredGenetronDesc".Translate() + "VQE_InstallUraniumPoweredGenetronDescNoStudied".Translate();
+                command_Action2.defaultDesc = "VQE_InstallUraniumPoweredGenetronDesc".Translate() ;
+                command_Action2.defaultDescPostfix = "VQE_InstallUraniumPoweredGenetronDescNoStudied".Translate().Colorize(Utils.tooltipColour);
+
                 command_Action2.defaultLabel = "VQE_InstallUraniumPoweredGenetron".Translate();
                 command_Action2.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_13", true);
 

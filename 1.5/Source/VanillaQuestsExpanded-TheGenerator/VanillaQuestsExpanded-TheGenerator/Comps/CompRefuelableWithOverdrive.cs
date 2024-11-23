@@ -74,6 +74,11 @@ namespace VanillaQuestsExpandedTheGenerator
         public float ConsumptionRatePerTick
         {
             get {
+                if (building.criticalBreakdown)
+                {
+                    return 0;
+                }
+
                 if (building.overdrive)
                 {
                     overdriveMultiplier = 3;
