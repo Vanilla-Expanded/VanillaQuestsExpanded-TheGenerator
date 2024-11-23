@@ -91,12 +91,12 @@ namespace VanillaQuestsExpandedTheGenerator
 
 
             command_Action3.defaultDesc = "VQE_DowngradeGenetronDesc".Translate();
-            command_Action3.defaultLabel = "VQE_DowngradeGenetron".Translate(InternalDefOf.VQE_Genetron_ChemfuelFortified.LabelCap);
-            command_Action3.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/DowngradeGenetron_Gizmo_8", true);
+            command_Action3.defaultLabel = "VQE_DowngradeGenetron".Translate(InternalDefOf.VQE_Genetron_ChemfuelCharged.LabelCap);
+            command_Action3.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/DowngradeGenetron_Gizmo_7", true);
             command_Action3.hotKey = KeyBindingDefOf.Misc2;
             command_Action3.action = delegate
             {
-                Window_Downgrade downgradeWindow = new Window_Downgrade(this, InternalDefOf.VQE_Genetron_ChemfuelFortified);
+                Window_Downgrade downgradeWindow = new Window_Downgrade(this, InternalDefOf.VQE_Genetron_ChemfuelCharged);
                 Find.WindowStack.Add(downgradeWindow);
             };
 

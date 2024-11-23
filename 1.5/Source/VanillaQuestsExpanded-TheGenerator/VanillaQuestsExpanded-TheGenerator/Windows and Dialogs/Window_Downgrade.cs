@@ -19,13 +19,13 @@ namespace VanillaQuestsExpandedTheGenerator
         public override Vector2 InitialSize => new Vector2(500f, 180f);
         private Vector2 scrollPosition = new Vector2(0, 0);
 
-        Building_GenetronTuning building;
+        Building_Genetron building;
         ThingDef newBuilding;
 
         private static readonly Color borderColor = new Color(0.13f, 0.13f, 0.13f);
         private static readonly Color fillColor = new Color(0, 0, 0, 0.1f);
 
-        public Window_Downgrade(Building_GenetronTuning building, ThingDef newBuilding)
+        public Window_Downgrade(Building_Genetron building, ThingDef newBuilding)
         {
 
             this.building = building;
