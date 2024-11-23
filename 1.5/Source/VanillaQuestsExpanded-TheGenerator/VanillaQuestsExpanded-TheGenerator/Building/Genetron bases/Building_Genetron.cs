@@ -55,9 +55,8 @@ namespace VanillaQuestsExpandedTheGenerator
             for (int i = 0; i < list.Count; i++)
             {
                 Building existingBuilding = list[i] as Building;
-                if (existingBuilding != this && existingBuilding is Building_Genetron)
-                {
-                    Building_Genetron existingBuildingAsGenetron = (Building_Genetron)existingBuilding;
+                if (existingBuilding != this && existingBuilding is Building_Genetron existingBuildingAsGenetron)
+                {                   
 
                     if (existingBuildingAsGenetron.compRefuelable != null && compRefuelable!=null)
                     {
@@ -65,7 +64,9 @@ namespace VanillaQuestsExpandedTheGenerator
                         {
                             if (compRefuelable.Props.fuelFilter.AllowedThingDefs.Contains(fuel))
                             {
-                                compRefuelable.Refuel(existingBuildingAsGenetron.compRefuelable.Fuel);
+                                float newCapacity = compRefuelable.Props.fuelCapacity;
+                                float existingCapacity = existingBuildingAsGenetron.compRefuelable.Fuel;
+                                compRefuelable.Refuel(newCapacity > existingCapacity ? existingCapacity : newCapacity);
                                 break;
                             }
                         } 
@@ -74,7 +75,7 @@ namespace VanillaQuestsExpandedTheGenerator
                     {
                         compPower.calibrationCounter = existingBuildingAsGenetron.compPower.calibrationCounter;
                     }
-                    Building_GenetronNuclear existingBuildingAsNuclearGenetron = (Building_GenetronNuclear)existingBuilding;
+                    Building_GenetronNuclear existingBuildingAsNuclearGenetron = existingBuildingAsGenetron as Building_GenetronNuclear;
                     if(existingBuildingAsNuclearGenetron!=null && this.TryGetComp<CompRefuelableWithOverdrive>() is CompRefuelableWithOverdrive compRefuelableWithOverdrive)
                     {
                         compRefuelableWithOverdrive.permanentFuelRodCalibrationMultiplier = existingBuildingAsNuclearGenetron.compRefuelableWithOverdrive.permanentFuelRodCalibrationMultiplier;

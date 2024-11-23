@@ -24,6 +24,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public bool nonLinearMaintenanceLoss = false;
 
         public bool hasNuclearMeltdowns = false;
+        public bool anyoneCanHandle = false;
 
     }
 

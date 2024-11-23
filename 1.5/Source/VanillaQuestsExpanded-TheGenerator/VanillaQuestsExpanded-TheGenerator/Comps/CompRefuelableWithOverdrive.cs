@@ -118,7 +118,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 if (building_nuclear != null && Props.isNuclear)
                 {
                     building_nuclear.Signal_ReduceMaintenanceBy(0.005f * this.ConsumptionRatePerTick);
-                    if (Fuel <= 0)
+                    if (Fuel <= 0.1)
                     {
                         building_nuclear.permanentlyDisabled = true;
                     }

@@ -124,6 +124,7 @@
 				<steamTuningControl>true</steamTuningControl>
 				<hideOverdrive>true</hideOverdrive>
 				<hidePowerSurge>true</hidePowerSurge>
+				<anyoneCanHandle>true</anyoneCanHandle>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -250,6 +251,7 @@
 				<steamTuningControl>true</steamTuningControl>
 				<hideOverdrive>true</hideOverdrive>
 				<hidePowerSurge>true</hidePowerSurge>
+				<anyoneCanHandle>true</anyoneCanHandle>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -377,6 +379,7 @@
 				<hideOverdrive>true</hideOverdrive>
 				<hidePowerSurge>true</hidePowerSurge>
 				<noCriticalBreakdowns>true</noCriticalBreakdowns>
+				<anyoneCanHandle>true</anyoneCanHandle>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -505,6 +508,7 @@
 				<hidePowerSurge>true</hidePowerSurge>
 				<noCriticalBreakdowns>true</noCriticalBreakdowns>
 				<worksInSolarFlares>true</worksInSolarFlares>
+				<anyoneCanHandle>true</anyoneCanHandle>
 			</li>
 		</modExtensions>
 	</ThingDef>

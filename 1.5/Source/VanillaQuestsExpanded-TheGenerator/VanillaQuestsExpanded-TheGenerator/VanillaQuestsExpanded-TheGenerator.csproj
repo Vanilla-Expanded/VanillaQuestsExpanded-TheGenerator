@@ -355,6 +355,7 @@
     <Compile Include="Things\SmokeSprayer_Constant.cs" />
     <Compile Include="Things\IntermittentSteamSprayer_Constant.cs" />
     <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Windows and Dialogs\Window_Downgrade.cs" />
     <Compile Include="Windows and Dialogs\Window_FineTuning.cs" />
     <Compile Include="Windows and Dialogs\Window_SteamTuning.cs" />
     <Compile Include="Windows and Dialogs\Window_Tuning.cs" />

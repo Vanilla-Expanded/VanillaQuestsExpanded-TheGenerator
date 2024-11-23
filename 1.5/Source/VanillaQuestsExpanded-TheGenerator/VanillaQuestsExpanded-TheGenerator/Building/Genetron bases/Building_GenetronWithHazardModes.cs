@@ -64,8 +64,18 @@ namespace VanillaQuestsExpandedTheGenerator
                 };
             }
             yield return command_Action;
-            
-        }
+            if (DebugSettings.ShowDevGizmos)
+            {
+                Command_Action command_Action3 = new Command_Action();
+                command_Action3.defaultLabel = "Set time in hazard mode to 100 days";
+                command_Action3.action = delegate
+                {
+                    hazardModeCounter=6000000;
+                };
+                yield return command_Action3;
+            }
+
+            }
 
         public override string GetInspectString()
         {

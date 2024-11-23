@@ -457,9 +457,9 @@
 		<clearBuildingArea>false</clearBuildingArea>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
-			<WorkToBuild>28000</WorkToBuild>
+			<WorkToBuild>32000</WorkToBuild>
 			<Flammability>0.5</Flammability>
-			<MarketValue>24220</MarketValue>
+			<MarketValue>32270</MarketValue>
 			<Beauty>-30</Beauty>
 			
 		</statBases>
@@ -467,8 +467,8 @@
 		<size>(6,6)</size>
 		<costList>
 		<Plasteel>50</Plasteel>
-			<Steel>100</Steel>	
-			<ComponentSpacer>2</ComponentSpacer>
+		
+			<ComponentSpacer>8</ComponentSpacer>
 			<VQE_GenetronComponent>2</VQE_GenetronComponent>
 		</costList>
 		<comps>
@@ -494,11 +494,11 @@
 			</li>
 			<li Class="CompProperties_HeatPusher">
 				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
-				<heatPerSecond>24</heatPerSecond>
+				<heatPerSecond>36</heatPerSecond>
 			</li>
 			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
 				<fuelConsumptionRate>1</fuelConsumptionRate>
-				<fuelCapacity>100</fuelCapacity>
+				<fuelCapacity>300</fuelCapacity>
 				<uraniumLevelConfigurable>true</uraniumLevelConfigurable>
 				<isNuclear>true</isNuclear>
 				<fuelGizmoLabel>Uranium</fuelGizmoLabel>
@@ -571,6 +571,7 @@
 				<hideTuning>true</hideTuning>
 				<nonLinearMaintenanceLoss>true</nonLinearMaintenanceLoss>
 				<hasNuclearMeltdowns>true</hasNuclearMeltdowns>
+				<anyoneCanHandle>true</anyoneCanHandle>
 			</li>
 		</modExtensions>
 	</ThingDef>

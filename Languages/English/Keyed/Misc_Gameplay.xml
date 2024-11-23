@@ -74,6 +74,12 @@
 	<VQE_InstallAtomicGenetronDesc>Install a system that instantly shuts down the reactor in dangerous situations, avoiding catastrophic failures and giving time for repairs. Additional safety mechanisms also allow anyone to maintain the atomic genetron, not just those who studied the ancient variants.</VQE_InstallAtomicGenetronDesc>
 	<VQE_InstallAtomicGenetronDescExpanded>\n\nGenetron needs to operate uninterrupted in hazard mode for {0} (time at the moment: {1})</VQE_InstallAtomicGenetronDescExpanded>
 	
+	<!-- Downgrade genetron -->
+	
+	<VQE_DowngradeGenetron>Downgrade to {0}</VQE_DowngradeGenetron>
+	<VQE_DowngradeGenetronDesc>Downgrade the genetron to an earlier stage of construction.</VQE_DowngradeGenetronDesc>
+	<VQE_DowngradeGenetronDialog>Warning, this will downgrade the genetron to {0}. All materials used to upgrade it to the current stage will be lost. Are you sure you want to proceed?</VQE_DowngradeGenetronDialog>
+	
 	<!-- Reactor abilities -->
 	<VQE_GenetronOverdrive>genetron overdrive</VQE_GenetronOverdrive>
 	<VQE_GenetronOverdriveDesc>Put the genetron in a temporary {0} overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.</VQE_GenetronOverdriveDesc>
@@ -125,6 +131,10 @@
 	<VQE_HazardModeDesc>The genetron operates in hazard mode. Burning uranium emits an unhealthy amount of radiation in radius, generating toxic buildup to everyone caught in it without toxic-resistant gear. The radius depends on the amount of uranium in the genetron. Maintenance of the genetron does not decrease. Activating this ability will change the genetron to operate in safe mode.</VQE_HazardModeDesc>
 	<VQE_SafeModeInfo>Operating in safe mode.</VQE_SafeModeInfo>
 	<VQE_HazardModeInfo>Operating in hazard mode.</VQE_HazardModeInfo>
+	
+	<VQE_EmergencyShutDown>emergency shut-down</VQE_EmergencyShutDown>
+	<VQE_EmergencyShutDownDesc>Shut down the genetron. It will stop burning uranium, thus stopping the maintenance loss. It will also stop generating power until restart procedures are initiated.</VQE_EmergencyShutDownDesc>
+	<VQE_EmergencyShutDownDescExtended>\n\nReactor is off now.</VQE_EmergencyShutDownDescExtended>
 	
 	<!-- Alerts -->
 	
