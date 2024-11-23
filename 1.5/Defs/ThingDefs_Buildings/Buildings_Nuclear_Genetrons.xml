@@ -50,7 +50,7 @@
 				<transmitsPower>true</transmitsPower>
 			</li>
 			
-			<li Class="CompProperties_Flickable"/>
+			
 		
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
@@ -193,7 +193,7 @@
 				<transmitsPower>true</transmitsPower>
 			</li>
 			
-			<li Class="CompProperties_Flickable"/>
+			
 		
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
@@ -336,7 +336,7 @@
 				<transmitsPower>true</transmitsPower>
 			</li>
 			
-			<li Class="CompProperties_Flickable"/>
+			
 		
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
@@ -479,8 +479,7 @@
 				<transmitsPower>true</transmitsPower>
 			</li>
 			
-			<li Class="CompProperties_Flickable"/>
-		
+			
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
 				<empChancePerTick>0.7</empChancePerTick>

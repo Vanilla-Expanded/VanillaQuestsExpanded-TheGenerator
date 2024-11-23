@@ -58,6 +58,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 Close();
                 Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(newBuilding), building.PositionHeld, building.Map);
+                thingToMake.SetFaction(building.Faction);
             }
         }
     }
