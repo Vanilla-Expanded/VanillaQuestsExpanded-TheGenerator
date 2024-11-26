@@ -12,4 +12,10 @@
 		<reportString>maintaining TargetA.</reportString>
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
 	</JobDef>
+	<JobDef>
+		<defName>VQE_StudyGenetron</defName>
+		<driverClass>VanillaQuestsExpandedTheGenerator.JobDriver_StudyGenetron</driverClass>
+		<reportString>studying TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
 </Defs>

@@ -293,12 +293,15 @@
   <ItemGroup>
     <Compile Include="AI\JobDriver\JobDriver_FixCriticallyBrokenDownBuilding.cs" />
     <Compile Include="AI\JobDriver\JobDriver_MaintainGenetron.cs" />
+    <Compile Include="AI\JobDriver\JobDriver_StudyGenetron.cs" />
     <Compile Include="AI\WorkGiver\WorkGiver_FixCriticallyBreakdown.cs" />
+    <Compile Include="AI\WorkGiver\WorkGiver_StudyGenetron.cs" />
     <Compile Include="AI\WorkGiver\WorkGiver_MaintainGenetron.cs" />
     <Compile Include="AI\WorkGiver\WorkGiver_RefuelWithOverdrive.cs" />
     <Compile Include="Alerts\Alert_CriticalMaintenance.cs" />
     <Compile Include="Alerts\Alert_LowUranium.cs" />
     <Compile Include="Alerts\Alert_LowMaintenance.cs" />
+    <Compile Include="Building\Building_Genetron_Studiable.cs" />
     <Compile Include="Building\Chemfuel\Building_Genetron_ChemfuelFortified.cs" />
     <Compile Include="Building\Chemfuel\Building_Genetron_ChemfuelCharged.cs" />
     <Compile Include="Building\Chemfuel\Building_Genetron_ChemfuelBoosted.cs" />

@@ -40,6 +40,10 @@ namespace VanillaQuestsExpandedTheGenerator
         public static HashSet<BuildableDef> nuclearGenetrons = new HashSet<BuildableDef>() { InternalDefOf.VQE_Genetron_UraniumPowered,
         InternalDefOf.VQE_Genetron_Nuclear,InternalDefOf.VQE_Genetron_Isotopic,InternalDefOf.VQE_Genetron_Atomic };
 
+        public static HashSet<BackstoryDef> basicBackstories = new HashSet<BackstoryDef>() { InternalDefOf.VQE_AncientEngineer01,InternalDefOf.VQE_PowerArchitect02,
+            InternalDefOf.VQE_ControlSystemsEngineer03,InternalDefOf.VQE_FieldRepairTech04,InternalDefOf.VQE_SafetyInspector05,InternalDefOf.VQE_ChildhoodInventorGenetron, InternalDefOf.VQE_InventorGenetronAdulthood};
+
+        public static HashSet<BackstoryDef> advancedBackstories = new HashSet<BackstoryDef>() { InternalDefOf.VQE_ChildhoodInventorGenetron, InternalDefOf.VQE_InventorGenetronAdulthood};
 
 
     }

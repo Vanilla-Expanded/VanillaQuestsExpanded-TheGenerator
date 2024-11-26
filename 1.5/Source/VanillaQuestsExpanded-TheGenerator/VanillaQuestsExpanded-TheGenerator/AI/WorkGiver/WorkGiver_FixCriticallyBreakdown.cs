@@ -18,8 +18,6 @@ namespace VanillaQuestsExpandedTheGenerator
             return pawn.Map.GetComponent<Genetron_MapComponent>().repairables_InMap;
         }
 
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial);
-
         public override PathEndMode PathEndMode => PathEndMode.Touch;
 
         public static void ResetStaticData()
@@ -62,7 +60,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 return false;
             }
-            if (building.cachedDetailsExtension?.anyoneCanHandle!=true && pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron) == null)
+            if (building.cachedDetailsExtension?.anyoneCanHandle!=true && !Utils.HasStudiedBasicHediffOrBackstory(pawn))
             {
                 JobFailReason.Is(NotStudied);
                 return false;

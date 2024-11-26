@@ -18,14 +18,14 @@ namespace VanillaQuestsExpandedTheGenerator
 
             if (__result && StaticCollections.genetrons.Contains(t.def.entityDefToBuild) && !StaticCollections.geothermalGenetrons.Contains(t.def.entityDefToBuild))
             {
-                if(t.def.entityDefToBuild==InternalDefOf.VQE_Genetron_Geothermal && p?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGeothermalGenetron) == null)
+                if(t.def.entityDefToBuild==InternalDefOf.VQE_Genetron_Geothermal && !Utils.HasStudiedGeothermalHediffOrBackstory(p))
                 {
                     if (p != null) { JobFailReason.Is("VQE_NeedsStudyGeothermal".Translate(p.NameFullColored)); }
 
                     __result = false;
                 }
                 else
-                if (StaticCollections.nuclearGenetrons.Contains(t.def.entityDefToBuild) && p?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientNuclearGenetron) == null)
+                if (StaticCollections.nuclearGenetrons.Contains(t.def.entityDefToBuild) && !Utils.HasStudiedNuclearHediffOrBackstory(p))
                 {
                     if (p != null) { JobFailReason.Is("VQE_NeedsStudyNuclear".Translate(p.NameFullColored)); }
 
@@ -34,7 +34,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 else
 
 
-                if (p?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron)==null)
+                if (!Utils.HasStudiedBasicHediffOrBackstory(p))
                 {
                     if(p!=null) { JobFailReason.Is("VQE_NeedsStudy".Translate(p.NameFullColored)); }
                     

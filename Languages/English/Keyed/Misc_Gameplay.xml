@@ -165,4 +165,11 @@
 	<VQE_NuclearFuelConsumption>Fuel consumption per day: {0}</VQE_NuclearFuelConsumption>
 	<VQE_GenetronMaintenanceTooltip>ARC maintenance
 ARC needs to be maintained by colonists. If maintenance reaches 0%, ARC will break down.</VQE_GenetronMaintenanceTooltip>
+
+	<!-- Ancient ARC study -->
+	
+	<VQE_StudyAncientGenetron>Study ancient ARC</VQE_StudyAncientGenetron>
+	<VQE_StudyAncientGenetronDesc>Study the ancient ARC to find out how to construct an operational one in your colony.</VQE_StudyAncientGenetronDesc>
+	<VQE_StudyAncientGenetronDescExtended>\n\nThis ARC has already been studied or is in the process of being studied.</VQE_StudyAncientGenetronDescExtended>
+	
 </LanguageData>

@@ -34,5 +34,56 @@ namespace VanillaQuestsExpandedTheGenerator
                 map.flecks.CreateFleck(dataStatic);
             }
         }
+
+        public static bool HasStudiedBasicHediffOrBackstory(Pawn pawn)
+        {
+            if(pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron) != null)
+            {
+                return true;
+            }
+            if (pawn.story.Adulthood!=null && StaticCollections.basicBackstories.Contains(pawn?.story.Adulthood))
+            {
+                return true;
+            }
+            if (pawn.story.Childhood != null && StaticCollections.basicBackstories.Contains(pawn?.story.Childhood))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool HasStudiedGeothermalHediffOrBackstory(Pawn pawn)
+        {
+            if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGeothermalGenetron) != null)
+            {
+                return true;
+            }
+            if (pawn.story.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Adulthood))
+            {
+                return true;
+            }
+            if (pawn.story.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Childhood))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool HasStudiedNuclearHediffOrBackstory(Pawn pawn)
+        {
+            if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientNuclearGenetron) != null)
+            {
+                return true;
+            }
+            if (pawn.story.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Adulthood))
+            {
+                return true;
+            }
+            if (pawn.story.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Childhood))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

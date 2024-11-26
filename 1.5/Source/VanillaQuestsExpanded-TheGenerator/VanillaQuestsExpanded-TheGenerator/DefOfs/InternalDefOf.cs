@@ -55,6 +55,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static JobDef VQE_FixCriticallyBrokenDownBuilding;
         public static JobDef VQE_MaintainGenetron;
+        public static JobDef VQE_StudyGenetron;
 
         public static StatDef VQE_GenetronMaintenanceLoss;
 
@@ -63,5 +64,13 @@ namespace VanillaQuestsExpandedTheGenerator
         public static ResearchProjectDef ShipReactor;
 
         public static SoundDef VQE_MeltdownExplosion;
+
+        public static BackstoryDef VQE_AncientEngineer01;
+        public static BackstoryDef VQE_PowerArchitect02;
+        public static BackstoryDef VQE_ControlSystemsEngineer03;
+        public static BackstoryDef VQE_FieldRepairTech04;
+        public static BackstoryDef VQE_SafetyInspector05;
+        public static BackstoryDef VQE_ChildhoodInventorGenetron;
+        public static BackstoryDef VQE_InventorGenetronAdulthood;
     }
 }

@@ -16,6 +16,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public HashSet<Thing> repairables_InMap = new HashSet<Thing>();
         public HashSet<Thing> maintainables_InMap = new HashSet<Thing>();
         public HashSet<Thing> uraniumFueled_InMap = new HashSet<Thing>();
+        public HashSet<Thing> studiables_InMap = new HashSet<Thing>();
 
         public Genetron_MapComponent(Map map) : base(map)
         {
@@ -25,7 +26,8 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.ExposeData();
             Scribe_Collections.Look(ref this.repairables_InMap, "repairables_InMap", LookMode.Reference);
-           
+            Scribe_Collections.Look(ref this.studiables_InMap, "studiables_InMap", LookMode.Reference);
+
         }
 
         public override void FinalizeInit()
@@ -101,6 +103,22 @@ namespace VanillaQuestsExpandedTheGenerator
             if (uraniumFueled_InMap.Contains(thing))
             {
                 uraniumFueled_InMap.Remove(thing);
+            }
+
+        }
+        public void AddStudiablesToMap(Thing thing)
+        {
+            if (!studiables_InMap.Contains(thing))
+            {
+                studiables_InMap.Add(thing);
+            }
+        }
+
+        public void RemoveStudiablesFromMap(Thing thing)
+        {
+            if (studiables_InMap.Contains(thing))
+            {
+                studiables_InMap.Remove(thing);
             }
 
         }
