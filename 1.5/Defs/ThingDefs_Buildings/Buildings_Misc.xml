@@ -160,7 +160,7 @@
 		<graphicData>
 			<texPath>Things/AncientJunk/AncientGenetronConstructionTruck</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
-			<drawSize>(6,3)</drawSize>
+			<drawSize>(7,4)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
