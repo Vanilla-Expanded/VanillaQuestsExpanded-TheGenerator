@@ -28,9 +28,9 @@
     <defName>VQE_InventorGenetronAdulthood</defName>
     <identifier>VQE_InventorGenetron</identifier>
     <slot>Adulthood</slot>
-    <title>inventor of the genetron</title>
+    <title>inventor of the ARC</title>
     <titleShort>inventor</titleShort>
-    <description>[PAWN_nameDef] became a legend among engineers as the inventor of the genetron, a groundbreaking power generator that changed the fate of entire colonies. Driven by a relentless desire to solve the energy shortages crippling the outer rim, [PAWN_pronoun] pushed the boundaries of safe experimentation. The first prototypes were rushed, leading to tragic accidents that claimed many lives. Though these failures weighed heavily on [PAWN_objective], they fueled [PAWN_possessive] determination. After countless trials, [PAWN_nameDef] finally succeeded, cementing [PAWN_possessive] legacy as a hero to some, and a reckless maverick to others.</description>
+    <description>[PAWN_nameDef] became a legend among engineers as the inventor of the ARC, a groundbreaking power generator that changed the fate of entire colonies. Driven by a relentless desire to solve the energy shortages crippling the outer rim, [PAWN_pronoun] pushed the boundaries of safe experimentation. The first prototypes were rushed, leading to tragic accidents that claimed many lives. Though these failures weighed heavily on [PAWN_objective], they fueled [PAWN_possessive] determination. After countless trials, [PAWN_nameDef] finally succeeded, cementing [PAWN_possessive] legacy as a hero to some, and a reckless maverick to others.</description>
     <skillGains>
         <Construction>6</Construction>
         <Intellectual>8</Intellectual>

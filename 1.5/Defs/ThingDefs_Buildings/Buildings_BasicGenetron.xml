@@ -2,7 +2,7 @@
 <Defs>
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Basic</defName>
-		<label>genetron</label>
+		<label>ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Basic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>

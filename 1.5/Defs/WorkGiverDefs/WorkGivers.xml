@@ -29,7 +29,7 @@
 	</WorkGiverDef>
 	<WorkGiverDef>
 		<defName>VQE_MaintainGenetron</defName>
-		<label>maintain genetron</label>
+		<label>maintain ARC</label>
 		<giverClass>VanillaQuestsExpandedTheGenerator.WorkGiver_MaintainGenetron</giverClass>
 		<workType>Construction</workType>
 		<verb>maintain</verb>

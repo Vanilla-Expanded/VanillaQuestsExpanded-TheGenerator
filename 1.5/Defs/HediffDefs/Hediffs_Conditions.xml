@@ -3,8 +3,8 @@
 
 	<HediffDef>
 		<defName>VQE_StudiedAncientGenetron</defName>
-		<label>studied ancient genetron</label>
-		<description>This particular colonist has studied the ancient genetron. It allows them to build, upgrade and maintain a genetron in the colony.</description>
+		<label>studied ancient ARC</label>
+		<description>This particular colonist has studied the ancient ARC. It allows them to build, upgrade and maintain an ARC in the colony.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -24,8 +24,8 @@
 	
 	<HediffDef>
 		<defName>VQE_StudiedAncientGeothermalGenetron</defName>
-		<label>studied ancient geothermal genetron</label>
-		<description>This particular colonist has studied the ancient geothermal genetron. It allows them to build, upgrade and maintain a geothermal genetron in the colony.</description>
+		<label>studied ancient geothermal ARC</label>
+		<description>This particular colonist has studied the ancient geothermal ARC. It allows them to build, upgrade and maintain a geothermal ARC in the colony.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -45,8 +45,8 @@
 	
 	<HediffDef>
 		<defName>VQE_StudiedAncientNuclearGenetron</defName>
-		<label>studied nuclear genetron husk</label>
-		<description>This particular colonist has studied a nuclear genetron husk. It allows them to build, upgrade and maintain a nuclear genetron in the colony.</description>
+		<label>studied nuclear ARC husk</label>
+		<description>This particular colonist has studied a nuclear ARC husk. It allows them to build, upgrade and maintain a nuclear ARC in the colony.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>

@@ -4,9 +4,9 @@
  
   <RecipeDef>
     <defName>VQE_DisassembleGenetronComponent</defName>
-    <label>disassemble genetron component</label>
-    <description>Disassemble a genetron component to salvage potentially useful advanced parts.</description>
-    <jobString>disassembling genetron component.</jobString>
+    <label>disassemble ARC component</label>
+    <description>Disassemble an ARC component to salvage potentially useful advanced parts.</description>
+    <jobString>disassembling ARC component.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>

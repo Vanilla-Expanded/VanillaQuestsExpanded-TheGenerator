@@ -3,7 +3,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_WoodFired</defName>
-		<label>wood-fired genetron</label>
+		<label>wood-fired ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_WoodFired</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -113,7 +113,7 @@
 	</ThingDef>
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_WoodFueled</defName>
-		<label>wood-fueled genetron</label>
+		<label>wood-fueled ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_WoodFueled</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -229,7 +229,7 @@
 	</ThingDef>
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_WoodPowered</defName>
-		<label>wood-powered genetron</label>
+		<label>wood-powered ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_WoodPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -348,7 +348,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_WoodBlasting</defName>
-		<label>wood-blasting genetron</label>
+		<label>wood-blasting ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_WoodBlasting</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>

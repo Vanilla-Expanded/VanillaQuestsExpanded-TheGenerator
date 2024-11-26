@@ -4,7 +4,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelPowered</defName>
-		<label>chemfuel-powered genetron</label>
+		<label>chemfuel-powered ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -135,7 +135,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelBoosted</defName>
-		<label>chemfuel-boosted genetron</label>
+		<label>chemfuel-boosted ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelBoosted</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -266,7 +266,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelCharged</defName>
-		<label>chemfuel-charged genetron</label>
+		<label>chemfuel-charged ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelCharged</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -398,7 +398,7 @@
 	</ThingDef>
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelFortified</defName>
-		<label>chemfuel-fortified genetron</label>
+		<label>chemfuel-fortified ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelFortified</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>

@@ -15,8 +15,8 @@
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingNaturalBase">
 		<defName>VQE_GenetronJunk</defName>
-		<label>genetron junk</label>
-		<description>A twisted chunk of a genetron. Valuable parts are missing, and everything else is degraded to uselessness.</description>
+		<label>ARC junk</label>
+		<description>A twisted chunk of an ARC. Valuable parts are missing, and everything else is degraded to uselessness.</description>
 		<thingClass>Building</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -37,8 +37,8 @@
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_NuclearGenetronHusk</defName>
-		<label>nuclear genetron husk</label>
-		<description>A ruined husk of a nuclear genetron. Lack of maintenance or other unforeseen crisis has resulted in a devastating detonation that has twisted the metal into something quite unusable. This husk can be studied to learn how to construct and maintain a nuclear genetron, but can also be deconstructed to yield some resources back.</description>
+		<label>nuclear ARC husk</label>
+		<description>A ruined husk of a nuclear ARC. Lack of maintenance or other unforeseen crisis has resulted in a devastating detonation that has twisted the metal into something quite unusable. This husk can be studied to learn how to construct and maintain a nuclear ARC, but can also be deconstructed to yield some resources back.</description>
 		<graphicData>
 			<texPath>Things/AncientJunk/NuclearGenetronHusk</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

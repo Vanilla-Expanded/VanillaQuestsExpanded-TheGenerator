@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<!-- Wood genetron upgrades -->
-	<VQE_InstallWoodFiredGenetron>install wood-fired genetron core</VQE_InstallWoodFiredGenetron>
-	<VQE_InstallWoodFiredGenetronDesc>Install wood-fueled furnaces that greatly improve the power output of the genetron core, but will change the generator to require wood to operate.</VQE_InstallWoodFiredGenetronDesc>
-	<VQE_InstallWoodFiredGenetronDescExpanded>\n\nGenetron needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallWoodFiredGenetronDescExpanded>
+	<!-- Wood ARC upgrades -->
+	<VQE_InstallWoodFiredGenetron>install wood-fired ARC core</VQE_InstallWoodFiredGenetron>
+	<VQE_InstallWoodFiredGenetronDesc>Install wood-fueled furnaces that greatly improve the power output of the ARC core, but will change the generator to require wood to operate.</VQE_InstallWoodFiredGenetronDesc>
+	<VQE_InstallWoodFiredGenetronDescExpanded>\n\nARC needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallWoodFiredGenetronDescExpanded>
 	
 	<VQE_InstallWoodFueledGenetron>install automated stoker</VQE_InstallWoodFueledGenetron>
 	<VQE_InstallWoodFueledGenetronDesc>Install an automated system for feeding the fuel, keeping the furnace at optimal output with less frequent fueling.</VQE_InstallWoodFueledGenetronDesc>
-	<VQE_InstallWoodFueledGenetronDescExpanded>\n\nGenetron needs to burn {0} fuel (fuel burned at the moment: {1})</VQE_InstallWoodFueledGenetronDescExpanded>
+	<VQE_InstallWoodFueledGenetronDescExpanded>\n\nARC needs to burn {0} fuel (fuel burned at the moment: {1})</VQE_InstallWoodFueledGenetronDescExpanded>
 		
 	<VQE_InstallWoodPoweredGenetron>install energy circulators</VQE_InstallWoodPoweredGenetron>
-	<VQE_InstallWoodPoweredGenetronDesc>Install energy circulators that redirect excess heat back into the genetron core, amplifying power output with only a slight rise in fuel consumption.</VQE_InstallWoodPoweredGenetronDesc>
-	<VQE_InstallWoodPoweredGenetronDescExpanded>\n\nGenetron needs to burn {0} fuel (fuel burned at the moment: {1})</VQE_InstallWoodPoweredGenetronDescExpanded>
+	<VQE_InstallWoodPoweredGenetronDesc>Install energy circulators that redirect excess heat back into the ARC core, amplifying power output with only a slight rise in fuel consumption.</VQE_InstallWoodPoweredGenetronDesc>
+	<VQE_InstallWoodPoweredGenetronDescExpanded>\n\nARC needs to burn {0} fuel (fuel burned at the moment: {1})</VQE_InstallWoodPoweredGenetronDescExpanded>
 	
 	<VQE_InstallWoodBlastingGenetron>install adjustable burn cylinders</VQE_InstallWoodBlastingGenetron>
 	<VQE_InstallWoodBlastingGenetronDesc>Install large, adjustable internal cylinders that allow altering the burn rate of the core, adjusting the power generated to fit the needs of the colony.</VQE_InstallWoodBlastingGenetronDesc>
-	<VQE_InstallWoodBlastingGenetronDescExpanded>\n\nGenetron needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallWoodBlastingGenetronDescExpanded>
+	<VQE_InstallWoodBlastingGenetronDescExpanded>\n\nARC needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallWoodBlastingGenetronDescExpanded>
 	
-	<!-- Chemfuel genetron upgrades -->
-	<VQE_InstallChemfuelPoweredGenetron>install chemfuel-powered genetron core</VQE_InstallChemfuelPoweredGenetron>
-	<VQE_InstallChemfuelPoweredGenetronDesc>Install a set of chemfuel-operated engines that power up the genetron core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require genetron components to be replaced.</VQE_InstallChemfuelPoweredGenetronDesc>
-	<VQE_InstallChemfuelPoweredGenetronDescExpanded>\n\nGenetron needs to operate at 200% using genetron tuning uninterrupted for {0} days. (time at the moment: {1})</VQE_InstallChemfuelPoweredGenetronDescExpanded>
+	<!-- Chemfuel ARC upgrades -->
+	<VQE_InstallChemfuelPoweredGenetron>install chemfuel-powered ARC core</VQE_InstallChemfuelPoweredGenetron>
+	<VQE_InstallChemfuelPoweredGenetronDesc>Install a set of chemfuel-operated engines that power up the ARC core, providing large quantities of energy by burning chemfuel. The engines will need regular maintenance, and if they break down, will require ARC components to be replaced.</VQE_InstallChemfuelPoweredGenetronDesc>
+	<VQE_InstallChemfuelPoweredGenetronDescExpanded>\n\nARC needs to operate at 200% using ARC tuning uninterrupted for {0} days. (time at the moment: {1})</VQE_InstallChemfuelPoweredGenetronDescExpanded>
 	<VQE_InstallChemfuelPoweredGenetronDescNoResearch>\n\nRequires Biofuel refining research to be completed.</VQE_InstallChemfuelPoweredGenetronDescNoResearch>
 	
 	<VQE_InstallChemfuelBoostedGenetron>install hyperburn chamber</VQE_InstallChemfuelBoostedGenetron>
 	<VQE_InstallChemfuelBoostedGenetronDesc>Install a hyperburn chamber to superheat the combustion process and extract maximum energy from each unit of fuel.</VQE_InstallChemfuelBoostedGenetronDesc>
-	<VQE_InstallChemfuelBoostedGenetronDescExpanded>\n\nGenetron overdrive needs to be active for {0} days. (time at the moment: {1})</VQE_InstallChemfuelBoostedGenetronDescExpanded>
+	<VQE_InstallChemfuelBoostedGenetronDescExpanded>\n\nARC overdrive needs to be active for {0} days. (time at the moment: {1})</VQE_InstallChemfuelBoostedGenetronDescExpanded>
 	
 	<VQE_InstallChemfuelChargedGenetron>install adaptive fuel modulator</VQE_InstallChemfuelChargedGenetron>
 	<VQE_InstallChemfuelChargedGenetronDesc>Install an adaptive fuel modulator to adjust fuel flow dynamically, matching power demands and optimizing fuel usage. This ensures extended runtime and peak efficiency without sacrificing energy output.</VQE_InstallChemfuelChargedGenetronDesc>
@@ -34,91 +34,91 @@
 	
 	<VQE_InstallChemfuelFortifiedGenetron>install ignition stabilizer</VQE_InstallChemfuelFortifiedGenetron>
 	<VQE_InstallChemfuelFortifiedGenetronDesc>Install an ignition stabilizer gizmo to ensure consistent and steady combustion, maintaining optimal power output and reducing fluctuations in fuel consumption. This upgrade enhances the generator's reliability and fuel efficiency. The stabilizer can be calibrated to permanently improve the power output.</VQE_InstallChemfuelFortifiedGenetronDesc>
-	<VQE_InstallChemfuelFortifiedGenetronDescExpanded>\n\nGenetron needs to burn {0} fuel (fuel burned at the moment: {1})</VQE_InstallChemfuelFortifiedGenetronDescExpanded>
+	<VQE_InstallChemfuelFortifiedGenetronDescExpanded>\n\nARC needs to burn {0} fuel (fuel burned at the moment: {1})</VQE_InstallChemfuelFortifiedGenetronDescExpanded>
 	
-	<!-- Geothermal genetron upgrades -->
+	<!-- Geothermal ARC upgrades -->
 	
-	<VQE_InstallGeothermalGenetron>install geothermal genetron core</VQE_InstallGeothermalGenetron>
-	<VQE_InstallGeothermalGenetronDesc>Exchange the genetron core to utilise exclusively the steam energy produced by the geothermal vent. Doing so will decrease the power output significantly, but will also remove any fuel need completely. Geothermal genetron core will require regular maintenance, but can be maintained by everyone and not just the genetron specialists.</VQE_InstallGeothermalGenetronDesc>
+	<VQE_InstallGeothermalGenetron>install geothermal ARC core</VQE_InstallGeothermalGenetron>
+	<VQE_InstallGeothermalGenetronDesc>Exchange the ARC core to utilise exclusively the steam energy produced by the geothermal vent. Doing so will decrease the power output significantly, but will also remove any fuel need completely. Geothermal ARC core will require regular maintenance, but can be maintained by everyone and not just the ARC specialists.</VQE_InstallGeothermalGenetronDesc>
 	<VQE_InstallGeothermalGenetronDescNoResearch>\n\nRequires Geothermal power research to be completed.</VQE_InstallGeothermalGenetronDescNoResearch>
-	<VQE_InstallGeothermalGenetronDescNoStudied>\n\nA colonist needs to study an ancient geothermal genetron somewhere in the world.</VQE_InstallGeothermalGenetronDescNoStudied>
+	<VQE_InstallGeothermalGenetronDescNoStudied>\n\nA colonist needs to study an ancient geothermal ARC somewhere in the world.</VQE_InstallGeothermalGenetronDescNoStudied>
 	
 	<VQE_InstallSteamPoweredGenetron>install vent booster</VQE_InstallSteamPoweredGenetron>
-	<VQE_InstallSteamPoweredGenetronDesc>Install a thermal vent booster to enhance steam flow from geothermal vents, boosting the genetron’s power output during peak energy demands. This upgrade ensures higher efficiency and performance when needed most.</VQE_InstallSteamPoweredGenetronDesc>
-	<VQE_InstallSteamPoweredGenetronDescExpanded>\n\nGenetron needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallSteamPoweredGenetronDescExpanded>
+	<VQE_InstallSteamPoweredGenetronDesc>Install a thermal vent booster to enhance steam flow from geothermal vents, boosting the ARC’s power output during peak energy demands. This upgrade ensures higher efficiency and performance when needed most.</VQE_InstallSteamPoweredGenetronDesc>
+	<VQE_InstallSteamPoweredGenetronDescExpanded>\n\nARC needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallSteamPoweredGenetronDescExpanded>
 	
 	<VQE_InstallThermalVentGenetron>install pressure surge protectors</VQE_InstallThermalVentGenetron>
-	<VQE_InstallThermalVentGenetronDesc>Install a set of pressure surge protectors that will prevent the genetron from ever reaching a critical breaking point, while also increasing the power output.</VQE_InstallThermalVentGenetronDesc>
+	<VQE_InstallThermalVentGenetronDesc>Install a set of pressure surge protectors that will prevent the ARC from ever reaching a critical breaking point, while also increasing the power output.</VQE_InstallThermalVentGenetronDesc>
 	<VQE_InstallThermalVentGenetronDescExpanded>\n\nSteam boost needs to be activated {0} times. (activations at the moment: {1})</VQE_InstallThermalVentGenetronDescExpanded>
 	
 	<VQE_InstallHeatPoweredGenetron>install flow regulators</VQE_InstallHeatPoweredGenetron>
 	<VQE_InstallHeatPoweredGenetronDesc>Install a number of internal steam flow regulators that balance steam intake to ensure consistent performance, reducing wear and tear on the generator's components. Flow regulators allow the generator to operate even during a solar flare.</VQE_InstallHeatPoweredGenetronDesc>
-	<VQE_InstallHeatPoweredGenetronDescExpanded>\n\nGenetron needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallHeatPoweredGenetronDescExpanded>
+	<VQE_InstallHeatPoweredGenetronDescExpanded>\n\nARC needs to operate uninterrupted for {0} (time at the moment: {1})</VQE_InstallHeatPoweredGenetronDescExpanded>
 	
-	<!-- Nuclear genetron upgrades -->
+	<!-- Nuclear ARC upgrades -->
 	
-	<VQE_InstallUraniumPoweredGenetron>install uranium-powered genetron core</VQE_InstallUraniumPoweredGenetron>
-	<VQE_InstallUraniumPoweredGenetronDesc>Install a large nuclear reactor in place of the old genetron core, utilising uranium to generate huge amounts of energy. The genetron will no longer be able to operate without fuel, and will shut down if it ever runs out of uranium. Maintenance and uranium supply will become essential in preventing devastating consequences.</VQE_InstallUraniumPoweredGenetronDesc>
+	<VQE_InstallUraniumPoweredGenetron>install uranium-powered ARC core</VQE_InstallUraniumPoweredGenetron>
+	<VQE_InstallUraniumPoweredGenetronDesc>Install a large nuclear reactor in place of the old ARC core, utilising uranium to generate huge amounts of energy. The ARC will no longer be able to operate without fuel, and will shut down if it ever runs out of uranium. Maintenance and uranium supply will become essential in preventing devastating consequences.</VQE_InstallUraniumPoweredGenetronDesc>
 	<VQE_InstallUraniumPoweredGenetronDescNoResearch>\n\nRequires Starship reactor research to be completed.</VQE_InstallUraniumPoweredGenetronDescNoResearch>
-	<VQE_InstallUraniumPoweredGenetronDescNoStudied>\n\nA colonist needs to study a nuclear genetron husk somewhere in the world.</VQE_InstallUraniumPoweredGenetronDescNoStudied>
+	<VQE_InstallUraniumPoweredGenetronDescNoStudied>\n\nA colonist needs to study a nuclear ARC husk somewhere in the world.</VQE_InstallUraniumPoweredGenetronDescNoStudied>
 	
 	<VQE_InstallNuclearGenetron>install uranium enrichment chamber</VQE_InstallNuclearGenetron>
 	<VQE_InstallNuclearGenetronDesc>Install a chamber that allows you to slow down the decay rate of uranium, allowing it to generate power for a longer time.</VQE_InstallNuclearGenetronDesc>
-	<VQE_InstallNuclearGenetronDescExpanded>\n\nUranium-powered genetron needs to be restarted. To do that, it needs to burn all uranium and shut down due to lack of fuel.</VQE_InstallNuclearGenetronDescExpanded>
+	<VQE_InstallNuclearGenetronDescExpanded>\n\nUranium-powered ARC needs to be restarted. To do that, it needs to burn all uranium and shut down due to lack of fuel.</VQE_InstallNuclearGenetronDescExpanded>
 	
 	<VQE_InstallIsotopicGenetron>install radiation shielding</VQE_InstallIsotopicGenetron>
 	<VQE_InstallIsotopicGenetronDesc>Install advanced shielding to reduce radiation exposure in nearby areas, making it safer for colonists when the reactor operates in unsafe mode.</VQE_InstallIsotopicGenetronDesc>
-	<VQE_InstallIsotopicGenetronDescExpanded>\n\nGenetron needs to burn {0} uranium (uranium burned at the moment: {1})</VQE_InstallIsotopicGenetronDescExpanded>
+	<VQE_InstallIsotopicGenetronDescExpanded>\n\nARC needs to burn {0} uranium (uranium burned at the moment: {1})</VQE_InstallIsotopicGenetronDescExpanded>
 	
 	<VQE_InstallAtomicGenetron>install emergency shut-off systems</VQE_InstallAtomicGenetron>
-	<VQE_InstallAtomicGenetronDesc>Install a system that instantly shuts down the reactor in dangerous situations, avoiding catastrophic failures and giving time for repairs. Additional safety mechanisms also allow anyone to maintain the atomic genetron, not just those who studied the ancient variants.</VQE_InstallAtomicGenetronDesc>
-	<VQE_InstallAtomicGenetronDescExpanded>\n\nGenetron needs to operate uninterrupted in hazard mode for {0} (time at the moment: {1})</VQE_InstallAtomicGenetronDescExpanded>
+	<VQE_InstallAtomicGenetronDesc>Install a system that instantly shuts down the reactor in dangerous situations, avoiding catastrophic failures and giving time for repairs. Additional safety mechanisms also allow anyone to maintain the atomic ARC, not just those who studied the ancient variants.</VQE_InstallAtomicGenetronDesc>
+	<VQE_InstallAtomicGenetronDescExpanded>\n\nARC needs to operate uninterrupted in hazard mode for {0} (time at the moment: {1})</VQE_InstallAtomicGenetronDescExpanded>
 	
-	<!-- Downgrade genetron -->
+	<!-- Downgrade ARC -->
 	
 	<VQE_DowngradeGenetron>Downgrade to {0}</VQE_DowngradeGenetron>
-	<VQE_DowngradeGenetronDesc>Downgrade the genetron to an earlier stage of construction.</VQE_DowngradeGenetronDesc>
-	<VQE_DowngradeGenetronDialog>Warning, this will downgrade the genetron to {0}. All materials used to upgrade it to the current stage will be lost. Are you sure you want to proceed?</VQE_DowngradeGenetronDialog>
+	<VQE_DowngradeGenetronDesc>Downgrade the ARC to an earlier stage of construction.</VQE_DowngradeGenetronDesc>
+	<VQE_DowngradeGenetronDialog>Warning, this will downgrade the ARC to {0}. All materials used to upgrade it to the current stage will be lost. Are you sure you want to proceed?</VQE_DowngradeGenetronDialog>
 	
 	<!-- Reactor abilities -->
-	<VQE_GenetronOverdrive>genetron overdrive</VQE_GenetronOverdrive>
-	<VQE_GenetronOverdriveDesc>Put the genetron in a temporary {0} overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with genetron components.</VQE_GenetronOverdriveDesc>
+	<VQE_GenetronOverdrive>ARC overdrive</VQE_GenetronOverdrive>
+	<VQE_GenetronOverdriveDesc>Put the ARC in a temporary {0} overdrive mode. It will rapidly burn through fuel, generating significantly more energy. If at any point during the overdrive the fuel runs out, the generator will break down and require refurbishing with ARC components.</VQE_GenetronOverdriveDesc>
 	<VQE_GenetronOverdriveDescExtended>\n\Overdrive has a {0} cooldown. It will be ready again in {1}</VQE_GenetronOverdriveDescExtended>
 	
-	<VQE_GenetronTuning>genetron tuning</VQE_GenetronTuning>
-	<VQE_GenetronTuningDesc>Alter the fuel consumption to increase or decrease the power generated by the genetron.</VQE_GenetronTuningDesc>
-	<VQE_GenetronTuningSet>set genetron output to: {0}%</VQE_GenetronTuningSet>
+	<VQE_GenetronTuning>ARC tuning</VQE_GenetronTuning>
+	<VQE_GenetronTuningDesc>Alter the fuel consumption to increase or decrease the power generated by the ARC.</VQE_GenetronTuningDesc>
+	<VQE_GenetronTuningSet>set ARC output to: {0}%</VQE_GenetronTuningSet>
 	<VQE_GenetronTuningProjected>Projected power output: {0} Wd</VQE_GenetronTuningProjected>
 	<VQE_FuelConsumptionProjected>Projected fuel burn rate: {0} per day</VQE_FuelConsumptionProjected>
 	
-	<VQE_GenetronFineTuning>genetron fine-tuning</VQE_GenetronFineTuning>
-	<VQE_GenetronFineTuningDesc>Alter the fuel consumption to increase or decrease the power generated by the genetron, and adjust generator maintenance wear to boost the power output.</VQE_GenetronFineTuningDesc>
-	<VQE_SetGenetronWear>set genetron wear to: {0}%</VQE_SetGenetronWear>
+	<VQE_GenetronFineTuning>ARC fine-tuning</VQE_GenetronFineTuning>
+	<VQE_GenetronFineTuningDesc>Alter the fuel consumption to increase or decrease the power generated by the ARC, and adjust generator maintenance wear to boost the power output.</VQE_GenetronFineTuningDesc>
+	<VQE_SetGenetronWear>set ARC wear to: {0}%</VQE_SetGenetronWear>
 	
 	<VQE_PowerSurge>power surge</VQE_PowerSurge>
-	<VQE_PowerSurgeDesc>Instantly vaporize half of the remaining fuel in the genetron to create a surge of power, refilling the batteries at the cost of a significant 25% maintenance reduction of the genetron. Power surge will temporarily disable nearby electronics.</VQE_PowerSurgeDesc>
+	<VQE_PowerSurgeDesc>Instantly vaporize half of the remaining fuel in the ARC to create a surge of power, refilling the batteries at the cost of a significant 25% maintenance reduction of the ARC. Power surge will temporarily disable nearby electronics.</VQE_PowerSurgeDesc>
 	<VQE_PowerSurgeDescExtended>\n\nPower Surge has a {0} cooldown. It will be ready again in {1}</VQE_PowerSurgeDescExtended>
-	<VQE_PowerSurgeDescNoMaintenance>Power surge cannot be activated: Genetron maintenance is too low (below 30%).</VQE_PowerSurgeDescNoMaintenance>
+	<VQE_PowerSurgeDescNoMaintenance>Power surge cannot be activated: ARC maintenance is too low (below 30%).</VQE_PowerSurgeDescNoMaintenance>
 	
 	<VQE_CalibrateEfficiency>calibrate efficiency</VQE_CalibrateEfficiency>
-	<VQE_CalibrateEfficiencyDesc>Set the genetron into a low-power mode to calibrate its efficiency. While the fuel consumption will not change in the low-power mode, upon completion of the calibration, the power output will permanently increase by 1%.</VQE_CalibrateEfficiencyDesc>
+	<VQE_CalibrateEfficiencyDesc>Set the ARC into a low-power mode to calibrate its efficiency. While the fuel consumption will not change in the low-power mode, upon completion of the calibration, the power output will permanently increase by 1%.</VQE_CalibrateEfficiencyDesc>
 	<VQE_CalibrateEfficiencyDescExtended>\n\nThe efficiency calibration has a {0} cooldown. It will be ready again in {1}</VQE_CalibrateEfficiencyDescExtended>
 	
 	<VQE_GenetronSteamTuning>pressure tuning</VQE_GenetronSteamTuning>
-	<VQE_GenetronSteamTuningDesc>Alter the pressure of the genetron, affecting the wear and tear of components and the power output.</VQE_GenetronSteamTuningDesc>
-	<VQE_GenetronPressureLabel>genetron pressure</VQE_GenetronPressureLabel>
+	<VQE_GenetronSteamTuningDesc>Alter the pressure of the ARC, affecting the wear and tear of components and the power output.</VQE_GenetronSteamTuningDesc>
+	<VQE_GenetronPressureLabel>ARC pressure</VQE_GenetronPressureLabel>
 	<VQE_GenetronSteamTuningMaintenance>set maintenance loss per day to: {0}%</VQE_GenetronSteamTuningMaintenance>
 	
 	<VQE_SteamBoost>steam boost</VQE_SteamBoost>
-	<VQE_SteamBoostDesc>Temporarily enhance the steam flow by activating internal steam pumps, increasing the power output of the genetron. The vent boosters will need to cool down for a period of time, preventing them from being used again until the temperature is optimal again.</VQE_SteamBoostDesc>
+	<VQE_SteamBoostDesc>Temporarily enhance the steam flow by activating internal steam pumps, increasing the power output of the ARC. The vent boosters will need to cool down for a period of time, preventing them from being used again until the temperature is optimal again.</VQE_SteamBoostDesc>
 	<VQE_SteamBoostDescExtended>\n\nSteam boost has a {0} cooldown. It will be ready again in {1}</VQE_SteamBoostDescExtended>
 	
 	<VQE_CalibrateComponents>calibrate components</VQE_CalibrateComponents>
-	<VQE_CalibrateComponentsDesc>Force a soft breakdown of the genetron, requiring parts of the core to be refurbished, in order to upgrade the internal workings of the core and improve the longevity of the components by 10%.</VQE_CalibrateComponentsDesc>
+	<VQE_CalibrateComponentsDesc>Force a soft breakdown of the ARC, requiring parts of the core to be refurbished, in order to upgrade the internal workings of the core and improve the longevity of the components by 10%.</VQE_CalibrateComponentsDesc>
 	<VQE_CalibrateComponentsDescExtended>\n\nCalibrate components has a {0} cooldown. It will be ready again in {1}</VQE_CalibrateComponentsDescExtended>
 	
-	<VQE_RestartGenetron>restart genetron</VQE_RestartGenetron>
-	<VQE_RestartGenetronDesc>Jumpstart the nuclear genetron that has shut down due to lack of uranium. This restart can only be done if the genetron is filled with at least {0} uranium.</VQE_RestartGenetronDesc>
+	<VQE_RestartGenetron>restart ARC</VQE_RestartGenetron>
+	<VQE_RestartGenetronDesc>Jumpstart the nuclear ARC that has shut down due to lack of uranium. This restart can only be done if the ARC is filled with at least {0} uranium.</VQE_RestartGenetronDesc>
 	<VQE_RestartGenetronDescExtended>\n\nThere isn't enough uranium in this reactor to restart it.</VQE_RestartGenetronDescExtended>
 	<VQE_RestartGenetronDescNotNeeded>\n\nGenetron is running normally at the moment and doesn't require a restart.</VQE_RestartGenetronDescNotNeeded>
 	
@@ -127,42 +127,42 @@
 	<VQE_CalibrateFuelRodsDescExtended>\n\nCalibrate fuel rods has a {0} cooldown. It will be ready again in {1}</VQE_CalibrateFuelRodsDescExtended>
 	
 	<VQE_SafeMode>safe mode</VQE_SafeMode>
-	<VQE_SafeModeDesc>The genetron operates in safe mode. Burning uranium affects the maintenance of the genetron core, but no radiation is leaking from it. Activating this ability will change the genetron to operate in hazard mode.</VQE_SafeModeDesc>
+	<VQE_SafeModeDesc>The ARC operates in safe mode. Burning uranium affects the maintenance of the ARC core, but no radiation is leaking from it. Activating this ability will change the ARC to operate in hazard mode.</VQE_SafeModeDesc>
 	<VQE_HazardMode>hazard mode</VQE_HazardMode>
-	<VQE_HazardModeDesc>The genetron operates in hazard mode. Burning uranium emits an unhealthy amount of radiation in radius, generating toxic buildup to everyone caught in it without toxic-resistant gear. The radius depends on the amount of uranium in the genetron. Maintenance of the genetron does not decrease. Activating this ability will change the genetron to operate in safe mode.</VQE_HazardModeDesc>
+	<VQE_HazardModeDesc>The ARC operates in hazard mode. Burning uranium emits an unhealthy amount of radiation in radius, generating toxic buildup to everyone caught in it without toxic-resistant gear. The radius depends on the amount of uranium in the ARC. Maintenance of the ARC does not decrease. Activating this ability will change the ARC to operate in safe mode.</VQE_HazardModeDesc>
 	<VQE_SafeModeInfo>Operating in safe mode.</VQE_SafeModeInfo>
 	<VQE_HazardModeInfo>Operating in hazard mode.</VQE_HazardModeInfo>
 	
 	<VQE_EmergencyShutDown>emergency shut-down</VQE_EmergencyShutDown>
-	<VQE_EmergencyShutDownDesc>Shut down the genetron. It will stop burning uranium, thus stopping the maintenance loss. It will also stop generating power until restart procedures are initiated.</VQE_EmergencyShutDownDesc>
+	<VQE_EmergencyShutDownDesc>Shut down the ARC. It will stop burning uranium, thus stopping the maintenance loss. It will also stop generating power until restart procedures are initiated.</VQE_EmergencyShutDownDesc>
 	<VQE_EmergencyShutDownDescExtended>\n\nReactor is off now.</VQE_EmergencyShutDownDescExtended>
 	
 	<!-- Alerts -->
 	
-	<VQE_Alert_LowMaintenance>Genetron maintenance low</VQE_Alert_LowMaintenance>
-	<VQE_Alert_LowMaintenance_Desc>Genetron requires maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_LowMaintenance_Desc>
-	<VQE_Alert_CriticalMaintenance>Genetron maintenance critical</VQE_Alert_CriticalMaintenance>
-	<VQE_Alert_CriticalMaintenance_Desc>Genetron requires urgent maintenance. If no maintenance is performed, the genetron will critically break down.</VQE_Alert_CriticalMaintenance_Desc>
-	<VQE_Alert_LowUranium>Genetron low on uranium</VQE_Alert_LowUranium>
-	<VQE_Alert_LowUranium_Desc>Genetron is about to run out of uranium. When it does, it will become disabled until the restart procedures are initiated.</VQE_Alert_LowUranium_Desc>
+	<VQE_Alert_LowMaintenance>ARC maintenance low</VQE_Alert_LowMaintenance>
+	<VQE_Alert_LowMaintenance_Desc>ARC requires maintenance. If no maintenance is performed, the ARC will critically break down.</VQE_Alert_LowMaintenance_Desc>
+	<VQE_Alert_CriticalMaintenance>ARC maintenance critical</VQE_Alert_CriticalMaintenance>
+	<VQE_Alert_CriticalMaintenance_Desc>ARC requires urgent maintenance. If no maintenance is performed, the ARC will critically break down.</VQE_Alert_CriticalMaintenance_Desc>
+	<VQE_Alert_LowUranium>ARC low on uranium</VQE_Alert_LowUranium>
+	<VQE_Alert_LowUranium_Desc>ARC is about to run out of uranium. When it does, it will become disabled until the restart procedures are initiated.</VQE_Alert_LowUranium_Desc>
 	
 	<!-- General stuff -->
-	<VQE_NeedsStudy>{0} did not study an ancient genetron.</VQE_NeedsStudy> 
-	<VQE_NeedsStudyGeothermal>{0} did not study an ancient geothermal genetron.</VQE_NeedsStudyGeothermal> 
-	<VQE_NeedsStudyNuclear>{0} did not study a nuclear genetron husk.</VQE_NeedsStudyNuclear>
-	<VQE_NeedsStudyGeneric>This colonist can't repair critical breakdowns, as they did not study an ancient genetron</VQE_NeedsStudyGeneric>
+	<VQE_NeedsStudy>{0} did not study an ancient ARC.</VQE_NeedsStudy> 
+	<VQE_NeedsStudyGeothermal>{0} did not study an ancient geothermal ARC.</VQE_NeedsStudyGeothermal> 
+	<VQE_NeedsStudyNuclear>{0} did not study a nuclear ARC husk.</VQE_NeedsStudyNuclear>
+	<VQE_NeedsStudyGeneric>This colonist can't repair critical breakdowns, as they did not study an ancient ARC</VQE_NeedsStudyGeneric>
 	<VQE_Overdrive>Reactor overdrive</VQE_Overdrive>
 	<VQE_CriticalBreakdown>Critical breakdown</VQE_CriticalBreakdown>
-	<VQE_CurrentMaintenance>Genetron maintenance: {0}</VQE_CurrentMaintenance>
+	<VQE_CurrentMaintenance>ARC maintenance: {0}</VQE_CurrentMaintenance>
 	<VQE_LowPowerMode>Low power mode. Remaining time: {0}.</VQE_LowPowerMode>
 	<VQE_ShutDownForCalibrations>Shut down for calibrations. Remaining time: {0}.</VQE_ShutDownForCalibrations>
 	<VQE_FuelRateAtTheMoment>Current fuel burn rate: {0} per day</VQE_FuelRateAtTheMoment>
 	<VQE_ReactorShutdown>Reactor shut down</VQE_ReactorShutdown>
 	<VQE_SetTargetUraniumLevel>Set target uranium level</VQE_SetTargetUraniumLevel>
 	<VQE_SetTargetUraniumLevelTo>Set target uranium level to {0}</VQE_SetTargetUraniumLevelTo>
-	<VQE_SetTargetUraniumLevelDesc>Set desired uranium level in the genetron. Colonists will try to fill the genetron up to that level.</VQE_SetTargetUraniumLevelDesc>
+	<VQE_SetTargetUraniumLevelDesc>Set desired uranium level in the ARC. Colonists will try to fill the ARC up to that level.</VQE_SetTargetUraniumLevelDesc>
 	<VQE_NuclearPowerOutput>Power output: {0}W</VQE_NuclearPowerOutput>
 	<VQE_NuclearFuelConsumption>Fuel consumption per day: {0}</VQE_NuclearFuelConsumption>
-	<VQE_GenetronMaintenanceTooltip>Genetron maintenance
-Genetron needs to be maintained by colonists. If maintenance reaches 0%, Genetron will break down.</VQE_GenetronMaintenanceTooltip>
+	<VQE_GenetronMaintenanceTooltip>ARC maintenance
+ARC needs to be maintained by colonists. If maintenance reaches 0%, ARC will break down.</VQE_GenetronMaintenanceTooltip>
 </LanguageData>

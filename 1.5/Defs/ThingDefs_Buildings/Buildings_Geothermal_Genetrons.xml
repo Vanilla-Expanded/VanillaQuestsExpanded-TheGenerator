@@ -5,7 +5,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Geothermal</defName>
-		<label>geothermal genetron</label>
+		<label>geothermal ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Geothermal</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -131,7 +131,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_SteamPowered</defName>
-		<label>steam-powered genetron</label>
+		<label>steam-powered ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_SteamPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -258,7 +258,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ThermalVent</defName>
-		<label>thermal-vent genetron</label>
+		<label>thermal-vent ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ThermalVent</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -386,7 +386,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_HeatPowered</defName>
-		<label>heat-powered genetron</label>
+		<label>heat-powered ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_HeatPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>

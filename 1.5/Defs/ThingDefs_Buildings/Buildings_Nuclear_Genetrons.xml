@@ -5,7 +5,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_UraniumPowered</defName>
-		<label>uranium-powered genetron</label>
+		<label>uranium-powered ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_UraniumPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -148,7 +148,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Nuclear</defName>
-		<label>nuclear genetron</label>
+		<label>nuclear ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Nuclear</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -291,7 +291,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Isotopic</defName>
-		<label>isotopic genetron</label>
+		<label>isotopic ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Isotopic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -434,7 +434,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Atomic</defName>
-		<label>atomic genetron</label>
+		<label>atomic ARC</label>
 		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Atomic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
