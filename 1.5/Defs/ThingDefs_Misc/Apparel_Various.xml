@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ApparelBase">
+		<defName>VQE_Apparel_Parka</defName>
+		<label>ancient tight parka</label>
+		<description>A thick, ancient parka for staying warm even in the coldest of temperatures. Somehow it seems resistant to deterioration, but the way to tailor one of these has been lost to history.</description>
+		<graphicData>
+			<texPath>Things/Item/Apparel/AncientTightParka/AncientTightParka</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<thingCategories>
+			<li>ApparelMisc</li>
+		</thingCategories>
+		<statBases>
+			<Mass>3.8</Mass>
+			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.3</ArmorRating_Heat>
+			<Insulation_Cold>68</Insulation_Cold>
+			<EquipDelay>3</EquipDelay>
+		</statBases><smeltable>false</smeltable>
+		<apparel>
+		
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Item/Apparel/AncientTightParka/AncientTightParka</wornGraphicPath>
+			<anyTechLevelCanUseForWarmth>true</anyTechLevelCanUseForWarmth>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<developmentalStageFilter>Adult</developmentalStageFilter>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3)</min>
+					<max>(0.5,0.5,0.5)</max>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+</Defs>
