@@ -22,7 +22,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public static ThingDef VQE_GenetronJunk;
         public static ThingDef VQE_ChunkProjectile;
         public static ThingDef Filth_Ash;
-
+        public static ThingDef VQE_EmptyConstructionPallet;
 
         public static ThingDef VQE_Genetron_Basic;
         //Wood

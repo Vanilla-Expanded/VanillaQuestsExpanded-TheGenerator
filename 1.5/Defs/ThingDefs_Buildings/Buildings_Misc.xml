@@ -36,6 +36,532 @@
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientARCPart</defName>
+		<label>ancient ARC part</label>
+		<description>An old, rusted fragment of an ARC. It was probably abandoned when the construction project was halted. It might be possible to disassemble it to obtain some valuable ARC components.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.5</fillPercent>
+		<size>(2,2)</size>
+		<costList>
+			<ChunkSlagSteel>3</ChunkSlagSteel>
+			<VQE_GenetronComponent>1</VQE_GenetronComponent>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientGenetronChunk</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientARCPrototype_One</defName>
+		<label>ancient ARC prototype</label>
+		<description>A rusted frame of an old power generator, incomplete and barely holding together. Most of its parts are long gone, scavenged or destroyed by time. What’s left is little more than scrap, with no hope of restoration. Perhaps investigating the area could allow you to find the location of another prototype.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<selectable>true</selectable>
+		<size>(6,6)</size>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>100</Steel>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientGenetronPrototypes/PrototypeMegagenerator_Stage1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>9</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientARCPrototype_Two</defName>
+		<label>ancient ARC prototype</label>
+		<description>An abandoned generator. Its machinery slightly more intact but still useless. Broken panels, snapped wires, and heavy rust show it was never finished. It’s overgrown and forgotten, offering only a few parts to salvage. Perhaps investigating the area could allow you to find the location of another prototype.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<selectable>true</selectable>
+		<size>(6,6)</size>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>140</Steel>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientGenetronPrototypes/PrototypeMegagenerator_Stage2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>9</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientARCPrototype_Three</defName>
+		<label>ancient ARC prototype</label>
+		<description>An almost-complete generator, abandoned before it could ever work. The structure is more solid, but its insides are wrecked—rust, missing pieces, and heavy overgrowth make it useless. Only a few materials can still be salvaged, but among them it is possible to find some ARC components. Perhaps investigating the area could allow you to find the location of another prototype.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<selectable>true</selectable>
+		<size>(6,6)</size>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>190</Steel>
+			<VQE_GenetronComponent>2</VQE_GenetronComponent>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientGenetronPrototypes/PrototypeMegagenerator_Stage3</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>9</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientConstructionTruck</defName>
+		<label>ancient construction truck</label>
+		<description>A rusted, overgrown wreck of a large construction truck. Everything that isn't rusted away was looted long ago. It was most likely used in construction of an ARC generator, judging by the still present shells of a large generator unit strapped on the back.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<selectable>true</selectable>
+		<size>(6,3)</size>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>1500</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientGenetronConstructionTruck</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(6,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientConstructionCrane</defName>
+		<label>ancient construction crane</label>
+		<description>A rusted, overgrown wreck of a large construction crane. Everything that isn't rusted away was looted long ago. Cranes like that could have been used to construct the large ARC generators, but this wreck can no longer be utilised for anything due to broken down machinery.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<selectable>true</selectable>
+		<size>(7,4)</size>
+		<costList>
+			<ChunkSlagSteel>8</ChunkSlagSteel>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientGenetronCrane</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,6)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientDigger</defName>
+		<label>ancient digger</label>
+		<description>A rusted, overgrown wreck of a large digger. Everything that isn't rusted away was looted long ago. A digger of that size could’ve been used to prepare the area for the construction of an ARC generator, but this one is in a very bad state.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<selectable>true</selectable>
+		<size>(7,4)</size>
+		<costList>
+			<ChunkSlagSteel>8</ChunkSlagSteel>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientGenetronDigger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,6)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_EmptyConstructionPallet</defName>
+		<label>empty construction pallet</label>
+		<description>A rusted construction pallet. It’s empty.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<selectable>true</selectable>
+		<fillPercent>0</fillPercent>
+		<size>(2,2)</size>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ConstructionPallet_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_ConstructionPallet_Boxes</defName>
+		<label>construction pallet with boxes</label>
+		<description>A rusted construction pallet with a stack of old, rusted steel boxes. Anything of value has been removed a long time ago.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.4</fillPercent>
+		<size>(2,2)</size>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ConstructionPallet_Crates</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_ConstructionPallet_Scrap</defName>
+		<label>construction pallet with scrap</label>
+		<description>A rusted construction pallet with a large container of scrap on it. Can be rummaged through to recover some steel.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.4</fillPercent>
+		<size>(2,2)</size>
+		<rotatable>false</rotatable>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ConstructionPallet_SteelSlags</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+				<contents>
+					<li>
+						<thing>Steel</thing>
+						<count>60</count>
+					</li>
+					<li>
+						<thing>ChunkSlagSteel</thing>
+						<count>4</count>
+					</li>
+				</contents>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_ConstructionPallet_Components</defName>
+		<label>construction pallet with components</label>
+		<description>A rusted construction pallet with a large container of scrapped components on it. Can be rummaged through to recover some industrial components.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.4</fillPercent>
+		<size>(2,2)</size>
+		<rotatable>false</rotatable>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ConstructionPallet_Components</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+				<contents>
+					<li>
+						<thing>ComponentIndustrial</thing>
+						<count>4</count>
+					</li>
+					<li>
+						<thing>ChunkSlagSteel</thing>
+						<count>4</count>
+					</li>
+				</contents>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_ConstructionPallet_Chemfuel</defName>
+		<label>construction pallet with jerrycans</label>
+		<description>A rusted construction pallet with a stack of unused chemfuel jerrycans. Can be salvaged through to recover some chemfuel.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.4</fillPercent>
+		<size>(2,2)</size>
+		<rotatable>false</rotatable>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ConstructionPallet_Chemfuel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+				<contents>
+					<li>
+						<thing>Chemfuel</thing>
+						<count>80</count>
+					</li>
+				</contents>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_ConstructionPallet_Wood</defName>
+		<label>construction pallet with wood</label>
+		<description>A rusted construction pallet with a large stack of rotting wood. It is possible to recover some drier wood from it.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.4</fillPercent>
+		<size>(2,2)</size>
+		<rotatable>false</rotatable>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ConstructionPallet_Wood</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+				<contents>
+					<li>
+						<thing>WoodLog</thing>
+						<count>135</count>
+					</li>
+				</contents>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientResearchTerminal</defName>
+		<label>ancient research terminal</label>
+		<description>An ancient computer terminal. It can be used to access research notes related to an ARC generator unit.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.2</fillPercent>
+		<size>(1,1)</size>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientTerminals/GenetronTerminal</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6.8</glowRadius>
+				<glowColor>(0,235,31,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientResearchTerminal_Off</defName>
+		<label>ancient research terminal</label>
+		<description>An ancient computer terminal. It’s disconnected from power, or simply not working.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.2</fillPercent>
+		<size>(1,1)</size>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientTerminals/GenetronTerminalOff</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientResearchTerminal_Cracked</defName>
+		<label>cracked research terminal</label>
+		<description>An ancient computer terminal. The screen is cracked and any components of value have been removed.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.2</fillPercent>
+		<size>(1,1)</size>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientTerminals/GenetronTerminalRusted</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientChainlinkFence</defName>
+		<label>ancient chainlink fence</label>
+		<description>An ancient fence made of reinforced metal posts connected by rusted chainlink.</description>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientChainlinkFence/AncientChainlinkFence_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Fences</li>
+			</linkFlags>
+			<shadowData>
+				<volume>(1, 0.5, 0.45)</volume>
+				<offset>(0,0,-0.23)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.35,0.1,0.3,0.7)</rect>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+		</statBases>
+		<uiIconPath>Things/AncientJunk/AncientChainlinkFence/AncientChainlinkFence_MenuIcon</uiIconPath>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>60</pathCost>
+		<blockWind>false</blockWind>
+		<fillPercent>0.55</fillPercent>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<fertility>0</fertility>
+		<building>
+			<isInert>true</isInert>
+			<isFence>true</isFence>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_OvergrownCryptosleepCasket</defName>
+		<label>overgrown cryptosleep casket</label>
+		<description>This cryptosleep casket is overgrown with brambles and looks like it has been here for a very long time. Who knows what it might contain?</description>
+		<thingClass>Building_AncientCryptosleepPod</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/AncientJunk/GenetronCryptosleepPod/GenetronCryptosleepPod</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+			<shadowData>
+				<volume>(0.83, 0.3, 1.7)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>42</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(1,2)</size>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(1,0,0)</interactionCellOffset>
+		<killedLeavings>
+			<Steel>130</Steel>
+			<Uranium>5</Uranium>
+		</killedLeavings>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+		</building>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientGenetron</defName>
 		<label>ancient ARC</label>
 		<description>An ancient prototype of an ARC, ruined by time and lack of maintenance. Most of the critical machinery has been looted long ago, thwarting any restatoration attempts, however deconstructing it may still yield valuable components, useful in constructing a brand new ARC. This ancient ruin can be studied to learn how to construct and maintain an ARC.</description>
@@ -77,10 +603,8 @@
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<modExtensions>
-			
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientGenetron</studyingHediff>
-				
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -126,7 +650,6 @@
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<modExtensions>
-			
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientGeothermalGenetron</studyingHediff>
 				<toggleGeothermalStudied>true</toggleGeothermalStudied>
@@ -175,11 +698,107 @@
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<modExtensions>
-			
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientNuclearGenetron</studyingHediff>
 				<toggleNuclearStudied>true</toggleNuclearStudied>
 			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientOvergrownGenetron</defName>
+		<label>ancient overgrown ARC</label>
+		<description>A mysterious, ancient, overgrown ARC. It seems to look more like a working prototype than a finished product, now fully covered in brambles and signs of aging. Somehow, despite its age, it’s still operating, generating sufficient power for nearby electrical networks. Any tampering with it is bound to irreversibly damage it, but it may be possible to extract some ARC components from it.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_Core_AncientTech_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<blockWind>true</blockWind>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-30</Beauty>
+			<MarketValue>8450</MarketValue>
+		</statBases>
+		<size>(6,6)</size>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-10000</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+		</comps>
+		<costList>
+			<Steel>320</Steel>
+		
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+			<VQE_GenetronComponent>8</VQE_GenetronComponent>
+		</costList>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<uiIconPath>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_AncientTech_MenuIcon</uiIconPath>
+		<modExtensions>
+			
+			
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_CoreShield_AncientTech_Outline</texture>
+					</li>
+					
+					<li>
+						<texture>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_Tier1_AncientTech_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_Core_AncientTech_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_Core_AncientTech</texture>
+					</li>
+					
+					
+					<li>
+						<texture>Things/Turbines/Megagenerator_SpinningCore</texture>
+						<size>4</size>
+						<offset>(0,0.5)</offset>
+						<rotation>true</rotation>
+					</li>
+					<li>
+						<texture>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_CoreShield_AncientTech</texture>
+					</li>
+					<li>
+						<texture>Things/AncientJunk/AncientOvergrownGenetron/Megagenerator_Tier1_AncientTech</texture>
+					</li>
+					
+				</graphics>
+			</li>
+		
 		</modExtensions>
 	</ThingDef>
 </Defs>
