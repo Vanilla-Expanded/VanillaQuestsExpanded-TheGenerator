@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SitePartDef>
+		<defName>VQE_Quest3Site</defName>
+		<label>ancient ARC</label>
+		<description>An even larger construction site with an ARC prototype.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>UI/QuestIcons/WorshipfulARCSite</expandingIconTexture>
+		<tags>
+			<li>VQE_Quest3Site</li>
+		</tags>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQE_Quest3Site</defName>
+		<linkWithSite>VQE_Quest3Site</linkWithSite>
+		<order>450</order>
+		<genStep Class="KCSG.GenStep_CustomStructureGen">
+			<structureLayoutDefs>
+				<li>VQE_Quest3Map_Alpha</li>
+				<li>VQE_Quest3Map_Beta</li>
+				<li>VQE_Quest3Map_Gamma</li>
+				<li>VQE_Quest3Map_Delta</li>
+				<li>VQE_Quest3Map_Epsilon</li>
+				<li>VQE_Quest3Map_Zeta</li>
+				
+			</structureLayoutDefs>
+		
+			<filthTypes>
+				<li>Filth_Dirt</li>
+				<li>Filth_Trash</li>
+				<li>Filth_RubbleBuilding</li>
+			</filthTypes>
+		</genStep>
+	</GenStepDef>
+</Defs>
