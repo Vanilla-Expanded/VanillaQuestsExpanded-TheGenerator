@@ -1,8 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Assemblies\VanillaQuestsExpanded-TheGenerator.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Source\VanillaQuestsExpanded-TheGenerator\VanillaQuestsExpanded-TheGenerator\obj\Debug\VanillaQuestsExpanded-TheGenerator.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Source\VanillaQuestsExpanded-TheGenerator\VanillaQuestsExpanded-TheGenerator\obj\Debug\VanillaQuestsExpanded-TheGenerator.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Source\VanillaQuestsExpanded-TheGenerator\VanillaQuestsExpanded-TheGenerator\obj\Debug\VanillaQuestsExpanded-TheGenerator.dll
-E:\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Assemblies\VanillaQuestsExpanded-TheGenerator.dll
-E:\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Source\VanillaQuestsExpanded-TheGenerator\VanillaQuestsExpanded-TheGenerator\obj\Debug\VanillaQuestsExpanded-TheGenerator.csproj.AssemblyReference.cache
-E:\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Source\VanillaQuestsExpanded-TheGenerator\VanillaQuestsExpanded-TheGenerator\obj\Debug\VanillaQuestsExpanded-TheGenerator.csproj.CoreCompileInputs.cache
-E:\Steam\steamapps\common\RimWorld\Mods\VanillaQuestsExpanded-TheGenerator\1.5\Source\VanillaQuestsExpanded-TheGenerator\VanillaQuestsExpanded-TheGenerator\obj\Debug\VanillaQuestsExpanded-TheGenerator.dll

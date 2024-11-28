@@ -1,4 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Insector\1.5\Assemblies\VanillaRacesExpanded-Insector.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Insector\1.5\Source\VanillaRacesExpanded-Insector\VanillaRacesExpanded-Insector\obj\Debug\VanillaRacesExpanded-Insector.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Insector\1.5\Source\VanillaRacesExpanded-Insector\VanillaRacesExpanded-Insector\obj\Debug\VanillaRacesExpanded-Insector.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Insector\1.5\Source\VanillaRacesExpanded-Insector\VanillaRacesExpanded-Insector\obj\Debug\VanillaRacesExpanded-Insector.dll
