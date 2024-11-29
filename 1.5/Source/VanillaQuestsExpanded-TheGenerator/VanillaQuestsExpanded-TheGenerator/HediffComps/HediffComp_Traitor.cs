@@ -38,7 +38,7 @@ namespace VanillaQuestsExpandedTheGenerator
                         List<Building_Genetron> listOfThings = pawn.Map.listerBuildings.AllColonistBuildingsOfType<Building_Genetron>().ToList();
                         if(listOfThings.Count > 0)
                         {
-                            Building_Genetron genetron = listOfThings.First();
+                            Building_Genetron genetron = listOfThings.RandomElement();
 
                             if(CheckJobPossible(pawn, genetron))
                             {
