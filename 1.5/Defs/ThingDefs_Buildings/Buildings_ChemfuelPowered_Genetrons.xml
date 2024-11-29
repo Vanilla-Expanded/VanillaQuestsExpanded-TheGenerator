@@ -136,7 +136,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelBoosted</defName>
 		<label>chemfuel-boosted ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Chemfuel-boosted advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be tuned to increase the power generation even further. A power surge function allows it to instantly vaporize a large quantity of fuel to refill batteries in the network. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelBoosted</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -267,7 +267,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelCharged</defName>
 		<label>chemfuel-charged ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Chemfuel-charged advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be fine-tuned to increase the power generation even further or reduce maintenance loss if the strain on the components is too high. A power surge function allows it to instantly vaporize a large quantity of fuel to refill batteries in the network. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelCharged</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -399,7 +399,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelFortified</defName>
 		<label>chemfuel-fortified ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Chemfuel-fortified advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be fine-tuned to increase the power generation even further or reduce maintenance loss if the strain on the components is too high. A power surge function allows it to instantly vaporize a large quantity of fuel to refill batteries in the network. It is possible to calibrate the efficiency of the ARC to permanently increase the power generated from each burnt unit of fuel. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelFortified</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>

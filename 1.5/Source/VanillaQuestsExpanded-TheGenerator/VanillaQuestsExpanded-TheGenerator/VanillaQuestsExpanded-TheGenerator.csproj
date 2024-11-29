@@ -361,6 +361,8 @@
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\InspectPaneFiller_DrawHealth_Patch.cs" />
     <Compile Include="Harmony\PowerNet_PowerNetTick.cs" />
+    <Compile Include="HediffComps\HediffComp_Traitor.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompPropreties_Traitor.cs" />
     <Compile Include="MapComponents\Genetron_GameComponent.cs" />
     <Compile Include="MapComponents\Genetron_MapComponent.cs" />
     <Compile Include="Projectiles\Projectile_SpawnsThingAndExplodes.cs" />

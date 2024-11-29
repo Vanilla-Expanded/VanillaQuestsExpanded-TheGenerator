@@ -6,7 +6,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_UraniumPowered</defName>
 		<label>uranium-powered ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Uranium-powered advanced reactor chamber, ARC in short, produces electricity from a reaction that occurs when uranium breaks down inside the core. The more uranium is present in the core, the faster it breaks down, but it also generates more power. If uranium ever runs out, the reactor will shut down and will need to be refilled with a large quantity of uranium to restart. The core suffers wear and tear with each uranium unit broken down, and will require continuous maintenance, as lack of it will result in a catastrophic nuclear detonation. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied a husk of a nuclear ARC generator.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_UraniumPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -149,7 +149,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Nuclear</defName>
 		<label>nuclear ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Nuclear advanced reactor chamber, ARC in short, produces electricity from a reaction that occurs when uranium breaks down inside the core. The more uranium is present in the core, the faster it breaks down, but it also generates more power. If uranium ever runs out, the reactor will shut down and will need to be refilled with a large quantity of uranium to restart. The core suffers wear and tear with each uranium unit broken down, and will require continuous maintenance, as lack of it will result in a catastrophic nuclear detonation. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. Fuel rods can also be calibrated to permanently reduce the rate at which uranium decays. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied a husk of a nuclear ARC generator.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Nuclear</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -292,7 +292,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Isotopic</defName>
 		<label>isotopic ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Isotopic advanced reactor chamber, ARC in short, produces electricity from a reaction that occurs when uranium breaks down inside the core. The more uranium is present in the core, the faster it breaks down, but it also generates more power. If uranium ever runs out, the reactor will shut down and will need to be refilled with a large quantity of uranium to restart. The core suffers wear and tear with each uranium unit broken down, and will require continuous maintenance, as lack of it will result in a catastrophic nuclear detonation. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. Fuel rods can also be calibrated to permanently reduce the rate at which uranium decays. This reactor can operate in one of two modes: basic safe mode, or hazard mode, in which maintenance does not lower when uranium is broken down, but radiation leaks out of the core affecting everyone in a large radius. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied a husk of a nuclear ARC generator.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Isotopic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -435,7 +435,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Atomic</defName>
 		<label>atomic ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Atomic advanced reactor chamber, ARC in short, produces electricity from a reaction that occurs when uranium breaks down inside the core. The more uranium is present in the core, the faster it breaks down, but it also generates more power. If uranium ever runs out, the reactor will shut down and will need to be refilled with a large quantity of uranium to restart. The core suffers wear and tear with each uranium unit broken down, and will require continuous maintenance, as lack of it will result in a catastrophic nuclear detonation. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. Fuel rods can also be calibrated to permanently reduce the rate at which uranium decays. This reactor can operate in one of two modes: basic safe mode, or hazard mode, in which maintenance does not lower when uranium is broken down, but radiation leaks out of the core affecting everyone in a large radius. Emergency shut-down systems are also in place, allowing the reactor to stop at any point in order to prevent a critical meltdown. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied a husk of a nuclear ARC generator.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Atomic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>

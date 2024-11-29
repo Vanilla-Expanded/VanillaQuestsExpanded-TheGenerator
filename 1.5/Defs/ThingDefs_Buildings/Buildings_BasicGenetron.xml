@@ -3,7 +3,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Basic</defName>
 		<label>ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. Must be placed on a steam geyser.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Basic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>

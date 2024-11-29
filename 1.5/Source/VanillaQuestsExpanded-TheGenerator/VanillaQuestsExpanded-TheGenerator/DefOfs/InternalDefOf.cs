@@ -52,6 +52,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public static HediffDef VQE_StudiedAncientGenetron;
         public static HediffDef VQE_StudiedAncientGeothermalGenetron;
         public static HediffDef VQE_StudiedAncientNuclearGenetron;
+        public static HediffDef VQE_TraitorousInventor;
 
         public static JobDef VQE_FixCriticallyBrokenDownBuilding;
         public static JobDef VQE_MaintainGenetron;

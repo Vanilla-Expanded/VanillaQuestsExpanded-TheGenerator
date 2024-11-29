@@ -6,7 +6,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_Geothermal</defName>
 		<label>geothermal ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Geothermal advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Unlike other ARCs, however, this variant can be maintained by anyone, even those who haven’t studied the ancient generators. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. Pressure can be tuned to reduce the maintenance need at the cost of lower power consumption. It is possible to calibrate the efficiency of the ARC to permanently increase the power generated. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Geothermal</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -132,7 +132,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_SteamPowered</defName>
 		<label>steam-powered ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Steam-powered advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Unlike other ARCs, however, this variant can be maintained by anyone, even those who haven’t studied the ancient generators. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. Pressure can be tuned to reduce the maintenance need at the cost of lower power consumption. It is possible to calibrate the efficiency of the ARC to permanently increase the power generated. The steam boost ability can be used to temporarily increase the power output, but requires a lengthy cool down period afterwards. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_SteamPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -259,7 +259,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ThermalVent</defName>
 		<label>thermal-vent ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Thermal-vent advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers. The engine requires regular maintenance, and lack of it can result in a minor breakdown that requires just regular components to fix. Unlike other ARCs, however, this variant can be maintained by anyone, even those who haven’t studied the ancient generators. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. Pressure can be tuned to reduce the maintenance need at the cost of lower power consumption. It is possible to calibrate the efficiency of the ARC to permanently increase the power generated. The steam boost ability can be used to temporarily increase the power output, but requires a lengthy cool down period afterwards. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ThermalVent</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -387,7 +387,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_HeatPowered</defName>
 		<label>heat-powered ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Heat-powered advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers. The engine requires regular maintenance, and lack of it can result in a minor breakdown that requires just regular components to fix. Unlike other ARCs, however, this variant can be maintained by anyone, even those who haven’t studied the ancient generators. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. Pressure can be tuned to reduce the maintenance need at the cost of lower power consumption. It is possible to calibrate the efficiency of the ARC to permanently increase the power generated. The steam boost ability can be used to temporarily increase the power output, but requires a lengthy cool down period afterwards. This generator will continue generating power even during a solar flare. It is also possible to calibrate the internal components, permanently lowering the maintenance need of the device. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_HeatPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
