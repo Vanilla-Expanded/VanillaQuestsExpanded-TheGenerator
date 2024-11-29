@@ -18,4 +18,10 @@
 		<reportString>studying TargetA.</reportString>
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
 	</JobDef>
+	<JobDef>
+		<defName>VQE_SabotageGenetron</defName>
+		<driverClass>VanillaQuestsExpandedTheGenerator.JobDriver_SabotageGenetron</driverClass>
+		<reportString>sabotaging TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
 </Defs>

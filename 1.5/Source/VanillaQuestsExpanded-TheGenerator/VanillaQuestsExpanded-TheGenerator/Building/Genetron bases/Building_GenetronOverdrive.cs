@@ -127,7 +127,15 @@ namespace VanillaQuestsExpandedTheGenerator
                 wickTimer++;
                 if (wickTimer > wickTicksLeft)
                 {
-                    Signal_NuclearCriticalBreakdown_Detonate();
+                    if (cachedDetailsExtension.hasNuclearMeltdowns) {
+
+                        Signal_NuclearCriticalBreakdown_Detonate();
+                    }
+                    else
+                    {
+                        Signal_CriticalBreakdown();
+                    }
+                    
                 }
 
             }
@@ -191,6 +199,16 @@ namespace VanillaQuestsExpandedTheGenerator
             overlayBurningWick = Map.overlayDrawer.Enable(this, OverlayTypes.BurningWick);
             wickActive = true;
             
+        }
+        public void Signal_ShortFuse()
+        {
+            wickTicksLeft = 1200;
+            SoundInfo info = SoundInfo.InMap(this, MaintenanceType.PerTick);
+            wickSoundSustainer = SoundDefOf.HissSmall.TrySpawnSustainer(info);
+            Map.overlayDrawer.Disable(this, ref overlayBurningWick);
+            overlayBurningWick = Map.overlayDrawer.Enable(this, OverlayTypes.BurningWick);
+            wickActive = true;
+
         }
         public void Signal_NuclearCriticalBreakdown_Detonate()
         {
@@ -261,30 +279,7 @@ namespace VanillaQuestsExpandedTheGenerator
             Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(InternalDefOf.VQE_NuclearGenetronHusk), PositionHeld, Map);
 
         }
-
-        public void Signal_Explode()
-        {
-            CellRect cellRect = GenAdj.OccupiedRect(Position, Rot4.North, def.Size);
-            int randomAmountOfChunks = Rand.RangeInclusive(3, 9);
-            for (int i = 0; i < randomAmountOfChunks; i++)
-            {
-                IntVec3 randomCell = cellRect.RandomCell;
-
-                if (RCellFinder.TryFindRandomCellNearWith(Position, (IntVec3 c) => !c.Fogged(Map) && c.Walkable(Map) && !c.Impassable(Map), Map, out IntVec3 result, 13, 28))
-                {
-                    var projectile = (Projectile)GenSpawn.Spawn(InternalDefOf.VQE_ChunkProjectile, randomCell, Map);
-                    projectile.Launch(this, result, result, ProjectileHitFlags.None, false, null);
-                }
-            }
-            GenExplosion.DoExplosion(Position + IntVec3.North * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
-            GenExplosion.DoExplosion(Position + IntVec3.South * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
-            GenExplosion.DoExplosion(Position + IntVec3.West * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
-            GenExplosion.DoExplosion(Position + IntVec3.East * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
-
-        }
-
-       
-
+                 
         public void Signal_CriticalBreakdownRepaired()
         {
             criticalBreakdown = false;

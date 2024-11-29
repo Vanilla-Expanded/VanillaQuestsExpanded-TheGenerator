@@ -57,6 +57,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public static JobDef VQE_FixCriticallyBrokenDownBuilding;
         public static JobDef VQE_MaintainGenetron;
         public static JobDef VQE_StudyGenetron;
+        public static JobDef VQE_SabotageGenetron;
 
         public static StatDef VQE_GenetronMaintenanceLoss;
 

@@ -297,6 +297,7 @@
   <ItemGroup>
     <Compile Include="AI\JobDriver\JobDriver_FixCriticallyBrokenDownBuilding.cs" />
     <Compile Include="AI\JobDriver\JobDriver_MaintainGenetron.cs" />
+    <Compile Include="AI\JobDriver\JobDriver_SabotageGenetron.cs" />
     <Compile Include="AI\JobDriver\JobDriver_StudyGenetron.cs" />
     <Compile Include="AI\WorkGiver\WorkGiver_FixCriticallyBreakdown.cs" />
     <Compile Include="AI\WorkGiver\WorkGiver_StudyGenetron.cs" />

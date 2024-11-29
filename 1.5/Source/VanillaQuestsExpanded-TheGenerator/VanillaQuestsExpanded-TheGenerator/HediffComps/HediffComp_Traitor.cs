@@ -4,7 +4,9 @@ using System.Linq;
 using RimWorld;
 using VanillaQuestsExpandedTheGenerator;
 using Verse;
+using Verse.AI;
 using Verse.AI.Group;
+using Verse.Noise;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
@@ -36,24 +38,60 @@ namespace VanillaQuestsExpandedTheGenerator
                         List<Building_Genetron> listOfThings = pawn.Map.listerBuildings.AllColonistBuildingsOfType<Building_Genetron>().ToList();
                         if(listOfThings.Count > 0)
                         {
-                            var faction = Find.FactionManager.RandomEnemyFaction(allowNonHumanlike: false);
-                            pawn.SetFaction(faction);
+                            Building_Genetron genetron = listOfThings.First();
 
-                            var map = pawn.Map;
-                            LordMaker.MakeNewLord(faction, new LordJob_AssaultColony(faction, true, false, false, true, true, false, true), map, new List<Pawn> { pawn });
-                            Find.LetterStack.ReceiveLetter("VQE_TraitorLabel".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), "VQE_TraitorLetter".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), LetterDefOf.ThreatBig, new TargetInfo(pawn.Position, map, false));
+                            if(CheckJobPossible(pawn, genetron))
+                            {
 
-                            parent.pawn.health.hediffSet.hediffs.Remove(parent);
+                                var faction = Find.FactionManager.RandomEnemyFaction(allowNonHumanlike: false);
+                                pawn.SetFaction(faction);
+                                ReturnJob(pawn, genetron);
+                                Find.LetterStack.ReceiveLetter("VQE_TraitorLabel".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), "VQE_TraitorLetter".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), LetterDefOf.ThreatBig, new TargetInfo(pawn.Position, pawn.Map, false));
+                                parent.pawn.health.hediffSet.hediffs.Remove(parent);
 
-                        }
-
-                        
-
+                            }
+                       
+                        }                  
                     }
                     SetOrResetTicks();
                 }
                 
             }
+        }
+
+        public bool CheckJobPossible(Pawn pawn, Building_Genetron building)
+        {
+            
+            if (building == null)
+            {
+                return false;
+            }           
+
+            if (building.IsForbidden(pawn))
+            {
+                return false;
+            }
+
+            if (!pawn.CanReserve(building, 1, -1, null, true))
+            {
+                return false;
+            }
+            if (pawn.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) != null)
+            {
+                return false;
+            }
+            if (building.IsBurning())
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void ReturnJob(Pawn pawn, Thing t, bool forced = false)
+        {
+            pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(InternalDefOf.VQE_SabotageGenetron, t), JobTag.Misc);
+             
         }
 
         public override void CompPostMerged(Hediff other)

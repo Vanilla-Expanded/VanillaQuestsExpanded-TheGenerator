@@ -90,7 +90,26 @@ namespace VanillaQuestsExpandedTheGenerator
 
         }
 
+        public void Signal_Explode()
+        {
+            CellRect cellRect = GenAdj.OccupiedRect(Position, Rot4.North, def.Size);
+            int randomAmountOfChunks = Rand.RangeInclusive(3, 9);
+            for (int i = 0; i < randomAmountOfChunks; i++)
+            {
+                IntVec3 randomCell = cellRect.RandomCell;
 
+                if (RCellFinder.TryFindRandomCellNearWith(Position, (IntVec3 c) => !c.Fogged(Map) && c.Walkable(Map) && !c.Impassable(Map), Map, out IntVec3 result, 13, 28))
+                {
+                    var projectile = (Projectile)GenSpawn.Spawn(InternalDefOf.VQE_ChunkProjectile, randomCell, Map);
+                    projectile.Launch(this, result, result, ProjectileHitFlags.None, false, null);
+                }
+            }
+            GenExplosion.DoExplosion(Position + IntVec3.North * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+            GenExplosion.DoExplosion(Position + IntVec3.South * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+            GenExplosion.DoExplosion(Position + IntVec3.West * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+            GenExplosion.DoExplosion(Position + IntVec3.East * 4, Map, 4.9f, DamageDefOf.Flame, this, -1, -1f);
+
+        }
 
 
         public void StoreGraphics()
