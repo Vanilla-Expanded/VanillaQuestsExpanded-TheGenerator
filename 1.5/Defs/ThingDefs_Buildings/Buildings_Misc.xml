@@ -25,6 +25,7 @@
 		<killedLeavings>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</killedLeavings>
+		<pathCost>42</pathCost>
 		<rotatable>false</rotatable>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -44,6 +45,7 @@
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
 		<fillPercent>0.5</fillPercent>
+		<pathCost>42</pathCost>
 		<size>(2,2)</size>
 		<costList>
 			<ChunkSlagSteel>3</ChunkSlagSteel>
@@ -259,6 +261,7 @@
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
 		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
 		<size>(2,2)</size>
 		<costList>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -284,6 +287,7 @@
 		<selectable>true</selectable>
 		<fillPercent>0.4</fillPercent>
 		<size>(2,2)</size>
+		<pathCost>42</pathCost>
 		<rotatable>false</rotatable>
 		<costList>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -320,6 +324,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<pathCost>42</pathCost>
 		<fillPercent>0.4</fillPercent>
 		<size>(2,2)</size>
 		<rotatable>false</rotatable>
@@ -358,6 +363,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<pathCost>42</pathCost>
 		<fillPercent>0.4</fillPercent>
 		<size>(2,2)</size>
 		<rotatable>false</rotatable>
@@ -392,6 +398,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<pathCost>42</pathCost>
 		<fillPercent>0.4</fillPercent>
 		<size>(2,2)</size>
 		<rotatable>false</rotatable>
@@ -427,6 +434,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<pathCost>42</pathCost>
 		<fillPercent>0.2</fillPercent>
 		<size>(1,1)</size>
 		<hasInteractionCell>true</hasInteractionCell>
@@ -466,6 +474,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<pathCost>42</pathCost>
 		<fillPercent>0.2</fillPercent>
 		<size>(1,1)</size>
 		<costList>
@@ -490,6 +499,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<pathCost>42</pathCost>
 		<fillPercent>0.2</fillPercent>
 		<size>(1,1)</size>
 		<costList>
@@ -610,6 +620,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<blockWind>true</blockWind>
+		<pathCost>75</pathCost>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>0.5</fillPercent>
 		<blockLight>false</blockLight>
@@ -657,6 +668,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<blockWind>true</blockWind>
+		<pathCost>75</pathCost>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>0.5</fillPercent>
 		<blockLight>false</blockLight>
@@ -707,6 +719,7 @@
 		<blockWind>true</blockWind>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<fillPercent>0.5</fillPercent>
+		<pathCost>75</pathCost>
 		<blockLight>false</blockLight>
 		<clearBuildingArea>false</clearBuildingArea>
 		<statBases>
