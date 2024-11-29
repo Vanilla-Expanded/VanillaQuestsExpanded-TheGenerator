@@ -1,0 +1,109 @@
+<Defs>
+	<QuestScriptDef>
+		<defName>VQE_AncientARC</defName>
+		<rootMinPoints>400</rootMinPoints>
+		<autoAccept>True</autoAccept>
+		<rootSelectionWeight>1</rootSelectionWeight>
+		<questNameRules>
+			<rulesStrings>
+				<!-- quest name -->
+				<li>questName->The [adj] [arcName]</li>
+				<li>adj->forgotten</li>
+				<li>adj->ancient</li>
+				<li>adj->mysterious</li>
+				<li>adj->sacred</li>
+				<li>adj->hidden</li>
+				<li>adj->forsaken</li>
+				<li>adj->tribal</li>
+				<li>adj->lost</li>
+				<li>adj->overgrown</li>
+				<li>arcName(p=4)->ARC</li>
+				<li>arcName->structure</li>
+				<li>arcName->machine</li>
+				<li>arcName->relic</li>
+				<li>arcName->generator</li>
+				<li>arcName->core</li>
+				<li>arcName->artifact</li>
+				<li>arcName->device</li>
+				<li>arcName->source</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<!-- quest description -->
+				<li>questDescription->You have [discoveryDesc] of a [adj] village where the potentially final prototype of [inventor_nameFull]'s [arcName] has been built. The villagers [villagerBehavior], and the site [villageCondition].\n\n[arcDetails] However, [villagerWarnings]. If [trigger], the villagers will [villagerReaction].\n\n[finalWarning]</li>
+
+				<!-- discovery phrases -->
+				<li>discoveryDesc->learned</li>
+				<li>discoveryDesc->discovered</li>
+				<li>discoveryDesc->found the location</li>
+
+				<!-- village adjectives -->
+				<li>adj->forgotten</li>
+				<li>adj->ancient</li>
+				<li>adj->hidden</li>
+				<li>adj->mysterious</li>
+				<li>adj->decayed</li>
+				<li>adj->ruined</li>
+
+				<!-- ARC name options -->
+				<li>arcName->ARC</li>
+				<li>arcName->relic</li>
+				<li>arcName->artifact</li>
+				<li>arcName->device</li>
+				<li>arcName->core</li>
+
+				<!-- villager behavior -->
+				<li>villagerBehavior->venerate the [arcName]</li>
+				<li>villagerBehavior->worship the [arcName]</li>
+				<li>villagerBehavior->protect the [arcName]</li>
+				<li>villagerBehavior->revere the [arcName]</li>
+				<li>villagerBehavior->guard the [arcName]</li>
+
+				<!-- village condition -->
+				<li>villageCondition->shows signs of past technological greatness</li>
+				<li>villageCondition->is overgrown and crumbling</li>
+				<li>villageCondition->has decayed into primitive simplicity</li>
+				<li>villageCondition->has long since fallen from its peak</li>
+				<li>villageCondition->bears the scars of time and neglect</li>
+
+				<!-- ARC details -->
+				<li>arcDetails->The [arcName] is said to hold valuable secrets for your colony.</li>
+				<li>arcDetails->Studying the [arcName] could unlock vital knowledge.</li>
+				<li>arcDetails->This ancient [arcName] may reveal the means to build one yourself.</li>
+
+				<!-- villager warnings -->
+				<li>villagerWarnings->be careful not to provoke the villagers</li>
+				<li>villagerWarnings->the villagers will not take kindly to trespassers</li>
+				<li>villagerWarnings->violating their sanctity may result in hostility</li>
+				<li>villagerWarnings->their patience may be thin with outsiders</li>
+
+				<!-- triggers -->
+				<li>trigger->you harm anyone, interact with the [arcName] or overstay your welcome</li>
+
+				<!-- villager reaction -->
+				<li>villagerReaction->turn hostile and call for reinforcements</li>
+				<li>villagerReaction->attack with all their might</li>
+				<li>villagerReaction->defend their home at all costs</li>
+				<li>villagerReaction->lash out in violent retaliation</li>
+
+				<!-- final warning -->
+				<li>finalWarning->If hostilities break out, reinforcements may arrive quickly.</li>
+				<li>finalWarning->If conflict arises, expect heavy resistance.</li>
+				<li>finalWarning->Failure to act swiftly could spell disaster.</li>
+				<li>finalWarning->Prepare for an overwhelming response if provoked.</li>
+			</rulesStrings>
+
+		</questDescriptionRules>
+		<questContentRules>
+		<rulesStrings>
+			
+			<!-- Misc -->
+			<li>terminalStudiedMessage->Terminal studied. You've collected the information and can now leave.</li>
+	
+		</rulesStrings>
+		</questContentRules>
+		<root Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_AncientARCStudy" />
+
+	</QuestScriptDef>
+</Defs>

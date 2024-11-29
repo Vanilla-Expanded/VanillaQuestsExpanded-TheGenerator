@@ -6,6 +6,7 @@
 		<description>An even larger construction site with an ARC prototype.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>UI/QuestIcons/WorshipfulARCSite</expandingIconTexture>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
 		<tags>
 			<li>VQE_Quest3Site</li>
 		</tags>
@@ -14,7 +15,7 @@
 		<defName>VQE_Quest3Site</defName>
 		<linkWithSite>VQE_Quest3Site</linkWithSite>
 		<order>450</order>
-		<genStep Class="KCSG.GenStep_CustomStructureGen">
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
 			<structureLayoutDefs>
 				<li>VQE_Quest3Map_Alpha</li>
 				<li>VQE_Quest3Map_Beta</li>

@@ -42,7 +42,7 @@
 	</WorkGiverDef>
 	<WorkGiverDef>
 		<defName>VQE_StudyGenetron</defName>
-		<label>study ancient ARC</label>
+		<label>study ancient structures</label>
 		<giverClass>VanillaQuestsExpandedTheGenerator.WorkGiver_StudyGenetron</giverClass>
 		<workType>Research</workType>
 		<verb>study</verb>

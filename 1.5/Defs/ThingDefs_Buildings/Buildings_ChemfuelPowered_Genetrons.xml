@@ -5,7 +5,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_ChemfuelPowered</defName>
 		<label>chemfuel-powered ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Chemfuel-powered advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be tuned to increase the power generation even further. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelPowered</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>

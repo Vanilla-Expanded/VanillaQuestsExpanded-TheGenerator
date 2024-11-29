@@ -72,5 +72,10 @@ namespace VanillaQuestsExpandedTheGenerator
         public static BackstoryDef VQE_SafetyInspector05;
         public static BackstoryDef VQE_ChildhoodInventorGenetron;
         public static BackstoryDef VQE_InventorGenetronAdulthood;
+
+        public static SitePartDef VQE_Quest3Site;
+        public static ThingDef VQE_AncientResearchTerminal;
+        public static PawnKindDef VQE_Inventor;
+        public static RulePackDef VQE_InventorMaleNames, VQE_InventorFemaleNames, VQE_InventorLastNames;
     }
 }

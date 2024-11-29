@@ -168,8 +168,9 @@ ARC needs to be maintained by colonists. If maintenance reaches 0%, ARC will bre
 
 	<!-- Ancient ARC study -->
 	
-	<VQE_StudyAncientGenetron>Study ancient ARC</VQE_StudyAncientGenetron>
-	<VQE_StudyAncientGenetronDesc>Study the ancient ARC to find out how to construct an operational one in your colony.</VQE_StudyAncientGenetronDesc>
-	<VQE_StudyAncientGenetronDescExtended>\n\nThis ARC has already been studied or is in the process of being studied.</VQE_StudyAncientGenetronDescExtended>
-	
+	<VQE_StudyAncientGenetron>Study {0}</VQE_StudyAncientGenetron>
+	<VQE_StudyAncientGenetronDesc>Study the {0} to find out how to construct an operational one in your colony.</VQE_StudyAncientGenetronDesc>
+	<VQE_StudyAncientGenetronDescExtended>\n\nThis {0} has already been studied or is in the process of being studied.</VQE_StudyAncientGenetronDescExtended>
+	<VQE_FactionBecameHostileTimed>You've stayed in the village too long. The people of {FACTION_name} are attacking!</VQE_FactionBecameHostileTimed>
+	<VQE_ThingWithInventorName>{0}'s {1}</VQE_ThingWithInventorName>
 </LanguageData>

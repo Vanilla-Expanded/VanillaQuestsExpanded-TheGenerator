@@ -19,7 +19,7 @@
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
-      <li>Scientist</li>
+      <li>VQE_Inventor</li>
     </spawnCategories>
     <shuffleable>False</shuffleable>
   </BackstoryDef>
@@ -40,7 +40,7 @@
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
-      <li>Scientist</li>
+      <li>VQE_Inventor</li>
     </spawnCategories>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeFemale>Thin</bodyTypeFemale>

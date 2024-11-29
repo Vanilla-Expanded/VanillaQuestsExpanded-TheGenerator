@@ -62,9 +62,9 @@
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientARCPrototype_One</defName>
-		<label>ancient ARC prototype</label>
+		<label>prototype</label>
 		<description>A rusted frame of an old power generator, incomplete and barely holding together. Most of its parts are long gone, scavenged or destroyed by time. What’s left is little more than scrap, with no hope of restoration. Perhaps investigating the area could allow you to find the location of another prototype.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Base</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
@@ -85,12 +85,17 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>9</drawSize>
 		</graphicData>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<includeInventorFullName>True</includeInventorFullName>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientARCPrototype_Two</defName>
-		<label>ancient ARC prototype</label>
+		<label>prototype</label>
 		<description>An abandoned generator. Its machinery slightly more intact but still useless. Broken panels, snapped wires, and heavy rust show it was never finished. It’s overgrown and forgotten, offering only a few parts to salvage. Perhaps investigating the area could allow you to find the location of another prototype.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Base</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
@@ -111,12 +116,17 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>9</drawSize>
 		</graphicData>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<includeInventorFullName>True</includeInventorFullName>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientARCPrototype_Three</defName>
-		<label>ancient ARC prototype</label>
+		<label>prototype</label>
 		<description>An almost-complete generator, abandoned before it could ever work. The structure is more solid, but its insides are wrecked—rust, missing pieces, and heavy overgrowth make it useless. Only a few materials can still be salvaged, but among them it is possible to find some ARC components. Perhaps investigating the area could allow you to find the location of another prototype.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Base</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
@@ -138,6 +148,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>9</drawSize>
 		</graphicData>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<includeInventorFullName>True</includeInventorFullName>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientConstructionTruck</defName>
@@ -405,14 +420,17 @@
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientResearchTerminal</defName>
-		<label>ancient research terminal</label>
+		<label>research terminal</label>
 		<description>An ancient computer terminal. It can be used to access research notes related to an ARC generator unit.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Studiable</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
 		<fillPercent>0.2</fillPercent>
 		<size>(1,1)</size>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
 		<costList>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
@@ -432,6 +450,13 @@
 				<glowColor>(0,235,31,0)</glowColor>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<descriptionOverride>Study the data on this ancient research terminal. It may provide valuable information about the ARC project.</descriptionOverride>
+				<convertAfterStudying>VQE_AncientResearchTerminal_Off</convertAfterStudying>
+				<includeInventorFirstName>True</includeInventorFirstName>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientResearchTerminal_Off</defName>
@@ -524,9 +549,9 @@
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_OvergrownCryptosleepCasket</defName>
-		<label>overgrown cryptosleep casket</label>
+		<label>cryptosleep casket</label>
 		<description>This cryptosleep casket is overgrown with brambles and looks like it has been here for a very long time. Who knows what it might contain?</description>
-		<thingClass>Building_AncientCryptosleepPod</thingClass>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_AncientCryptosleepPod</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -560,6 +585,11 @@
 			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
 		</building>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<includeInventorFirstName>True</includeInventorFirstName>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientGenetron</defName>
@@ -706,7 +736,7 @@
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
 		<defName>VQE_AncientOvergrownGenetron</defName>
-		<label>ancient overgrown ARC</label>
+		<label>experimental ARC</label>
 		<description>A mysterious, ancient, overgrown ARC. It seems to look more like a working prototype than a finished product, now fully covered in brambles and signs of aging. Somehow, despite its age, it’s still operating, generating sufficient power for nearby electrical networks. Any tampering with it is bound to irreversibly damage it, but it may be possible to extract some ARC components from it.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron</thingClass>
 		<tickerType>Normal</tickerType>
@@ -798,7 +828,9 @@
 					
 				</graphics>
 			</li>
-		
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<includeInventorFirstName>True</includeInventorFirstName>
+			</li>
 		</modExtensions>
 	</ThingDef>
 </Defs>

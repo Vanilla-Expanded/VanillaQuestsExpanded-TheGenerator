@@ -30,7 +30,9 @@ namespace VanillaQuestsExpandedTheGenerator
         public bool toggleGeothermalStudied = false;
         public bool toggleNuclearStudied = false;
 
+        public string descriptionOverride;
+        public ThingDef convertAfterStudying;
+        public bool includeInventorFirstName;
+        public bool includeInventorFullName;
     }
-
-
 }

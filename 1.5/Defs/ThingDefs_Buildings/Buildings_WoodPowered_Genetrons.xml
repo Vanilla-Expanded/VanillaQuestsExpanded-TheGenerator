@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQE_Genetron_WoodFired</defName>
 		<label>wood-fired ARC</label>
-		<description>Produces electricity from geothermal steam geysers. Must be placed on a steam geyser.</description>
+		<description>Wood-fired advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and wood burned in a set of large furnaces. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_WoodFired</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>

@@ -9,11 +9,10 @@ using RimWorld;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class Building_Genetron : Building
+    public class Building_Genetron : Building_Genetron_Base
     {
 
         public GenetronGraphicsExtension cachedGraphicsExtension;
-        public ExtraGenetronParameters cachedDetailsExtension;
         public Dictionary<Graphic_Single, Tuple<bool, Vector2>> cachedGraphics = new Dictionary<Graphic_Single, Tuple<bool, Vector2>>();
         public CompPowerPlantGenetron compPower;
         public CompRefuelable compRefuelable;
@@ -38,7 +37,6 @@ namespace VanillaQuestsExpandedTheGenerator
             compRefuelable = this.TryGetComp<CompRefuelable>();
             compPower = this.TryGetComp<CompPowerPlantGenetron>();
             compBreakdownable = this.TryGetComp<CompBreakdownable>();
-            cachedDetailsExtension = this.def.GetModExtension<ExtraGenetronParameters>();
             cachedGraphicsExtension = this.def.GetModExtension<GenetronGraphicsExtension>();
 
             if (cachedGraphicsExtension != null)

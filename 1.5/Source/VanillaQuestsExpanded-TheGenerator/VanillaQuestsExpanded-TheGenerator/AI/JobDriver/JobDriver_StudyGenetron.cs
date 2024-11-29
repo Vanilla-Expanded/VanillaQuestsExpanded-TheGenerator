@@ -24,10 +24,24 @@ namespace VanillaQuestsExpandedTheGenerator
             Thing building = this.job.GetTarget(TargetIndex.A).Thing;
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
             this.FailOnBurningImmobile(TargetIndex.A);
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
+            if (TargetA.Thing.def.hasInteractionCell)
+            {
+                yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
+            }
+            else
+            {
+                yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
+            }
 
             Toil study = ToilMaker.MakeToil("MakeNewToils");
-
+            study.initAction = delegate
+            {
+                if (!Building.studyStartedSignal.NullOrEmpty())
+                {
+                    Find.SignalManager.SendSignal(new Signal(Building.studyStartedSignal, Building.Named("SUBJECT")));
+                }
+                QuestUtility.SendQuestTargetSignals(Building.questTags, "StudyStarted", Building.Named("SUBJECT"));
+            };
             study.tickAction = delegate
             {
                 Pawn actor = study.actor;
@@ -42,19 +56,35 @@ namespace VanillaQuestsExpandedTheGenerator
                 if (totalTimer > totalTime)
                 {
                     Building.alreadyStudied = true;
-                    if (Building.cachedDetailsExtension != null)
+                    if (!Building.studyFinishedSignal.NullOrEmpty())
                     {
-                        if (Building.cachedDetailsExtension?.studyingHediff != null && !actor.health.hediffSet.HasHediff(Building.cachedDetailsExtension.studyingHediff))
+                        Find.SignalManager.SendSignal(new Signal(Building.studyFinishedSignal, Building.Named("SUBJECT")));
+                    }
+                    QuestUtility.SendQuestTargetSignals(Building.questTags, "Studied", Building.Named("SUBJECT"));
+
+                    var ext = Building.cachedDetailsExtension;
+                    if (ext != null)
+                    {
+                        if (ext.studyingHediff != null && !actor.health.hediffSet.HasHediff(ext.studyingHediff))
                         {
-                            actor.health.AddHediff(Building.cachedDetailsExtension.studyingHediff);
+                            actor.health.AddHediff(ext.studyingHediff);
                         }
-                        if (Building.cachedDetailsExtension.toggleGeothermalStudied)
+                        if (ext.toggleGeothermalStudied)
                         {
                             Genetron_GameComponent.Instance.geothermalGenetronStudied = true;
                         }
-                        if (Building.cachedDetailsExtension.toggleNuclearStudied)
+                        if (ext.toggleNuclearStudied)
                         {
                             Genetron_GameComponent.Instance.nuclearGenetronStudied = true;
+                        }
+                        if (ext.convertAfterStudying != null)
+                        {
+                            var pos = Building.Position;
+                            var rot = Building.Rotation;
+                            var map = Building.Map;
+                            Building.Destroy();
+                            var newThing = ThingMaker.MakeThing(ext.convertAfterStudying);
+                            GenSpawn.Spawn(newThing, pos, map, rot);
                         }
                     }
                     

@@ -10,26 +10,25 @@ using static UnityEngine.Random;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class Building_Genetron_Studiable : Building
+    public class Building_Genetron_Studiable : Building_Genetron_Base
     {
         Genetron_MapComponent comp;
-        public ExtraGenetronParameters cachedDetailsExtension;
         public bool alreadyStudied = false;
-
+        public string studyStartedSignal;
+        public string studyFinishedSignal;
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
             comp = Map.GetComponent<Genetron_MapComponent>();
-            cachedDetailsExtension = this.def.GetModExtension<ExtraGenetronParameters>();
-
-
         }
+
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref this.alreadyStudied, "alreadyStudied", false, false);
-         
+            Scribe_Values.Look(ref studyStartedSignal, "studyStartedSignal");
+            Scribe_Values.Look(ref studyFinishedSignal, "studyFinishedSignal");
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -43,8 +42,12 @@ namespace VanillaQuestsExpandedTheGenerator
 
             if (!alreadyStudied && comp?.studiables_InMap.Contains(this)==false)
             {
-                command_Action.defaultDesc = "VQE_StudyAncientGenetronDesc".Translate();
-                command_Action.defaultLabel = "VQE_StudyAncientGenetron".Translate();
+                command_Action.defaultDesc = "VQE_StudyAncientGenetronDesc".Translate(this.def.label);
+                if (cachedDetailsExtension != null && cachedDetailsExtension.descriptionOverride.NullOrEmpty() is false)
+                {
+                    command_Action.defaultDesc = cachedDetailsExtension.descriptionOverride.ToString();
+                }
+                command_Action.defaultLabel = "VQE_StudyAncientGenetron".Translate(this.def.label);
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/StudyAncientGenetron_Gizmo", true);
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
@@ -54,9 +57,13 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_StudyAncientGenetronDesc".Translate();
-                command_Action.defaultDescPostfix = "VQE_StudyAncientGenetronDescExtended".Translate().Colorize(Utils.tooltipColour);
-                command_Action.defaultLabel = "VQE_StudyAncientGenetron".Translate();
+                command_Action.defaultDesc = "VQE_StudyAncientGenetronDesc".Translate(this.def.label);
+                if (cachedDetailsExtension != null && cachedDetailsExtension.descriptionOverride.NullOrEmpty() is false)
+                {
+                    command_Action.defaultDesc = cachedDetailsExtension.descriptionOverride.ToString();
+                }
+                command_Action.defaultDescPostfix = "VQE_StudyAncientGenetronDescExtended".Translate(this.def.label).Colorize(Utils.tooltipColour);
+                command_Action.defaultLabel = "VQE_StudyAncientGenetron".Translate(this.def.label);
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/StudyAncientGenetron_Gizmo", true);
                 command_Action.Disabled = true;                
             }           
@@ -117,7 +124,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
                 else
                 {
-                    yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("VQE_StudyAncientGenetron".Translate().CapitalizeFirst(), delegate
+                    yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("VQE_StudyAncientGenetron".Translate(this.def.label).CapitalizeFirst(), delegate
                     {
                         selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(InternalDefOf.VQE_StudyGenetron, this), JobTag.Misc);
                     }), selPawn, this);
