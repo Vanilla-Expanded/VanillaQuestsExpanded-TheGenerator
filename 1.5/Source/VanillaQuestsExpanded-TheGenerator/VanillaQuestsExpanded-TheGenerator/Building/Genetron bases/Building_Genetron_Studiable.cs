@@ -13,7 +13,7 @@ namespace VanillaQuestsExpandedTheGenerator
     public class Building_Genetron_Studiable : Building_Genetron_Base
     {
         Genetron_MapComponent comp;
-        public bool alreadyStudied = false;
+      
         public string studyStartedSignal;
         public string studyFinishedSignal;
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -26,7 +26,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref this.alreadyStudied, "alreadyStudied", false, false);
+          
             Scribe_Values.Look(ref studyStartedSignal, "studyStartedSignal");
             Scribe_Values.Look(ref studyFinishedSignal, "studyFinishedSignal");
         }
@@ -40,7 +40,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             Command_Action command_Action = new Command_Action();
 
-            if (!alreadyStudied && comp?.studiables_InMap.Contains(this)==false)
+            if (comp?.studiables_InMap.Contains(this)==false)
             {
                 command_Action.defaultDesc = "VQE_StudyAncientGenetronDesc".Translate(this.def.label);
                 if (cachedDetailsExtension != null && cachedDetailsExtension.descriptionOverride.NullOrEmpty() is false)
@@ -98,7 +98,7 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.DrawAt(drawLoc, flip);
 
-            if (comp?.studiables_InMap.Contains(this) == true && !alreadyStudied)
+            if (comp?.studiables_InMap.Contains(this) == true)
             {
                 Vector3 drawPos = DrawPos;
                 drawPos.y = AltitudeLayer.MetaOverlays.AltitudeFor() + 0.181818187f;
@@ -115,7 +115,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return floatMenuOption;
             }
-            if (!alreadyStudied && selPawn.CanReserve(this) && selPawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation)
+            if (selPawn.CanReserve(this) && selPawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation)
                 && !selPawn.skills.GetSkill(SkillDefOf.Intellectual).TotallyDisabled)
             {
                 if (!selPawn.CanReach(this, PathEndMode.OnCell, Danger.Deadly))

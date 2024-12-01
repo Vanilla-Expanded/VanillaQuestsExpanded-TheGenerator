@@ -55,7 +55,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 totalTimer++;
                 if (totalTimer > totalTime)
                 {
-                    Building.alreadyStudied = true;
+                   
                     if (!Building.studyFinishedSignal.NullOrEmpty())
                     {
                         Find.SignalManager.SendSignal(new Signal(Building.studyFinishedSignal, Building.Named("SUBJECT")));

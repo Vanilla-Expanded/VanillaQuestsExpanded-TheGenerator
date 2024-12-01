@@ -42,10 +42,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 return false;
             }
 
-            if (building.alreadyStudied)
-            {
-                return false;
-            }
+           
 
             if (t.Faction != pawn.Faction)
             {
