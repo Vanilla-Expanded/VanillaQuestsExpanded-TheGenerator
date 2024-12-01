@@ -97,10 +97,10 @@ namespace VanillaQuestsExpandedTheGenerator
             }, null, null, null, null, terminalDestroyedSignal);
 
             // When the terminal is hacked or studied, the quest progresses
-            quest.SignalPassAll(delegate
+            quest.SignalPass(delegate
             {
                 quest.End(QuestEndOutcome.Success, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, sendStandardLetter: true);
-            }, new List<string> { terminalHackedSignal, siteMapRemovedSignal });
+            }, terminalHackedSignal);
 
             // Handle overstaying or hostility trigger
             quest.SignalPassActivable(delegate
