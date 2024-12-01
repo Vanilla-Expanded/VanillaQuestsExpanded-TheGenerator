@@ -34,5 +34,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public ThingDef convertAfterStudying;
         public bool includeInventorFirstName;
         public bool includeInventorFullName;
+
+        public string studyGizmoIcon;
     }
 }
