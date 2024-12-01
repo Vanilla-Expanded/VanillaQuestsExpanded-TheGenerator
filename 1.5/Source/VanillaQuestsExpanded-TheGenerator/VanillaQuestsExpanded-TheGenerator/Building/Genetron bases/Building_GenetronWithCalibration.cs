@@ -63,6 +63,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public void Signal_CalibrationStarted()
         {
+            calibrationCanBeReUsed = false;
             compPower.inCalibrationMode = true;
         }
 
