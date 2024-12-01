@@ -48,7 +48,7 @@ namespace VanillaQuestsExpandedTheGenerator
                     command_Action.defaultDesc = cachedDetailsExtension.descriptionOverride.ToString();
                 }
                 command_Action.defaultLabel = "VQE_StudyAncientGenetron".Translate(this.def.label);
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/StudyAncientGenetron_Gizmo", true);
+                command_Action.icon = ContentFinder<Texture2D>.Get(cachedDetailsExtension.studyGizmoIcon, true);
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
@@ -64,7 +64,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
                 command_Action.defaultDescPostfix = "VQE_StudyAncientGenetronDescExtended".Translate(this.def.label).Colorize(Utils.tooltipColour);
                 command_Action.defaultLabel = "VQE_StudyAncientGenetron".Translate(this.def.label);
-                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/StudyAncientGenetron_Gizmo", true);
+                command_Action.icon = ContentFinder<Texture2D>.Get(cachedDetailsExtension.studyGizmoIcon, true);
                 command_Action.Disabled = true;                
             }           
             

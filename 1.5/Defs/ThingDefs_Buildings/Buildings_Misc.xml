@@ -463,6 +463,7 @@
 				<descriptionOverride>Study the data on this ancient research terminal. It may provide valuable information about the ARC project.</descriptionOverride>
 				<convertAfterStudying>VQE_AncientResearchTerminal_Off</convertAfterStudying>
 				<includeInventorFirstName>True</includeInventorFirstName>
+				<studyGizmoIcon>UI/Gizmos/StudyAncientResearchTerminal_Gizmo</studyGizmoIcon>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -646,6 +647,8 @@
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientGenetron</studyingHediff>
+				<studyGizmoIcon>UI/Gizmos/StudyAncientGenetron_Gizmo</studyGizmoIcon>
+
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -695,6 +698,7 @@
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientGeothermalGenetron</studyingHediff>
 				<toggleGeothermalStudied>true</toggleGeothermalStudied>
+				<studyGizmoIcon>UI/Gizmos/StudyAncientGeothermalGenetron_Gizmo</studyGizmoIcon>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -744,6 +748,7 @@
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientNuclearGenetron</studyingHediff>
 				<toggleNuclearStudied>true</toggleNuclearStudied>
+				<studyGizmoIcon>UI/Gizmos/StudyNuclearGenetronHusk_Gizmo</studyGizmoIcon>
 			</li>
 		</modExtensions>
 	</ThingDef>
