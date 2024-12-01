@@ -110,7 +110,7 @@
 	<VQE_GenetronSteamTuningMaintenance>set maintenance loss per day to: {0}%</VQE_GenetronSteamTuningMaintenance>
 	
 	<VQE_SteamBoost>steam boost</VQE_SteamBoost>
-	<VQE_SteamBoostDesc>Temporarily enhance the steam flow by activating internal steam pumps, increasing the power output of the ARC. The vent boosters will need to cool down for a period of time, preventing them from being used again until the temperature is optimal again.</VQE_SteamBoostDesc>
+	<VQE_SteamBoostDesc>Temporarily enhance the steam flow by activating internal steam pumps, increasing the power output of the ARC for 5 days. The vent boosters will need to cool down for a period of time, preventing them from being used again until the temperature is optimal again.</VQE_SteamBoostDesc>
 	<VQE_SteamBoostDescExtended>\n\nSteam boost has a {0} cooldown. It will be ready again in {1}</VQE_SteamBoostDescExtended>
 	
 	<VQE_CalibrateComponents>calibrate components</VQE_CalibrateComponents>

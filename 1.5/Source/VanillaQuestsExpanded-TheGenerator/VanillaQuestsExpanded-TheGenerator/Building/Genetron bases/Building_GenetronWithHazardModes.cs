@@ -54,7 +54,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             else
             {
-                command_Action.defaultDesc = "VQE_HazardModeyDesc".Translate();
+                command_Action.defaultDesc = "VQE_HazardModeDesc".Translate();
                 command_Action.defaultLabel = "VQE_HazardMode".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/HazardMode_Gizmo", true);
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
