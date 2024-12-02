@@ -19,7 +19,7 @@ namespace VanillaQuestsExpandedTheGenerator
     public static class VanillaQuestsExpandedTheGenerator_PowerNet_PowerNetTick_Patch
     {
         public static bool PowerUpActive(Thing parent) => parent.Spawned && parent.Map.GameConditionManager.ElectricityDisabled(parent.Map);
-        public static bool PowerUpActive(CompPower powerComp) => PowerUpActive(powerComp.parent) && powerComp.parent is Building_Genetron genetron && genetron.cachedDetailsExtension.worksInSolarFlares;
+        public static bool PowerUpActive(CompPower powerComp) => PowerUpActive(powerComp.parent) && powerComp.parent is Building_Genetron genetron && genetron.cachedDetailsExtension?.worksInSolarFlares==true;
         public static List<CompPowerBattery> batteriesShuffled = new List<CompPowerBattery>();
         public static IEnumerable<CompPowerTrader> PowerTradersSolarFlare(this PowerNet net) => net.powerComps.Where(x => x.parent is Building_Genetron genetron && genetron.cachedDetailsExtension.worksInSolarFlares);
 
