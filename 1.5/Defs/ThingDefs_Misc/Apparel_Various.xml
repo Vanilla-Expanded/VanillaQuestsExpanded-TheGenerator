@@ -20,9 +20,9 @@
 			<ArmorRating_Heat>0.3</ArmorRating_Heat>
 			<Insulation_Cold>68</Insulation_Cold>
 			<EquipDelay>3</EquipDelay>
-		</statBases><smeltable>false</smeltable>
+		</statBases>
+		<smeltable>false</smeltable>
 		<apparel>
-		
 			<bodyPartGroups>
 				<li>Torso</li>
 				<li>Neck</li>
@@ -30,13 +30,17 @@
 				<li>Arms</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Item/Apparel/AncientTightParka/AncientTightParka</wornGraphicPath>
-			<anyTechLevelCanUseForWarmth>true</anyTechLevelCanUseForWarmth>
+			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+			<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
 			<layers>
 				<li>Shell</li>
 			</layers>
 			<developmentalStageFilter>Adult</developmentalStageFilter>
 			<countsAsClothingForNudity>true</countsAsClothingForNudity>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+			<tags>
+				<li>VQE_InventorParka</li>
+			</tags>
 		</apparel>
 		<colorGenerator Class="ColorGenerator_Options">
 			<options>
