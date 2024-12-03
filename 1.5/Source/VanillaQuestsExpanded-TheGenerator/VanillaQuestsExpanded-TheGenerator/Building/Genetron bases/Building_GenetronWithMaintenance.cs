@@ -84,7 +84,7 @@ namespace VanillaQuestsExpandedTheGenerator
             if (compBreakdownable != null && cachedDetailsExtension.noCriticalBreakdowns)
             {
                 compBreakdownable.DoBreakdown();
-            }
+            }else
             if (cachedDetailsExtension?.hasNuclearMeltdowns==true)
             {
                 Signal_NuclearCriticalBreakdown_Begin();

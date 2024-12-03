@@ -34,7 +34,7 @@
 		<workType>Construction</workType>
 		<verb>maintain</verb>
 		<gerund>maintaining</gerund>
-		<priorityInType>19</priorityInType>
+		<priorityInType>300</priorityInType>
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>
