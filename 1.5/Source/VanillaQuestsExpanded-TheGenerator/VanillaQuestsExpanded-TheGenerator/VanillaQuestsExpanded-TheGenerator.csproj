@@ -355,6 +355,7 @@
     <Compile Include="Events\SitePartWorker_AncientARCStudy.cs" />
     <Compile Include="GraphicsCache\GraphicsCache.cs" />
     <Compile Include="Harmony\BuildCopyCommandUtility_BuildCopyCommand.cs" />
+    <Compile Include="Harmony\Building_SteamGeyser_Tick.cs" />
     <Compile Include="Harmony\CompBreakdownable_NotifyRepaired.cs" />
     <Compile Include="Harmony\DesignationCategoryDef_ResolvedAllowedDesignators.cs" />
     <Compile Include="Harmony\GenConstruct_CanConstruct.cs" />

@@ -21,6 +21,8 @@ public class Genetron_GameComponent : GameComponent
     public bool geothermalGenetronStudied = false;
     public bool nuclearGenetronStudied = false;
 
+    public HashSet<Thing> supressedGeysers = new HashSet<Thing>();
+
     public override void StartedNewGame()
     {
         base.StartedNewGame();
@@ -51,6 +53,8 @@ public class Genetron_GameComponent : GameComponent
     {
         Scribe_Values.Look(ref this.nuclearGenetronStudied, "nuclearGenetronStudied", false, false);
         Scribe_Values.Look(ref this.geothermalGenetronStudied, "geothermalGenetronStudied", false, false);
+        Scribe_Collections.Look(ref this.supressedGeysers, "supressedGeysers",LookMode.Reference);
+
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
             if (inventor is null)
@@ -66,6 +70,22 @@ public class Genetron_GameComponent : GameComponent
         {
             Scribe_Deep.Look(ref inventor, "inventor");
         }
+    }
+
+    public void AddGeyserToSuppressed(Thing geyser) {
+        if (!supressedGeysers.Contains(geyser))
+        {
+            supressedGeysers.Add(geyser);
+        }
+    
+    }
+    public void RemoveGeyserFromSuppressed(Thing geyser)
+    {
+        if (supressedGeysers.Contains(geyser))
+        {
+            supressedGeysers.Remove(geyser);
+        }
+
     }
 
 

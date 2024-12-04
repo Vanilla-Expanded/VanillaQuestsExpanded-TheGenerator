@@ -20,7 +20,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public int totalRunningTicks;
         public float totalFuelBurned;
         public float consumptionRatePerTick = 0;
-    
+        public Building_SteamGeyser geyser;
 
         public override void ExposeData()
         {
@@ -39,10 +39,11 @@ namespace VanillaQuestsExpandedTheGenerator
             compBreakdownable = this.TryGetComp<CompBreakdownable>();
             cachedGraphicsExtension = this.def.GetModExtension<GenetronGraphicsExtension>();
 
+            
+
             if (cachedGraphicsExtension != null)
             {
                 LongEventHandler.ExecuteWhenFinished(delegate { StoreGraphics(); });
-
             }
 
             if (compRefuelable != null)
@@ -148,6 +149,12 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             base.Tick();
 
+            if (geyser == null)
+            {
+                geyser = (Building_SteamGeyser)Map.thingGrid.ThingAt(Position, ThingDefOf.SteamGeyser);         
+                Genetron_GameComponent.Instance.AddGeyserToSuppressed(geyser);
+            }
+
             if (compPower.PowerOn && (compRefuelable is null ||(compRefuelable!=null && compRefuelable.HasFuel))
                 && (compBreakdownable is null || (compBreakdownable != null && !compBreakdownable.BrokenDown)))
             {
@@ -215,7 +222,15 @@ namespace VanillaQuestsExpandedTheGenerator
 
         }
 
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+        {
+            if (geyser != null)
+            {
+                Genetron_GameComponent.Instance.RemoveGeyserFromSuppressed(geyser);
+            }
 
+            base.Destroy(mode);
+        }
 
 
 
