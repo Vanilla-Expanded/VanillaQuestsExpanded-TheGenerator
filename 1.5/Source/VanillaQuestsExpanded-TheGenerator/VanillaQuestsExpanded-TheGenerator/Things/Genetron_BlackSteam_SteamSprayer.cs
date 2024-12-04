@@ -5,11 +5,11 @@ using Verse;
 using UnityEngine;
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class IntermittentSteamSprayer_Constant
+    public class Genetron_BlackSteam_SteamSprayer
     {
         private Thing parent;
 
-        private int ticksUntilSpray = 250;
+        private int ticksUntilSpray = 0;
 
         private int sprayTicksLeft;
 
@@ -21,13 +21,13 @@ namespace VanillaQuestsExpandedTheGenerator
 
         private const int MaxTicksBetweenSprays = 50;
 
-        private const int MinSprayDuration = 500;
+        private const int MinSprayDuration = 300;
 
-        private const int MaxSprayDuration = 500;
+        private const int MaxSprayDuration = 400;
 
-        private const float SprayThickness = 0.6f;
+        private const float SprayThickness = 0.4f;
 
-        public IntermittentSteamSprayer_Constant(Thing parent)
+        public Genetron_BlackSteam_SteamSprayer(Thing parent)
         {
             this.parent = parent;
         }
@@ -39,7 +39,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 sprayTicksLeft--;
                 if (Rand.Value < SprayThickness)
                 {
-                    FleckMaker.ThrowAirPuffUp(parent.TrueCenter()+new Vector3(0,0,2.75f), parent.Map);
+                    Utils.ThrowBlackSmoke(parent.TrueCenter()+ new Vector3(new FloatRange(0,5).RandomInRange, new FloatRange(0, 5).RandomInRange, new FloatRange(0, 5).RandomInRange), parent.Map, new FloatRange(0, 3).RandomInRange);
                 }
                 
                 if (sprayTicksLeft <= 0)

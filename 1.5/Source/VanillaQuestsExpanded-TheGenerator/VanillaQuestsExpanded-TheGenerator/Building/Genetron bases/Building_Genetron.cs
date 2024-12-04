@@ -21,6 +21,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public float totalFuelBurned;
         public float consumptionRatePerTick = 0;
         public Building_SteamGeyser geyser;
+        public Genetron_SteamSprayer steamSprayer;
 
         public override void ExposeData()
         {
@@ -38,8 +39,8 @@ namespace VanillaQuestsExpandedTheGenerator
             compPower = this.TryGetComp<CompPowerPlantGenetron>();
             compBreakdownable = this.TryGetComp<CompBreakdownable>();
             cachedGraphicsExtension = this.def.GetModExtension<GenetronGraphicsExtension>();
+            steamSprayer = new Genetron_SteamSprayer(this);
 
-            
 
             if (cachedGraphicsExtension != null)
             {
@@ -148,6 +149,8 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void Tick()
         {
             base.Tick();
+
+            steamSprayer.SteamSprayerTick();
 
             if (geyser == null)
             {

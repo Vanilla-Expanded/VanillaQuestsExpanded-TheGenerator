@@ -15,8 +15,8 @@ namespace VanillaQuestsExpandedTheGenerator
     public class Building_GenetronOverdrive : Building_Genetron
     {
 
-        public IntermittentSteamSprayer_Constant steamSprayer;
-        public SmokeSprayer_Constant smokeSprayer;
+        public Genetron_Overdrive_SteamSprayer overdriveSprayer;
+        public Genetron_BlackSteam_SteamSprayer smokeSprayer;
         public bool overdrive = false;
         public const int overdriveTime = 300000; // 5 days
         public int overdriveTimer = 0;
@@ -60,8 +60,8 @@ namespace VanillaQuestsExpandedTheGenerator
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            steamSprayer = new IntermittentSteamSprayer_Constant(this);
-            smokeSprayer = new SmokeSprayer_Constant(this);
+            overdriveSprayer = new Genetron_Overdrive_SteamSprayer(this);
+            smokeSprayer = new Genetron_BlackSteam_SteamSprayer(this);
             compRefuelableWithOverdrive = this.TryGetComp<CompRefuelableWithOverdrive>();
         }
 
@@ -87,7 +87,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
             if (overdrive)
             {
-                steamSprayer.SteamSprayerTick();
+                overdriveSprayer.SteamSprayerTick();
                 overdriveTimer++;
                 if (overdriveTimer > overdriveTime)
                 {

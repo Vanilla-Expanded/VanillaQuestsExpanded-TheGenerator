@@ -24,7 +24,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static void ThrowBlackSmoke(Vector3 loc, Map map, float size)
         {
-            if (loc.ShouldSpawnMotesAt(map))
+            if (loc.ToIntVec3().ShouldSpawnMotesAt(map))
             {
                 FleckCreationData dataStatic = FleckMaker.GetDataStatic(loc, map, FleckDefOf.Smoke, Rand.Range(1.5f, 2.5f) * size);
                 dataStatic.rotationRate = Rand.Range(-30f, 30f);
@@ -34,6 +34,19 @@ namespace VanillaQuestsExpandedTheGenerator
                 map.flecks.CreateFleck(dataStatic);
             }
         }
+
+        public static void ThrowExtendedAirPuffUp(Vector3 loc, Map map, float size, float speedMultiplier)
+        {
+            if (loc.ToIntVec3().ShouldSpawnMotesAt(map))
+            {
+                FleckCreationData dataStatic = FleckMaker.GetDataStatic(loc + new Vector3(Rand.Range(-0.02f, 0.02f), 0f, Rand.Range(-0.02f, 0.02f)), map, FleckDefOf.AirPuff, Rand.Range(1.5f, 2.5f) * size);
+                dataStatic.rotationRate = Rand.RangeInclusive(-240, 240);
+                dataStatic.velocityAngle = Rand.Range(-45, 45);
+                dataStatic.velocitySpeed = Rand.Range(1.2f, 1.5f) * speedMultiplier;
+                map.flecks.CreateFleck(dataStatic);
+            }
+        }
+
 
         public static bool HasStudiedBasicHediffOrBackstory(Pawn pawn)
         {

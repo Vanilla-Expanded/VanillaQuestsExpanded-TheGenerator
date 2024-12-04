@@ -49,7 +49,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             if (compPower.inSteamBoostMode)
             {
-                steamSprayer.SteamSprayerTick();
+                overdriveSprayer.SteamSprayerTick();
                 steamBoostTimer++;
                 if (steamBoostTimer > steamBoostTime)
                 {
