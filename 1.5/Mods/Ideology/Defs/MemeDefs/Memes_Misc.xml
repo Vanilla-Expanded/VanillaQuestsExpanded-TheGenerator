@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<MemeDef>
+		<defName>VQE_Technophobia</defName>
+		<label>technophobia</label>
+		<exclusionTags>
+			<li>VQE_Technophobia_Transhumanist</li>
+			<li>VQE_Technophobia_Industrialist</li>
+			<li>VQE_Technophobia_MechSupremacy</li>
+			<li>VQE_Technophobia_Progressive</li>
+		</exclusionTags>
+		<description>Humanity should reject technology as it exposes us to discord and cataclysm.</description>
+		<iconPath>UI/Ideology/Meme_Technophobia</iconPath>
+		<impact>2</impact>
+		<generalRules>
+			<rulesStrings>
+				<!-- Adjectives describing the technophobe ideology -->
+				<li>memeAdjective->primitive</li>
+				<li>memeAdjective->natural</li>
+				<li>memeAdjective->organic</li>
+				<li>memeAdjective->traditional</li>
+				<li>memeAdjective->rustic</li>
+				<!-- Nouns representing their creed or belief system -->
+				<li>memeCreed->path</li>
+				<li>memeCreed->movement</li>
+				<li>memeCreed->circle</li>
+				<li>memeCreed->doctrine</li>
+				<li>memeCreed->faith</li>
+				<!-- Hyphenated prefixes for describing their concepts -->
+				<li>memeHyphenPrefix->anti</li>
+				<li>memeHyphenPrefix->earth</li>
+				<li>memeHyphenPrefix->post</li>
+				<li>memeHyphenPrefix->neo</li>
+				<li>memeHyphenPrefix->rust</li>
+				<!-- Core concepts of their ideology -->
+				<li>memeConcept->humanity</li>
+				<li>memeConcept->nature</li>
+				<li>memeConcept->purity</li>
+				<li>memeConcept->balance</li>
+				<li>memeConcept->simplicity</li>
+				<!-- Titles for their leaders or figureheads -->
+				<li>memeLeaderNoun->arbiter</li>
+				<li>memeLeaderNoun->seer</li>
+				<li>memeLeaderNoun->keeper</li>
+				<li>memeLeaderNoun->sage</li>
+				<li>memeLeaderNoun->prophet</li>
+				<!-- Adjectives for leaders or ideological descriptors -->
+				<li>memeLeaderAdjective->natural</li>
+				<li>memeLeaderAdjective->primal</li>
+				<li>memeLeaderAdjective->earthly</li>
+				<li>memeLeaderAdjective->ascetic</li>
+				<li>memeLeaderAdjective->pure</li>
+				<!-- Roles or descriptors for their moralists or enforcers -->
+				<li>memeMoralist->warden</li>
+				<li>memeMoralist->protector</li>
+				<li>memeMoralist->guardian</li>
+				<li>memeMoralist->preserver</li>
+				<li>memeMoralist->guide</li>
+			</rulesStrings>
+		</generalRules>
+		<descriptionMaker>
+			<rules>
+				<rulesStrings>
+					<!-- theist myth -->
+					<li>creation(tag=meme_Technophobic)        ->[deity0_name] taught humanity to survive through the strength of their hands and the purity of nature, warning that machines would only bring ruin.</li>
+					<li>episode(uses=1,tag=meme_Technophobic)  ->When humanity turned to machines, [deity0_name] wept and unleashed storms to sweep away the taint of their arrogance.</li>
+					<!-- theist founder -->
+					<li>intro(tag=meme_Technophobic)           ->The [memberNamePlural] gathered in the shadow of [place_name], a place untouched by machines, and pledged themselves to the ways of simplicity and balance.</li>
+					<li>conflict(tag=meme_Technophobic)        ->A cruel [foeLeader] sought to spread machines into the sacred lands of the [memberNamePlural], sparking a desperate struggle for survival.</li>
+					<li>founderJoin(tag=meme_Technophobic)     ->A [place_job] named [founderName] led the charge against the [foeSoldiers], armed only with tools of the earth and the strength of [founder_possessive] followers.</li>
+					<li>victory(tag=meme_Technophobic)         ->[founderName] rallied the [memberNamePlural] to destroy the factories of the [foeLeader], cleansing the land of machinery and restoring harmony.</li>
+					<!-- ideological founder -->
+					<li>setup(tag=meme_Technophobic)           ->[founderName] saw the collapse of a society built on machines and vowed to prevent humanity from repeating its mistakes.</li>
+					<li>story(uses=1,tag=meme_Technophobic)    ->[founderName] gathered like-minded individuals, teaching them to reject technology and embrace a self-reliant life in harmony with nature.</li>
+					<!-- ideological lesson -->
+					<li>lessonIntro(tag=meme_Technophobic)         ->The elders taught me a truth that echoed through the ages:</li>
+					<li>lesson(tag=meme_Technophobic)              ->reliance on machines breeds fragility, and only through simplicity can we endure</li>
+					<li>lessonReinforcement(tag=meme_Technophobic) ->I saw it with my own eyes when the great cities fell, powerless in the face of their own hubris.</li>
+					<!-- archist -->
+					<li>archistBasis(tag=meme_Technophobic)    ->The archotechs turned away from humanity, seeing us as slaves to our machines. Only by abandoning technology can we regain their favor.</li>
+					<li>archistFact(tag=meme_Technophobic)     ->Machines dull the spirit and weaken the mind, driving humanity further from the enlightenment of the archotechs.</li>
+					<li>archistProphecy(tag=meme_Technophobic) ->[inTheEnd], only those who live pure, machine-free lives will be spared when the archotechs cleanse the world.</li>
+					<!-- animist -->
+					<li>animistBasis(tag=meme_Technophobic)    ->Every living thing has a spirit, and the soulless machines disrupt the harmony of the natural world.</li>
+					<li>animistFact(tag=meme_Technophobic)     ->The spirits of the earth grow weak where machines tread, their power siphoned and corrupted.</li>
+					<li>animistProphecy(tag=meme_Technophobic) ->[itIsSaid] that when the last machine falls silent, the spirits will return and heal the world.</li>
+					<!-- eschatologism -->
+					<li>eschatologismFact(tag=meme_Technophobic)->Machines are the heralds of the apocalypse, and their creations will poison the earth until nothing is left but ash and ruin.</li>
+					<li>eschatologismProphecy(tag=meme_Technophobic)->[inTheEnd], the machines will turn against their creators, bringing devastation until only those who shun technology remain.</li>
+					<!-- corporate -->
+					<li>introMemo(tag=meme_Technophobic)->To: All Staff\nFrom: Office of Sustainability\nSubject: Policy Update - Technology Usage\n\nEffective immediately, all non-essential machinery is to be phased out. Remember, our ancestors thrived without these devices, and so can we. Continued reliance on technology undermines our resilience and poses long-term risks to our sustainability goals. Let's lead by example and demonstrate the strength of self-reliance. Compliance will be closely monitored.</li>
+					<!-- eldritch / chthonian -->
+					<li>chthonianProphecy(tag=meme_Technophobic)->[itIsSaid] that the machines are mere tools of the dark forces below, and every gear turned brings us closer to their dominion.</li>
+					<!-- serketist -->
+					<li>serketistProphecy(tag=meme_Technophobic)->The insects thrive without machines, a lesson in resilience that humanity has forgotten.</li>
+					<!-- alienist -->
+					<li>alienistProphecy(tag=meme_Technophobic)->It was machines that created these terrifying creatures, and as such we must reject technology as a source of great evil.</li>
+				</rulesStrings>
+			</rules>
+		</descriptionMaker>
+		<requireOne>
+			<li>
+				<li>AutonomousWeapons_Prohibited</li>
+			</li>
+			<li>
+				<li>Research_None</li>
+			</li>
+			
+		</requireOne>
+		<symbolPacks>
+			<li>
+				<ideoName>Purism</ideoName>
+				<theme>purity</theme>
+				<adjective>purist</adjective>
+				<member>purist</member>
+			</li>
+			<li>
+				<ideoName>Naturalism</ideoName>
+				<theme>nature</theme>
+				<adjective>naturalist</adjective>
+				<member>naturalist</member>
+			</li>
+			<li>
+				<ideoName>Traditionism</ideoName>
+				<theme>tradition</theme>
+				<adjective>traditionist</adjective>
+				<member>traditionalist</member>
+			</li>
+			<li>
+				<ideoName>Primivitism</ideoName>
+				<theme>primitivism</theme>
+				<adjective>primitivist</adjective>
+				<member>primitivist</member>
+			</li>
+			<li>
+				<ideoName>Rejectionism</ideoName>
+				<theme>rejection</theme>
+				<adjective>rejectionist</adjective>
+				<member>rejector</member>
+			</li>
+			<li>
+				<ideoName>Survivalism</ideoName>
+				<theme>survival</theme>
+				<adjective>survivalist</adjective>
+				<member>survivalist</member>
+			</li>
+			<li>
+				<ideoName>Simplicity</ideoName>
+				<theme>simplicity</theme>
+				<adjective>simplistic</adjective>
+				<member>simplist</member>
+			</li>
+		</symbolPacks>
+	</MemeDef>
+</Defs>

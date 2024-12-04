@@ -109,6 +109,9 @@
 					</li>
 				</graphics>
 			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<ARClevel>2</ARClevel>
+			</li>
 		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="BuildingBase">
@@ -224,6 +227,9 @@
 						<texture>Things/Wood/Megagenerator_Tier2_Wood</texture>
 					</li>
 				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<ARClevel>3</ARClevel>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -341,6 +347,9 @@
 						<texture>Things/Wood/Megagenerator_Tier3_Wood</texture>
 					</li>
 				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<ARClevel>4</ARClevel>
 			</li>
 			
 		</modExtensions>
@@ -467,6 +476,9 @@
 						<texture>Things/Wood/Megagenerator_Tier4_Wood</texture>
 					</li>
 				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<ARClevel>5</ARClevel>
 			</li>
 			
 		</modExtensions>

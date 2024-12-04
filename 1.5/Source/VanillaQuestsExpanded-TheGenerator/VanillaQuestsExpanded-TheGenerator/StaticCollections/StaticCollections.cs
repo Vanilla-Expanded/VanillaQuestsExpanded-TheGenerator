@@ -24,6 +24,9 @@ namespace VanillaQuestsExpandedTheGenerator
             }
         }
 
+        public static Dictionary<Map,int> ARClevelInMap = new Dictionary<Map,int>();
+        public static Dictionary<Map, float> ARCmaintenanceInMap = new Dictionary<Map, float>();
+
         // A list of designators that shouldn't appear on the architect menu.
         public static HashSet<BuildableDef> hidden_designators = new HashSet<BuildableDef>();
      
@@ -45,6 +48,20 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static HashSet<BackstoryDef> advancedBackstories = new HashSet<BackstoryDef>() { InternalDefOf.VQE_ChildhoodInventorGenetron, InternalDefOf.VQE_InventorGenetronAdulthood};
 
+        public static HashSet<HediffDef> studiedHediffs = new HashSet<HediffDef>() { InternalDefOf.VQE_StudiedAncientGenetron,
+        InternalDefOf.VQE_StudiedAncientGeothermalGenetron,InternalDefOf.VQE_StudiedAncientNuclearGenetron};
+
+        public static void SetArcLevelInMap(Map map, int level)
+        {
+            ARClevelInMap[map] = level;
+
+        }
+
+        public static void SetArcMaintenanceInMap(Map map, float maintenance)
+        {
+            ARCmaintenanceInMap[map] = maintenance;
+
+        }
 
     }
 }

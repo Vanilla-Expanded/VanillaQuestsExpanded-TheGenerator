@@ -91,6 +91,10 @@
 					</li>
 				</graphics>
 			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				
+				<ARClevel>1</ARClevel>
+			</li>
 		</modExtensions>
 	</ThingDef>
 </Defs>

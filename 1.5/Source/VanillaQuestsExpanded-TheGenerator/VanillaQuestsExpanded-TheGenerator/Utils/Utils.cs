@@ -110,5 +110,28 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             return false;
         }
+
+        public static bool HasAnyStudiedHediffOrBackstory(Pawn pawn)
+        {
+            if (pawn == Genetron_GameComponent.Instance.inventor)
+            {
+                return true;
+            }
+            foreach (HediffDef hediffDef in StaticCollections.studiedHediffs) {
+                if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(hediffDef) != null)
+                {
+                    return true;
+                }
+            }            
+            if (pawn.story.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Adulthood))
+            {
+                return true;
+            }
+            if (pawn.story.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Childhood))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

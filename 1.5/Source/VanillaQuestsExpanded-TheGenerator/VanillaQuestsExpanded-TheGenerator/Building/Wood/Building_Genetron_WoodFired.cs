@@ -11,7 +11,7 @@ namespace VanillaQuestsExpandedTheGenerator
     public class Building_Genetron_WoodFired : Building_Genetron
     {
 
-        public const int totalFuelBurnedToUpdate = 700; 
+        public const int totalFuelBurnedToUpdate = 700;
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -30,19 +30,22 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_WoodFueled, Position, Map, Rotation, Faction.OfPlayer, null);
+                    if (Map.thingGrid.ThingAt(Position, InternalDefOf.VQE_Genetron_WoodFueled.blueprintDef) == null)
+                    {
+                        GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_WoodFueled, Position, Map, Rotation, Faction.OfPlayer, null);
+                    }
                 };
             }
             else
             {
                 command_Action.defaultDesc = "VQE_InstallWoodFueledGenetronDesc".Translate();
-                command_Action.defaultDescPostfix ="VQE_InstallWoodFueledGenetronDescExpanded".Translate(totalFuelBurnedToUpdate, totalFuelBurned).Colorize(Utils.tooltipColour);
+                command_Action.defaultDescPostfix = "VQE_InstallWoodFueledGenetronDescExpanded".Translate(totalFuelBurnedToUpdate, totalFuelBurned).Colorize(Utils.tooltipColour);
 
                 command_Action.defaultLabel = "VQE_InstallWoodFueledGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_2", true);
-                command_Action.Disabled = true;                
-            }           
-            
+                command_Action.Disabled = true;
+            }
+
             yield return command_Action;
 
             Command_Action command_Action2 = new Command_Action();

@@ -68,6 +68,7 @@ namespace VanillaQuestsExpandedTheGenerator
                         if (ext.studyingHediff != null && !actor.health.hediffSet.HasHediff(ext.studyingHediff))
                         {
                             actor.health.AddHediff(ext.studyingHediff);
+                           
                         }
                         if (ext.toggleGeothermalStudied)
                         {

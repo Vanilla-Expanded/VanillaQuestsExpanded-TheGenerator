@@ -10,16 +10,55 @@ using RimWorld.Planet;
 namespace VanillaQuestsExpandedTheGenerator
 {
     public class Genetron_MapComponent : MapComponent
-    {    
+    {
 
         public HashSet<Thing> refuelables_InMap = new HashSet<Thing>();
         public HashSet<Thing> repairables_InMap = new HashSet<Thing>();
         public HashSet<Thing> maintainables_InMap = new HashSet<Thing>();
         public HashSet<Thing> uraniumFueled_InMap = new HashSet<Thing>();
         public HashSet<Thing> studiables_InMap = new HashSet<Thing>();
+        public int tickCounter = tickInterval;
+        public const int tickInterval = 1000;
 
         public Genetron_MapComponent(Map map) : base(map)
         {
+        }
+
+        public override void MapComponentTick()
+        {
+            if (Find.IdeoManager.classicMode) return;
+
+            tickCounter++;
+            if ((tickCounter > tickInterval))
+            {
+                List<Building_Genetron> listOfThings = map.listerBuildings.AllColonistBuildingsOfType<Building_Genetron>()?.ToList();
+                if (listOfThings.Count > 0)
+                {
+                   
+                    IEnumerable<int> levels = listOfThings.Select(x => x.cachedDetailsExtension.ARClevel);
+              
+                    if (levels.Count() > 0)
+                    {
+                        StaticCollections.SetArcLevelInMap(map, levels.Max());
+                    }
+                    IEnumerable<float> maintenances = listOfThings.Where(x => x is Building_GenetronWithMaintenance)?.Select(x => ((Building_GenetronWithMaintenance)x).maintenance);
+                    if (maintenances.Count() > 0)
+                    {
+                        StaticCollections.SetArcMaintenanceInMap(map, maintenances.Max());
+                    }
+
+
+
+                }
+                else
+                {
+                    StaticCollections.SetArcLevelInMap(map, 0);
+                    StaticCollections.SetArcMaintenanceInMap(map, 1);
+                }
+                                   
+                tickCounter = 0;
+            }
+
         }
 
         public override void ExposeData()

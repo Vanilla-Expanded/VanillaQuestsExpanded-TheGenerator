@@ -125,6 +125,7 @@
 				<hideOverdrive>true</hideOverdrive>
 				<hidePowerSurge>true</hidePowerSurge>
 				<anyoneCanHandle>true</anyoneCanHandle>
+				<ARClevel>10</ARClevel>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -252,6 +253,7 @@
 				<hideOverdrive>true</hideOverdrive>
 				<hidePowerSurge>true</hidePowerSurge>
 				<anyoneCanHandle>true</anyoneCanHandle>
+				<ARClevel>11</ARClevel>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -380,6 +382,7 @@
 				<hidePowerSurge>true</hidePowerSurge>
 				<noCriticalBreakdowns>true</noCriticalBreakdowns>
 				<anyoneCanHandle>true</anyoneCanHandle>
+				<ARClevel>12</ARClevel>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -509,6 +512,7 @@
 				<noCriticalBreakdowns>true</noCriticalBreakdowns>
 				<worksInSolarFlares>true</worksInSolarFlares>
 				<anyoneCanHandle>true</anyoneCanHandle>
+				<ARClevel>13</ARClevel>
 			</li>
 		</modExtensions>
 	</ThingDef>

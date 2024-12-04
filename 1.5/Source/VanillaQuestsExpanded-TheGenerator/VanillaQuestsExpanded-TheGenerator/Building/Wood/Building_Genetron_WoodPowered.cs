@@ -31,7 +31,11 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_WoodBlasting, Position, Map, Rotation, Faction.OfPlayer, null);
+                    if (Map.thingGrid.ThingAt(Position, InternalDefOf.VQE_Genetron_WoodBlasting.blueprintDef) == null)
+                    {
+
+                        GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_WoodBlasting, Position, Map, Rotation, Faction.OfPlayer, null);
+                    }
                 };
             }
             else

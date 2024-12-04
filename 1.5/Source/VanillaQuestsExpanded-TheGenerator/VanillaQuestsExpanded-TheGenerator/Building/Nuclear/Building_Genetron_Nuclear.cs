@@ -32,12 +32,15 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_Isotopic, Position, Map, Rotation, Faction.OfPlayer, null);
+                    if (Map.thingGrid.ThingAt(Position, InternalDefOf.VQE_Genetron_Isotopic.blueprintDef) == null)
+                    {
+                        GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_Isotopic, Position, Map, Rotation, Faction.OfPlayer, null);
+                    }
                 };
             }
             else
             {
-                command_Action.defaultDesc = "VQE_InstallIsotopicGenetronDesc".Translate() ;
+                command_Action.defaultDesc = "VQE_InstallIsotopicGenetronDesc".Translate();
                 command_Action.defaultDescPostfix = "VQE_InstallIsotopicGenetronDescExpanded".Translate(totalFuelBurnedToUpdate, nuclearConsumptionTotal).Colorize(Utils.tooltipColour);
 
                 command_Action.defaultLabel = "VQE_InstallIsotopicGenetron".Translate();

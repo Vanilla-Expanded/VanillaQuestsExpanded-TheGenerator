@@ -12,6 +12,8 @@ namespace VanillaQuestsExpandedTheGenerator
     public class ExtraGenetronParameters : DefModExtension
     {
 
+        public int ARClevel = 1;
+
         public bool fineTuningControl = false;
         public bool steamTuningControl = false;
 

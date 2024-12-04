@@ -18,7 +18,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 yield return c;
             }
-          
+
             Command_Action command_Action = new Command_Action();
             if (!InternalDefOf.GeothermalPower.IsFinished)
             {
@@ -38,7 +38,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
                 command_Action.defaultLabel = "VQE_InstallGeothermalGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_9", true);
-              
+
                 command_Action.Disabled = true;
             }
             else
@@ -46,11 +46,14 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.defaultDesc = "VQE_InstallGeothermalGenetronDesc".Translate();
                 command_Action.defaultLabel = "VQE_InstallGeothermalGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_9", true);
-                
+
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_Geothermal, Position, Map, Rotation, Faction.OfPlayer, null);
+                    if (Map.thingGrid.ThingAt(Position, InternalDefOf.VQE_Genetron_Geothermal.blueprintDef) == null)
+                    {
+                        GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_Geothermal, Position, Map, Rotation, Faction.OfPlayer, null);
+                    }
                 };
             }
 
@@ -72,7 +75,7 @@ namespace VanillaQuestsExpandedTheGenerator
             else
             if (!Genetron_GameComponent.Instance.nuclearGenetronStudied)
             {
-                command_Action2.defaultDesc = "VQE_InstallUraniumPoweredGenetronDesc".Translate() ;
+                command_Action2.defaultDesc = "VQE_InstallUraniumPoweredGenetronDesc".Translate();
                 command_Action2.defaultDescPostfix = "VQE_InstallUraniumPoweredGenetronDescNoStudied".Translate().Colorize(Utils.tooltipColour);
 
                 command_Action2.defaultLabel = "VQE_InstallUraniumPoweredGenetron".Translate();
