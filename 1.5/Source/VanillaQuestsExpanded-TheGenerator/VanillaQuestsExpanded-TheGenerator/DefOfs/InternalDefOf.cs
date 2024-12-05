@@ -81,6 +81,8 @@ namespace VanillaQuestsExpandedTheGenerator
         public static PreceptDef VQE_ARCGenerators_Abhorrent;
         [MayRequireIdeology]
         public static PreceptDef VQE_Technology_Rejected;
+        [MayRequireIdeology]
+        public static MemeDef VQE_Technophobia;
 
 
         public static SitePartDef VQE_Quest3Site;

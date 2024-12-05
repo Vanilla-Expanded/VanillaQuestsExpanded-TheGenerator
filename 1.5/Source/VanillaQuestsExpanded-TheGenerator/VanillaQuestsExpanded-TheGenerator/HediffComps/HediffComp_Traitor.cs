@@ -34,38 +34,50 @@ namespace VanillaQuestsExpandedTheGenerator
                 ticksToDisappear -= 250;
                 if (ticksToDisappear <= 0)
                 {
-                    if(pawn.Map!=null) {
-                        List<Building_Genetron> listOfThings = pawn.Map.listerBuildings.AllColonistBuildingsOfType<Building_Genetron>().ToList();
-                        if(listOfThings.Count > 0)
+                    if (pawn.Map != null)
+                    {
+
+                        if (Find.IdeoManager.classicMode)
                         {
-                            Building_Genetron genetron = listOfThings.RandomElement();
-
-                            if(CheckJobPossible(pawn, genetron))
+                            List<Building_Genetron> listOfThings = pawn.Map.listerBuildings.AllColonistBuildingsOfType<Building_Genetron>().ToList();
+                            if (listOfThings.Count > 0)
                             {
+                                Building_Genetron genetron = listOfThings.RandomElement();
 
-                                var faction = Find.FactionManager.RandomEnemyFaction(allowNonHumanlike: false);
-                                pawn.SetFaction(faction);
-                                ReturnJob(pawn, genetron);
-                                Find.LetterStack.ReceiveLetter("VQE_TraitorLabel".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), "VQE_TraitorLetter".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), LetterDefOf.ThreatBig, new TargetInfo(pawn.Position, pawn.Map, false));
-                                parent.pawn.health.hediffSet.hediffs.Remove(parent);
+                                if (CheckJobPossible(pawn, genetron))
+                                {
+
+                                    var faction = Find.FactionManager.RandomEnemyFaction(allowNonHumanlike: false);
+                                    pawn.SetFaction(faction);
+                                    ReturnJob(pawn, genetron);
+                                    Find.LetterStack.ReceiveLetter("VQE_TraitorLabel".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), "VQE_TraitorLetter".Translate(pawn.Named("PAWN")).AdjustedFor(pawn), LetterDefOf.ThreatBig, new TargetInfo(pawn.Position, pawn.Map, false));
+                                    parent.pawn.health.hediffSet.hediffs.Remove(parent);
+
+                                }
 
                             }
-                       
-                        }                  
+
+                        }
+                        else
+                        {
+                            DoIdeoSchism();
+                            parent.pawn.health.hediffSet.hediffs.Remove(parent);
+                        }
+
                     }
                     SetOrResetTicks();
                 }
-                
+
             }
         }
 
         public bool CheckJobPossible(Pawn pawn, Building_Genetron building)
         {
-            
+
             if (building == null)
             {
                 return false;
-            }           
+            }
 
             if (building.IsForbidden(pawn))
             {
@@ -91,7 +103,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public void ReturnJob(Pawn pawn, Thing t, bool forced = false)
         {
             pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(InternalDefOf.VQE_SabotageGenetron, t), JobTag.Misc);
-             
+
         }
 
         public override void CompPostMerged(Hediff other)
@@ -123,6 +135,43 @@ namespace VanillaQuestsExpandedTheGenerator
                         ticksToDisappear = 200;
                     })
                 };
+            }
+        }
+
+        public void DoIdeoSchism()
+        {
+            Ideo oldIdeo = Faction.OfPlayer.ideos.PrimaryIdeo;
+            var newIdeo = IdeoGenerator.MakeIdeo(oldIdeo.foundation.def);
+            oldIdeo.CopyTo(newIdeo);
+            var parms = new IdeoGenerationParms(Faction.OfPlayer.def);
+            newIdeo.memes.Add(InternalDefOf.VQE_Technophobia);
+            newIdeo.foundation.GenerateTextSymbols();
+            newIdeo.foundation.RandomizePrecepts(init: false, parms);
+            newIdeo.foundation.GenerateLeaderTitle();
+            newIdeo.foundation.RandomizeIcon();
+            newIdeo.foundation.InitPrecepts(parms);
+            newIdeo.RecachePrecepts();
+            newIdeo.foundation.ideo.RegenerateDescription(force: true);
+            newIdeo.thingStyleCategories = new List<ThingStyleCategoryWithPriority>();
+            foreach (var cat in oldIdeo.thingStyleCategories)
+            {
+                newIdeo.thingStyleCategories.Add(cat);
+            }
+            newIdeo.style.ResetStylesForThingDef();
+            if (oldIdeo.Fluid)
+            {
+                newIdeo.Fluid = true;
+                oldIdeo.development.CopyTo(newIdeo.development);
+            }
+
+            this.parent.pawn.ideo.SetIdeo(newIdeo);
+
+            foreach (Pawn pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists)
+            {
+                if (pawn != null && pawn.relations.OpinionOf(this.parent.pawn) > 35)
+                {
+                    pawn.ideo.SetIdeo(newIdeo);
+                }
             }
         }
     }
