@@ -77,7 +77,11 @@ namespace VanillaQuestsExpandedTheGenerator
 
         [MayRequireIdeology]
         public static PreceptDef VQE_ARCGenerators_Exalted;
-       
+        [MayRequireIdeology]
+        public static PreceptDef VQE_ARCGenerators_Abhorrent;
+        [MayRequireIdeology]
+        public static PreceptDef VQE_Technology_Rejected;
+
 
         public static SitePartDef VQE_Quest3Site;
         public static ThingDef VQE_AncientResearchTerminal;

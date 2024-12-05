@@ -32,7 +32,7 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             if (thing.Map != null && StaticCollections.ARCmaintenanceInMap.ContainsKey(thing.Map))
             {
-                return StaticCollections.ARCmaintenanceInMap[thing.Map] / 100;
+                return StaticCollections.ARCmaintenanceInMap[thing.Map];
             } else return 1f;
           
 

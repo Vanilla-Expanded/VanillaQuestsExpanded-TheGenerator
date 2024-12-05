@@ -66,4 +66,60 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+	
+	
+	
+	<PreceptDef>
+		<defName>VQE_ARCGenerators_Abhorrent</defName>
+		<issue>VQE_ARCGenerators</issue>
+		<label>abhorrent</label>
+		<description>ARCs are dangerous abominations, symbols of humanity’s reckless reliance on technology. Their existence brings unease, and their use risks inviting catastrophe.\n\n&lt;color=#E5E54C&gt;Gameplay effects:&lt;/color&gt;\n - Tantrum mental breaks will target the ARC if it is reachable.</description>
+		<impact>Medium</impact>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VQE_ARCGenerators_Abhorrent_Social</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VQE_ARCGenerators_Abhorrent_StudiedARC</thought>     
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VQE_ARCGenerators_Abhorrent_ARCLevel</thought>     
+			</li>
+		</comps>
+	</PreceptDef>
+	<ThoughtDef>
+		<defName>VQE_ARCGenerators_Abhorrent_Social</defName>
+		<workerClass>VanillaQuestsExpandedTheGenerator.ThoughtWorker_Precept_ARCGenerators_Exalted_Social</workerClass>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<stages>
+			<li>
+				<label>studied ancient ARC</label>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>VQE_ARCGenerators_Abhorrent_StudiedARC</defName>
+		<workerClass>VanillaQuestsExpandedTheGenerator.ThoughtWorker_Precept_ARCGenerators_Exalted_StudiedARC</workerClass>
+		
+		<stages>
+			<li>
+				<label>studied ancient ARC</label>
+				<description>I possess the forbidden knowledge I’d rather not have.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>VQE_ARCGenerators_Abhorrent_ARCLevel</defName>
+		<workerClass>VanillaQuestsExpandedTheGenerator.ThoughtWorker_Precept_ARCGenerators_Exalted_ARCLevel</workerClass>
+		
+		<stages>
+			<li>
+				<label>advanced reactor chamber</label>
+				<description>Our colony has the ARC. It’s outrageous. I hate it.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
 </Defs>

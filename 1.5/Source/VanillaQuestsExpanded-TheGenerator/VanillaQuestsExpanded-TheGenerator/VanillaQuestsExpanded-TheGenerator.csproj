@@ -358,10 +358,13 @@
     <Compile Include="Harmony\Building_SteamGeyser_Tick.cs" />
     <Compile Include="Harmony\CompBreakdownable_NotifyRepaired.cs" />
     <Compile Include="Harmony\DesignationCategoryDef_ResolvedAllowedDesignators.cs" />
+    <Compile Include="Harmony\EquipmentUtility_CanEquip.cs" />
     <Compile Include="Harmony\GenConstruct_CanConstruct.cs" />
     <Compile Include="Harmony\GenSpawn_SpawningWipes.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\InspectPaneFiller_DrawHealth_Patch.cs" />
+    <Compile Include="Harmony\JobGiver_OptimizeApparel_ApparelScoreGain.cs" />
+    <Compile Include="Harmony\MentalState_TargetedTantrum_TryFindNewTarget.cs" />
     <Compile Include="Harmony\PowerNet_PowerNetTick.cs" />
     <Compile Include="HediffComps\HediffComp_Traitor.cs" />
     <Compile Include="HediffComps\Properties\HediffCompPropreties_Traitor.cs" />
@@ -378,6 +381,7 @@
     <Compile Include="ThoughtWorkers\ThoughtWorker_Precept_ARCGenerators_Exalted_ARCLevel.cs" />
     <Compile Include="ThoughtWorkers\ThoughtWorker_Precept_ARCGenerators_Exalted_Social.cs" />
     <Compile Include="ThoughtWorkers\ThoughtWorker_Precept_ARCGenerators_Exalted_StudiedARC.cs" />
+    <Compile Include="ThoughtWorkers\ThoughtWorker_Precept_WearingTech.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="Windows and Dialogs\Window_Downgrade.cs" />
     <Compile Include="Windows and Dialogs\Window_FineTuning.cs" />

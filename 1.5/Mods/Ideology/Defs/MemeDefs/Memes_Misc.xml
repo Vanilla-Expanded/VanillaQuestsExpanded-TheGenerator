@@ -105,6 +105,12 @@
 			<li>
 				<li>Research_None</li>
 			</li>
+			<li>
+				<li>VQE_Technology_Rejected</li>
+			</li>
+			<li>
+				<li>VQE_ARCGenerators_Abhorrent</li>
+			</li>
 			
 		</requireOne>
 		<symbolPacks>

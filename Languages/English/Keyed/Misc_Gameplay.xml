@@ -168,6 +168,7 @@ ARC needs to be maintained by colonists. If maintenance reaches 0%, ARC will bre
     <VQE_TraitorLabel>Traitor {PAWN_nameDef}!</VQE_TraitorLabel>
     <VQE_TraitorLetter>{PAWN_nameDef}, known for creating the ARC, has turned against the colony. {PAWN_pronoun} admits that they plan to sabotage the ARC, believing the colony’s reliance on a single source of power is a fatal mistake.\n\n{PAWN_nameDef} argues that trusting one machine with everyone’s survival is a path to disaster. Unable to change minds through reason, {PAWN_pronoun} chose to act instead.\n\nYou can choose to capture {PAWN_objective}, kill them or banish them. However, preventing the sabotage is the top priority. Do not let {PAWN_nameDef} get to the ARC.</VQE_TraitorLetter>
 	<VQE_MaintenanceImpact>ARC Maintenance in map</VQE_MaintenanceImpact>
+	<VQE_NoTechnology>Will not equip: Ideology prohibits</VQE_NoTechnology>
 
 	<!-- Ancient ARC study -->
 	

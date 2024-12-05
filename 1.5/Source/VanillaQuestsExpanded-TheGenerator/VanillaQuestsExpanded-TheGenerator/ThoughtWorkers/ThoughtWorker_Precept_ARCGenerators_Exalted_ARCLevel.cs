@@ -10,15 +10,16 @@ namespace VanillaQuestsExpandedTheGenerator
         {
             if (p.Map?.IsPlayerHome != true)
             {
-                return false;
+                return ThoughtState.Inactive;
             }
-            if (!StaticCollections.ARClevelInMap.ContainsKey(p.Map))
+            if (!StaticCollections.ARClevelInMap.ContainsKey(p.Map) || StaticCollections.ARClevelInMap[p.Map]==0)
             {
-                return false;
+                return ThoughtState.Inactive;
             }
             else
             {
                 return ThoughtState.ActiveAtStage(0);
+                
             }
         }
         public override float MoodMultiplier(Pawn pawn)
