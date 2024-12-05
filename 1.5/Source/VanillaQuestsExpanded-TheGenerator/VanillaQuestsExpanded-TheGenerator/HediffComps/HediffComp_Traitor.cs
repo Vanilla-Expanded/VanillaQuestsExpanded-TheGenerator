@@ -14,6 +14,9 @@ namespace VanillaQuestsExpandedTheGenerator
     {
         public HediffCompPropreties_Traitor Props => (HediffCompPropreties_Traitor)props;
 
+        public HashSet<MemeDef> memesToRemove = new HashSet<MemeDef>() { InternalDefOf.Transhumanist,InternalDefOf.VME_HardcoreIndustrialism,
+        InternalDefOf.VME_MechanoidSupremacy, InternalDefOf.VME_Progressive};
+
         private int ticksToDisappear;
 
         public override void CompPostMake()
@@ -166,13 +169,43 @@ namespace VanillaQuestsExpandedTheGenerator
 
             this.parent.pawn.ideo.SetIdeo(newIdeo);
 
+
+
+            List<Pawn> convertedPawns = new List<Pawn>();
+
+            Precept_Role precept_role = Faction.OfPlayer.ideos.PrimaryIdeo?.GetPrecept(PreceptDefOf.IdeoRole_Leader) as Precept_Role;
+            Pawn leader = precept_role?.ChosenPawnSingle();
+
             foreach (Pawn pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists)
             {
-                if (pawn != null && pawn.relations.OpinionOf(this.parent.pawn) > 35)
+                if (pawn != null && pawn.relations.OpinionOf(this.parent.pawn) > 35 && pawn != leader)
                 {
-                    pawn.ideo.SetIdeo(newIdeo);
+                   
+                    convertedPawns.Add(pawn);
                 }
             }
+            if (!convertedPawns.Any())
+            {
+                convertedPawns.Add(PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists.RandomElement());
+            }
+
+            foreach(Pawn pawnToConvert in convertedPawns)
+            {
+                pawnToConvert.ideo.SetIdeo(newIdeo);
+            }
+            foreach(MemeDef meme in memesToRemove)
+            {
+                if(meme!=null && newIdeo.HasMeme(meme))
+                {
+                    newIdeo.memes.Remove(meme);
+                }
+
+            }
+            Find.IdeoManager.Add(newIdeo);
+            Faction.OfPlayer.ideos.Notify_ColonistChangedIdeo();
+
+            Find.LetterStack.ReceiveLetter("VQE_TraitorSchism".Translate(this.parent.pawn.NameShortColored),
+                "VQE_TraitorSchismDesc".Translate(this.parent.pawn.NameShortColored, newIdeo.name, this.parent.pawn.NameShortColored+", "+convertedPawns.ToStringSafeEnumerable()),LetterDefOf.NegativeEvent, this.parent.pawn);
         }
     }
 }

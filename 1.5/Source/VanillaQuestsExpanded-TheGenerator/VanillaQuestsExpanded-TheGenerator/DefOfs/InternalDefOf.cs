@@ -83,7 +83,14 @@ namespace VanillaQuestsExpandedTheGenerator
         public static PreceptDef VQE_Technology_Rejected;
         [MayRequireIdeology]
         public static MemeDef VQE_Technophobia;
-
+        [MayRequireIdeology]
+        public static MemeDef Transhumanist;
+        [MayRequire("VanillaExpanded.VMemesE")]
+        public static MemeDef VME_HardcoreIndustrialism;
+        [MayRequire("VanillaExpanded.VMemesE")]
+        public static MemeDef VME_Progressive;
+        [MayRequire("VanillaExpanded.VMemesE")]
+        public static MemeDef VME_MechanoidSupremacy;
 
         public static SitePartDef VQE_Quest3Site;
         public static ThingDef VQE_AncientResearchTerminal;

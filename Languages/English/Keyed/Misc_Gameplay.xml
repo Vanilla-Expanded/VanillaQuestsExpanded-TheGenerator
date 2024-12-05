@@ -177,4 +177,9 @@ ARC needs to be maintained by colonists. If maintenance reaches 0%, ARC will bre
 	<VQE_StudyAncientGenetronDescExtended>\n\nThis {0} has already been studied or is in the process of being studied.</VQE_StudyAncientGenetronDescExtended>
 	<VQE_FactionBecameHostileTimed>You've stayed in the village too long. The people of {FACTION_name} are attacking!</VQE_FactionBecameHostileTimed>
 	<VQE_ThingWithInventorName>{0}'s {1}</VQE_ThingWithInventorName>
+	
+	<!-- Traitor letter -->
+	
+	<VQE_TraitorSchism>Traitor schism ({0})</VQE_TraitorSchism>
+	<VQE_TraitorSchismDesc>The creator of the ARC has turned out to be a traitor: {0} has been spreading their beliefs, convincing others to embrace an ideology that rejects technology. They have formed a new ideology: {1}. They argue that dependence on the ARC is reckless and will doom the colony. Their growing following now views the ARC as a threat, and whispers of sabotage have begun to surface. Left unchecked, this movement could escalate into conflict, putting your colony’s survival at risk.\n\nFollowing colonists have adopted {1}: {2}\n\nFollowers of {1} will refuse to do research. They will be unhappy if equipped with industrial-tech level or higher apparel and weapons, and will target technological items in their tantrums. Their priority will be destroying the ARC generator, and they will dislike anyone who holds the knowledge how to construct one of them.\n\nYou can consider exiling these colonists, or converting them back to their previous ideology.</VQE_TraitorSchismDesc>
 </LanguageData>
