@@ -17,13 +17,13 @@ namespace VanillaQuestsExpandedTheGenerator
 
     public static class VanillaQuestsExpandedTheGenerator_DesignationCategoryDef_ResolvedAllowedDesignators_Patch
     {
-      
+
 
         [HarmonyPostfix]
         public static IEnumerable<Designator> AllowBuild(IEnumerable<Designator> values)
 
         {
-            IEnumerable < Designator > designators = values;
+            IEnumerable<Designator> designators = values;
 
             foreach (Designator designator in designators)
             {
@@ -31,14 +31,16 @@ namespace VanillaQuestsExpandedTheGenerator
 
                 if (designator_build == null || !StaticCollections.hidden_designators.Contains(designator_build.PlacingDef))
                 {
-                   
-                   
-                    yield return designator;
+                    if (designator_build?.PlacingDef != InternalDefOf.VQE_Genetron_Basic || (designator_build.PlacingDef == InternalDefOf.VQE_Genetron_Basic && Genetron_GameComponent.Instance.anyGenetronStudied))
+                    {
+
+                        yield return designator;
+                    }
                 }
-                
+
 
             }
-            
+
 
 
 

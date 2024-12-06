@@ -4,6 +4,7 @@ using Verse;
 using Verse.AI;
 using RimWorld;
 using UnityEngine;
+using System.Collections;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
@@ -65,10 +66,13 @@ namespace VanillaQuestsExpandedTheGenerator
                     var ext = Building.cachedDetailsExtension;
                     if (ext != null)
                     {
+                        Messages.Message("VQE_HasStudied".Translate(actor.NameShortColored,Building.LabelCap), MessageTypeDefOf.PositiveEvent, true);
+
+
                         if (ext.studyingHediff != null && !actor.health.hediffSet.HasHediff(ext.studyingHediff))
                         {
                             actor.health.AddHediff(ext.studyingHediff);
-                           
+                            Genetron_GameComponent.Instance.anyGenetronStudied = true;
                         }
                         if (ext.toggleGeothermalStudied)
                         {

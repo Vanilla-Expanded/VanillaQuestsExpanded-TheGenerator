@@ -122,6 +122,10 @@ namespace VanillaQuestsExpandedTheGenerator
                 {
                     yield return new FloatMenuOption("CannotUseReason".Translate("NoPath".Translate().CapitalizeFirst()), null);
                 }
+                if (cachedDetailsExtension?.studyingHediff != null && selPawn.health.hediffSet.HasHediff(cachedDetailsExtension.studyingHediff)) {
+                    yield return new FloatMenuOption("CannotUseReason".Translate("VQE_PawnAlreadyStudied".Translate(selPawn.NameShortColored).CapitalizeFirst()), null);
+
+                }
                 else
                 {
                     yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("VQE_StudyAncientGenetron".Translate(this.def.label).CapitalizeFirst(), delegate

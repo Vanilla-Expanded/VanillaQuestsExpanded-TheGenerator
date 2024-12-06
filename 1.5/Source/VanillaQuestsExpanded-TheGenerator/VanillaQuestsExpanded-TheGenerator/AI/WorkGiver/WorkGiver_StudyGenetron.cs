@@ -9,7 +9,7 @@ namespace VanillaQuestsExpandedTheGenerator
 {
     public class WorkGiver_StudyGenetron : WorkGiver_Scanner
     {
-       
+
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
@@ -26,7 +26,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
         }
 
-      
+
 
         public override bool ShouldSkip(Pawn pawn, bool forced = false)
         {
@@ -36,24 +36,27 @@ namespace VanillaQuestsExpandedTheGenerator
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             Building_Genetron_Studiable building = t as Building_Genetron_Studiable;
+            ExtraGenetronParameters ext = building.cachedDetailsExtension;
 
             if (building == null)
             {
                 return false;
             }
 
-           
+            if (ext?.studyingHediff != null && pawn.health.hediffSet.HasHediff(ext.studyingHediff)) {
+                return false;
+            }
 
             if (t.Faction != pawn.Faction)
             {
                 return false;
             }
-          
+
             if (t.IsForbidden(pawn))
             {
                 return false;
             }
-            
+
             if (!pawn.CanReserve(building, 1, -1, null, forced))
             {
                 return false;
@@ -65,8 +68,8 @@ namespace VanillaQuestsExpandedTheGenerator
             if (building.IsBurning())
             {
                 return false;
-            }          
-           
+            }
+
             return true;
         }
 

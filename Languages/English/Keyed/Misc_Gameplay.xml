@@ -177,6 +177,8 @@ ARC needs to be maintained by colonists. If maintenance reaches 0%, ARC will bre
 	<VQE_StudyAncientGenetronDescExtended>\n\nThis {0} has already been studied or is in the process of being studied.</VQE_StudyAncientGenetronDescExtended>
 	<VQE_FactionBecameHostileTimed>You've stayed in the village too long. The people of {FACTION_name} are attacking!</VQE_FactionBecameHostileTimed>
 	<VQE_ThingWithInventorName>{0}'s {1}</VQE_ThingWithInventorName>
+	<VQE_HasStudied>{0} has thoroughly studied the {1}</VQE_HasStudied>
+	<VQE_PawnAlreadyStudied>{0} has already studied this structure</VQE_PawnAlreadyStudied>
 	
 	<!-- Traitor letter -->
 	
