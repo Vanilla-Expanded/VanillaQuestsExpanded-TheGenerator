@@ -12,6 +12,7 @@
 		</fixedAdultBackstories>
 		<apparelIgnoreSeasons>True</apparelIgnoreSeasons>
 		<apparelIgnorePollution>True</apparelIgnorePollution>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 		<nakedChance>1</nakedChance>
 		<fixedInventory>
 			<VQE_Apparel_Parka/>				

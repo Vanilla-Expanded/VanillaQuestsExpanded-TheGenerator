@@ -33,6 +33,11 @@ public class Genetron_GameComponent : GameComponent
     private void CreateInventor()
     {
         inventor = PawnGenerator.GeneratePawn(InternalDefOf.VQE_Inventor);
+        foreach (ThingDef thingDef in inventor.kindDef.apparelRequired)
+        {
+            var newApparel = ThingMaker.MakeThing(thingDef, GenStuff.RandomStuffFor(thingDef)) as Apparel;
+            inventor.apparel.Wear(newApparel);
+        }
         GrammarRequest firstNameReq = default;
         if (inventor.gender == Gender.Male)
         {
