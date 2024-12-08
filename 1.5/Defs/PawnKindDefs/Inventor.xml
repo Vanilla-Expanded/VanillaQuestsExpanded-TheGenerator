@@ -10,9 +10,15 @@
 		<fixedAdultBackstories>
 			<li>VQE_InventorGenetronAdulthood</li>
 		</fixedAdultBackstories>
+		<apparelIgnoreSeasons>True</apparelIgnoreSeasons>
+		<apparelIgnorePollution>True</apparelIgnorePollution>
+		<nakedChance>1</nakedChance>
 		<fixedInventory>
-			<VQE_Apparel_Parka/>
+			<VQE_Apparel_Parka/>				
 		</fixedInventory>
+		<apparelRequired>
+			<li>Apparel_Tuque</li>
+		</apparelRequired>
 		<requiredWorkTags>Intellectual, Crafting</requiredWorkTags>
 		<combatPower>0</combatPower>
 		<initialWillRange>3~5</initialWillRange>
