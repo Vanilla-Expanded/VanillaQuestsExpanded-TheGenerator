@@ -69,9 +69,6 @@
 			<developmentalStageFilter>Adult</developmentalStageFilter>
 			<countsAsClothingForNudity>true</countsAsClothingForNudity>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-			<tags>
-				<li>VQE_InventorParka</li>
-			</tags>
 		</apparel>
 		<colorGenerator Class="ColorGenerator_Options">
 			<options>
@@ -94,5 +91,6 @@
 				</li>
 			</options>
 		</colorGenerator>
+		<generateAllowChance>0</generateAllowChance>
 	</ThingDef>
 </Defs>

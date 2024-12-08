@@ -10,10 +10,10 @@
 		<fixedAdultBackstories>
 			<li>VQE_InventorGenetronAdulthood</li>
 		</fixedAdultBackstories>
+		<fixedInventory>
+			<VQE_Apparel_Parka/>
+		</fixedInventory>
 		<requiredWorkTags>Intellectual, Crafting</requiredWorkTags>
-		<apparelTags>
-			<li>AncientTightParka</li>
-		</apparelTags>
 		<combatPower>0</combatPower>
 		<initialWillRange>3~5</initialWillRange>
 		<initialResistanceRange>16~25</initialResistanceRange>
