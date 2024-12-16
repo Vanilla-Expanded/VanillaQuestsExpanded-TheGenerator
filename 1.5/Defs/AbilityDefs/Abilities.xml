@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityDef>
+		<defName>VQE_CraftAnARCComponent</defName>
+		<label>Craft an ARC component</label>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<cooldownTicksRange>300000</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<description>Try and turn an advanced component into an ARC component. There is an equal chance that it will turn an advanced component into an ARC component, or an industrial component.</description>
+		<targetRequired>True</targetRequired>
+		<gizmoClass>Command_Ability</gizmoClass>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<iconPath>UI/Gizmos/CraftARCComponent</iconPath>
+		<uiOrder>1</uiOrder>
+		
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>5</warmupTime>
+			<range>10</range>
+			<targetParams>
+			
+				   <canTargetLocations>True</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class = "VanillaQuestsExpandedTheGenerator.CompProperties_CraftAnARCComponent">
+			
+			</li>
+			
+		</comps>
+		
+	</AbilityDef>
+	
+</Defs>

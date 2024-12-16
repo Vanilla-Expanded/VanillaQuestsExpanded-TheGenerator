@@ -295,6 +295,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\CompAbilityCraftAnARCComponent.cs" />
+    <Compile Include="Abilities\Properties\CompProperties_CraftAnARCComponent.cs" />
     <Compile Include="AI\JobDriver\JobDriver_FixCriticallyBrokenDownBuilding.cs" />
     <Compile Include="AI\JobDriver\JobDriver_MaintainGenetron.cs" />
     <Compile Include="AI\JobDriver\JobDriver_SabotageGenetron.cs" />

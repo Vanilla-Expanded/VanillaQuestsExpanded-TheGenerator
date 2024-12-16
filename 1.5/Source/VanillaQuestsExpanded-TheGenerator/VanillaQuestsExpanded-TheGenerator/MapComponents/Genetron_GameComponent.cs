@@ -53,6 +53,7 @@ public class Genetron_GameComponent : GameComponent
         var lastName = GrammarResolver.Resolve("r_last_name", lastNameReq);
         var name = new NameTriple(firstName, "", lastName);
         inventor.Name = name;
+        inventor.abilities.GetAbility(InternalDefOf.VQE_CraftAnARCComponent);
     }
 
     public override void ExposeData()
