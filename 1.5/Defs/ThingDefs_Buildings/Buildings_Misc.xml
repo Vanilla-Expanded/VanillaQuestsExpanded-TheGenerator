@@ -97,7 +97,7 @@
 		<defName>VQE_AncientARCPrototype_Two</defName>
 		<label>prototype</label>
 		<description>An abandoned generator. Its machinery slightly more intact but still useless. Broken panels, snapped wires, and heavy rust show it was never finished. It’s overgrown and forgotten, offering only a few parts to salvage. Perhaps investigating the area could allow you to find the location of another prototype.</description>
-		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Base</thingClass>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Studiable</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
@@ -121,6 +121,9 @@
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<includeInventorFullName>True</includeInventorFullName>
+				<descriptionOverride>Study the unfinished prototype of the ARC generator. The information it holds can help you locate the operational one.</descriptionOverride>
+				
+				<studyGizmoIcon>UI/Gizmos/StudyAncientARCPrototype2_Gizmo</studyGizmoIcon>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -128,7 +131,7 @@
 		<defName>VQE_AncientARCPrototype_Three</defName>
 		<label>prototype</label>
 		<description>An almost-complete generator, abandoned before it could ever work. The structure is more solid, but its insides are wrecked—rust, missing pieces, and heavy overgrowth make it useless. Only a few materials can still be salvaged, but among them it is possible to find some ARC components. Perhaps investigating the area could allow you to find the location of another prototype.</description>
-		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Base</thingClass>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Studiable</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
@@ -153,6 +156,9 @@
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<includeInventorFullName>True</includeInventorFullName>
+				<descriptionOverride>Study the unfinished prototype of the ARC generator. The information it holds can help you locate the operational one.</descriptionOverride>
+				
+				<studyGizmoIcon>UI/Gizmos/StudyAncientARCPrototype3_Gizmo</studyGizmoIcon>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -515,6 +521,136 @@
 			<texPath>Things/AncientJunk/AncientTerminals/GenetronTerminalRusted</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientResearchFiles</defName>
+		<label>ancient research files</label>
+		<description>An ancient, rusted filing cabinet containing folders with research notes regarding the construction of an ARC generator.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Studiable</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<pathCost>42</pathCost>
+		<fillPercent>0.2</fillPercent>
+		<size>(1,1)</size>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientFilingCabinet/AncientFilingCabinet_Full</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+		
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<descriptionOverride>Study the files inside this filing cabinet. They may provide valuable information about the ARC project.</descriptionOverride>
+				<convertAfterStudying>VQE_AncientResearchFiles_Off</convertAfterStudying>
+				<includeInventorFirstName>True</includeInventorFirstName>
+				<studyGizmoIcon>UI/Gizmos/StudyAncientFilingCabinet_Gizmo</studyGizmoIcon>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_AncientResearchFiles_Off</defName>
+		<label>ancient filing cabinet</label>
+		<description>An ancient, rusted filing cabinet. It’s completely empty.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<pathCost>42</pathCost>
+		<fillPercent>0.2</fillPercent>
+		<size>(1,1)</size>
+		<costList>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/AncientFilingCabinet/AncientFilingCabinet_Empty</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_ExperimentalARCPart</defName>
+		<label>experimental ARC part</label>
+		<description>A bizarre piece of machinery that was designed for a large generator. Since it was covered with a tarp, it’s relatively intact. It can be studied to gain some knowledge about the ARC generator unit that may help decipher the ancient research data left by the inventor. It might be possible to disassemble it to obtain some valuable ARC components.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Studiable</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<pathCost>42</pathCost>
+		<fillPercent>0.2</fillPercent>
+		<size>(3,3)</size>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<costList>
+			<ChunkSlagSteel>3</ChunkSlagSteel>
+			<VQE_GenetronComponent>2</VQE_GenetronComponent>
+		</costList>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ARCModules</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>3</drawSize>
+		</graphicData>
+		<building> <deconstructible>false</deconstructible></building>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<descriptionOverride> Study the machinery in the experimental ARC part. It may provide valuable information about the ARC project.</descriptionOverride>
+				<convertAfterStudying>VQE_ExperimentalARCPart_Studied</convertAfterStudying>
+				<includeInventorFirstName>True</includeInventorFirstName>
+				<studyGizmoIcon>UI/Gizmos/StudyExperimentalARCModule_Gizmo</studyGizmoIcon>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQE_RuinedBuildingBase">
+		<defName>VQE_ExperimentalARCPart_Studied</defName>
+		<label>studied experimental ARC part</label>
+		<description>A bizarre piece of machinery that was designed for a large generator. As you have already studied it, it can be disassembled for parts.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<pathCost>42</pathCost>
+		<fillPercent>0.2</fillPercent>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>3</ChunkSlagSteel>
+			<VQE_GenetronComponent>2</VQE_GenetronComponent>
+		</costList>
+		<killedLeavings Inherit="False">
+			<ChunkSlagSteel>3</ChunkSlagSteel>
+			<VQE_GenetronComponent>2</VQE_GenetronComponent>
+		</killedLeavings>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/AncientJunk/ARCModules</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>3</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQE_RuinedBuildingBase">
