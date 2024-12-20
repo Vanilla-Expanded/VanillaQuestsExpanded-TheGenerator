@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SitePartDef>
+		<defName>VQE_Quest5Site_Nuclear</defName>
+		<label>nuclear ARC site</label>
+		<description>An abandoned ARC generator site with the ruins of a nuclear ARC.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>UI/QuestIcons/SideQuestARCSiteNuclear</expandingIconTexture>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<tags>
+			<li>VQE_Quest5Site_Nuclear</li>
+		</tags>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQE_Quest5Site_Nuclear</defName>
+		<linkWithSite>VQE_Quest5Site_Nuclear</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
+			<structureLayoutDefs>
+				<li>VQE_Quest5NuclearMap_Alpha</li>
+				<li>VQE_Quest5NuclearMap_Beta</li>
+				<li>VQE_Quest5NuclearMap_Gamma</li>
+				<li>VQE_Quest5NuclearMap_Delta</li>
+				<li>VQE_Quest5NuclearMap_Epsilon</li>
+				<li>VQE_Quest5NuclearMap_Zeta</li>
+				<li>VQE_Quest5NuclearMap_Eta</li>
+				<li>VQE_Quest5NuclearMap_Theta</li>
+				<li>VQE_Quest5NuclearMap_Iota</li>
+				<li>VQE_Quest5NuclearMap_Kappa</li>
+				<li>VQE_Quest5NuclearMap_Lambda</li>
+				<li>VQE_Quest5NuclearMap_Mu</li>
+				<li>VQE_Quest5NuclearMap_Nu</li>
+				<li>VQE_Quest5NuclearMap_Xi</li>
+				<li>VQE_Quest5NuclearMap_Omicron</li>
+			</structureLayoutDefs>
+		
+			<filthTypes>
+				<li>Filth_Dirt</li>
+				<li>Filth_Trash</li>
+				<li>Filth_RubbleBuilding</li>
+			</filthTypes>
+		</genStep>
+	</GenStepDef>
+</Defs>

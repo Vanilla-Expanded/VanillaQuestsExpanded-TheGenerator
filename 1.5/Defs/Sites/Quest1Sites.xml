@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SitePartDef>
+		<defName>VQE_Quest1Site</defName>
+		<label>ARC prototype</label>
+		<description>A derelict site with an abandoned ARC prototype.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>UI/QuestIcons/ARCConstructionSite</expandingIconTexture>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<tags>
+			<li>VQE_Quest1Site</li>
+		</tags>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQE_Quest1Site</defName>
+		<linkWithSite>VQE_Quest1Site</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
+			<structureLayoutDefs>
+				<li>VQE_Quest1Map_Alpha</li>
+				<li>VQE_Quest1Map_Beta</li>
+				<li>VQE_Quest1Map_Gamma</li>
+				<li>VQE_Quest1Map_Delta</li>
+				<li>VQE_Quest1Map_Epsilon</li>
+				<li>VQE_Quest1Map_Zeta</li>
+				
+			</structureLayoutDefs>
+		
+			<filthTypes>
+				<li>Filth_Dirt</li>
+				<li>Filth_Trash</li>
+				<li>Filth_RubbleBuilding</li>
+			</filthTypes>
+		</genStep>
+	</GenStepDef>
+</Defs>

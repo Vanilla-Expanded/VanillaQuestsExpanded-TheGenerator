@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SitePartDef>
+		<defName>VQE_Quest5Site_Geothermal</defName>
+		<label>geothermal ARC site</label>
+		<description>An abandoned ARC generator site with the ruins of a geothermal ARC.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>UI/QuestIcons/SideQuestARCSiteGeothermal</expandingIconTexture>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<tags>
+			<li>VQE_Quest5Site_Geothermal</li>
+		</tags>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQE_Quest5Site_Geothermal</defName>
+		<linkWithSite>VQE_Quest5Site_Geothermal</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
+			<structureLayoutDefs>
+				<li>VQE_Quest5GeothermalMap_Alpha</li>
+				<li>VQE_Quest5GeothermalMap_Beta</li>
+				<li>VQE_Quest5GeothermalMap_Gamma</li>
+				<li>VQE_Quest5GeothermalMap_Delta</li>
+				<li>VQE_Quest5GeothermalMap_Epsilon</li>
+				<li>VQE_Quest5GeothermalMap_Zeta</li>
+				<li>VQE_Quest5GeothermalMap_Eta</li>
+				<li>VQE_Quest5GeothermalMap_Theta</li>
+				<li>VQE_Quest5GeothermalMap_Iota</li>
+				<li>VQE_Quest5GeothermalMap_Kappa</li>
+				<li>VQE_Quest5GeothermalMap_Lambda</li>
+				<li>VQE_Quest5GeothermalMap_Mu</li>
+				<li>VQE_Quest5GeothermalMap_Nu</li>
+				<li>VQE_Quest5GeothermalMap_Xi</li>
+				<li>VQE_Quest5GeothermalMap_Omicron</li>
+			</structureLayoutDefs>
+		
+			<filthTypes>
+				<li>Filth_Dirt</li>
+				<li>Filth_Trash</li>
+				<li>Filth_RubbleBuilding</li>
+			</filthTypes>
+		</genStep>
+	</GenStepDef>
+</Defs>

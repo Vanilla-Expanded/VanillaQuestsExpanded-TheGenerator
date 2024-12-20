@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SitePartDef>
+		<defName>VQE_Quest5Site</defName>
+		<label>ARC site</label>
+		<description>An abandoned ARC generator site where ARC components can be scavenged.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>UI/QuestIcons/SideQuestARCSite</expandingIconTexture>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<tags>
+			<li>VQE_Quest5Site</li>
+		</tags>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQE_Quest5Site</defName>
+		<linkWithSite>VQE_Quest5Site</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
+			<structureLayoutDefs>
+				<li>VQE_Quest5Map_Alpha</li>
+				<li>VQE_Quest5Map_Beta</li>
+				<li>VQE_Quest5Map_Gamma</li>
+				<li>VQE_Quest5Map_Delta</li>
+				<li>VQE_Quest5Map_Epsilon</li>
+				<li>VQE_Quest5Map_Zeta</li>
+				<li>VQE_Quest5Map_Eta</li>
+				<li>VQE_Quest5Map_Theta</li>
+				<li>VQE_Quest5Map_Iota</li>
+				<li>VQE_Quest5Map_Kappa</li>
+				<li>VQE_Quest5Map_Lambda</li>
+				<li>VQE_Quest5Map_Mu</li>
+				<li>VQE_Quest5Map_Nu</li>
+				<li>VQE_Quest5Map_Xi</li>
+				<li>VQE_Quest5Map_Omicron</li>
+			</structureLayoutDefs>
+		
+			<filthTypes>
+				<li>Filth_Dirt</li>
+				<li>Filth_Trash</li>
+				<li>Filth_RubbleBuilding</li>
+			</filthTypes>
+		</genStep>
+	</GenStepDef>
+</Defs>
