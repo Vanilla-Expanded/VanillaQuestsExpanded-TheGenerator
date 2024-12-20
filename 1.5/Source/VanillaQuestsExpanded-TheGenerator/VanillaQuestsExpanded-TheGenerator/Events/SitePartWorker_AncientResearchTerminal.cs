@@ -5,7 +5,7 @@ using Verse;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class SitePartWorker_AncientARCStudy : SitePartWorker
+    public class SitePartWorker_AncientResearchTerminal : SitePartWorker
     {
         public override void Init(Site site, SitePart sitePart)
         {
@@ -32,7 +32,12 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public override string GetArrivedLetterPart(Map map, out LetterDef preferredLetterDef, out LookTargets lookTargets)
         {
-            return base.GetArrivedLetterPart(map, out preferredLetterDef, out lookTargets).Formatted(map.Parent.GetComponent<TimedMakeFactionHostile>().TicksLeft.Value.ToStringTicksToPeriod().Named("TIMER"));
+            var comp = map.Parent.GetComponent<TimedMakeFactionHostile>();
+            if (comp.TicksLeft.HasValue)
+            {
+                return base.GetArrivedLetterPart(map, out preferredLetterDef, out lookTargets).Formatted(comp.TicksLeft.Value.ToStringTicksToPeriod().Named("TIMER"));
+            }
+            return base.GetArrivedLetterPart(map, out preferredLetterDef, out lookTargets);
         }
     }
 }

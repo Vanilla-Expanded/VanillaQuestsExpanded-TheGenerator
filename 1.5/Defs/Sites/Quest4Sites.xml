@@ -6,7 +6,7 @@
 		<description>A forgotten bunker emanating a preternatural cold.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>UI/QuestIcons/ARCInventorTomb</expandingIconTexture>
-		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientResearchTerminal</workerClass>
 		<tags>
 			<li>VQE_Quest4Site</li>
 		</tags>

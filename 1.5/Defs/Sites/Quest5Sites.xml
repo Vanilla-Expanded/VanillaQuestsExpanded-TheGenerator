@@ -6,7 +6,7 @@
 		<description>An abandoned ARC generator site where ARC components can be scavenged.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>UI/QuestIcons/SideQuestARCSite</expandingIconTexture>
-		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientResearchTerminal</workerClass>
 		<tags>
 			<li>VQE_Quest5Site</li>
 		</tags>

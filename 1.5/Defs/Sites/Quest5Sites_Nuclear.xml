@@ -6,7 +6,7 @@
 		<description>An abandoned ARC generator site with the ruins of a nuclear ARC.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>UI/QuestIcons/SideQuestARCSiteNuclear</expandingIconTexture>
-		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientResearchTerminal</workerClass>
 		<tags>
 			<li>VQE_Quest5Site_Nuclear</li>
 		</tags>

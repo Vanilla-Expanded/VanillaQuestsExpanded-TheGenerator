@@ -84,7 +84,7 @@ namespace VanillaQuestsExpandedTheGenerator
         [MayRequire("VanillaExpanded.VMemesE")]
         public static MemeDef VME_MechanoidSupremacy;
 
-        public static SitePartDef VQE_Quest3Site;
+        public static SitePartDef VQE_Quest1Site, VQE_Quest2Site, VQE_Quest3Site, VQE_Quest4Site, VQE_Quest5Site;
         public static ThingDef VQE_AncientResearchTerminal;
 
         //Inventor

@@ -354,7 +354,9 @@
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Defs\HiddenDesignatorsDef.cs" />
     <Compile Include="Events\QuestNode_Root_AncientARCStudy.cs" />
-    <Compile Include="Events\SitePartWorker_AncientARCStudy.cs" />
+    <Compile Include="Events\QuestNode_Root_PrototypeARC.cs" />
+    <Compile Include="Events\QuestNode_Site.cs" />
+    <Compile Include="Events\SitePartWorker_AncientResearchTerminal.cs" />
     <Compile Include="GraphicsCache\GraphicsCache.cs" />
     <Compile Include="Harmony\BuildCopyCommandUtility_BuildCopyCommand.cs" />
     <Compile Include="Harmony\Building_SteamGeyser_Tick.cs" />

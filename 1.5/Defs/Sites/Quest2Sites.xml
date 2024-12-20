@@ -6,7 +6,7 @@
 		<description>An abandoned industrial complex with an ARC prototype.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>UI/QuestIcons/ARCConstructionTown</expandingIconTexture>
-		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientResearchTerminal</workerClass>
 		<tags>
 			<li>VQE_Quest2Site</li>
 		</tags>

@@ -6,7 +6,7 @@
 		<description>A derelict site with an abandoned ARC prototype.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>UI/QuestIcons/ARCConstructionSite</expandingIconTexture>
-		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientARCStudy</workerClass>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientResearchTerminal</workerClass>
 		<tags>
 			<li>VQE_Quest1Site</li>
 		</tags>
@@ -15,7 +15,7 @@
 		<defName>VQE_Quest1Site</defName>
 		<linkWithSite>VQE_Quest1Site</linkWithSite>
 		<order>450</order>
-		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
+		<genStep Class="KCSG.GenStep_CustomStructureGen">
 			<structureLayoutDefs>
 				<li>VQE_Quest1Map_Alpha</li>
 				<li>VQE_Quest1Map_Beta</li>
