@@ -98,6 +98,7 @@
 		<label>prototype</label>
 		<description>An abandoned generator. Its machinery slightly more intact but still useless. Broken panels, snapped wires, and heavy rust show it was never finished. It’s overgrown and forgotten, offering only a few parts to salvage. Perhaps investigating the area could allow you to find the location of another prototype.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Studiable</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
@@ -118,6 +119,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>9</drawSize>
 		</graphicData>
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<includeInventorFullName>True</includeInventorFullName>
@@ -132,6 +138,7 @@
 		<label>prototype</label>
 		<description>An almost-complete generator, abandoned before it could ever work. The structure is more solid, but its insides are wrecked—rust, missing pieces, and heavy overgrowth make it useless. Only a few materials can still be salvaged, but among them it is possible to find some ARC components. Perhaps investigating the area could allow you to find the location of another prototype.</description>
 		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Studiable</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
@@ -153,6 +160,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>9</drawSize>
 		</graphicData>
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<includeInventorFullName>True</includeInventorFullName>
@@ -463,6 +475,9 @@
 				<glowRadius>6.8</glowRadius>
 				<glowColor>(0,235,31,0)</glowColor>
 			</li>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
 		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
@@ -550,7 +565,11 @@
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>2</drawSize>
 		</graphicData>
-		
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<descriptionOverride>Study the files inside this filing cabinet. They may provide valuable information about the ARC project.</descriptionOverride>
@@ -614,6 +633,11 @@
 			<drawSize>3</drawSize>
 		</graphicData>
 		<building> <deconstructible>false</deconstructible></building>
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<descriptionOverride> Study the machinery in the experimental ARC part. It may provide valuable information about the ARC project.</descriptionOverride>
@@ -780,6 +804,11 @@
 			<ai_chillDestination>false</ai_chillDestination>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientGenetron</studyingHediff>
@@ -830,6 +859,11 @@
 			<ai_chillDestination>false</ai_chillDestination>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientGeothermalGenetron</studyingHediff>
@@ -880,6 +914,11 @@
 			<ai_chillDestination>false</ai_chillDestination>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<studyingHediff>VQE_StudiedAncientNuclearGenetron</studyingHediff>
