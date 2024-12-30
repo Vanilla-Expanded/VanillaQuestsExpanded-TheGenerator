@@ -6,7 +6,7 @@
 		<description>A forgotten bunker emanating a preternatural cold.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>UI/QuestIcons/ARCInventorTomb</expandingIconTexture>
-		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_AncientResearchTerminal</workerClass>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_InventorShelter</workerClass>
 		<tags>
 			<li>VQE_Quest4Site</li>
 		</tags>
@@ -15,7 +15,7 @@
 		<defName>VQE_Quest4Site</defName>
 		<linkWithSite>VQE_Quest4Site</linkWithSite>
 		<order>450</order>
-		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_InventorShelter">
 			<structureLayoutDefs>
 				<li>VQE_Quest4Map_Alpha</li>
 				<li>VQE_Quest4Map_Beta</li>

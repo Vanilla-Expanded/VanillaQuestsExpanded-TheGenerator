@@ -5,7 +5,6 @@ using Verse;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-
 	public class SitePartWorker_AncientResearchTerminal : SitePartWorker
 	{
 		public override void Init(Site site, SitePart sitePart)

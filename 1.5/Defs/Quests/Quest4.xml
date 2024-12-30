@@ -1,0 +1,117 @@
+<Defs>
+	<QuestScriptDef>
+		<defName>VQE_InventorShelter</defName>
+		<autoAccept>True</autoAccept>
+		<rootSelectionWeight>1</rootSelectionWeight>
+		<questNameRules>
+			<rulesStrings>
+				<!-- quest name -->
+				<li>questName->[Inventor_LastName]’s [adj] [structureType]</li>
+			
+				<!-- adjectives -->
+				<li>adj->forgotten</li>
+				<li>adj->ancient</li>
+				<li>adj->hidden</li>
+				<li>adj->abandoned</li>
+				<li>adj->sealed</li>
+				<li>adj->mysterious</li>
+				<li>adj->remote</li>
+				<li>adj->lost</li>
+				<li>adj->secret</li>
+				<li>adj->forsaken</li>
+			
+				<!-- structure type -->
+				<li>structureType->bunker</li>
+				<li>structureType->vault</li>
+				<li>structureType->crypt</li>
+				<li>structureType->tomb</li>
+				<li>structureType->chamber</li>
+				<li>structureType->sanctuary</li>
+				<li>structureType->facility</li>
+				<li>structureType->shelter</li>
+
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<!-- quest description -->
+				<li>questDescription->[dataDiscovery] revealed the location of a [adj] underground [structureType] where [inventor_nameFull] rests in cryptosleep. The journey will be grueling, as the site is afflicted by a[coldSnapDesc], bringing the region into unnaturally low temperatures. \n\nInside the bunker, a few [turretDefense] still guard the interior, powered by an ancient [arcName]. The ARC cannot be studied but can be deconstructed for [arcComponents]. Your primary task, however, is to reach the casket and release the inventor. Prepare carefully for the extreme cold or risk severe [hypothermiaDanger].</li>
+			
+				<li>questDescription->Recovered data points us to a [adj] bunker buried deep beneath a region suffering from a[coldSnapDesc]. It is here that [inventor_nameFull], the legendary mind behind the ARC project, lies sealed in cryptosleep. \n\nThe area’s temperatures are falling to dangerous lows, creating an immediate risk of [hypothermiaDanger] during your approach. Inside, [turretDefense] remain active, powered by an overgrown [arcName]. The ARC can be deconstructed for [arcComponents], but the real prize is freeing the inventor and bringing them back to your colony.</li>
+			
+				<li>questDescription->We’ve identified the location of a [adj] [structureType] where [inventor_nameFull] has been preserved in a cryptosleep casket. The area surrounding the site is cursed with a[coldSnapDesc], plummeting temperatures to deadly extremes. \n\nThe bunker itself houses a few [turretDefense], powered by an overgrown [arcName]. While the ARC cannot be studied, it can be salvaged for [arcComponents]. Be ready for freezing conditions and hypothermia as you attempt to retrieve the legendary inventor.</li>
+			
+				<!-- data discovery -->
+				<li>dataDiscovery->Ancient schematics</li>
+				<li>dataDiscovery->Decoded transmissions</li>
+				<li>dataDiscovery->Recovered coordinates</li>
+				<li>dataDiscovery->Archived data logs</li>
+			
+				<!-- adjectives -->
+				<li>adj->forgotten</li>
+				<li>adj->ancient</li>
+				<li>adj->hidden</li>
+				<li>adj->sealed</li>
+				<li>adj->abandoned</li>
+				<li>adj->overgrown</li>
+				<li>adj->mysterious</li>
+				<li>adj->remote</li>
+			
+				<!-- structure type -->
+				<li>structureType->bunker</li>
+				<li>structureType->vault</li>
+				<li>structureType->sanctuary</li>
+				<li>structureType->chamber</li>
+				<li>structureType->crypt</li>
+				<li>structureType->facility</li>
+			
+				<!-- coldsnap descriptions -->
+				<li>coldSnapDesc->unnatural coldsnap</li>
+				<li>coldSnapDesc->bizarre freezing anomaly</li>
+				<li>coldSnapDesc->unexplainable cold front</li>
+				<li>coldSnapDesc->mysterious deep freeze</li>
+				<li>coldSnapDesc->sudden extreme temperature drop</li>
+				<li>coldSnapDesc->deadly frost anomaly</li>
+			
+				<!-- turret defense -->
+				<li>turretDefense->inactive turrets that occasionally sputter to life</li>
+				<li>turretDefense->a handful of aging security turrets</li>
+				<li>turretDefense->old but still lethal automated turrets</li>
+				<li>turretDefense->sporadically functional defense systems</li>
+				<li>turretDefense->a few crumbling yet operational turrets</li>
+			
+				<!-- ARC components -->
+				<li>arcComponents->rare ARC components</li>
+				<li>arcComponents->valuable technological salvage</li>
+				<li>arcComponents->essential ARC salvage parts</li>
+				<li>arcComponents->advanced generator fragments</li>
+			
+				<!-- hypothermia danger -->
+				<li>hypothermiaDanger->frostbite and hypothermia</li>
+				<li>hypothermiaDanger->rapid onset hypothermia</li>
+				<li>hypothermiaDanger->life-threatening cold exposure</li>
+				<li>hypothermiaDanger->freezing injuries and exhaustion</li>
+				<li>hypothermiaDanger->severe frostbite or death</li>
+				
+				<li>arcName->ARC generator</li>
+			</rulesStrings>
+
+		</questDescriptionRules>
+		<root Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_InventorShelter" />
+
+	</QuestScriptDef>
+	
+  <GameConditionDef>
+    <defName>VQE_UnnaturalColdSnap</defName>
+    <conditionClass>VanillaQuestsExpandedTheGenerator.GameCondition_UnnaturalColdSnap</conditionClass>
+    <label>cold snap</label>
+    <description>An unnatural cold snap is freezing the region.</description>
+    <letterDef>NegativeEvent</letterDef>
+    <exclusiveConditions>
+      <li>HeatWave</li>
+    </exclusiveConditions>
+    <allowUnderground>false</allowUnderground>
+	<canBePermanent>True</canBePermanent>
+	<natural>False</natural>
+  </GameConditionDef>
+</Defs>

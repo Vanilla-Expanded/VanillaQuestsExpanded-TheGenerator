@@ -12,6 +12,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
 		}
 
+
 		protected override void RunInt()
 		{
 			if (!PrepareQuest(out Quest quest, out Slate slate, out Map map, out float points, out int tile))

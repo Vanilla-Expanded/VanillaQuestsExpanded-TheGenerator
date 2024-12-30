@@ -162,6 +162,7 @@
 		<defName>VQE_OvergrownCryptosleepCasket_East</defName>
 		<thing>VQE_OvergrownCryptosleepCasket</thing>
 		<rotation>East</rotation>
+		<chanceToContainPawn>0</chanceToContainPawn>
 	</KCSG.SymbolDef>
 	<KCSG.SymbolDef>
 		<defName>VQE_AncientOvergrownGenetron</defName>
@@ -170,6 +171,7 @@
 	<KCSG.SymbolDef>
 		<defName>VQE_OvergrownCryptosleepCasket_North</defName>
 		<thing>VQE_OvergrownCryptosleepCasket</thing>
+		<chanceToContainPawn>0</chanceToContainPawn>
 	</KCSG.SymbolDef>
 	<KCSG.SymbolDef>
 		<defName>VQE_AncientResearchFiles_Off_West</defName>
