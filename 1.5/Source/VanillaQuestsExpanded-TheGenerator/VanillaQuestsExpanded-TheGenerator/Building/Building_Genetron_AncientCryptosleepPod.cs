@@ -39,6 +39,8 @@ namespace VanillaQuestsExpandedTheGenerator
 			}
 			QuestUtility.SendQuestTargetSignals(Map.Parent.questTags, "InventorReleased", this.Named("SUBJECT"));
 			inventor.SetFaction(Faction.OfPlayer);
+			Find.LetterStack.ReceiveLetter("LetterLabelRescueeJoins".Translate(inventor.Named("PAWN")),
+			"VQE_InventorJoinsDesc".Translate(inventor.Named("PAWN")), LetterDefOf.PositiveEvent, inventor);
 			if (Rand.Chance(0.5f))
 			{
 				inventor.health.AddHediff(InternalDefOf.VQE_TraitorousInventor);

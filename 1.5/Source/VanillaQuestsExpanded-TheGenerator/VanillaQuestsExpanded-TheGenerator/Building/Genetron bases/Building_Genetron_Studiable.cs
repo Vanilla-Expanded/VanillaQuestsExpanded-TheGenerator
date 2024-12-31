@@ -79,7 +79,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
 		public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
 		{
-			if (!preventSendingSignal)
+			if (!preventSendingSignal && Map?.Parent != null)
 			{
 				QuestUtility.SendQuestTargetSignals(Map.Parent.questTags, "ObjectDestroyed", this.Named("SUBJECT"));
 			}

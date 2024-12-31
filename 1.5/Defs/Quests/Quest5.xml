@@ -1,0 +1,150 @@
+<Defs>
+	<QuestScriptDef>
+		<defName>VQE_ArcSite</defName>
+		<expireDaysRange>14</expireDaysRange>
+		<rootSelectionWeight>1</rootSelectionWeight>
+		<questNameRules>
+			<rulesStrings>
+				<!-- quest name -->
+				<li>questName->[adj] [arcName]</li>
+
+				<!-- adjectives describing the site -->
+				<li>adj->abandoned</li>
+				<li>adj->derelict</li>
+				<li>adj->forsaken</li>
+				<li>adj->ruined</li>
+				<li>adj->remote</li>
+				<li>adj->desolate</li>
+				<li>adj->forgotten</li>
+				<li>adj->hidden</li>
+				<li>adj->bandit-controlled</li>
+				<li>adj->enemy</li>
+				<li>adj->hideout</li>
+				<li>adj->overrun</li>
+				<li>adj->dangerous</li>
+
+				<!-- ARC generator-related names -->
+				<li>arcName->ARC generator site</li>
+				<li>arcName->power facility</li>
+				<li>arcName->generator station</li>
+				<li>arcName->industrial core</li>
+				<li>arcName->energy relic</li>
+				<li>arcName->power ruins</li>
+				<li>arcName->ARC ruins</li>
+				<li>arcName->prototype generator</li>
+
+
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<!-- quest description -->
+				<li>questDescription(asker_factionLeader==True)->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A group of [siteFaction_pawnsPlural] has occupied the location of an abandoned ARC generator site. The camp is under the control of [siteFaction_name].\n\n[asker_nameDef] is requesting that we clear out the area by eliminating all enemies and defenses. Once the site is secured, we will have the opportunity to study the ARC generator and recover valuable ARC components. [asker_label] also says that [sitePart0_description].</li>
+
+				<!-- alternative discovery -->
+				<li>questDescription(askerIsNull==true)->We have received information that an old ARC generator site has been taken over by [siteFaction_pawnsPlural] from [siteFaction_name]. The bandits have fortified their position and are using the location as a hideout.\n\nSecuring the site will allow us to examine the generator for any remaining research data and salvageable ARC components. Be prepared for resistance, as the site is likely heavily guarded. Additionally, [sitePart0_description].</li>
+
+				<!-- site descriptions -->
+				<li>sitePart0_description->the site is partially overgrown, with many of its original structures crumbling from age</li>
+				<li>sitePart0_description->the bandits have fortified the site with makeshift defenses and traps</li>
+				<li>sitePart0_description->the ARC generator is visibly damaged but still holds valuable salvage</li>
+				<li>sitePart0_description->the site appears to be a mix of old ruins and hastily built bandit encampments</li>
+				<li>sitePart0_description->hostile patrols have been seen guarding the perimeter</li>
+				<li>sitePart0_description->the bandits are using the generator to power their crude operations</li>
+
+			</rulesStrings>
+		</questDescriptionRules>
+		
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_RandomNode">
+					<nodes>
+						<li Class="QuestNode_Set"><!-- null asker -->
+							<selectionWeight>0.5</selectionWeight>
+							<name>askerIsNull</name>
+							<value>true</value>
+						</li>
+						<li Class="QuestNode_GetPawn"><!-- any faction leader -->
+							<selectionWeight>0.5</selectionWeight>
+							<storeAs>asker</storeAs>
+							<mustBeFactionLeader>true</mustBeFactionLeader>
+							<mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+						</li>
+					</nodes>
+				</li>
+				
+				<li Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_ArcSite"/>
+				
+				<li Class="QuestNode_WorldObjectTimeout">
+					<worldObject>$site</worldObject>
+					<isQuestTimeout>true</isQuestTimeout>
+					<delayTicks>$(randInt(12,28)*60000)</delayTicks>
+					<inSignalDisable>site.MapGenerated</inSignalDisable>
+					<destroyOnCleanup>true</destroyOnCleanup>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestExpired">The bandit camp has packed up and moved on. The quest [resolvedQuestName] has expired.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<!-- If we enter and leave, the map is destroyed. Fail the quest. -->
+				<li Class="QuestNode_Signal">
+					<inSignal>site.Destroyed</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestFailed">After being discovered, the bandit camp has dispersed. The quest [resolvedQuestName] has ended.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<li Class="QuestNode_Signal">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Notify_PlayerRaidedSomeone">
+								<getRaidersFromMapParent>$site</getRaidersFromMapParent>
+							</li>
+
+							<li Class="QuestNode_IsSet">
+								<name>asker</name>
+								<node Class="QuestNode_Sequence">
+									<nodes>
+										<li Class="QuestNode_GiveRewards">
+											<parms>
+												<allowGoodwill>true</allowGoodwill>
+												<allowRoyalFavor>true</allowRoyalFavor>
+												<chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+											</parms>
+											<addCampLootReward>true</addCampLootReward>
+											<customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
+											<customLetterText TKey="LetterTextPaymentArrived">You have defeated the bandit camp!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+										</li>
+									</nodes>
+								</node>
+							</li>
+						</nodes>
+					</node>
+				</li>
+				
+				<li Class="QuestNode_End">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<outcome>Success</outcome>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+	
+</Defs>

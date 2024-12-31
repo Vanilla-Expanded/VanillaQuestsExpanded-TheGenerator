@@ -10,36 +10,39 @@ namespace VanillaQuestsExpandedTheGenerator
 {
 	public abstract class QuestNode_Site : QuestNode
 	{
-		protected virtual int MinDistanceFromColony => 2;
-
-		protected virtual int MaxDistanceFromColony => 99999;
 		protected bool TryFindSiteTile(out int tile, Predicate<int> extraValidator = null)
 		{
-			Func<int, int> findTile = delegate (int root)
+			var tiles = Find.World.tilesInRandomOrder.Tiles.Where((int x) => (extraValidator == null || extraValidator(x))
+			&& IsValidTile(x));
+			if (tiles.TryRandomElement(out tile))
 			{
-				if (TileFinder.TryFindPassableTileWithTraversalDistance(root, MinDistanceFromColony, 
-				MaxDistanceFromColony, out var result, (int x) => (extraValidator == null || extraValidator(x))
-				&& !Find.WorldObjects.AnyWorldObjectAt(x) 
-				&& TileFinder.IsValidTileForNewSettlement(x), ignoreFirstTilePassability: false, 
-				TileFinderMode.Random, canTraverseImpassable: false, false))
-				{
-					return result;
-				}
-				return TileFinder.TryFindPassableTileWithTraversalDistance(root, MinDistanceFromColony, 
-				MaxDistanceFromColony, out result, (int x) => (extraValidator == null || extraValidator(x))
-				&& !Find.WorldObjects.AnyWorldObjectAt(x) 
-				&& TileFinder.IsValidTileForNewSettlement(x) && (!Find.World.Impassable(x) 
-				|| Find.WorldGrid[x].WaterCovered), ignoreFirstTilePassability: false, 
-				TileFinderMode.Random, canTraverseImpassable: true, false) ? result : (-1);
-			};
-			int tile2;
-			if (!TileFinder.TryFindRandomPlayerTile(out tile2, true, (int x) => findTile(x) != -1))
+				return true;
+			}
+			tile = -1;
+			return false;
+		}
+
+		public static bool IsValidTile(int tile)
+		{
+			Tile tile2 = Find.WorldGrid[tile];
+			if (!tile2.biome.canBuildBase)
 			{
-				tile = -1;
 				return false;
 			}
-			tile = findTile(tile2);
-			return tile != -1;
+			if (!tile2.biome.implemented)
+			{
+				return false;
+			}
+			if (tile2.hilliness == Hilliness.Impassable)
+			{
+				return false;
+			}
+			if (Find.WorldObjects.AnyMapParentAt(tile) || Current.Game.FindMap(tile) != null 
+			|| Find.WorldObjects.AnyWorldObjectOfDefAt(WorldObjectDefOf.AbandonedSettlement, tile))
+			{
+				return false;
+			}
+			return true;
 		}
 
 		protected override bool TestRunInt(Slate slate)
@@ -87,6 +90,7 @@ namespace VanillaQuestsExpandedTheGenerator
 			Find.FactionManager.Add(parentFaction);
 			quest.ReserveFaction(parentFaction);
 			slate.Set("parentFaction", parentFaction);
+			slate.Set("siteFaction", parentFaction);
 			return parentFaction;
 		}
 

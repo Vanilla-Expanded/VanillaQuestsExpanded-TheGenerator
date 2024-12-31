@@ -1,7 +1,6 @@
 <Defs>
 	<QuestScriptDef>
 		<defName>VQE_AncientARC</defName>
-		<rootMinPoints>400</rootMinPoints>
 		<autoAccept>True</autoAccept>
 		<rootSelectionWeight>1</rootSelectionWeight>
 		<questNameRules>
