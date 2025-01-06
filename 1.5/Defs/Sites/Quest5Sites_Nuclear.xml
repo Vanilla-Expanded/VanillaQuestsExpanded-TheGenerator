@@ -15,7 +15,7 @@
 		<defName>VQE_Quest5Site_Nuclear</defName>
 		<linkWithSite>VQE_Quest5Site_Nuclear</linkWithSite>
 		<order>450</order>
-		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_Village">
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_NuclearArc">
 			<structureLayoutDefs>
 				<li>VQE_Quest5NuclearMap_Alpha</li>
 				<li>VQE_Quest5NuclearMap_Beta</li>

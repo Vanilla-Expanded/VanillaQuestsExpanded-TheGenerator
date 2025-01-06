@@ -6,6 +6,7 @@ using RimWorld.Planet;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
+
 	public class GenStep_InventorShelter : GenStep_CustomStructureGen
 	{
 		public override void PostGenerate(CellRect rect, Map map, GenStepParams parms)
@@ -20,8 +21,8 @@ namespace VanillaQuestsExpandedTheGenerator
 				turret.SetFaction(Faction.OfAncientsHostile);
 			}
 			var gameCondition = GameConditionMaker.MakeConditionPermanent(InternalDefOf.VQE_UnnaturalColdSnap);
-			gameCondition.startTick = Find.TickManager.TicksGame - gameCondition.TransitionTicks;
 			map.gameConditionManager.RegisterCondition(gameCondition);
+			gameCondition.startTick = Find.TickManager.TicksGame - gameCondition.TransitionTicks;
 			Find.World.GetComponent<TileTemperaturesComp>().ClearCaches();
 			map.weatherDecider.StartNextWeather();
 			map.weatherManager.curWeatherAge = GenDate.TicksPerDay;

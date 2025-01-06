@@ -7,6 +7,8 @@ namespace VanillaQuestsExpandedTheGenerator
 {
 	public class QuestNode_Root_InventorShelter : QuestNode_Site
 	{
+		public override SitePartDef QuestSite => InternalDefOf.VQE_Quest4Site;
+
 		public QuestNode_Root_InventorShelter()
 		{
 
@@ -38,7 +40,7 @@ namespace VanillaQuestsExpandedTheGenerator
 				quest.End(QuestEndOutcome.Success, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, sendStandardLetter: true);
 			}, siteInventorReleased);
 			slate.Set("Inventor_LastName", (Genetron_GameComponent.Instance.inventor.Name as NameTriple).Last);
-			Site site = GenerateSite(InternalDefOf.VQE_Quest4Site, quest, slate, points, tile, null, out string siteMapGeneratedSignal);
+			Site site = GenerateSite(quest, slate, points, tile, null, out string siteMapGeneratedSignal);
 		}
 	}
 }

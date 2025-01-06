@@ -10,52 +10,48 @@ using Verse;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
-    public class QuestNode_Root_AncientARCStudy : QuestNode_Site
-    {
-        private const int FactionBecomesHostileAfterHours = 10;
+	public class QuestNode_Root_AncientARCStudy : QuestNode_Site
+	{
+		private const int FactionBecomesHostileAfterHours = 10;
+		public override SitePartDef QuestSite => InternalDefOf.VQE_Quest3Site;
+		public QuestNode_Root_AncientARCStudy()
+		{
+		}
 
-        private const float PointsMultiplierRaid = 0.2f;
+		protected override void RunInt()
+		{
+			if (!PrepareQuest(out Quest quest, out Slate slate, out Map map, out float points, out int tile))
+			{
+				Log.Error("Failed to find a suitable site tile for the Ancient ARC quest.");
+				return;
+			}
 
-        private const float MinPointsRaid = 45f;
+			// Create a temporary tribal faction to guard the site
+			var parentFaction = CreateFaction(quest, slate, FactionDefOf.TribeCivil);
 
-        public QuestNode_Root_AncientARCStudy()
-        {
-        }
+			// Generate site parts and the site itself
+			Site site = GenerateSite(quest, slate, points, tile, parentFaction, out string siteMapGeneratedSignal);
 
-        protected override void RunInt()
-        {
-            if (!PrepareQuest(out Quest quest, out Slate slate, out Map map, out float points, out int tile))
-            {
-                Log.Error("Failed to find a suitable site tile for the Ancient ARC quest.");
-                return;
-            }
+			// Time before faction becomes hostile if overstayed
+			int hostileTimerTicks = GenDate.TicksPerHour * FactionBecomesHostileAfterHours;
+			site.GetComponent<TimedMakeFactionHostile>().SetupTimer(hostileTimerTicks, "VQE_FactionBecameHostileTimed".Translate(parentFaction.Named("FACTION")));
 
-            // Create a temporary tribal faction to guard the site
-            var parentFaction = CreateFaction(quest, slate, FactionDefOf.TribeCivil);
+			string tribalFactionMemberArrestedSignal = QuestGenUtility.HardcodedSignalWithQuestID("parentFaction.FactionMemberArrested");
 
-            // Generate site parts and the site itself
-            Site site = GenerateSite(InternalDefOf.VQE_Quest3Site, quest, slate, points, tile, parentFaction, out string siteMapGeneratedSignal);
+			quest.SetFactionHidden(parentFaction);
 
-            // Time before faction becomes hostile if overstayed
-            int hostileTimerTicks = GenDate.TicksPerHour * FactionBecomesHostileAfterHours;
-            site.GetComponent<TimedMakeFactionHostile>().SetupTimer(hostileTimerTicks, "VQE_FactionBecameHostileTimed".Translate(parentFaction.Named("FACTION")));
+			string terminalHackingStartedSignal = GenerateTerminal(quest, slate, site);
 
-            string tribalFactionMemberArrestedSignal = QuestGenUtility.HardcodedSignalWithQuestID("parentFaction.FactionMemberArrested");
+			// Start recurring raids if violence is allowed
+			if (Find.Storyteller.difficulty.allowViolentQuests)
+			{
+				quest.FactionRelationToPlayerChange(parentFaction, FactionRelationKind.Hostile, canSendHostilityLetter: false, terminalHackingStartedSignal);
+				quest.StartRecurringRaids(site, new FloatRange(2.5f, 2.5f), GenDate.TicksPerHour, siteMapGeneratedSignal);
+				quest.FactionRelationToPlayerChange(parentFaction, FactionRelationKind.Hostile, canSendHostilityLetter: true, tribalFactionMemberArrestedSignal);
+			}
 
-            quest.SetFactionHidden(parentFaction);
-
-            string terminalHackingStartedSignal = GenerateTerminal(quest, slate, site);
-
-            // Start recurring raids if violence is allowed
-            if (Find.Storyteller.difficulty.allowViolentQuests)
-            {
-                quest.FactionRelationToPlayerChange(parentFaction, FactionRelationKind.Hostile, canSendHostilityLetter: false, terminalHackingStartedSignal);
-                quest.StartRecurringRaids(site, new FloatRange(2.5f, 2.5f), GenDate.TicksPerHour, siteMapGeneratedSignal);
-                quest.FactionRelationToPlayerChange(parentFaction, FactionRelationKind.Hostile, canSendHostilityLetter: true, tribalFactionMemberArrestedSignal);
-            }
-
-            // Final setup for quest-related data
-            slate.Set("timer", hostileTimerTicks);
-        }
-    }
+			// Final setup for quest-related data
+			slate.Set("timer", hostileTimerTicks);
+		}
+	}
 }

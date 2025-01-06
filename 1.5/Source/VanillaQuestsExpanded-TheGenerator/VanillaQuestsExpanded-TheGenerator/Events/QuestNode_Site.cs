@@ -10,6 +10,7 @@ namespace VanillaQuestsExpandedTheGenerator
 {
 	public abstract class QuestNode_Site : QuestNode
 	{
+		public abstract SitePartDef QuestSite { get; }
 		protected bool TryFindSiteTile(out int tile, Predicate<int> extraValidator = null)
 		{
 			var tiles = Find.World.tilesInRandomOrder.Tiles.Where((int x) => (extraValidator == null || extraValidator(x))
@@ -50,7 +51,7 @@ namespace VanillaQuestsExpandedTheGenerator
 			return TryFindSiteTile(out _);
 		}
 
-		protected Site GenerateSite(SitePartDef sitePart, Quest quest, Slate slate, float points,
+		protected Site GenerateSite(Quest quest, Slate slate, float points,
 			int tile, Faction parentFaction, out string siteMapGeneratedSignal)
 		{
 			SitePartParams sitePartParams = new SitePartParams
@@ -61,7 +62,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
 			Site site = QuestGen_Sites.GenerateSite(new List<SitePartDefWithParams>
 			{
-				new SitePartDefWithParams(sitePart, sitePartParams)
+				new SitePartDefWithParams(QuestSite, sitePartParams)
 			}, tile, parentFaction);
 
 			site.doorsAlwaysOpenForPlayerPawns = true;

@@ -8,8 +8,10 @@ using Verse.Grammar;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
+
 	public class QuestNode_Root_ArcSite : QuestNode_Site
 	{
+		public override SitePartDef QuestSite => InternalDefOf.VQE_Quest5Site;
 		public QuestNode_Root_ArcSite()
 		{
 
@@ -17,7 +19,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
 		protected override void RunInt()
 		{
-			Log.Message("RunInt: " + this);
 			if (!PrepareQuest(out Quest quest, out Slate slate, out Map map, out float points, out int tile))
 			{
 				Log.Error("Failed to find a suitable site tile for the Ancient ARC quest.");
@@ -25,13 +26,11 @@ namespace VanillaQuestsExpandedTheGenerator
 			}
 
 			var parentFaction = CreateFaction(quest, slate, FactionDefOf.Pirate);
-			Site site = GenerateSite(InternalDefOf.VQE_Quest5Site, quest, slate, points, tile, parentFaction,
+			Site site = GenerateSite(quest, slate, points, tile, parentFaction,
 			out string siteMapGeneratedSignal);
 			var asker = slate.Get<Pawn>("asker");
-			Log.Message("asker: " + asker);
 			if (asker is null)
 			{
-				Log.Message("Adding custom reward");
 				var allEnemiesDestroyed = QuestGenUtility.HardcodedSignalWithQuestID("site.AllEnemiesDefeated");
 				GiveRewards(quest, new RewardsGeneratorParams
 				{

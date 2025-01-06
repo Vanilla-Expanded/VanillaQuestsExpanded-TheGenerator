@@ -84,7 +84,8 @@ namespace VanillaQuestsExpandedTheGenerator
 		[MayRequire("VanillaExpanded.VMemesE")]
 		public static MemeDef VME_MechanoidSupremacy;
 
-		public static SitePartDef VQE_Quest1Site, VQE_Quest2Site, VQE_Quest3Site, VQE_Quest4Site, VQE_Quest5Site;
+		public static SitePartDef VQE_Quest1Site, VQE_Quest2Site, VQE_Quest3Site, VQE_Quest4Site, 
+		VQE_Quest5Site, VQE_Quest5Site_Nuclear, VQE_Quest5Site_Geothermal;
 		public static ThingDef VQE_AncientResearchTerminal;
 
 		//Inventor
@@ -100,5 +101,5 @@ namespace VanillaQuestsExpandedTheGenerator
 		public static BackstoryDef VQE_ChildhoodInventorGenetron;
 		public static BackstoryDef VQE_InventorGenetronAdulthood;
 		public static WeatherDef SnowHard;
-    }
+	}
 }

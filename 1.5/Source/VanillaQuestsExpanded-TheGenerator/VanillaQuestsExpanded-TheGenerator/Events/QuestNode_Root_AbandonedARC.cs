@@ -8,6 +8,7 @@ namespace VanillaQuestsExpandedTheGenerator
 {
 	public class QuestNode_Root_AbandonedARC : QuestNode_Site
 	{
+        public override SitePartDef QuestSite => InternalDefOf.VQE_Quest2Site;
 		public QuestNode_Root_AbandonedARC()
 		{
 		}
@@ -31,7 +32,7 @@ namespace VanillaQuestsExpandedTheGenerator
 			slate.Set("animalKind", animalKind);
 			slate.Set("threatPoints", points);
 
-			var site = GenerateSite(InternalDefOf.VQE_Quest2Site, quest, slate, points, tile, null, out string siteMapGeneratedSignal);
+			var site = GenerateSite(quest, slate, points, tile, null, out string siteMapGeneratedSignal);
 
 			string siteMoreThanHalfObjectsDestroyed = QuestGenUtility.HardcodedSignalWithQuestID("site.MoreThanHalfObjectsDestroyed");
 			string siteStudiedAll = QuestGenUtility.HardcodedSignalWithQuestID("site.StudiedAll");
