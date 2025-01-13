@@ -129,6 +129,17 @@
 				<li Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_AbandonedARC"/>
 			</nodes>
 		</root>
-
+        <modExtensions>
+            <li Class="VFECore.QuestChainExtension">
+                <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                <conditionSucceedQuests>
+                    <li>VQE_PrototypeARC</li>
+                </conditionSucceedQuests>
+                <ticksSinceSucceed>600</ticksSinceSucceed>
+                <isRepeatable>false</isRepeatable>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <daysUntilGrantAgainOnFailure>7</daysUntilGrantAgainOnFailure>
+            </li>
+        </modExtensions>
 	</QuestScriptDef>
 </Defs>

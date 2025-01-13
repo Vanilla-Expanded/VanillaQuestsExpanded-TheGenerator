@@ -2,7 +2,6 @@
 	<QuestScriptDef>
 		<defName>VQE_PrototypeARC</defName>
 		<autoAccept>True</autoAccept>
-		<rootSelectionWeight>1</rootSelectionWeight>
 		<questNameRules>
 			<rulesStrings>
 				<li>questName->The [adj] [prototypeName]</li>
@@ -105,6 +104,14 @@
 				<li Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_PrototypeARC"></li>
 			</nodes>
 		</root>
-
+        <modExtensions>
+            <li Class="VFECore.QuestChainExtension">
+                <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                <conditionMinDaysSinceStart>20</conditionMinDaysSinceStart>
+                <isRepeatable>false</isRepeatable>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <daysUntilGrantAgainOnFailure>7</daysUntilGrantAgainOnFailure>
+            </li>
+        </modExtensions>
 	</QuestScriptDef>
 </Defs>

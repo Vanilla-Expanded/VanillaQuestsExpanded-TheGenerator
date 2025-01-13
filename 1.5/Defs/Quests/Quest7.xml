@@ -2,7 +2,6 @@
 	<QuestScriptDef>
 		<defName>VQE_GeothermalArcSite</defName>
 		<expireDaysRange>28</expireDaysRange>
-		<rootSelectionWeight>1</rootSelectionWeight>
 		<questNameRules>
 			<rulesStrings>
 				<!-- quest name -->
@@ -146,6 +145,21 @@
 				</li>
 			</nodes>
 		</root>
+        <modExtensions>
+            <li Class="VFECore.QuestChainExtension">
+                 <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                  <conditionSucceedQuests>
+                    <li>VQE_InventorShelter</li>
+                </conditionSucceedQuests>
+				 <ticksSinceSucceed>3600000~7200000</ticksSinceSucceed>
+                <isRepeatable>true</isRepeatable>
+                <mtbDaysRepeat>100</mtbDaysRepeat>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <grantAgainOnExpiry>true</grantAgainOnExpiry>
+				 <daysUntilGrantAgainOnFailure>100</daysUntilGrantAgainOnFailure>
+                 <daysUntilGrantAgainOnExpiry>100</daysUntilGrantAgainOnExpiry>
+            </li>
+        </modExtensions>
 	</QuestScriptDef>
 	
 </Defs>

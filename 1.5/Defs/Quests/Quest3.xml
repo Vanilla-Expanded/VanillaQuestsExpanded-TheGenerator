@@ -2,7 +2,6 @@
 	<QuestScriptDef>
 		<defName>VQE_AncientARC</defName>
 		<autoAccept>True</autoAccept>
-		<rootSelectionWeight>1</rootSelectionWeight>
 		<questNameRules>
 			<rulesStrings>
 				<!-- quest name -->
@@ -103,6 +102,17 @@
 		</rulesStrings>
 		</questContentRules>
 		<root Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_AncientARCStudy" />
-
+        <modExtensions>
+            <li Class="VFECore.QuestChainExtension">
+                <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                <conditionSucceedQuests>
+                    <li>VQE_AbandonedARC</li>
+                </conditionSucceedQuests>
+                <ticksSinceSucceed>600</ticksSinceSucceed>
+                <isRepeatable>false</isRepeatable>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <daysUntilGrantAgainOnFailure>7</daysUntilGrantAgainOnFailure>
+            </li>
+        </modExtensions>
 	</QuestScriptDef>
 </Defs>

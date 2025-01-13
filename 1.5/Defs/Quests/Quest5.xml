@@ -2,7 +2,6 @@
 	<QuestScriptDef>
 		<defName>VQE_ArcSite</defName>
 		<expireDaysRange>14</expireDaysRange>
-		<rootSelectionWeight>1</rootSelectionWeight>
 		<questNameRules>
 			<rulesStrings>
 				<!-- quest name -->
@@ -145,6 +144,21 @@
 				</li>
 			</nodes>
 		</root>
+        <modExtensions>
+            <li Class="VFECore.QuestChainExtension">
+                 <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                 <conditionSucceedQuests>
+                    <li>VQE_InventorShelter</li>
+                </conditionSucceedQuests>
+				 <ticksSinceSucceed>900000~3600000</ticksSinceSucceed>
+                <isRepeatable>true</isRepeatable>
+				<mtbDaysRepeat>75</mtbDaysRepeat>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <grantAgainOnExpiry>true</grantAgainOnExpiry>
+                 <daysUntilGrantAgainOnFailure>75</daysUntilGrantAgainOnFailure>
+                 <daysUntilGrantAgainOnExpiry>75</daysUntilGrantAgainOnExpiry>
+            </li>
+        </modExtensions>
 	</QuestScriptDef>
 	
 </Defs>
