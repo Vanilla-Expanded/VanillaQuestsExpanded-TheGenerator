@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
+using VFECore;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
@@ -126,7 +127,7 @@ namespace VanillaQuestsExpandedTheGenerator
 			terminal.studyFinishedSignal = terminalHackedSignal;
 			terminal.studyStartedSignal = terminalHackingStartedSignal;
 			// Set faction to hidden until the terminal is interacted with
-
+			terminal.GetComp<CompBouncingArrow>().doBouncingArrow = true;
 			// Signals for when the terminal is destroyed or hacked
 			quest.SignalPassActivable(delegate
 			{

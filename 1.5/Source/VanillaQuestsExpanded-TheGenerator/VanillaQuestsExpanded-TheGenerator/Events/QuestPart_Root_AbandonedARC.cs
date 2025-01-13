@@ -16,7 +16,6 @@ namespace VanillaQuestsExpandedTheGenerator
 		public int initialStudiableCount;
 		public int countDestroyed;
 		
-		
 		public QuestPart_Root_AbandonedARC()
 		{
 		}
@@ -39,7 +38,6 @@ namespace VanillaQuestsExpandedTheGenerator
 			{
 				countDestroyed++;
 			}
-			Log.Message("countDestroyed: " + countDestroyed);
 		}
 
 		protected override void Enable(SignalArgs receivedArgs)

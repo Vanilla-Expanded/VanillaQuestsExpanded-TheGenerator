@@ -50,10 +50,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasStudiedBasicHediffOrBackstory(Pawn pawn)
         {
-            if (pawn == Genetron_GameComponent.Instance.inventor)
-            {
-                return true;
-            }
             if(pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron) != null)
             {
                 return true;
@@ -71,10 +67,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasStudiedGeothermalHediffOrBackstory(Pawn pawn)
         {
-            if (pawn == Genetron_GameComponent.Instance.inventor)
-            {
-                return true;
-            }
             if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGeothermalGenetron) != null)
             {
                 return true;
@@ -92,10 +84,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasStudiedNuclearHediffOrBackstory(Pawn pawn)
         {
-            if (pawn == Genetron_GameComponent.Instance.inventor)
-            {
-                return true;
-            }
             if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientNuclearGenetron) != null)
             {
                 return true;
@@ -113,10 +101,6 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasAnyStudiedHediffOrBackstory(Pawn pawn)
         {
-            if (pawn == Genetron_GameComponent.Instance.inventor)
-            {
-                return true;
-            }
             foreach (HediffDef hediffDef in StaticCollections.studiedHediffs) {
                 if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(hediffDef) != null)
                 {

@@ -3,6 +3,7 @@ using KCSG;
 using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
+using VFECore;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
@@ -13,6 +14,7 @@ namespace VanillaQuestsExpandedTheGenerator
 		{
 			base.PostGenerate(rect, map, parms);
 			var casket = map.listerThings.GetThingsOfType<Building_Genetron_AncientCryptosleepPod>().First();
+			casket.GetComp<CompBouncingArrow>().doBouncingArrow = true;
 			casket.InnerContainer.ClearAndDestroyContents();
 			casket.TryAcceptThing(Genetron_GameComponent.Instance.inventor);
 			Genetron_GameComponent.Instance.inventorSpawned = true;

@@ -452,6 +452,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<seeThroughFog>true</seeThroughFog>
 		<pathCost>42</pathCost>
 		<fillPercent>0.2</fillPercent>
 		<size>(1,1)</size>
@@ -756,6 +757,12 @@
 			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
 		</building>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<comps>
+			<li>
+				<compClass>VFECore.CompBouncingArrow</compClass>
+			</li>
+		</comps>
+		<seeThroughFog>true</seeThroughFog>
 		<modExtensions>
 			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
 				<includeInventorFirstName>True</includeInventorFirstName>
