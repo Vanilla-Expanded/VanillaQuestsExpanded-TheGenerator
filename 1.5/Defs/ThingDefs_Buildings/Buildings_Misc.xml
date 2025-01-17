@@ -549,6 +549,7 @@
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
 		<pathCost>42</pathCost>
+		<seeThroughFog>true</seeThroughFog>
 		<fillPercent>0.2</fillPercent>
 		<size>(1,1)</size>
 		<hasInteractionCell>true</hasInteractionCell>
