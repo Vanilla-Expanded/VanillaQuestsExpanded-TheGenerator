@@ -65,12 +65,12 @@
 				<li>structureType->facility</li>
 			
 				<!-- coldsnap descriptions -->
-				<li>coldSnapDesc->unnatural coldsnap</li>
-				<li>coldSnapDesc->bizarre freezing anomaly</li>
-				<li>coldSnapDesc->unexplainable cold front</li>
-				<li>coldSnapDesc->mysterious deep freeze</li>
-				<li>coldSnapDesc->sudden extreme temperature drop</li>
-				<li>coldSnapDesc->deadly frost anomaly</li>
+				<li>coldSnapDesc->n unnatural coldsnap</li>
+				<li>coldSnapDesc-> bizarre freezing anomaly</li>
+				<li>coldSnapDesc->n unexplainable cold front</li>
+				<li>coldSnapDesc-> mysterious deep freeze</li>
+				<li>coldSnapDesc-> sudden extreme temperature drop</li>
+				<li>coldSnapDesc-> deadly frost anomaly</li>
 			
 				<!-- turret defense -->
 				<li>turretDefense->inactive turrets that occasionally sputter to life</li>
