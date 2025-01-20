@@ -486,6 +486,7 @@
 				<convertAfterStudying>VQE_AncientResearchTerminal_Off</convertAfterStudying>
 				<includeInventorFirstName>True</includeInventorFirstName>
 				<studyGizmoIcon>UI/Gizmos/StudyAncientResearchTerminal_Gizmo</studyGizmoIcon>
+				<toggleTerminalStudied>true</toggleTerminalStudied>
 			</li>
 		</modExtensions>
 	</ThingDef>

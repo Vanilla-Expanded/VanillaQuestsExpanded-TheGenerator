@@ -31,7 +31,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
                 if (designator_build == null || !StaticCollections.hidden_designators.Contains(designator_build.PlacingDef))
                 {
-                    if (designator_build?.PlacingDef != InternalDefOf.VQE_Genetron_Basic || (designator_build.PlacingDef == InternalDefOf.VQE_Genetron_Basic && Genetron_GameComponent.Instance.anyGenetronStudied))
+                    if (designator_build?.PlacingDef != InternalDefOf.VQE_Genetron_Basic || (designator_build.PlacingDef == InternalDefOf.VQE_Genetron_Basic && Genetron_GameComponent.Instance.terminalStudied))
                     {
 
                         yield return designator;

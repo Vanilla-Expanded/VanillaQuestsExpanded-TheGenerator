@@ -29,6 +29,7 @@ namespace VanillaQuestsExpandedTheGenerator
         public bool anyoneCanHandle = false;
 
         public HediffDef studyingHediff = null;
+        public bool toggleTerminalStudied = false;
         public bool toggleGeothermalStudied = false;
         public bool toggleNuclearStudied = false;
 

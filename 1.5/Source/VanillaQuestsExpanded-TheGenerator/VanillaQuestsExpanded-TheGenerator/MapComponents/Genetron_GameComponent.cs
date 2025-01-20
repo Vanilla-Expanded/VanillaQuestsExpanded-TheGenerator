@@ -18,7 +18,8 @@ public class Genetron_GameComponent : GameComponent
 
 	public Genetron_GameComponent(Game game) => Instance = this;
 
-	public bool anyGenetronStudied = false;
+    public bool terminalStudied = false;
+    public bool anyGenetronStudied = false;
 	public bool geothermalGenetronStudied = false;
 	public bool nuclearGenetronStudied = false;
 
@@ -62,7 +63,9 @@ public class Genetron_GameComponent : GameComponent
 
 	public override void ExposeData()
 	{
-		Scribe_Values.Look(ref this.anyGenetronStudied, "anyGenetronStudied", false, false);
+        Scribe_Values.Look(ref this.terminalStudied, "terminalStudied", false, false);
+
+        Scribe_Values.Look(ref this.anyGenetronStudied, "anyGenetronStudied", false, false);
 		Scribe_Values.Look(ref this.nuclearGenetronStudied, "nuclearGenetronStudied", false, false);
 		Scribe_Values.Look(ref this.geothermalGenetronStudied, "geothermalGenetronStudied", false, false);
 		Scribe_Collections.Look(ref this.supressedGeysers, "supressedGeysers",LookMode.Reference);

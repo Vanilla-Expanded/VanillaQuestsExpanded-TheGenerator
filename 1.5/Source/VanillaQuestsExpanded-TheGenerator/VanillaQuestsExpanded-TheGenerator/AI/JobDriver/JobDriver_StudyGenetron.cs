@@ -71,7 +71,11 @@ namespace VanillaQuestsExpandedTheGenerator
 							actor.health.AddHediff(ext.studyingHediff);
 							Genetron_GameComponent.Instance.anyGenetronStudied = true;
 						}
-						if (ext.toggleGeothermalStudied)
+                        if (ext.toggleTerminalStudied)
+                        {
+                            Genetron_GameComponent.Instance.terminalStudied = true;
+                        }
+                        if (ext.toggleGeothermalStudied)
 						{
 							Genetron_GameComponent.Instance.geothermalGenetronStudied = true;
 						}
