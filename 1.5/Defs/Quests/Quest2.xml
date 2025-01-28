@@ -2,7 +2,6 @@
 	<QuestScriptDef>
 		<defName>VQE_AbandonedARC</defName>
 		<autoAccept>True</autoAccept>
-		<rootSelectionWeight>1</rootSelectionWeight>
 		<questNameRules>
 			<rulesStrings>
 				<!-- quest name -->
