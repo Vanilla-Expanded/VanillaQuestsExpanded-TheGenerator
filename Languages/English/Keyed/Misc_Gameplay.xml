@@ -79,6 +79,7 @@
 	<VQE_DowngradeGenetron>Downgrade to {0}</VQE_DowngradeGenetron>
 	<VQE_DowngradeGenetronDesc>Downgrade the ARC to an earlier stage of construction.</VQE_DowngradeGenetronDesc>
 	<VQE_DowngradeGenetronDialog>Warning, this will downgrade the ARC to {0}. All materials used to upgrade it to the current stage will be lost. Are you sure you want to proceed?</VQE_DowngradeGenetronDialog>
+	<VQE_DowngradeGenetronMeltdown>It's not possible to downgrade the ARC during a meltdown.</VQE_DowngradeGenetronMeltdown>
 	
 	<!-- Reactor abilities -->
 	<VQE_GenetronOverdrive>ARC overdrive</VQE_GenetronOverdrive>

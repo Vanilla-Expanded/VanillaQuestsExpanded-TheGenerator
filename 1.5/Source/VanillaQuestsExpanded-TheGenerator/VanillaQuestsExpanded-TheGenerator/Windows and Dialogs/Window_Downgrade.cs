@@ -56,9 +56,16 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             if (Widgets.ButtonText(new Rect(inRect.x + num + 10f, inRect.yMax - 30f, num, 30f), "OK".Translate()))
             {
-                Close();
-                Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(newBuilding), building.PositionHeld, building.Map);
-                thingToMake.SetFaction(building.Faction);
+                if (building is Building_GenetronOverdrive genetronOverdrive && genetronOverdrive.inMeltdown)
+                {
+                    Messages.Message("VQE_DowngradeGenetronMeltdown".Translate(), building, MessageTypeDefOf.RejectInput, false);
+                }
+                else
+                {
+                    Close();
+                    Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(newBuilding), building.PositionHeld, building.Map);
+                    thingToMake.SetFaction(building.Faction);
+                }
             }
         }
     }
