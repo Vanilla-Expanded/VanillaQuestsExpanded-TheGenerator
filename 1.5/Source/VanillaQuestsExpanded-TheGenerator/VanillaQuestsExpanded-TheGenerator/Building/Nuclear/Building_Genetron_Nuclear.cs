@@ -32,10 +32,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    if (Map.thingGrid.ThingAt(Position, InternalDefOf.VQE_Genetron_Isotopic.blueprintDef) == null)
-                    {
-                        GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_Isotopic, Position, Map, Rotation, Faction.OfPlayer, null);
-                    }
+                    Utils.PlaceDistinctBlueprint(this, InternalDefOf.VQE_Genetron_Isotopic);
                 };
             }
             else

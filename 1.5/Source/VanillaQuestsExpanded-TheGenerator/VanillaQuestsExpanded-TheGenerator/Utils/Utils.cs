@@ -117,5 +117,14 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             return false;
         }
+
+        public static void PlaceDistinctBlueprint(Building current, ThingDef replacement)
+        {
+            if (current.Map.thingGrid.ThingAt(current.Position, replacement.blueprintDef) == null &&
+                current.Map.thingGrid.ThingAt(current.Position, replacement.frameDef) == null)
+            {
+                GenConstruct.PlaceBlueprintForBuild(replacement, current.Position, current.Map, current.Rotation, Faction.OfPlayer, null);
+            }
+        }
     }
 }

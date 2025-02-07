@@ -50,10 +50,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    if (Map.thingGrid.ThingAt(Position, InternalDefOf.VQE_Genetron_Geothermal.blueprintDef) == null)
-                    {
-                        GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_Geothermal, Position, Map, Rotation, Faction.OfPlayer, null);
-                    }
+                    Utils.PlaceDistinctBlueprint(this, InternalDefOf.VQE_Genetron_Geothermal);
                 };
             }
 
@@ -92,7 +89,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action2.hotKey = KeyBindingDefOf.Misc2;
                 command_Action2.action = delegate
                 {
-                    GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_UraniumPowered, Position, Map, Rotation, Faction.OfPlayer, null);
+                    Utils.PlaceDistinctBlueprint(this, InternalDefOf.VQE_Genetron_UraniumPowered);
                 };
             }
 

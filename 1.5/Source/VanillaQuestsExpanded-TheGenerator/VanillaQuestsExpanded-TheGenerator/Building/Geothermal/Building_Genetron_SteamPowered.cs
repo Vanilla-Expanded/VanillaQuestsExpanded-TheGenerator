@@ -31,10 +31,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action.hotKey = KeyBindingDefOf.Misc1;
                 command_Action.action = delegate
                 {
-                    if (Map.thingGrid.ThingAt(Position, InternalDefOf.VQE_Genetron_ThermalVent.blueprintDef) == null)
-                    {
-                        GenConstruct.PlaceBlueprintForBuild(InternalDefOf.VQE_Genetron_ThermalVent, Position, Map, Rotation, Faction.OfPlayer, null);
-                    }
+                    Utils.PlaceDistinctBlueprint(this, InternalDefOf.VQE_Genetron_ThermalVent);
                 };
             }
             else
