@@ -128,7 +128,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
-            if (Prefs.DevMode)
+            if (DebugSettings.ShowDevGizmos)
             {
                 yield return new Command_Action
                 {
