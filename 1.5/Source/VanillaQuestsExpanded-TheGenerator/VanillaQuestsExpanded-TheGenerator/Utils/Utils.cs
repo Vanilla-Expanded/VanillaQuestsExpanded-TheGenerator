@@ -50,15 +50,19 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasStudiedBasicHediffOrBackstory(Pawn pawn)
         {
+            if (pawn?.IsColonyMech==true)
+            {
+                return false;
+            }
             if(pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGenetron) != null)
             {
                 return true;
             }
-            if (pawn.story.Adulthood!=null && StaticCollections.basicBackstories.Contains(pawn?.story.Adulthood))
+            if (pawn?.story?.Adulthood!=null && StaticCollections.basicBackstories.Contains(pawn.story.Adulthood))
             {
                 return true;
             }
-            if (pawn.story.Childhood != null && StaticCollections.basicBackstories.Contains(pawn?.story.Childhood))
+            if (pawn?.story?.Childhood != null && StaticCollections.basicBackstories.Contains(pawn.story.Childhood))
             {
                 return true;
             }
@@ -67,15 +71,19 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasStudiedGeothermalHediffOrBackstory(Pawn pawn)
         {
+            if (pawn?.IsColonyMech == true)
+            {
+                return false;
+            }
             if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientGeothermalGenetron) != null)
             {
                 return true;
             }
-            if (pawn.story.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Adulthood))
+            if (pawn?.story?.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn.story.Adulthood))
             {
                 return true;
             }
-            if (pawn.story.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Childhood))
+            if (pawn?.story?.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn.story.Childhood))
             {
                 return true;
             }
@@ -84,15 +92,19 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasStudiedNuclearHediffOrBackstory(Pawn pawn)
         {
+            if (pawn?.IsColonyMech == true)
+            {
+                return false;
+            }
             if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VQE_StudiedAncientNuclearGenetron) != null)
             {
                 return true;
             }
-            if (pawn.story.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Adulthood))
+            if (pawn?.story?.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn.story.Adulthood))
             {
                 return true;
             }
-            if (pawn.story.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Childhood))
+            if (pawn?.story?.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn.story.Childhood))
             {
                 return true;
             }
@@ -101,17 +113,21 @@ namespace VanillaQuestsExpandedTheGenerator
 
         public static bool HasAnyStudiedHediffOrBackstory(Pawn pawn)
         {
+            if (pawn?.IsColonyMech == true)
+            {
+                return false;
+            }
             foreach (HediffDef hediffDef in StaticCollections.studiedHediffs) {
                 if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(hediffDef) != null)
                 {
                     return true;
                 }
             }            
-            if (pawn.story.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Adulthood))
+            if (pawn?.story?.Adulthood != null && StaticCollections.advancedBackstories.Contains(pawn.story.Adulthood))
             {
                 return true;
             }
-            if (pawn.story.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn?.story.Childhood))
+            if (pawn?.story?.Childhood != null && StaticCollections.advancedBackstories.Contains(pawn.story.Childhood))
             {
                 return true;
             }
