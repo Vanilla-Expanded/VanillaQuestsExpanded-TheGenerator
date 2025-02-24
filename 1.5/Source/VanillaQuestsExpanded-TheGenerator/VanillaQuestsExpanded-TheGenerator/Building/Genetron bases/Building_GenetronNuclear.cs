@@ -124,6 +124,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 command_Action3.defaultLabel = "Fake a restart";
                 command_Action3.action = delegate
                 {
+                    permanentlyDisabled = false;
                     usedRestartAtLeastOnce = true;
                 };
                 yield return command_Action3;

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using System;
+
 namespace VanillaQuestsExpandedTheGenerator
 {
     [StaticConstructorOnStartup]
@@ -95,7 +97,8 @@ namespace VanillaQuestsExpandedTheGenerator
                         return 0;
                     }
                     
-                    return ((constant1*permanentFuelRodCalibrationMultiplier*Fuel*Fuel + constant2 * permanentFuelRodCalibrationMultiplier * Fuel) * overdriveMultiplier)/60000f;
+                    return Math.Max(((constant1 * permanentFuelRodCalibrationMultiplier * Fuel * Fuel + constant2 * permanentFuelRodCalibrationMultiplier * Fuel) * overdriveMultiplier),1) / 60000f;
+                    
 
                 }
                 
@@ -123,8 +126,9 @@ namespace VanillaQuestsExpandedTheGenerator
                 if (building_nuclear != null && Props.isNuclear)
                 {
                     building_nuclear.Signal_ReduceMaintenanceBy(0.005f * this.ConsumptionRatePerTick);
-                    if (Fuel <= 0.1)
+                    if (Fuel <= 0.11)
                     {
+                        ConsumeFuel(0.11f);
                         building_nuclear.permanentlyDisabled = true;
                     }
                 }
@@ -147,8 +151,8 @@ namespace VanillaQuestsExpandedTheGenerator
                 }
                 else
                 {
-                    text = text + " (" + "VQE_FuelRateAtTheMoment".Translate(((constant1 * permanentFuelRodCalibrationMultiplier * Fuel * Fuel 
-                        + constant2* permanentFuelRodCalibrationMultiplier * Fuel) * overdriveMultiplier).ToStringDecimalIfSmall()) + ")";
+                    text = text + " (" + "VQE_FuelRateAtTheMoment".Translate(Math.Max(((constant1 * permanentFuelRodCalibrationMultiplier * Fuel * Fuel 
+                        + constant2* permanentFuelRodCalibrationMultiplier * Fuel) * overdriveMultiplier),1).ToStringDecimalIfSmall()) + ")";
                 }
                 
                 
