@@ -29,14 +29,13 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 Designator_Build designator_build = designator as Designator_Build;
 
-                if (designator_build == null || !StaticCollections.hidden_designators.Contains(designator_build.PlacingDef))
-                {
-                    if (designator_build?.PlacingDef != InternalDefOf.VQE_Genetron_Basic || (designator_build.PlacingDef == InternalDefOf.VQE_Genetron_Basic && Genetron_GameComponent.Instance.terminalStudied))
+               
+                    if (designator_build?.PlacingDef != InternalDefOf.VQE_Genetron_Basic || (designator_build?.PlacingDef == InternalDefOf.VQE_Genetron_Basic && Genetron_GameComponent.Instance.terminalStudied))
                     {
 
                         yield return designator;
                     }
-                }
+                
 
 
             }
