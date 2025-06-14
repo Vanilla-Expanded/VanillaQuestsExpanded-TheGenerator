@@ -2,7 +2,8 @@ using Verse;
 using RimWorld;
 using KCSG;
 using System.Collections.Generic;
-using VFECore;
+using VEF.Buildings;
+
 namespace VanillaQuestsExpandedTheGenerator
 {
 	public class GenStep_AbandonedARC : GenStep_CustomStructureGen

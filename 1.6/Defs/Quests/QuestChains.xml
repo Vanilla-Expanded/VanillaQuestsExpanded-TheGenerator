@@ -1,12 +1,12 @@
 <Defs>
 
-    <VFECore.QuestChainDef>
+    <VEF.Storyteller.QuestChainDef>
         <defName>VQE_TheGeneratorQuestChain</defName>
 		<iconPath>UI/QuestChainIcon</iconPath>
         <label>The Generator</label>
         <description>This quest chain will have you explore the various sites in which {InventorFullName} tried to construct a prototype of the ultimate power source. If you connect the dots, you may be able to pick up this endeavour and construct your own ARC generator.</description>
 		<workerClass>VanillaQuestsExpandedTheGenerator.TheGenerator_QuestChainWorker</workerClass>
-    </VFECore.QuestChainDef>
+    </VEF.Storyteller.QuestChainDef>
 
 
 </Defs>

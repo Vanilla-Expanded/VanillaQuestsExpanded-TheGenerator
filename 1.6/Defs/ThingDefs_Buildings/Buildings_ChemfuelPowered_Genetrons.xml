@@ -46,6 +46,7 @@
 				<basePowerConsumption>-7200</basePowerConsumption>
 				<powerWithoutFuel>3600</powerWithoutFuel>
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		
@@ -80,7 +81,6 @@
 		<uiIconPath>Things/Chemfuel/MegageneratorTier1_Chemfuel_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -181,6 +181,7 @@
 				<basePowerConsumption>-8400</basePowerConsumption>
 				<powerWithoutFuel>3600</powerWithoutFuel>
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		
@@ -215,7 +216,6 @@
 		<uiIconPath>Things/Chemfuel/MegageneratorTier2_Chemfuel_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -315,6 +315,7 @@
 				<basePowerConsumption>-9200</basePowerConsumption>
 				<powerWithoutFuel>3600</powerWithoutFuel>
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		
@@ -349,7 +350,6 @@
 		<uiIconPath>Things/Chemfuel/MegageneratorTier3_Chemfuel_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -448,6 +448,7 @@
 				<basePowerConsumption>-10000</basePowerConsumption>
 				<powerWithoutFuel>3600</powerWithoutFuel>
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		
@@ -482,7 +483,6 @@
 		<uiIconPath>Things/Chemfuel/MegageneratorTier4_Chemfuel_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>

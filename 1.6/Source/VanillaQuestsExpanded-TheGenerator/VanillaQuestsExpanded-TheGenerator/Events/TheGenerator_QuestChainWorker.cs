@@ -1,4 +1,4 @@
-using VFECore;
+using VEF.Storyteller;
 namespace VanillaQuestsExpandedTheGenerator
 {
 	public class TheGenerator_QuestChainWorker : QuestChainWorker

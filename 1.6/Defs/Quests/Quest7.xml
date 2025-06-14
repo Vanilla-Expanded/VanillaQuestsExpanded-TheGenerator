@@ -146,7 +146,7 @@
 			</nodes>
 		</root>
         <modExtensions>
-            <li Class="VFECore.QuestChainExtension">
+            <li Class="VEF.Storyteller.QuestChainExtension">
                  <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
                   <conditionSucceedQuests>
                     <li>VQE_InventorShelter</li>

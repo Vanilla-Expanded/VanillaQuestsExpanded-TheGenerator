@@ -48,10 +48,8 @@
 				<isNuclear>true</isNuclear>
 				<basePowerConsumption>-1</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
-			
-			
-		
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
 				<empChancePerTick>0.7</empChancePerTick>
@@ -88,7 +86,6 @@
 		<uiIconPath>Things/Nuclear/MegageneratorTier1_Nuclear_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -192,10 +189,8 @@
 				<isNuclear>true</isNuclear>
 				<basePowerConsumption>-1</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
-			
-			
-		
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
 				<empChancePerTick>0.7</empChancePerTick>
@@ -232,7 +227,6 @@
 		<uiIconPath>Things/Nuclear/MegageneratorTier2_Nuclear_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -336,10 +330,8 @@
 				<isNuclear>true</isNuclear>
 				<basePowerConsumption>-1</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
-			
-			
-		
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
 				<empChancePerTick>0.7</empChancePerTick>
@@ -376,7 +368,6 @@
 		<uiIconPath>Things/Nuclear/MegageneratorTier3_Nuclear_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -480,9 +471,8 @@
 				<isNuclear>true</isNuclear>
 				<basePowerConsumption>-1</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
-			
-			
 			<li Class="CompProperties_Stunnable">
 				<useLargeEMPEffecter>true</useLargeEMPEffecter>
 				<empChancePerTick>0.7</empChancePerTick>
@@ -512,14 +502,12 @@
 				</fuelFilter>
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 			</li>
-			
 		</comps>
 		<rotatable>false</rotatable>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<uiIconPath>Things/Nuclear/MegageneratorTier4_Nuclear_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>

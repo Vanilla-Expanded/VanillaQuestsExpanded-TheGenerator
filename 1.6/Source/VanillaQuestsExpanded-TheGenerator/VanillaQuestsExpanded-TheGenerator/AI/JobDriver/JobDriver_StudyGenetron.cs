@@ -2,7 +2,7 @@
 using Verse;
 using Verse.AI;
 using RimWorld;
-using VFECore;
+using VEF.Buildings;
 
 namespace VanillaQuestsExpandedTheGenerator
 {

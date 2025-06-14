@@ -43,6 +43,7 @@
 				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
 				<basePowerConsumption>-3600</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Stunnable">
@@ -62,7 +63,6 @@
 		</placeWorkers>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<VanillaFurnitureExpanded.HiddenDesignatorsDef>
+	<VEF.Buildings.HiddenDesignatorsDef>
 		<defName>VQE_HiddenDesignators</defName>
 		<hiddenDesignators>
 			<li>VQE_Genetron_WoodFired</li>
@@ -23,5 +23,5 @@
 			<li>VQE_Genetron_Isotopic</li>
 			<li>VQE_Genetron_Atomic</li>
 		</hiddenDesignators>
-	</VanillaFurnitureExpanded.HiddenDesignatorsDef>
+	</VEF.Buildings.HiddenDesignatorsDef>
 </Defs>

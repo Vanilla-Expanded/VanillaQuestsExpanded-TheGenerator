@@ -121,7 +121,7 @@
 		</graphicData>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>
@@ -162,7 +162,7 @@
 		</graphicData>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>
@@ -477,7 +477,7 @@
 				<glowColor>(0,235,31,0)</glowColor>
 			</li>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>
@@ -570,7 +570,7 @@
 		</graphicData>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>
@@ -638,7 +638,7 @@
 		<building> <deconstructible>false</deconstructible></building>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>
@@ -761,7 +761,7 @@
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<seeThroughFog>true</seeThroughFog>
@@ -815,7 +815,7 @@
 		</building>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>
@@ -870,7 +870,7 @@
 		</building>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>
@@ -925,7 +925,7 @@
 		</building>
 		<comps>
 			<li>
-				<compClass>VFECore.CompBouncingArrow</compClass>
+				<compClass>VEF.Buildings.CompBouncingArrow</compClass>
 			</li>
 		</comps>
 		<modExtensions>

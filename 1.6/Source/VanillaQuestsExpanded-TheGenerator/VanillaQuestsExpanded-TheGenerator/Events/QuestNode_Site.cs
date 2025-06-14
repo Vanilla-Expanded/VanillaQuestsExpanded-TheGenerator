@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
-using VFECore;
+using VEF.Buildings;
 
 namespace VanillaQuestsExpandedTheGenerator
 {

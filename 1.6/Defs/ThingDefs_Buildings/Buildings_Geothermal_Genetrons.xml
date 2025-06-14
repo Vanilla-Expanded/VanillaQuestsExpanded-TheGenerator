@@ -46,6 +46,7 @@
 				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
 				<basePowerConsumption>-7200</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Flickable"/>
@@ -72,7 +73,6 @@
 		<uiIconPath>Things/Geothermal/MegageneratorTier1_Geothermal_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -174,6 +174,7 @@
 				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
 				<basePowerConsumption>-8600</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Flickable"/>
@@ -200,7 +201,6 @@
 		<uiIconPath>Things/Geothermal/MegageneratorTier2_Geothermal_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -302,6 +302,7 @@
 				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
 				<basePowerConsumption>-10000</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Flickable"/>
@@ -328,7 +329,6 @@
 		<uiIconPath>Things/Geothermal/MegageneratorTier3_Geothermal_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
@@ -431,6 +431,7 @@
 				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
 				<basePowerConsumption>-10000</basePowerConsumption>				
 				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
 			</li>
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Flickable"/>
@@ -457,7 +458,6 @@
 		<uiIconPath>Things/Geothermal/MegageneratorTier4_Geothermal_MenuIcon</uiIconPath>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>

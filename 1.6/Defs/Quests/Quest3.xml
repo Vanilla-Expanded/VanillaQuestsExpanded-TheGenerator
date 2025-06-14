@@ -103,7 +103,7 @@
 		</questContentRules>
 		<root Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_AncientARCStudy" />
         <modExtensions>
-            <li Class="VFECore.QuestChainExtension">
+            <li Class="VEF.Storyteller.QuestChainExtension">
                 <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
                 <conditionSucceedQuests>
                     <li>VQE_AbandonedARC</li>

@@ -40,9 +40,8 @@
       <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.5\Assemblies\KCSG.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="VFECore">
-      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.5\Assemblies\VFECore.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="VEF">
+      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.6\Assemblies\VEF.dll</HintPath>
     </Reference>
   </ItemGroup>
 

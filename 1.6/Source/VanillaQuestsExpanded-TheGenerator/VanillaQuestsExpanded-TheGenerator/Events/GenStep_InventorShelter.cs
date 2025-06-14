@@ -3,7 +3,7 @@ using KCSG;
 using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
-using VFECore;
+using VEF.Buildings;
 
 namespace VanillaQuestsExpandedTheGenerator
 {
