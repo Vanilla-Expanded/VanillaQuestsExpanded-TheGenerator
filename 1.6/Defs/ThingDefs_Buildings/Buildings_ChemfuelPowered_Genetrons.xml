@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_ChemfuelPowered</defName>
+		<label>chemfuel-powered ARC</label>
+		<description>Chemfuel-powered advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be tuned to increase the power generation even further. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelPowered</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<designationCategory>Power</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>10640</MarketValue>
+			<Beauty>-30</Beauty>
+			<VQE_GenetronMaintenanceLoss>0.05</VQE_GenetronMaintenanceLoss>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>340</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<VQE_GenetronComponent>4</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-7200</basePowerConsumption>
+				<powerWithoutFuel>3600</powerWithoutFuel>
+				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(80,112,180,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
+				<heatPerSecond>9</heatPerSecond>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
+				<fuelConsumptionRate>14</fuelConsumptionRate>
+				<fuelCapacity>300</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconPath>Things/Chemfuel/MegageneratorTier1_Chemfuel_MenuIcon</uiIconPath>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier2_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved</texture>
+					</li>
+					
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier2_Wood</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood</texture>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<ARClevel>6</ARClevel>
+			</li>
+			
+		</modExtensions>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_ChemfuelBoosted</defName>
+		<label>chemfuel-boosted ARC</label>
+		<description>Chemfuel-boosted advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be tuned to increase the power generation even further. A power surge function allows it to instantly vaporize a large quantity of fuel to refill batteries in the network. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelBoosted</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<designationCategory>Power</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>16000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>12430</MarketValue>
+			<Beauty>-30</Beauty>
+			<VQE_GenetronMaintenanceLoss>0.05</VQE_GenetronMaintenanceLoss>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>120</Steel>
+			<Plasteel>30</Plasteel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<VQE_GenetronComponent>2</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-8400</basePowerConsumption>
+				<powerWithoutFuel>3600</powerWithoutFuel>
+				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(80,112,180,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
+				<heatPerSecond>12</heatPerSecond>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
+				<fuelConsumptionRate>18</fuelConsumptionRate>
+				<fuelCapacity>300</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconPath>Things/Chemfuel/MegageneratorTier2_Chemfuel_MenuIcon</uiIconPath>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved</texture>
+					</li>
+					
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier3_Wood</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood</texture>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<ARClevel>7</ARClevel>
+			</li>
+			
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_ChemfuelCharged</defName>
+		<label>chemfuel-charged ARC</label>
+		<description>Chemfuel-charged advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be fine-tuned to increase the power generation even further or reduce maintenance loss if the strain on the components is too high. A power surge function allows it to instantly vaporize a large quantity of fuel to refill batteries in the network. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelCharged</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<designationCategory>Power</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>20000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>12430</MarketValue>
+			<Beauty>-30</Beauty>
+			<VQE_GenetronMaintenanceLoss>0.05</VQE_GenetronMaintenanceLoss>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>100</Steel>
+			<Gold>100</Gold>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<VQE_GenetronComponent>2</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-9200</basePowerConsumption>
+				<powerWithoutFuel>3600</powerWithoutFuel>
+				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(80,112,180,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
+				<heatPerSecond>12</heatPerSecond>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
+				<fuelConsumptionRate>19</fuelConsumptionRate>
+				<fuelCapacity>300</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconPath>Things/Chemfuel/MegageneratorTier3_Chemfuel_MenuIcon</uiIconPath>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier3_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved</texture>
+					</li>
+					
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier3_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Tier4_Wood</texture>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<fineTuningControl>true</fineTuningControl>
+				<ARClevel>8</ARClevel>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_ChemfuelFortified</defName>
+		<label>chemfuel-fortified ARC</label>
+		<description>Chemfuel-fortified advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers and chemfuel burned in a gigantic engine. The engine requires regular maintenance, and lack of it can result in a critical breakdown of the ARC components. Originally designed by {InventorFullName}, these ARCs are incredibly rare, but also versatile and powerful. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. It can be put into an overdrive mode, burning more fuel but generating more power. It can also be fine-tuned to increase the power generation even further or reduce maintenance loss if the strain on the components is too high. A power surge function allows it to instantly vaporize a large quantity of fuel to refill batteries in the network. It is possible to calibrate the efficiency of the ARC to permanently increase the power generated from each burnt unit of fuel. Must be placed on a steam geyser and can only be constructed and upgraded by colonists who have studied the ancient ARC generators.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_ChemfuelFortified</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<designationCategory>Power</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<clearBuildingArea>false</clearBuildingArea>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>15000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>16180</MarketValue>
+			<Beauty>-30</Beauty>
+			<VQE_GenetronMaintenanceLoss>0.05</VQE_GenetronMaintenanceLoss>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>220</Steel>
+		
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<VQE_GenetronComponent>1</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-10000</basePowerConsumption>
+				<powerWithoutFuel>3600</powerWithoutFuel>
+				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>GeothermalPlant_Ambience</soundAmbientProducingPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(80,112,180,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompHeatPusherPowered_Overdrive</compClass>
+				<heatPerSecond>12</heatPerSecond>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_RefuelableWithOverdrive">
+				<fuelConsumptionRate>19</fuelConsumptionRate>
+				<fuelCapacity>300</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconPath>Things/Chemfuel/MegageneratorTier4_Chemfuel_MenuIcon</uiIconPath>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier3_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier4_Chemfuel_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Core_Improved</texture>
+					</li>
+					
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_CoreShield_Improved</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier1_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier2_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier3_Chemfuel</texture>
+					</li>
+					<li>
+						<texture>Things/Chemfuel/Megagenerator_Tier4_Chemfuel</texture>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<fineTuningControl>true</fineTuningControl>
+				<ARClevel>9</ARClevel>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

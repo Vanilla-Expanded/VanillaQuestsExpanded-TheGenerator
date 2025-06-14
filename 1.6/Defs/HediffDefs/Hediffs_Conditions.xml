@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>VQE_StudiedAncientGenetron</defName>
+		<label>studied ancient ARC</label>
+		<description>This particular colonist has studied the ancient ARC. It allows them to build, upgrade and maintain an ARC in the colony.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQE_StudiedAncientGeothermalGenetron</defName>
+		<label>studied ancient geothermal ARC</label>
+		<description>This particular colonist has studied the ancient geothermal ARC. It allows them to build, upgrade and maintain a geothermal ARC in the colony.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQE_StudiedAncientNuclearGenetron</defName>
+		<label>studied nuclear ARC husk</label>
+		<description>This particular colonist has studied a nuclear ARC husk. It allows them to build, upgrade and maintain a nuclear ARC in the colony.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQE_TraitorousInventor</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<description>Traitorous inventor. This hediff shouldn't be visible to players. If you are seeing this you will go to cheater hell, which is full of politicians.</description>
+		<label>traitorous inventor</label>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.HediffCompPropreties_Traitor">
+				<disappearsAfterTicks>
+					<min>120000</min>
+					<max>360000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

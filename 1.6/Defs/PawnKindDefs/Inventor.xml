@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef>
+		<defName>VQE_Inventor</defName>
+		<label>Inventor</label>
+		<race>Human</race>
+		<fixedChildBackstories>
+			<li>VQE_ChildhoodInventorGenetron</li>
+		</fixedChildBackstories>
+		<fixedAdultBackstories>
+			<li>VQE_InventorGenetronAdulthood</li>
+		</fixedAdultBackstories>
+		<apparelIgnoreSeasons>True</apparelIgnoreSeasons>
+		<apparelIgnorePollution>True</apparelIgnorePollution>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<nakedChance>1</nakedChance>
+		<fixedInventory>
+			<VQE_Apparel_Parka/>				
+		</fixedInventory>
+		<apparelRequired>
+			<li>Apparel_Tuque</li>
+		</apparelRequired>
+		<requiredWorkTags>Intellectual, Crafting</requiredWorkTags>
+		<combatPower>0</combatPower>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>16~25</initialResistanceRange>
+	</PawnKindDef>
+	
+  <RulePackDef>
+    <defName>VQE_InventorNameUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>InventorNameFirstMale->Names/Inventor_First_Male</li>
+        <li>InventorNameFirstFemale->Names/Inventor_First_Female</li>
+        <li>InventorNameLast->Names/Inventor_Last</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>VQE_InventorMaleNames</defName>
+    <include>
+      <li>VQE_InventorNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_first_name->[InventorNameFirstMale]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>VQE_InventorFemaleNames</defName>
+    <include>
+      <li>VQE_InventorNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_first_name->[InventorNameFirstFemale]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>VQE_InventorLastNames</defName>
+    <include>
+      <li>VQE_InventorNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_last_name->[InventorNameLast]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

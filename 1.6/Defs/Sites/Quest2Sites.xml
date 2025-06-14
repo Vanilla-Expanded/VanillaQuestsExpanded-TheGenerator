@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SitePartDef>
+		<defName>VQE_Quest2Site</defName>
+		<label>ARC industrial complex</label>
+		<description>An abandoned industrial complex with an ARC prototype.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>UI/QuestIcons/ARCConstructionTown</expandingIconTexture>
+		<workerClass>VanillaQuestsExpandedTheGenerator.SitePartWorker_Manhunters</workerClass>
+		<tags>
+			<li>VQE_Quest2Site</li>
+		</tags>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQE_Quest2Site</defName>
+		<linkWithSite>VQE_Quest2Site</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedTheGenerator.GenStep_AbandonedARC">
+			<structureLayoutDefs>
+				<li>VQE_Quest2Map_Alpha</li>
+				<li>VQE_Quest2Map_Beta</li>
+				<li>VQE_Quest2Map_Gamma</li>
+				<li>VQE_Quest2Map_Delta</li>
+				
+				
+			</structureLayoutDefs>
+		
+			<filthTypes>
+				<li>Filth_Dirt</li>
+				<li>Filth_Trash</li>
+				<li>Filth_RubbleBuilding</li>
+			</filthTypes>
+		</genStep>
+	</GenStepDef>
+</Defs>
