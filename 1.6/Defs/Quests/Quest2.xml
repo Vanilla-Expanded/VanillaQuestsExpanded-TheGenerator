@@ -1,0 +1,144 @@
+<Defs>
+	<QuestScriptDef>
+		<defName>VQE_AbandonedARC</defName>
+		<autoAccept>True</autoAccept>
+		<questNameRules>
+			<rulesStrings>
+				<!-- quest name -->
+				<li>questName->The [adj] [constructionName]</li>
+
+				<!-- adjectives for the construction yard and village -->
+				<li>adj->sprawling</li>
+				<li>adj->abandoned</li>
+				<li>adj->industrial</li>
+				<li>adj->derelict</li>
+				<li>adj->ancient</li>
+				<li>adj->forgotten</li>
+				<li>adj->overgrown</li>
+				<li>adj->incomplete</li>
+				<li>adj->vast</li>
+				<li>adj->unfinished</li>
+				<li>adj->dilapidated</li>
+				<li>adj->remote</li>
+				<li>adj->mysterious</li>
+				<li>adj->failed</li>
+				<li>adj->once-thriving</li>
+
+				<!-- names for the construction site and its purpose -->
+				<li>constructionName->construction yard</li>
+				<li>constructionName->development site</li>
+				<li>constructionName->industrial complex</li>
+				<li>constructionName->workshop</li>
+				<li>constructionName->power yard</li>
+				<li>constructionName->generator site</li>
+				<li>constructionName->assembly area</li>
+				<li>constructionName->test facility</li>
+				<li>constructionName->work village</li>
+				<li>constructionName->prototype yard</li>
+				<li>constructionName->engineering hub</li>
+				<li>constructionName->construction facility</li>
+				<li>constructionName->ARC facility</li>
+				<li>constructionName->energy project site</li>
+
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<!-- quest description -->
+				<li>questDescription->According to the data extracted on the old prototype site, we managed to find the location of an [adj] industrial complex where construction of the [arcName] continued. This sprawling facility was once bustling with engineers and scientists pushing the boundaries of technology, but now it stands in silence, overtaken by the passage of time.\n\nThe site contains [siteDetails], but it is now [siteThreat].\n\n[studyWarning] [questFailWarning]\n\nSuccessfully completing this expedition [questOutcome].</li>
+
+				<li>questDescription->Data from the prototype site revealed the coordinates of an [adj] industrial yard, where the [arcName] was further developed by [inventor_nameFull] and their team. The facility stretches across a vast expanse, its rusting frames and crumbling walls hinting at its former glory.\n\nWithin the complex are [siteDetails], but [siteThreat] must be dealt with before any meaningful research can be done.\n\n[studyWarning] [questFailWarning]\n\nResolving this task [questOutcome].</li>
+
+				<li>questDescription->Analyzing the prototype’s data, we’ve pinpointed the location of an [adj] construction yard that served as the next step in the [arcName] project. This site, once a beacon of industrial ambition, is now a graveyard of innovation, its machinery left to decay under the open sky.\n\nInside, you’ll find [siteDetails], but it is [siteThreat].\n\n[studyWarning] [questFailWarning]\n\nYour efforts here [questOutcome].</li>
+
+				<li>questDescription->The data retrieved from the old prototype has led us to an [adj] industrial complex that was pivotal in advancing the [arcName] project. Once a thriving hub of technological development, the facility now lies in ruin, its halls echoing only with the wind.\n\nAmong the remnants are [siteDetails], though the complex has become [siteThreat].\n\n[studyWarning] [questFailWarning]\n\nCompleting this mission [questOutcome].</li>
+
+				<!-- industrial complex adjectives -->
+				<li>adj->forgotten</li>
+				<li>adj->ancient</li>
+				<li>adj->derelict</li>
+				<li>adj->sprawling</li>
+				<li>adj->decayed</li>
+				<li>adj->overgrown</li>
+				<li>adj->ruined</li>
+				<li>adj->industrial</li>
+				<li>adj->abandoned</li>
+
+				<!-- ARC name -->
+				<li>arcName->ARC</li>
+				<li>arcName->generator</li>
+				<li>arcName->machine</li>
+				<li>arcName->core</li>
+				<li>arcName->power source</li>
+				<li>arcName->device</li>
+				<li>arcName->artifact</li>
+
+				<!-- site details -->
+				<li>siteDetails->ancient machinery and unfinished generator components</li>
+				<li>siteDetails->critical research notes and large generator components</li>
+				<li>siteDetails->valuable schematics and industrial equipment</li>
+				<li>siteDetails->research data and prototype machinery</li>
+				<li>siteDetails->complex equipment and experimental generator blueprints</li>
+				<li>siteDetails->abandoned industrial machines and research archives</li>
+				<li>siteDetails->essential research notes and unique generator pieces</li>
+
+				<!-- site threat -->
+				<li>siteThreat->home to [Number] manhunting [AnimalPlural]</li>
+				<li>siteThreat->overrun with [Number] manhunting [AnimalPlural]</li>
+				<li>siteThreat->inhabited by a pack of [AnimalPlural]</li>
+				<li>siteThreat->guarded by [Number] aggressive [AnimalPlural]</li>
+				<li>siteThreat->occupied by [Number] hostile [AnimalPlural]</li>
+
+				<!-- study warnings -->
+				<li>studyWarning->Careful examination of the area is required to uncover valuable information.</li>
+				<li>studyWarning->You must study the ancient machines and generator components carefully.</li>
+				<li>studyWarning->To gain insights, you'll need to investigate the research notes and generator parts thoroughly.</li>
+				<li>studyWarning->Thorough investigation is key to retrieving useful data from the site.</li>
+				<li>studyWarning->The data here could be critical, so every effort must be made to study the area thoroughly.</li>
+
+				<!-- quest failure warnings -->
+				<li>questFailWarning->If more than half of the studiable machines and notes are destroyed, the mission will fail.</li>
+				<li>questFailWarning->Too much damage to the complex will result in failure.</li>
+				<li>questFailWarning->Destroying too many research materials will cause the mission to fail.</li>
+				<li>questFailWarning->Failure to preserve enough studiable components will end the mission.</li>
+				<li>questFailWarning->Be mindful of your actions; the mission hinges on preserving the site's integrity.</li>
+
+				<!-- quest outcomes -->
+				<li>questOutcome->could lead us to the actual ARC location.</li>
+				<li>questOutcome->may uncover the true ARC site.</li>
+				<li>questOutcome->might point us to the final ARC project.</li>
+				<li>questOutcome->should reveal the next steps to find the ancient ARC.</li>
+				<li>questOutcome->will bring us closer to uncovering the secrets of the ARC.</li>
+
+
+			</rulesStrings>
+
+		</questDescriptionRules>
+		<questContentRules>
+			<rulesStrings>
+			
+				<!-- Misc -->
+				<li>allObjectsStudiedMessage->All objects are studied. You've collected the information and can now leave.</li>
+				<li>halfOfObjectsDestroyedMessage->More than half of the research data has been lost.</li>
+	
+			</rulesStrings>
+		</questContentRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_AbandonedARC"/>
+			</nodes>
+		</root>
+        <modExtensions>
+            <li Class="VFECore.QuestChainExtension">
+                <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                <conditionSucceedQuests>
+                    <li>VQE_PrototypeARC</li>
+                </conditionSucceedQuests>
+                <ticksSinceSucceed>600</ticksSinceSucceed>
+                <isRepeatable>false</isRepeatable>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <daysUntilGrantAgainOnFailure>7</daysUntilGrantAgainOnFailure>
+            </li>
+        </modExtensions>
+	</QuestScriptDef>
+</Defs>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--=============== ARC Component ====================-->
+	<ThingDef ParentName="ResourceBase">
+		<defName>VQE_GenetronComponent</defName>
+		<label>ARC component</label>
+		<description>Complex lump of ancient mechanical systems, engineered with precision and knowledge that surpasses current technological understanding. The ability to replicate these components has been lost over generations, making them rare and essential for construction of the ARCs.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/GenetronComponent</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>50</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<MarketValue>550</MarketValue>
+			<Mass>0.85</Mass>
+			<Flammability>0.4</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<intricate>true</intricate>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>
