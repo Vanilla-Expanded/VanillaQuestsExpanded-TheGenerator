@@ -44,7 +44,7 @@ namespace VanillaQuestsExpandedTheGenerator
             
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (compRefuelableWithOverdrive?.HasFuel == true)

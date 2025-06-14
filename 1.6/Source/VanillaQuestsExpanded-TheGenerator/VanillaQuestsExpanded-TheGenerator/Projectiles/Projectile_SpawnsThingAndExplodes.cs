@@ -31,7 +31,7 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 thingToDestroy.Destroy(DestroyMode.KillFinalize);
             }
-            GenExplosion.DoExplosion(loc, map, 2.9f, DamageDefOf.Flame, this, -1, -1, null, null, null, null, null, 0f, 1, null, false, null, 0f, 1);
+            GenExplosion.DoExplosion(loc, map, 2.9f, DamageDefOf.Flame, this);
 
             Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(def.projectile.spawnsThingDef), loc, map);
             if (thingToMake.def.CanHaveFaction)
@@ -41,7 +41,7 @@ namespace VanillaQuestsExpandedTheGenerator
             Destroy();
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (this.IsHashIntervalTick(10))

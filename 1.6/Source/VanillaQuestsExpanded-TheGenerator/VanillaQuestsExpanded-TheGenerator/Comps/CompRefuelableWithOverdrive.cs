@@ -54,7 +54,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 mapComp.AddRefuelableToMap(this.parent);
             }
         }
-        public override void PostDeSpawn(Map map)
+        public override void PostDeSpawn(Map map, DestroyMode mode)
         {
             Genetron_MapComponent mapComp = map.GetComponent<Genetron_MapComponent>();
             if (mapComp != null)

@@ -27,11 +27,11 @@ namespace VanillaQuestsExpandedTheGenerator
 		public static bool IsValidTile(int tile)
 		{
 			Tile tile2 = Find.WorldGrid[tile];
-			if (!tile2.biome.canBuildBase)
+			if (!tile2.PrimaryBiome.canBuildBase)
 			{
 				return false;
 			}
-			if (!tile2.biome.implemented)
+			if (!tile2.PrimaryBiome.implemented)
 			{
 				return false;
 			}

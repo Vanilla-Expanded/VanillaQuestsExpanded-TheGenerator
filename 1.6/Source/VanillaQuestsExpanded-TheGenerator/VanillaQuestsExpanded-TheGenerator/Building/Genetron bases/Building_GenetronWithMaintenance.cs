@@ -60,7 +60,7 @@ namespace VanillaQuestsExpandedTheGenerator
             
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (this.IsHashIntervalTick(100) && maintenance > 0 && cachedDetailsExtension?.nonLinearMaintenanceLoss != true)

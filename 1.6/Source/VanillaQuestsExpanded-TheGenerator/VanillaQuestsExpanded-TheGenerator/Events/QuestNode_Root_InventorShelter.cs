@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using RimWorld;
 using RimWorld.Planet;
 using RimWorld.QuestGen;
 using Verse;
@@ -20,12 +21,12 @@ namespace VanillaQuestsExpandedTheGenerator
 			{
 				return;
 			}
-			bool seaIcePresent = Find.WorldGrid.tiles.Any(x => x.biome == BiomeDefOf.SeaIce);
+			bool seaIcePresent = Find.WorldGrid.Tiles.ToList().Any(x => x.PrimaryBiome == BiomeDefOf.SeaIce);
 			if (!PrepareQuest(out Quest quest, out Slate slate, out Map map, out float points, out int tile, delegate (int x)
 			{
 				if (seaIcePresent)
 				{
-					return Find.WorldGrid[x].biome == BiomeDefOf.SeaIce;
+					return Find.WorldGrid[x].PrimaryBiome == BiomeDefOf.SeaIce;
 				}
 				return true;
 			}))

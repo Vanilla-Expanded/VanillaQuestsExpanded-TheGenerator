@@ -176,7 +176,7 @@ namespace VanillaQuestsExpandedTheGenerator
             Precept_Role precept_role = Faction.OfPlayer.ideos.PrimaryIdeo?.GetPrecept(PreceptDefOf.IdeoRole_Leader) as Precept_Role;
             Pawn leader = precept_role?.ChosenPawnSingle();
 
-            foreach (Pawn pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists)
+            foreach (Pawn pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_FreeColonists)
             {
                 if (pawn != null && pawn.relations.OpinionOf(this.parent.pawn) > 35 && pawn != leader)
                 {
@@ -186,7 +186,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             if (!convertedPawns.Any())
             {
-                convertedPawns.Add(PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists.RandomElement());
+                convertedPawns.Add(PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_FreeColonists.RandomElement());
             }
 
             foreach(Pawn pawnToConvert in convertedPawns)
