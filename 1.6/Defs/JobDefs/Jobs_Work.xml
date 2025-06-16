@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JobDef>
+		<defName>VQE_FixCriticallyBrokenDownBuilding</defName>
+		<driverClass>VanillaQuestsExpandedTheGenerator.JobDriver_FixCriticallyBrokenDownBuilding</driverClass>
+		<reportString>replacing broken components in TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<JobDef>
+		<defName>VQE_MaintainGenetron</defName>
+		<driverClass>VanillaQuestsExpandedTheGenerator.JobDriver_MaintainGenetron</driverClass>
+		<reportString>maintaining TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<JobDef>
+		<defName>VQE_StudyGenetron</defName>
+		<driverClass>VanillaQuestsExpandedTheGenerator.JobDriver_StudyGenetron</driverClass>
+		<reportString>studying TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<JobDef>
+		<defName>VQE_SabotageGenetron</defName>
+		<driverClass>VanillaQuestsExpandedTheGenerator.JobDriver_SabotageGenetron</driverClass>
+		<reportString>sabotaging TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+</Defs>

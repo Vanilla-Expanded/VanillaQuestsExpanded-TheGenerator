@@ -2,7 +2,7 @@
 	<name>Vanilla Quests Expanded - The Generator</name>
 	<author>Oskar Potocki, Sarg Bjornson, Taranchuk, Bread mo</author>
 	<supportedVersions>
-		<li>1.5</li>
+		<li>1.5</li><li>1.6</li>
 	</supportedVersions>
 	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
 	<modDependencies>
@@ -20,12 +20,7 @@
 		</li>
 	</modDependencies>
 	<loadAfter>
-		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.RimWorld.Royalty</li>
-		<li>Ludeon.RimWorld.Ideology</li>
-		<li>Ludeon.RimWorld.Biotech</li>
-		<li>Ludeon.RimWorld.Anomaly</li>
-		<li>brrainz.harmony</li>
+	
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 

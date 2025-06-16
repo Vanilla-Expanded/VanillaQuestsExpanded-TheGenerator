@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/MemeDef[defName = "Transhumanist"]/exclusionTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/MemeDef[defName = "Transhumanist"]</xpath>
+			<value>
+				<exclusionTags>
+					<li>VQE_Technophobia_Transhumanist</li>
+				</exclusionTags>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/MemeDef[defName = "Transhumanist"]/exclusionTags</xpath>
+			<value>
+				<li>VQE_Technophobia_Transhumanist</li>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Ideology Expanded - Memes and Structures</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<success>Always</success>
+					<xpath>/Defs/MemeDef[defName = "VME_HardcoreIndustrialism"]/exclusionTags</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/MemeDef[defName = "VME_HardcoreIndustrialism"]</xpath>
+						<value>
+							<exclusionTags>
+								<li>VQE_Technophobia_Industrialist</li>
+							</exclusionTags>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/MemeDef[defName = "VME_HardcoreIndustrialism"]/exclusionTags</xpath>
+						<value>
+							<li>VQE_Technophobia_Industrialist</li>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<success>Always</success>
+					<xpath>/Defs/MemeDef[defName = "VME_MechanoidSupremacy"]/exclusionTags</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/MemeDef[defName = "VME_MechanoidSupremacy"]</xpath>
+						<value>
+							<exclusionTags>
+								<li>VQE_Technophobia_MechSupremacy</li>
+							</exclusionTags>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/MemeDef[defName = "VME_MechanoidSupremacy"]/exclusionTags</xpath>
+						<value>
+							<li>VQE_Technophobia_MechSupremacy</li>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<success>Always</success>
+					<xpath>/Defs/MemeDef[defName = "VME_Progressive"]/exclusionTags</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/MemeDef[defName = "VME_Progressive"]</xpath>
+						<value>
+							<exclusionTags>
+								<li>VQE_Technophobia_Progressive</li>
+							</exclusionTags>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/MemeDef[defName = "VME_Progressive"]/exclusionTags</xpath>
+						<value>
+							<li>VQE_Technophobia_Progressive</li>
+						</value>
+					</match>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -1,0 +1,165 @@
+<Defs>
+	<QuestScriptDef>
+		<defName>VQE_GeothermalArcSite</defName>
+		<expireDaysRange>28</expireDaysRange>
+		<questNameRules>
+			<rulesStrings>
+				<!-- quest name -->
+				<li>questName->[adj] [arcType] [siteType]</li>
+
+				<!-- adjectives -->
+				<li>adj->seized</li>
+				<li>adj->abandoned</li>
+				<li>adj->guarded</li>
+				<li>adj->ancient</li>
+				<li>adj->overrun</li>
+				<li>adj->occupied</li>
+				<li>adj->contested</li>
+				<li>adj->ruined</li>
+				<li>adj->forgotten</li>
+				<li>adj->hidden</li>
+
+				<!-- ARC types -->
+				<li>arcType->geothermal ARC</li>
+				<li>arcType->ARC generator</li>
+				<li>arcType->geothermal core</li>
+				<li>arcType->ARC station</li>
+				<li>arcType->energy core</li>
+				<li>arcType->power source</li>
+				<li>arcType->geothermal plant</li>
+
+				<!-- site types -->
+				<li>siteType->site</li>
+				<li>siteType->facility</li>
+				<li>siteType->outpost</li>
+				<li>siteType->complex</li>
+				<li>siteType->camp</li>
+				<li>siteType->station</li>
+
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription(asker_factionLeader==True)->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A group of [siteFaction_pawnsPlural] has taken control of an abandoned geothermal ARC site. The camp is under the control of [siteFaction_name].\n\n[asker_nameDef] is requesting that we clear out the area by eliminating all enemies and defenses. Securing the site will allow us to study the geothermal ARC and recover valuable components for future use. Additionally, [sitePart0_description].</li>
+
+				<li>questDescription(askerIsNull==true)->We have received information that an old geothermal ARC site has been occupied by [siteFaction_pawnsPlural] from [siteFaction_name]. The bandits have fortified their position and are using the site to control the surrounding area.\n\nSecuring the site will give us access to study the geothermal ARC and extract useful components. The site is likely well-defended, so prepare for resistance. Additionally, [sitePart0_description].</li>
+
+				<!-- site descriptions -->
+				<li>sitePart0_description->the site is partially overgrown, with remnants of its original machinery scattered around</li>
+				<li>sitePart0_description->the bandits have reinforced the area with crude barricades and guard posts</li>
+				<li>sitePart0_description->the geothermal ARC appears heavily worn but intact enough to salvage parts</li>
+				<li>sitePart0_description->the facility's infrastructure is still standing, though it shows signs of significant wear</li>
+				<li>sitePart0_description->hostile patrols have been spotted in the area, ensuring no one approaches unchallenged</li>
+				<li>sitePart0_description->the bandits seem to be utilizing the ARC to power their operations</li>
+
+			</rulesStrings>
+		</questDescriptionRules>
+		
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_RandomNode">
+					<nodes>
+						<li Class="QuestNode_Set"><!-- null asker -->
+							<selectionWeight>0.5</selectionWeight>
+							<name>askerIsNull</name>
+							<value>true</value>
+						</li>
+						<li Class="QuestNode_GetPawn"><!-- any faction leader -->
+							<selectionWeight>0.5</selectionWeight>
+							<storeAs>asker</storeAs>
+							<mustBeFactionLeader>true</mustBeFactionLeader>
+							<mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+						</li>
+					</nodes>
+				</li>
+				
+				<li Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_GeothermalArcSite"/>
+				
+				<li Class="QuestNode_WorldObjectTimeout">
+					<worldObject>$site</worldObject>
+					<isQuestTimeout>true</isQuestTimeout>
+					<delayTicks>$(randInt(12,28)*60000)</delayTicks>
+					<inSignalDisable>site.MapGenerated</inSignalDisable>
+					<destroyOnCleanup>true</destroyOnCleanup>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestExpired">The bandit camp has packed up and moved on. The quest [resolvedQuestName] has expired.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<!-- If we enter and leave, the map is destroyed. Fail the quest. -->
+				<li Class="QuestNode_Signal">
+					<inSignal>site.Destroyed</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestFailed">After being discovered, the bandit camp has dispersed. The quest [resolvedQuestName] has ended.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<li Class="QuestNode_Signal">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Notify_PlayerRaidedSomeone">
+								<getRaidersFromMapParent>$site</getRaidersFromMapParent>
+							</li>
+
+							<li Class="QuestNode_IsSet">
+								<name>asker</name>
+								<node Class="QuestNode_Sequence">
+									<nodes>
+										<li Class="QuestNode_GiveRewards">
+											<parms>
+												<allowGoodwill>true</allowGoodwill>
+												<allowRoyalFavor>true</allowRoyalFavor>
+												<chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+											</parms>
+											<addCampLootReward>true</addCampLootReward>
+											<customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
+											<customLetterText TKey="LetterTextPaymentArrived">You have defeated the bandit camp!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+										</li>
+									</nodes>
+								</node>
+							</li>
+						</nodes>
+					</node>
+				</li>
+				
+				<li Class="QuestNode_End">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<outcome>Success</outcome>
+				</li>
+			</nodes>
+		</root>
+        <modExtensions>
+            <li Class="VEF.Storyteller.QuestChainExtension">
+                 <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                  <conditionSucceedQuests>
+                    <li>VQE_InventorShelter</li>
+                </conditionSucceedQuests>
+				 <ticksSinceSucceed>3600000~7200000</ticksSinceSucceed>
+                <isRepeatable>true</isRepeatable>
+                <mtbDaysRepeat>100</mtbDaysRepeat>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <grantAgainOnExpiry>true</grantAgainOnExpiry>
+				 <daysUntilGrantAgainOnFailure>100</daysUntilGrantAgainOnFailure>
+                 <daysUntilGrantAgainOnExpiry>100</daysUntilGrantAgainOnExpiry>
+            </li>
+        </modExtensions>
+	</QuestScriptDef>
+	
+</Defs>

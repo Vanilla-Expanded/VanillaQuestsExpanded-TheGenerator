@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<BackstoryDef>
+    <defName>VQE_AncientEngineer01</defName>
+    <identifier>VQE_AncientEngineer01</identifier>
+    <slot>Adulthood</slot>
+    <title>ancient engineer</title>
+    <titleShort>engineer</titleShort>
+    <description>[PAWN_nameDef] was part of a team attempting to reverse-engineer ancient ARC components. The mysteries behind the machine’s intricate designs fascinated [PAWN_objective]. Although much of the technology was incomprehensible, [PAWN_pronoun] successfully adapted a few critical parts for modern use.</description>
+    <skillGains>
+        <Intellectual>6</Intellectual>
+        <Crafting>4</Crafting>
+    </skillGains>
+    <workDisables>Social</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+        <li>Offworld</li>
+        <li>Pirate</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <possessions>
+        <VQE_GenetronComponent>2</VQE_GenetronComponent>
+    </possessions>
+</BackstoryDef>
+
+<BackstoryDef>
+    <defName>VQE_PowerArchitect02</defName>
+    <identifier>VQE_PowerArchitect02</identifier>
+    <slot>Adulthood</slot>
+    <title>power architect</title>
+    <titleShort>architect</titleShort>
+    <description>[PAWN_nameDef] specialized in optimizing the power flow within ARC systems. By carefully calibrating the fuel rods, [PAWN_pronoun] was able to significantly extend the reactor's operational time. Despite lacking full knowledge of the ancient mechanisms, [PAWN_nameDef]'s adjustments became the industry standard.</description>
+    <skillGains>
+        <Construction>5</Construction>
+        <Intellectual>3</Intellectual>
+    </skillGains>
+    <workDisables>Artistic</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+        <li>Offworld</li>
+        <li>Outlander</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Male</bodyTypeGlobal>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <possessions>
+        <VQE_GenetronComponent>1</VQE_GenetronComponent>
+    </possessions>
+</BackstoryDef>
+
+<BackstoryDef>
+    <defName>VQE_ControlSystemsEngineer03</defName>
+    <identifier>VQE_ControlSystemsEngineer03</identifier>
+    <slot>Adulthood</slot>
+    <title>control systems engineer</title>
+    <titleShort>controller</titleShort>
+    <description>[PAWN_nameDef] was tasked with modernizing the control systems of ARC reactors. While [PAWN_pronoun] integrated new safety protocols, many of the core functions remained a black box. Even so, [PAWN_pronoun] managed to boost efficiency by adapting the ancient algorithms.</description>
+    <skillGains>
+        <Intellectual>5</Intellectual>
+        <Crafting>2</Crafting>
+        <Social>-2</Social>
+    </skillGains>
+    <workDisables>ManualDumb</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+        <li>Offworld</li>
+        <li>Pirate</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Male</bodyTypeGlobal>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <possessions>
+        <VQE_GenetronComponent>3</VQE_GenetronComponent>
+    </possessions>
+</BackstoryDef>
+
+<BackstoryDef>
+    <defName>VQE_FieldRepairTech04</defName>
+    <identifier>VQE_FieldRepairTech04</identifier>
+    <slot>Adulthood</slot>
+    <title>field repair tech</title>
+    <titleShort>repair tech</titleShort>
+    <description>[PAWN_nameDef] spent years repairing damaged ARC units in remote colonies. Despite lacking the original schematics, [PAWN_pronoun] became adept at improvising fixes. It was a dangerous job, but [PAWN_pronoun] always carried a few spare ARC components, just in case.</description>
+    <skillGains>
+        <Construction>6</Construction>
+        <Crafting>3</Crafting>
+    </skillGains>
+    <workDisables>Intellectual</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+        <li>Offworld</li>
+        <li>Outlander</li>
+        <li>Pirate</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <possessions>
+        <VQE_GenetronComponent>1</VQE_GenetronComponent>
+    </possessions>
+</BackstoryDef>
+
+<BackstoryDef>
+    <defName>VQE_SafetyInspector05</defName>
+    <identifier>VQE_SafetyInspector05</identifier>
+    <slot>Adulthood</slot>
+    <title>ARC safety inspector</title>
+    <titleShort>inspector</titleShort>
+    <description>As a safety inspector, [PAWN_nameDef] traveled between colonies, checking the status of ARC reactors. Although [PAWN_pronoun] could only speculate about how the core systems worked, [PAWN_pronoun] was able to identify potential failures and suggest maintenance that extended reactor lifespans.</description>
+    <skillGains>
+        <Intellectual>4</Intellectual>
+        <Medicine>2</Medicine>
+        <Social>2</Social>
+    </skillGains>
+    <workDisables>Artistic</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+        <li>Offworld</li>
+        <li>ImperialCommon</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <possessions>
+        <VQE_GenetronComponent>2</VQE_GenetronComponent>
+    </possessions>
+</BackstoryDef>
+
+</Defs>

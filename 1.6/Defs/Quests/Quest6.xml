@@ -1,0 +1,169 @@
+<Defs>
+	<QuestScriptDef>
+		<defName>VQE_NuclearArcSite</defName>
+		<expireDaysRange>28</expireDaysRange>
+		<questNameRules>
+			<rulesStrings>
+				<!-- quest name -->
+				<li>questName->[adj] [nuclearArcName]</li>
+
+				<!-- Adjectives -->
+				<li>adj->abandoned</li>
+				<li>adj->ruined</li>
+				<li>adj->bandit-occupied</li>
+				<li>adj->forgotten</li>
+				<li>adj->derelict</li>
+				<li>adj->ancient</li>
+				<li>adj->overrun</li>
+				<li>adj->desecrated</li>
+				<li>adj->dangerous</li>
+				<li>adj->hidden</li>
+
+				<!-- Nuclear ARC Names -->
+				<li>nuclearArcName->Nuclear ARC Site</li>
+				<li>nuclearArcName->ARC Husk</li>
+				<li>nuclearArcName->Reactor Remains</li>
+				<li>nuclearArcName->ARC Ruins</li>
+				<li>nuclearArcName->Generator Relic</li>
+				<li>nuclearArcName->Reactor Core</li>
+				<li>nuclearArcName->Power Husk</li>
+				<li>nuclearArcName->Energy Vault</li>
+				<li>nuclearArcName->Forsaken Reactor</li>
+				<li>nuclearArcName->Generator Site</li>
+
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<!-- quest description -->
+				<li>questDescription(asker_factionLeader==True)->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A group of [siteFaction_pawnsPlural] has taken control of an abandoned nuclear ARC husk site. The camp is currently under the control of [siteFaction_name].\n\n[asker_nameDef] is requesting that we clear out the area by eliminating all enemies and defenses. Once the site is secured, we will have the opportunity to study the nuclear ARC husk and recover valuable ARC components. [asker_label] also mentions that [sitePart0_description]. [sitePart1_description]</li>
+
+				<!-- alternative discovery -->
+				<li>questDescription(askerIsNull==true)->We have received intelligence that an abandoned nuclear ARC husk site has been overtaken by [siteFaction_pawnsPlural] from [siteFaction_name]. The bandits have fortified their position and are using the location as a hideout.\n\nSecuring the site will allow us to examine the nuclear ARC husk for any remaining research data and salvageable ARC components. Be prepared for resistance, as the bandits have likely set up significant defenses. Additionally, [sitePart0_description]. [sitePart1_description]</li>
+
+				<!-- site descriptions -->
+				<li>sitePart0_description->the nuclear ARC husk is surrounded by overgrowth, with much of its structure showing signs of decay</li>
+				<li>sitePart0_description->the bandits have heavily fortified the area with makeshift barriers and traps</li>
+				<li>sitePart0_description->the husk appears partially intact, holding the promise of valuable salvage</li>
+				<li>sitePart0_description->the site is a mix of ancient industrial ruins and ramshackle bandit encampments</li>
+				<li>sitePart0_description->hostile patrols have been spotted guarding the perimeter</li>
+				<li>sitePart0_description->the bandits are using the ARC husk to power their crude machinery and weapons</li>
+				<!-- fallout descriptions -->
+				<li>sitePart1_description->The entire area is blanketed in toxic fallout, making prolonged exposure dangerous without proper equipment</li>
+				<li>sitePart1_description->A thick layer of toxic fallout lingers over the site, creating an additional hazard for anyone attempting to approach</li>
+				<li>sitePart1_description->Toxic fallout from the ARC husk’s old reactor has poisoned the area, presenting a significant environmental danger</li>
+				<li>sitePart1_description->The site is covered in toxic fallout, making survival without protective gear extremely difficult</li>
+				<li>sitePart1_description->Hazardous fallout clouds the area, a grim reminder of the ARC’s unstable nuclear past</li>
+
+
+			</rulesStrings>
+		</questDescriptionRules>
+		
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_RandomNode">
+					<nodes>
+						<li Class="QuestNode_Set"><!-- null asker -->
+							<selectionWeight>0.5</selectionWeight>
+							<name>askerIsNull</name>
+							<value>true</value>
+						</li>
+						<li Class="QuestNode_GetPawn"><!-- any faction leader -->
+							<selectionWeight>0.5</selectionWeight>
+							<storeAs>asker</storeAs>
+							<mustBeFactionLeader>true</mustBeFactionLeader>
+							<mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+						</li>
+					</nodes>
+				</li>
+				
+				<li Class="VanillaQuestsExpandedTheGenerator.QuestNode_Root_NuclearArcSite"/>
+				
+				<li Class="QuestNode_WorldObjectTimeout">
+					<worldObject>$site</worldObject>
+					<isQuestTimeout>true</isQuestTimeout>
+					<delayTicks>$(randInt(12,28)*60000)</delayTicks>
+					<inSignalDisable>site.MapGenerated</inSignalDisable>
+					<destroyOnCleanup>true</destroyOnCleanup>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestExpired">The bandit camp has packed up and moved on. The quest [resolvedQuestName] has expired.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<!-- If we enter and leave, the map is destroyed. Fail the quest. -->
+				<li Class="QuestNode_Signal">
+					<inSignal>site.Destroyed</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestFailed">After being discovered, the bandit camp has dispersed. The quest [resolvedQuestName] has ended.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<li Class="QuestNode_Signal">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Notify_PlayerRaidedSomeone">
+								<getRaidersFromMapParent>$site</getRaidersFromMapParent>
+							</li>
+
+							<li Class="QuestNode_IsSet">
+								<name>asker</name>
+								<node Class="QuestNode_Sequence">
+									<nodes>
+										<li Class="QuestNode_GiveRewards">
+											<parms>
+												<allowGoodwill>true</allowGoodwill>
+												<allowRoyalFavor>true</allowRoyalFavor>
+												<chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+											</parms>
+											<addCampLootReward>true</addCampLootReward>
+											<customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
+											<customLetterText TKey="LetterTextPaymentArrived">You have defeated the bandit camp!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+										</li>
+									</nodes>
+								</node>
+							</li>
+						</nodes>
+					</node>
+				</li>
+				
+				<li Class="QuestNode_End">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<outcome>Success</outcome>
+				</li>
+			</nodes>
+		</root>
+        <modExtensions>
+            <li Class="VEF.Storyteller.QuestChainExtension">
+                 <questChainDef>VQE_TheGeneratorQuestChain</questChainDef>
+                  <conditionSucceedQuests>
+                    <li>VQE_InventorShelter</li>
+                </conditionSucceedQuests>
+				   <ticksSinceSucceed>3600000~7200000</ticksSinceSucceed>
+                <isRepeatable>true</isRepeatable>
+                <mtbDaysRepeat>100</mtbDaysRepeat>
+                <grantAgainOnFailure>true</grantAgainOnFailure>
+                <grantAgainOnExpiry>true</grantAgainOnExpiry>
+				 <daysUntilGrantAgainOnFailure>100</daysUntilGrantAgainOnFailure>
+                 <daysUntilGrantAgainOnExpiry>100</daysUntilGrantAgainOnExpiry>
+            </li>
+        </modExtensions>
+	</QuestScriptDef>
+	
+</Defs>

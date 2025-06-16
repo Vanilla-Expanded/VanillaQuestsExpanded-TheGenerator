@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>VQE_ChunkProjectile</defName>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Projectile_SpawnsThingAndExplodes</thingClass>
+		<graphicData>
+			<texPath>Things/AncientJunk/GenetronJunk</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<projectile>
+			
+			<speed>7</speed>
+			<arcHeightFactor>4</arcHeightFactor>			
+			<spawnsThingDef>VQE_GenetronJunk</spawnsThingDef>
+			 <ai_IsIncendiary>true</ai_IsIncendiary>
+		  <shadowSize>0.6</shadowSize>
+		  <screenShakeFactor>0.5</screenShakeFactor>
+		</projectile>
+	</ThingDef>
+</Defs>

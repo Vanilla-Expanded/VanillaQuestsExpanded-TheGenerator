@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Issues -->
+	
+	
+	<IssueDef>
+		<defName>VQE_Technology</defName>
+		<label>technology</label>
+		<iconPath>UI/Ideology/Issue_Technology</iconPath>
+	</IssueDef>
+	
+	
+	<!-- Precepts -->
+	
+	
+	<PreceptDef>
+		<defName>VQE_Technology_Rejected</defName>
+		<issue>VQE_Technology</issue>
+		<label>rejected</label>
+		<description>Modern technology is a corrupting force that separates humanity from its natural path. Using it is shameful and leads only to ruin and discord.\n\n&lt;color=#E5E54C&gt;Gameplay effects:&lt;/color&gt;\n - Colonists will refuse to equip or wear items that are industrial tech level or higher.\n - Tantrum mental breaks will target items and buildings that are industrial tech level or higher.</description>
+		<impact>High</impact>
+	
+	
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>VQE_Technology_Rejected_WearingTech</thought>     
+			</li>
+		</comps>
+	</PreceptDef>
+	
+	
+	<ThoughtDef>
+		<defName>VQE_Technology_Rejected_WearingTech</defName>
+		<workerClass>VanillaQuestsExpandedTheGenerator.ThoughtWorker_Precept_WearingTech</workerClass>
+		
+		<stages>
+			<li>
+				<label>wearing high-tech items</label>
+				<description>I’m wearing equipment of the future. I hate technology.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

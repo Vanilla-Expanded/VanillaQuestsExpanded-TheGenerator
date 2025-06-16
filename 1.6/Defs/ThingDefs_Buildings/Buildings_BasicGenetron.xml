@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VQE_Genetron_Basic</defName>
+		<label>ARC</label>
+		<description>Advanced reactor chamber, ARC in short, produces electricity from geothermal steam geysers. It’s an advanced generator type that can be upgraded to accept other fuel types, unlocking powerful new abilities. Must be placed on a steam geyser.</description>
+		<thingClass>VanillaQuestsExpandedTheGenerator.Building_Genetron_Basic</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Wood/Megagenerator_Core_Basic_Outline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<shadowData>
+				<volume>(5.03,1.0,4.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<clearBuildingArea>false</clearBuildingArea>
+		<blockWind>true</blockWind>
+		<uiIconPath>Things/Wood/MegageneratorTier0_MenuIcon</uiIconPath>
+		<uiIconScale>1.4</uiIconScale>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>false</blockLight>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>18000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<MarketValue>3852</MarketValue>
+			<Beauty>-30</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>440</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<VQE_GenetronComponent>5</VQE_GenetronComponent>
+		</costList>
+		<comps>
+			<li Class="VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron">
+				<compClass>VanillaQuestsExpandedTheGenerator.CompPowerPlantGenetron</compClass>
+				<basePowerConsumption>-3600</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<empChancePerTick>0.7</empChancePerTick>
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="CompProperties_AmbientSound">
+				<sound>GeothermalPlant_Ambience</sound>
+				<disabledOnUnpowered>true</disabledOnUnpowered>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<uiOrder>8000</uiOrder>
+		<placeWorkers>
+			<li>PlaceWorker_OnSteamGeyser</li>
+		</placeWorkers>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedTheGenerator.GenetronGraphicsExtension">
+				<graphics>
+					<li>
+						<texture>Things/Wood/Megagenerator_CoreShield_Basic_Outline</texture>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_Core_Basic</texture>
+					</li>
+					<li>
+						<texture>Things/Turbines/Megagenerator_SpinningCore</texture>
+						<size>4</size>
+						<offset>(0,0.5)</offset>
+						<rotation>true</rotation>
+					</li>
+					<li>
+						<texture>Things/Wood/Megagenerator_CoreShield_Basic</texture>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters">
+				<ARClevel>1</ARClevel>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>
