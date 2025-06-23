@@ -299,7 +299,7 @@
 		<defName>VQE_ConstructionPallet_Scrap</defName>
 		<label>construction pallet with scrap</label>
 		<description>A rusted construction pallet with a large container of scrap on it. Can be rummaged through to recover some steel.</description>
-		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
@@ -320,7 +320,7 @@
 			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<modExtensions>
-			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+			<li Class="VEF.Buildings.LootableBuildingDetails">
 				<contents>
 					<li>
 						<thing>Steel</thing>
@@ -331,6 +331,7 @@
 						<count>4</count>
 					</li>
 				</contents>
+				<buildingLeft>VQE_EmptyConstructionPallet</buildingLeft>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -338,7 +339,7 @@
 		<defName>VQE_ConstructionPallet_Components</defName>
 		<label>construction pallet with components</label>
 		<description>A rusted construction pallet with a large container of scrapped components on it. Can be rummaged through to recover some industrial components.</description>
-		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
@@ -359,7 +360,7 @@
 			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<modExtensions>
-			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+			<li Class="VEF.Buildings.LootableBuildingDetails">
 				<contents>
 					<li>
 						<thing>ComponentIndustrial</thing>
@@ -370,6 +371,7 @@
 						<count>4</count>
 					</li>
 				</contents>
+				<buildingLeft>VQE_EmptyConstructionPallet</buildingLeft>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -377,7 +379,7 @@
 		<defName>VQE_ConstructionPallet_Chemfuel</defName>
 		<label>construction pallet with jerrycans</label>
 		<description>A rusted construction pallet with a stack of unused chemfuel jerrycans. Can be salvaged through to recover some chemfuel.</description>
-		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
@@ -398,13 +400,14 @@
 			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<modExtensions>
-			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+			<li Class="VEF.Buildings.LootableBuildingDetails">
 				<contents>
 					<li>
 						<thing>Chemfuel</thing>
 						<count>80</count>
 					</li>
 				</contents>
+				<buildingLeft>VQE_EmptyConstructionPallet</buildingLeft>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -412,7 +415,7 @@
 		<defName>VQE_ConstructionPallet_Wood</defName>
 		<label>construction pallet with wood</label>
 		<description>A rusted construction pallet with a large stack of rotting wood. It is possible to recover some drier wood from it.</description>
-		<thingClass>VanillaQuestsExpandedTheGenerator.Pallet</thingClass>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
@@ -433,13 +436,14 @@
 			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<modExtensions>
-			<li Class="VanillaQuestsExpandedTheGenerator.PalletContents">
+			<li Class="VEF.Buildings.LootableBuildingDetails">
 				<contents>
 					<li>
 						<thing>WoodLog</thing>
 						<count>135</count>
 					</li>
 				</contents>
+				<buildingLeft>VQE_EmptyConstructionPallet</buildingLeft>
 			</li>
 		</modExtensions>
 	</ThingDef>
