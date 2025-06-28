@@ -14,7 +14,7 @@ namespace VanillaQuestsExpandedTheGenerator
 			base.PostGenerate(rect, map, parms);
 			var faction = map.ParentFaction;
 			Lord singlePawnLord = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rect.CenterCell,
-				true), map);
+				25000, true), map);
 			TraverseParms traverseParms = TraverseParms.For(TraverseMode.PassDoors);
 			ResolveParams resolveParams = default;
 			resolveParams.rect = rect;
