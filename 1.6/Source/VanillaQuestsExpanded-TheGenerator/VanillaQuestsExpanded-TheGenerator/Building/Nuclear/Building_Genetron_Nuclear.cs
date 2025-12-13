@@ -24,7 +24,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
             Command_Action command_Action = new Command_Action();
 
-            if (nuclearConsumptionTotal > totalFuelBurnedToUpdate)
+            if (nuclearConsumptionTotal > totalFuelBurnedToUpdate * VanillaQuestsExpandedTheGenerator_Settings.ARCFuelMultiplier)
             {
                 command_Action.defaultDesc = "VQE_InstallIsotopicGenetronDesc".Translate();
                 command_Action.defaultLabel = "VQE_InstallIsotopicGenetron".Translate();
@@ -38,7 +38,7 @@ namespace VanillaQuestsExpandedTheGenerator
             else
             {
                 command_Action.defaultDesc = "VQE_InstallIsotopicGenetronDesc".Translate();
-                command_Action.defaultDescPostfix = "VQE_InstallIsotopicGenetronDescExpanded".Translate(totalFuelBurnedToUpdate, nuclearConsumptionTotal).Colorize(Utils.tooltipColour);
+                command_Action.defaultDescPostfix = "VQE_InstallIsotopicGenetronDescExpanded".Translate((int)(totalFuelBurnedToUpdate * VanillaQuestsExpandedTheGenerator_Settings.ARCFuelMultiplier), nuclearConsumptionTotal).Colorize(Utils.tooltipColour);
 
                 command_Action.defaultLabel = "VQE_InstallIsotopicGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_15", true);

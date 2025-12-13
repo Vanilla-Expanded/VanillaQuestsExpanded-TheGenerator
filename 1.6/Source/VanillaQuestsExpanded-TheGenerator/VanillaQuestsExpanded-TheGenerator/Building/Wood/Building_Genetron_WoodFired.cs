@@ -22,7 +22,7 @@ namespace VanillaQuestsExpandedTheGenerator
             }
             Command_Action command_Action = new Command_Action();
 
-            if (totalFuelBurned > totalFuelBurnedToUpdate)
+            if (totalFuelBurned > totalFuelBurnedToUpdate * VanillaQuestsExpandedTheGenerator_Settings.ARCFuelMultiplier)
             {
                 command_Action.defaultDesc = "VQE_InstallWoodFueledGenetronDesc".Translate();
                 command_Action.defaultLabel = "VQE_InstallWoodFueledGenetron".Translate();
@@ -36,7 +36,7 @@ namespace VanillaQuestsExpandedTheGenerator
             else
             {
                 command_Action.defaultDesc = "VQE_InstallWoodFueledGenetronDesc".Translate();
-                command_Action.defaultDescPostfix = "VQE_InstallWoodFueledGenetronDescExpanded".Translate(totalFuelBurnedToUpdate, totalFuelBurned).Colorize(Utils.tooltipColour);
+                command_Action.defaultDescPostfix = "VQE_InstallWoodFueledGenetronDescExpanded".Translate((int)(totalFuelBurnedToUpdate * VanillaQuestsExpandedTheGenerator_Settings.ARCFuelMultiplier), totalFuelBurned).Colorize(Utils.tooltipColour);
 
                 command_Action.defaultLabel = "VQE_InstallWoodFueledGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_2", true);

@@ -62,7 +62,7 @@
 		<designationCategory>Power</designationCategory>
 		<uiOrder>8000</uiOrder>
 		<placeWorkers>
-			<li>PlaceWorker_OnSteamGeyser</li>
+			<li>VanillaQuestsExpandedTheGenerator.PlaceWorker_OnSteamGeyserBySettings</li>
 		</placeWorkers>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>

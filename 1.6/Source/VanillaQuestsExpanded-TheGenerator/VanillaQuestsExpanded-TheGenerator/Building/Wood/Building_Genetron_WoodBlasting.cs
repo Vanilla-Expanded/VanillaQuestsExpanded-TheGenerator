@@ -32,7 +32,7 @@ namespace VanillaQuestsExpandedTheGenerator
 
             }
             else
-            if (compRefuelableWithOverdrive.maxTuningMultiplierTimer > totalTimeInFullTuning)
+            if (compRefuelableWithOverdrive.maxTuningMultiplierTimer > totalTimeInFullTuning * VanillaQuestsExpandedTheGenerator_Settings.ARCTimersMultiplier)
             {
                 command_Action.defaultDesc = "VQE_InstallChemfuelPoweredGenetronDesc".Translate();
                 command_Action.defaultLabel = "VQE_InstallChemfuelPoweredGenetron".Translate();
@@ -46,7 +46,7 @@ namespace VanillaQuestsExpandedTheGenerator
             else
             {
                 command_Action.defaultDesc = "VQE_InstallChemfuelPoweredGenetronDesc".Translate();
-                command_Action.defaultDescPostfix = "VQE_InstallChemfuelPoweredGenetronDescExpanded".Translate(totalTimeInFullTuning.ToStringTicksToPeriod(), compRefuelableWithOverdrive.maxTuningMultiplierTimer.ToStringTicksToPeriod()).Colorize(Utils.tooltipColour);
+                command_Action.defaultDescPostfix = "VQE_InstallChemfuelPoweredGenetronDescExpanded".Translate(((int)(totalTimeInFullTuning * VanillaQuestsExpandedTheGenerator_Settings.ARCTimersMultiplier)).ToStringTicksToPeriod(), compRefuelableWithOverdrive.maxTuningMultiplierTimer.ToStringTicksToPeriod()).Colorize(Utils.tooltipColour);
                 command_Action.defaultLabel = "VQE_InstallChemfuelPoweredGenetron".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Gizmos/UpgradeGenetron_Gizmo_5", true);
                 command_Action.Disabled = true;
