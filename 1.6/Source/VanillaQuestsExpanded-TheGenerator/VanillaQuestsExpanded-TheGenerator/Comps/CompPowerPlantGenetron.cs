@@ -61,7 +61,7 @@ namespace VanillaQuestsExpandedTheGenerator
                         overdriveMultiplier = 2;
                     }
                     float fuelAmount = building.compRefuelableWithOverdrive.Fuel;
-                    base.PowerOutput = (5 * fuelAmount * fuelAmount + 50 * fuelAmount) * overdriveMultiplier;
+                    base.PowerOutput = (5 * fuelAmount * fuelAmount + 50 * fuelAmount) * overdriveMultiplier * VanillaQuestsExpandedTheGenerator_Settings.ARCOutputMultiplier;
                                             
             }
             else 
@@ -107,7 +107,7 @@ namespace VanillaQuestsExpandedTheGenerator
                     steamBoostMultiplier = 1.2f;
                 }
 
-                base.PowerOutput = baseOutput * overdriveMultiplier * tuningMultiplier * maintenanceMultiplier * calibrationMultiplier * (1+(calibrationCounter*0.01f)) * steamBoostMultiplier;
+                base.PowerOutput = baseOutput * overdriveMultiplier * tuningMultiplier * maintenanceMultiplier * calibrationMultiplier * (1+(calibrationCounter*0.01f)) * steamBoostMultiplier * VanillaQuestsExpandedTheGenerator_Settings.ARCOutputMultiplier;
             }
         }
 

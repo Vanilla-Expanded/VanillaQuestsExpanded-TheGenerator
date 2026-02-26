@@ -19,6 +19,9 @@ namespace VanillaQuestsExpandedTheGenerator
         public static float ARCFuelMultiplier = ARCFuelMultiplierBase;
         public const float ARCFuelMultiplierBase = 1f;
 
+        public static float ARCOutputMultiplier = ARCOutputMultiplierBase;
+        public const float ARCOutputMultiplierBase = 1f;
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -27,7 +30,8 @@ namespace VanillaQuestsExpandedTheGenerator
           
             Scribe_Values.Look(ref ARCTimersMultiplier, "ARCTimersMultiplier", ARCTimersMultiplierBase, true);
             Scribe_Values.Look(ref ARCFuelMultiplier, "ARCFuelMultiplier", ARCFuelMultiplierBase, true);
-         
+            Scribe_Values.Look(ref ARCFuelMultiplier, "ARCOutputMultiplier", ARCOutputMultiplierBase, true);
+
 
         }
         public static void DoWindowContents(Rect inRect)
@@ -57,7 +61,14 @@ namespace VanillaQuestsExpandedTheGenerator
             {
                 ARCFuelMultiplier = ARCFuelMultiplierBase;
             }
-           
+            var ARCOutputMultiplierLabel = ls.LabelPlusButton("VQEG_ARCOutputMultiplier".Translate() + ": x" + ARCOutputMultiplier, "VQEG_ARCOutputMultiplierTooltip".Translate());
+            ARCOutputMultiplier = (float)Math.Round(ls.Slider(ARCOutputMultiplier, 0.1f, 10), 1);
+
+            if (ls.Settings_Button("VQEG_Reset".Translate(), new Rect(0f, ARCOutputMultiplierLabel.position.y + 35, 250f, 29f)))
+            {
+                ARCOutputMultiplier = ARCOutputMultiplierBase;
+            }
+
 
             ls.End();
            

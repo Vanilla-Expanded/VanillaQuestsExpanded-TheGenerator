@@ -50,6 +50,7 @@ namespace VanillaQuestsExpandedTheGenerator
                 * (1 + (building.compPower.calibrationCounter * 0.01f))
                 * (building.compPower.inSteamBoostMode ? 1.2f : 1)
                 * (building.compPower.inCalibrationMode ? 0.1f : 1)
+                * VanillaQuestsExpandedTheGenerator_Settings.ARCOutputMultiplier
                 * Utils.CalculateMaintenancePowerImpact(building.maintenanceMultiplier)).CapitalizeFirst());
 
             var IntroLabel3 = new Rect(0, 60, 300, 32f);

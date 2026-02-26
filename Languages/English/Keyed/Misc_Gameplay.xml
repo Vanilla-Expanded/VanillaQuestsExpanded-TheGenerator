@@ -197,5 +197,7 @@ ARC needs to be maintained by colonists. If maintenance reaches 0%, ARC will bre
 	<VQEG_ARCTimersMultiplierTooltip>When upgrading the ARC, there are a series of time periods the player needs to respect before being allowed to do the upgrades (eg "the ARC needs to run for X days in this mode before being upgraded"). This setting will apply a multiplier to those periods. Bear in mind a lower number means things will go faster. A higher number will mean the ARC will take longer.</VQEG_ARCTimersMultiplierTooltip>
 	<VQEG_ARCFuelMultiplier>ARC upgrade fuel multiplier (lower means less fuel needed)</VQEG_ARCFuelMultiplier>
 	<VQEG_ARCFuelMultiplierTooltip>When upgrading the ARC, there are some times when the player needs to burn a given amount of fuel before being allowed to do the upgrades (eg "the ARC needs to burn X wood before being upgraded"). This setting will apply a multiplier to those amount. Bear in mind a lower number means less fuel is needed. A higher number will mean more fuel.</VQEG_ARCFuelMultiplierTooltip>
+	<VQEG_ARCOutputMultiplier>ARC power output multiplier</VQEG_ARCOutputMultiplier>
+	<VQEG_ARCOutputMultiplierTooltip>This will scale the amount of power produced by the ARC reactors.</VQEG_ARCOutputMultiplierTooltip>
 	<VQEG_Reset>Reset</VQEG_Reset>
 </LanguageData>
