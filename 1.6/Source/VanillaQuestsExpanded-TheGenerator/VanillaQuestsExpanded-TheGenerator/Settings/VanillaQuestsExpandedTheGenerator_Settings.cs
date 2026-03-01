@@ -30,7 +30,7 @@ namespace VanillaQuestsExpandedTheGenerator
           
             Scribe_Values.Look(ref ARCTimersMultiplier, "ARCTimersMultiplier", ARCTimersMultiplierBase, true);
             Scribe_Values.Look(ref ARCFuelMultiplier, "ARCFuelMultiplier", ARCFuelMultiplierBase, true);
-            Scribe_Values.Look(ref ARCFuelMultiplier, "ARCOutputMultiplier", ARCOutputMultiplierBase, true);
+            Scribe_Values.Look(ref ARCOutputMultiplier, "ARCOutputMultiplier", ARCOutputMultiplierBase, true);
 
 
         }
